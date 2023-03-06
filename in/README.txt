@@ -1,0 +1,1 @@
+This folder, 'auto_test_gen/in', will contain the usual input files, '<test_name>-sim.json' and '<test_name>-spec.json', of tests that have been tested for automatic test generation.  
