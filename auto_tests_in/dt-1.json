@@ -1,0 +1,84 @@
+{
+    "aix_sys_id": 0, 
+    "chips": 
+    [
+        {
+            "chip_id": 0,
+
+            "io_module": {
+                "layers": [
+                    {
+                        "layer_id": 0, 
+                        "layer_class": "input", 
+                        "layer_type": "input_ext",
+
+                        "dest_id": 1,
+
+                        "num_in_rows":8,
+                        "num_in_cols":8,
+                        "num_in_filters":3
+                    }, 
+                    {
+                        "layer_id": 1, 
+                        "layer_class": "io_bypass", 
+                        "layer_type": "io_bypass",
+
+                        "dest_id": 2
+                    }, 
+                    {
+                        "layer_id": 4, 
+                        "layer_class": "output", 
+                        "layer_type": "output_ext",
+
+                        "dest_id": 5
+                    }
+                ]
+            }, 
+
+            "mac_rows": {
+                "mac_row_id": 0, 
+                "layers": [
+                    {
+                        "layer_id": 2, 
+                        "layer_class": "conv", 
+                        "layer_type": "conv", 
+                        
+                        "dest_id": 3,
+
+                        "num_out_filters": 16,
+                        "filter_size": 3,
+                        "stride": 1, 
+                        "dilation": 1,
+                        "pad_top": 1,
+                        "pad_bot": 1,
+                        "pad_left": 1,
+                        "pad_right": 1, 
+                        
+                        "num_blocks": 1, 
+                        "num_xbars": [1, 1], 
+                        "num_convs": [1, 1]
+                    },
+
+                    {
+                        "layer_id": 3, 
+                        "layer_class": "pool", 
+                        "layer_type": "pool", 
+
+                        "dest_id": 4, 
+
+                        "filter_size": 2, 
+                        "pad_top": 0,
+                        "pad_bot": 0,
+                        "pad_left": 0,
+                        "pad_right": 0, 
+                        "stride": 1, 
+
+                        "num_pools": [2, 2]
+                    }
+                ]
+            }, 
+
+            "residual_mems": {}
+        }
+    ]
+}

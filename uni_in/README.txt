@@ -1,1 +1,0 @@
-This folder, 'auto_test_gen/uni_in', will contain the new simplified input json files for the tests which will be used to generate the coventional '<test_name>-sim.json' and '<test_name>-spec.json' files. 

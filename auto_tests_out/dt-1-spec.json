@@ -1,0 +1,130 @@
+{
+    "io_module": {
+        "layers": [
+            {
+                "layer_id": 0,
+                "layer_class": "input",
+                "layer_type": "input_ext",
+                "num_in_cols": 8,
+                "num_in_rows": 8,
+                "num_in_filters": 3,
+                "layer_mems": {
+                    "lm_max_rows": 4,
+                    "lm_row_size": 24
+                },
+                "dest_entries": {
+                    "dest_details": [
+                        {
+                            "dest_layer": 1,
+                            "addr_incr": 24
+                        }
+                    ],
+                    "len": 24
+                }
+            },
+            {
+                "layer_id": 1,
+                "layer_class": "io_bypass",
+                "layer_type": "io_bypass",
+                "num_in_cols": 8,
+                "num_in_rows": 8,
+                "num_in_filters": 3,
+                "layer_mems": {
+                    "lm_max_rows": 4,
+                    "lm_row_size": 24
+                },
+                "dest_entries": {
+                    "dest_details": [
+                        {
+                            "dest_layer": 2,
+                            "addr_incr": 24
+                        }
+                    ],
+                    "len": 24
+                }
+            }
+        ]
+    },
+    "mac_rows": [
+        {
+            "mac_row_id": 0,
+            "layers": [
+                {
+                    "layer_id": 2,
+                    "layer_class": "conv",
+                    "layer_type": "conv",
+                    "num_in_cols": 8,
+                    "num_in_rows": 8,
+                    "num_in_filters": 3,
+                    "filter_size": 3,
+                    "dilation": 1,
+                    "stride": 1,
+                    "pad_top": 1,
+                    "pad_bot": 1,
+                    "pad_left": 1,
+                    "pad_right": 1,
+                    "num_out_cols": 8.0,
+                    "num_out_rows": 8.0,
+                    "num_out_filters": 16,
+                    "layer_mems": {
+                        "lm_max_rows": 4,
+                        "lm_row_size": 24
+                    },
+                    "dest_entries": {
+                        "dest_details": [
+                            {
+                                "dest_layer": 3,
+                                "addr_incr": 128.0
+                            }
+                        ],
+                        "len": 128.0
+                    },
+                    "num_blocks": 1,
+                    "num_xbars": [
+                        1,
+                        1
+                    ],
+                    "nconvs": [
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "layer_id": 3,
+                    "layer_class": "pool",
+                    "layer_type": "pool",
+                    "num_in_cols": 8.0,
+                    "num_in_rows": 8.0,
+                    "num_in_filters": 16,
+                    "filter_size": 2,
+                    "stride": 1,
+                    "pad_top": 0,
+                    "pad_bot": 0,
+                    "pad_left": 0,
+                    "pad_right": 0,
+                    "num_out_cols": 7.0,
+                    "num_out_rows": 7.0,
+                    "num_out_filters": 16,
+                    "layer_mems": {
+                        "lm_max_rows": 4,
+                        "lm_row_size": 128.0
+                    },
+                    "dest_entries": {
+                        "dest_details": [
+                            {
+                                "dest_layer": 4,
+                                "addr_incr": 112.0
+                            }
+                        ],
+                        "len": 112.0
+                    },
+                    "pool_out_filters": [
+                        2,
+                        2
+                    ]
+                }
+            ]
+        }
+    ],
+    "residual_mems": []
+}
