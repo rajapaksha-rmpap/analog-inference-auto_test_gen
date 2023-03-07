@@ -1,0 +1,111 @@
+{
+    "io_module": {
+        "layers": [
+            {
+                "layer_id": 0,
+                "layer_type": "input_ext",
+                "dest_id": 1,
+                "num_in_cols": 8,
+                "num_in_rows": 8,
+                "num_in_filters": 9,
+                "layer_mems": {
+                    "lm_max_rows": 4,
+                    "lm_row_size": 72
+                },
+                "dest_entries": {
+                    "dest_details": [
+                        {
+                            "dest_layer": 1,
+                            "addr_incr": 72
+                        }
+                    ],
+                    "len": 72
+                }
+            },
+            {
+                "layer_id": 1,
+                "layer_type": "io_bypass",
+                "dest_id": 2,
+                "num_in_cols": 8,
+                "num_in_rows": 8,
+                "num_in_filters": 9,
+                "layer_mems": {
+                    "lm_max_rows": 4,
+                    "lm_row_size": 72
+                },
+                "dest_entries": {
+                    "dest_details": [
+                        {
+                            "dest_layer": 2,
+                            "addr_incr": 72
+                        }
+                    ],
+                    "len": 72
+                }
+            },
+            {
+                "layer_id": 3,
+                "layer_type": "output_ext",
+                "dest_id": 4,
+                "num_in_cols": 4,
+                "num_in_rows": 4,
+                "num_in_filters": 9,
+                "layer_mems": {
+                    "lm_max_rows": 4,
+                    "lm_row_size": 36
+                },
+                "dest_entries": {
+                    "dest_details": [
+                        {
+                            "dest_layer": 4,
+                            "addr_incr": 36
+                        }
+                    ],
+                    "len": 36
+                }
+            }
+        ]
+    },
+    "mac_rows": [
+        {
+            "mac_row_id": 0,
+            "layers": [
+                {
+                    "filter_size": 2,
+                    "dest_id": 3,
+                    "layer_id": 2,
+                    "layer_type": "pool",
+                    "pad_bot": 0,
+                    "pad_left": 0,
+                    "pad_right": 0,
+                    "pad_top": 0,
+                    "pool_out_filters": [
+                        8,
+                        1
+                    ],
+                    "stride": 2,
+                    "num_in_cols": 8,
+                    "num_in_rows": 8,
+                    "num_in_filters": 9,
+                    "num_out_rows": 4,
+                    "num_out_cols": 4,
+                    "num_out_filters": 9,
+                    "layer_mems": {
+                        "lm_max_rows": 4,
+                        "lm_row_size": 72
+                    },
+                    "dest_entries": {
+                        "dest_details": [
+                            {
+                                "dest_layer": 3,
+                                "addr_incr": 36
+                            }
+                        ],
+                        "len": 36
+                    }
+                }
+            ]
+        }
+    ],
+    "residual_mems": []
+}

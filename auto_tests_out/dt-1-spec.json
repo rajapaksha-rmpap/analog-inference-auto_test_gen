@@ -2,12 +2,11 @@
     "io_module": {
         "layers": [
             {
-                "layer_id": 0,
-                "layer_class": "input",
                 "layer_type": "input_ext",
+                "layer_id": 0,
                 "dest_id": 1,
-                "num_in_rows": 8,
                 "num_in_cols": 8,
+                "num_in_rows": 8,
                 "num_in_filters": 3,
                 "layer_mems": {
                     "lm_max_rows": 4,
@@ -24,9 +23,8 @@
                 }
             },
             {
-                "layer_id": 1,
-                "layer_class": "io_bypass",
                 "layer_type": "io_bypass",
+                "layer_id": 1,
                 "dest_id": 2,
                 "num_in_cols": 8,
                 "num_in_rows": 8,
@@ -46,25 +44,24 @@
                 }
             },
             {
-                "layer_id": 4,
-                "layer_class": "output",
                 "layer_type": "output_ext",
+                "layer_id": 4,
                 "dest_id": 5,
-                "num_in_cols": 7.0,
-                "num_in_rows": 7.0,
+                "num_in_cols": 4,
+                "num_in_rows": 4,
                 "num_in_filters": 16,
                 "layer_mems": {
                     "lm_max_rows": 4,
-                    "lm_row_size": 112.0
+                    "lm_row_size": 64
                 },
                 "dest_entries": {
                     "dest_details": [
                         {
                             "dest_layer": 5,
-                            "addr_incr": 112.0
+                            "addr_incr": 64
                         }
                     ],
-                    "len": 112.0
+                    "len": 64
                 }
             }
         ]
@@ -74,9 +71,8 @@
             "mac_row_id": 0,
             "layers": [
                 {
-                    "layer_id": 2,
-                    "layer_class": "conv",
                     "layer_type": "conv",
+                    "layer_id": 2,
                     "dest_id": 3,
                     "num_out_filters": 16,
                     "filter_size": 3,
@@ -98,8 +94,8 @@
                     "num_in_cols": 8,
                     "num_in_rows": 8,
                     "num_in_filters": 3,
-                    "num_out_rows": 8.0,
-                    "num_out_cols": 8.0,
+                    "num_out_rows": 8,
+                    "num_out_cols": 8,
                     "layer_mems": {
                         "lm_max_rows": 4,
                         "lm_row_size": 24
@@ -108,45 +104,44 @@
                         "dest_details": [
                             {
                                 "dest_layer": 3,
-                                "addr_incr": 128.0
+                                "addr_incr": 128
                             }
                         ],
-                        "len": 128.0
+                        "len": 128
                     }
                 },
                 {
-                    "layer_id": 3,
-                    "layer_class": "pool",
                     "layer_type": "pool",
+                    "layer_id": 3,
                     "dest_id": 4,
                     "filter_size": 2,
                     "pad_top": 0,
                     "pad_bot": 0,
                     "pad_left": 0,
                     "pad_right": 0,
-                    "stride": 1,
+                    "stride": 2,
                     "num_pools": [
-                        2,
-                        2
+                        8,
+                        8
                     ],
-                    "num_in_cols": 8.0,
-                    "num_in_rows": 8.0,
+                    "num_in_cols": 8,
+                    "num_in_rows": 8,
                     "num_in_filters": 16,
-                    "num_out_rows": 7.0,
-                    "num_out_cols": 7.0,
+                    "num_out_rows": 4,
+                    "num_out_cols": 4,
                     "num_out_filters": 16,
                     "layer_mems": {
                         "lm_max_rows": 4,
-                        "lm_row_size": 128.0
+                        "lm_row_size": 128
                     },
                     "dest_entries": {
                         "dest_details": [
                             {
                                 "dest_layer": 4,
-                                "addr_incr": 112.0
+                                "addr_incr": 64
                             }
                         ],
-                        "len": 112.0
+                        "len": 64
                     }
                 }
             ]

@@ -1,0 +1,10 @@
+{
+    "num_in_rows": 8,
+    "num_in_cols": 8,
+    "num_in_filters": 9,
+    "filter_size": 2,
+    "num_out_rows": 4,
+    "num_out_cols": 4,
+    "num_out_filters": 9,
+    "output_layer": 3
+}

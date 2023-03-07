@@ -15,28 +15,18 @@
             "io_module": {
                 "layers": [
                     {
-                        "layer_id": 0, 
-                        "layer_class": "input", 
                         "layer_type": "input_ext",
-
-                        "dest_id": 1,
-
-                        "num_in_rows":8,
-                        "num_in_cols":8,
-                        "num_in_filters":3
+                        "layer_id": 0,
+                        "dest_id": 1
                     }, 
                     {
-                        "layer_id": 1, 
-                        "layer_class": "io_bypass", 
                         "layer_type": "io_bypass",
-
+                        "layer_id": 1,
                         "dest_id": 2
                     }, 
                     {
-                        "layer_id": 4, 
-                        "layer_class": "output", 
                         "layer_type": "output_ext",
-
+                        "layer_id": 4,
                         "dest_id": 5
                     }
                 ]
@@ -48,10 +38,8 @@
                     "mac_row_id": 0, 
                     "layers": [
                         {
-                            "layer_id": 2, 
-                            "layer_class": "conv", 
-                            "layer_type": "conv", 
-                            
+                            "layer_type": "conv",
+                            "layer_id": 2,
                             "dest_id": 3,
 
                             "num_out_filters": 16,
@@ -69,20 +57,18 @@
                         },
 
                         {
-                            "layer_id": 3, 
-                            "layer_class": "pool", 
                             "layer_type": "pool", 
-
-                            "dest_id": 4, 
+                            "layer_id": 3,
+                            "dest_id": 4,
 
                             "filter_size": 2, 
                             "pad_top": 0,
                             "pad_bot": 0,
                             "pad_left": 0,
                             "pad_right": 0, 
-                            "stride": 1, 
+                            "stride": 2, 
 
-                            "num_pools": [2, 2]
+                            "num_pools": [8, 8]
                         }
                     ]
                 } 
