@@ -4,9 +4,9 @@ def start_mac_row_layer(layers, starting_layer):
     "find the value of lm_max_rows for the input and io_bypass layers"
     # find the first mac row layer in NN, and derive the value of lm_max_rows, and take it as lm_max_rows for the input and io_bypass layers 
     if layers[starting_layer]["layer_class"] == "conv":
-        return layers[starting_layer]["filter_size"]+1 
+        return (layers[starting_layer]["filter_size"], layers[starting_layer]["filter_size"]+1)
     elif layers[starting_layer]["layer_class"] == "pool":
-        return layers[starting_layer]["filter_size"]*2
+        return (layers[starting_layer]["filter_size"], layers[starting_layer]["filter_size"]*2)
     else:
         dest_id = layers[starting_layer]["dest_id"]
         return start_mac_row_layer(layers, dest_id)

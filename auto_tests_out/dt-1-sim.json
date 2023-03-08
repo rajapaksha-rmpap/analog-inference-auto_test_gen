@@ -1,0 +1,13 @@
+{
+    "num_in_rows": 8,
+    "num_in_cols": 8,
+    "num_in_filters": 3,
+    "image_fill_method": 2,
+    "max_ticks": 100000,
+    "step_ticks": 500,
+    "filter_size": 3,
+    "num_out_rows": 7.0,
+    "num_out_cols": 7.0,
+    "num_out_filters": 16,
+    "output_layer": 4
+}
