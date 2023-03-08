@@ -2,7 +2,7 @@
 
 import json 
 from pathlib import Path 
-from layer_classes import *
+from layer_processes import *
 from json_handling import *
 
 spec_json_struct = {"io_module": 
@@ -67,7 +67,6 @@ current_layer = starting_layer
 
 while layers[current_layer]["dest_id"] in layer_IDs: 
     # all tha layers are processed based on their layer type 
-    # here, 'spec_json' is the layer object of the final spec.json file for each layer
     layer, num_in_rows, num_in_cols, num_in_filters, lm_max_rows = process_layers(layers[current_layer], num_in_rows, num_in_cols, num_in_filters, lm_max_rows)
     spec_json_struct = fill_in_spec_json(spec_json_struct, layer)
     layer_IDs.remove(current_layer)
