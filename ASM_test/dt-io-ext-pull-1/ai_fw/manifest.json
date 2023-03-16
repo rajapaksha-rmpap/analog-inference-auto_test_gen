@@ -1,0 +1,14 @@
+{
+    "platform" : 0,
+    "systems" : 
+    [
+        {
+            "chips" : 
+            [
+                "chip_0"
+            ],
+            "extensa" : [],
+            "id" : 0
+        }
+    ]
+}

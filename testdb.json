@@ -1,0 +1,12 @@
+{
+    "tests": {
+        "dt-1": {
+            "enabled" : true,
+            "asm_test" : true,
+            "dv_test" : false,
+            "dv_tb": "iss",
+            "asm_sim" : "simtop",
+            "neg_test" : false
+        }
+    }
+}

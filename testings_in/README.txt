@@ -1,0 +1,1 @@
+This folder will contain all the input files (.txt, .json, etc.) used for testings.py

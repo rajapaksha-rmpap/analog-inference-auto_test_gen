@@ -1,0 +1,23 @@
+{
+    "num_in_rows": 8,
+    "num_in_cols": 8,
+    "num_in_filters": 3,
+    "use_block_transfer": true,
+    "read_in_image": false,
+    "write_out_image": true,
+    "input_image_file": "input_image.txt",
+    "output_image_file": "image.txt",
+    "image_fill_method": 2,
+    "out_data_file": "out.txt",
+    "pos_neg_acts": false,
+    "max_ticks": 1000000,
+    "step_ticks": 1500,
+    "asm_out_data_file": "asmout.txt",
+    "asm_results_file": "results.txt",
+    "asm_sim": true,
+    "filter_size": 3,
+    "num_out_rows": 8,
+    "num_out_cols": 8,
+    "num_out_filters": 9,
+    "output_layer": 2
+}

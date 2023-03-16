@@ -1,0 +1,9 @@
+{
+    "id" : 2,
+    "lanes" : 
+    [
+        "activation.mem",
+        "bias.mem",
+        "quant.mem"
+    ]
+}

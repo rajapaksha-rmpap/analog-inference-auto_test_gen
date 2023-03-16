@@ -1,0 +1,68 @@
+Running test directory /home/akila/redo_project/auto_test_gen/ASM_test/dt-io-ext-pull-1/ image count 1
+Reading map file /home/akila/redo_project/auto_test_gen/ASM_test/dt-io-ext-pull-1/map.rpt
+Chip 0 Row 32 Layer 0: Input Layer - nrows 8 ncols 8 num in filters 3 out rows 8 out cols 8 num out filters 3
+Chip 0 Row 32 Layer 1: Bypass Layer - nrows 8 ncols 8 num in filters 3 out rows 8 out cols 8 num out filters 3 skip add 0 scale 0
+Chip 0 Row 32 Layer 2: Output Layer - nrows 8 ncols 8 num in filters 9 out rows 8 out cols 8 num out filters 9
+Chip 0 Row 0 Layer 0: Conv Layer - nrows 8 ncols 8 num in filters 3 conv rows 8 conv cols 8 num out filters 9
+Reading weights file /home/akila/redo_project/auto_test_gen/ASM_test/dt-io-ext-pull-1/sub_array_0_pe_0_mac_blk_0_wt.mem
+Reading weights file /home/akila/redo_project/auto_test_gen/ASM_test/dt-io-ext-pull-1/sub_array_0_pe_0_mac_blk_1_wt.mem
+Reading binary file /home/akila/redo_project/auto_test_gen/ASM_test/dt-io-ext-pull-1/row32_output_chip.bin
+Reading config reg file /home/akila/redo_project/auto_test_gen/ASM_test/dt-io-ext-pull-1/chip0_pe32_config.csv
+Reading binary file /home/akila/redo_project/auto_test_gen/ASM_test/dt-io-ext-pull-1/row0_input_chip.bin
+Reading binary file /home/akila/redo_project/auto_test_gen/ASM_test/dt-io-ext-pull-1/row0_output_chip.bin
+Reading config reg file /home/akila/redo_project/auto_test_gen/ASM_test/dt-io-ext-pull-1/chip0_pe0_config.csv
+Reading config file /home/akila/redo_project/auto_test_gen/ASM_test/dt-io-ext-pull-1/config.rpt
+Chip 0 Row 0 Xbar 0: adc gain en 1 mac gain 14 pe gain 8 ag shift 14
+Chip 0 Row 0 Xbar 1: adc gain en 1 mac gain 14 pe gain 8 ag shift 14
+Chip 0 Row 0 Xbar 2: adc gain en 0 mac gain 1 pe gain 1 ag shift 1
+Chip 0 Row 0 Xbar 3: adc gain en 0 mac gain 1 pe gain 1 ag shift 1
+Reading extensa file /home/akila/redo_project/auto_test_gen/ASM_test/dt-io-ext-pull-1/extensa.rpt
+Input: chip 0 row 32 block 0 input rows 8 inlen 24 max rows 8 base addr 0x0 addr mask 0x3fff
+Output: chip 0 row 32 block 2 output rows 8 outlen 72 base addr 0x3008000 addr mask 0x3fff
+32,0,INPUT,0,0,8,8,3,3,0,0,0,0,0,1,0,0,0,0,0,0,8,8,99,50348032,16383,0,2,0,16383
+32,1,BYPASS,0,0,8,8,3,3,0,0,0,0,0,1,0,0,0,0,0,0,8,8,1,16777216,16383,1,2,16384,16383
+32,2,OUTPUT,0,0,8,8,9,9,0,0,0,0,0,1,0,0,0,0,0,0,8,8,3,9469952,16383,2,2,32768,16383
+0,0,CONV,0,2,8,8,3,9,3,1,1,1,1,1,4,2,2,1,1,1,8,8,2,50364416,16383,0,2,0,16383
+Number of input external layers : 1
+Input Sync counter[0] msgarea 0 chip addr 3ffff04
+Input Layer: 0 input start : 0 Row size: 24 number of rows: 8
+Starting : Image 1 tick: 0
+===================================
+Number of output external layers : 1
+Output Sync counter[0] msgarea 4 chip addr 3ffff44
+Output Layer: 0 output start : c0 Row size: 72 number of rows: 8
+Starting populating global memory with Host source and destination addresses 
+Info: Global memory controller found name : Chip_0_LOCAL_0_Global_SRAM
+Complete populating global memory with Host source and destination addresses 
+HST CPU Write Data: row 0 addrss 0x0 len 24 data 0 1 2
+send CSQ to chip tick: 1
+id: 0 PCIE_NODE_Sync Send Input sync message row cnt 1 addr: 0x3ffff04
+HST CPU Write Data: row 1 addrss 0x18 len 24 data 1 2 3
+send CSQ to chip tick: 2
+id: 0 PCIE_NODE_Sync Send Input sync message row cnt 2 addr: 0x3ffff04
+HST CPU Write Data: row 2 addrss 0x30 len 24 data 2 3 4
+send CSQ to chip tick: 3
+id: 0 PCIE_NODE_Sync Send Input sync message row cnt 3 addr: 0x3ffff04
+HST CPU Write Data: row 3 addrss 0x48 len 24 data 3 4 5
+send CSQ to chip tick: 4
+id: 0 PCIE_NODE_Sync Send Input sync message row cnt 4 addr: 0x3ffff04
+HST CPU Write Data: row 4 addrss 0x60 len 24 data 4 5 6
+send CSQ to chip tick: 5
+id: 0 PCIE_NODE_Sync Send Input sync message row cnt 5 addr: 0x3ffff04
+HST CPU Write Data: row 5 addrss 0x78 len 24 data 5 6 7
+send CSQ to chip tick: 6
+id: 0 PCIE_NODE_Sync Send Input sync message row cnt 6 addr: 0x3ffff04
+HST CPU Write Data: row 6 addrss 0x90 len 24 data 6 7 8
+send CSQ to chip tick: 7
+id: 0 PCIE_NODE_Sync Send Input sync message row cnt 7 addr: 0x3ffff04
+HST CPU Write Data: row 7 addrss 0xa8 len 24 data 7 8 9
+send CSQ to chip tick: 8
+id: 0 PCIE_NODE_Sync Send Input sync message row cnt 8 addr: 0x3ffff04
+id: 0 Host_Sync Input sync row decremented cntr 7
+id: 0 Host_Sync Input sync row decremented cntr 6
+id: 0 Host_Sync Input sync row decremented cntr 5
+id: 0 Host_Sync Input sync row decremented cntr 4
+id: 0 Host_Sync Input sync row decremented cntr 3
+id: 0 Host_Sync Input sync row decremented cntr 2
+id: 0 Host_Sync Input sync row decremented cntr 1
+id: 0 Host_Sync Input sync row decremented cntr 0

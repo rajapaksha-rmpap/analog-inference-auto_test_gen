@@ -1,0 +1,1 @@
+This folder will contain all the output files (.txt, .json, etc.) of the testings.py

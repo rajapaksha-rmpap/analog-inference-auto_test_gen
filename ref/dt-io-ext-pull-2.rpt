@@ -1,0 +1,16 @@
+Map Report - Chip 0
+NRows 1
+IO Module 
+	Layer ID 0 Row Sub Idx 0 nrows 224 ncols 224 in filters 3 out rows 224 out cols 224  out filters 3 outscale 1 inscale 1 remap region 0 scaleoutput 0 outscalemult 1 outscaleshift 0 scaleprefetch 0 prefetchscalemult 1 prefetchscaleshift 0 Layer Memory 0 size 16384 max rows 8 start index 3 Base addr 0x14000 Addr Mask 0x3fff xbar layer index 0 SINGLE LAYER 
+		Dest Entry 0 src addr 0 len 672 simd base 0x3010000 simd mask 0x3fff dest layer 99 layer mem idx 0 dest addr 0x0 incr 2a0 remap addr 0x0 remap_mask ffffffff LAYER_MEM 
+		Input Layer, input filters  INPUT_EXTERNAL 
+	Layer ID 99 Row Sub Idx 1 nrows 224 ncols 224 in filters 3 out rows 224 out cols 224  out filters 3 outscale 1 inscale 1 remap region 0 scaleoutput 0 outscalemult 1 outscaleshift 0 scaleprefetch 0 prefetchscalemult 1 prefetchscaleshift 0 Layer Memory 0 size 16384 max rows 8 start index 2 Base addr 0x10000 Addr Mask 0x3fff xbar layer index 0 SINGLE LAYER 
+		Dest Entry 0 src addr 0 len 672 simd base 0x1000000 simd mask 0x3fff dest layer 1 layer mem idx 0 dest addr 0x0 incr 2a0 remap addr 0x0 remap_mask ffffffff LAYER_MEM 
+		IO Bypass Layer, input filters 
+	Layer ID 2 Row Sub Idx 2 nrows 112 ncols 112 in filters 64 out rows 112 out cols 112  out filters 64 outscale 1 inscale 1 remap region 0 scaleoutput 0 outscalemult 1 outscaleshift 0 scaleprefetch 0 prefetchscalemult 1 prefetchscaleshift 0 Layer Memory 0 size 32768 max rows 4 start index 0 Base addr 0x0 Addr Mask 0x7fff Layer Memory 1 size 32768 max rows 4 start index 0 Base addr 0x8000 Addr Mask 0x7fff xbar layer index 0 SINGLE LAYER 
+		Dest Entry 0 src addr 0 len 7168 simd base 0x3008000 simd mask 0x3fff dest layer 3 layer mem idx 0 dest addr 0x3008000 incr 1c00 remap addr 0x0 remap_mask ffffffff LAYER_MEM 
+		Output Layer, input filters  OUTPUT EXTERNAL 
+Row 0
+	Layer ID 1 Row Sub Idx 0 nrows 224 ncols 224 in filters 3 out rows 112 out cols 112  out filters 64 outscale 1 inscale 1 remap region 0 scaleoutput 0 outscalemult 1 outscaleshift 0 scaleprefetch 0 prefetchscalemult 1 prefetchscaleshift 0 Layer Memory 0 size 16384 max rows 8 start index 0 Base addr 0x0 Addr Mask 0x3fff xbar layer index 0 SINGLE LAYER 
+		Dest Entry 0 src addr 0 len 7168 simd base 0x3000000 simd mask 0x7fff dest layer 2 layer mem idx 0 dest addr 0x0 incr 1c00 remap addr 0x0 remap_mask ffffffff LAYER_MEM 
+		Conv Layer filter_sz 7 skip 2 padl 3 padr 0 padt 3 padb 0 dilation 1 relu 0 skip add 0 start xbar 0 xbar cnt 4 start col 0 ncols 0 nxbars 4 4  nconvs 4 4  nblocks 7 versplit 512  horsplit 2048  adcscale 1 pos neg acts 0 col split parameters, grpshift 0 sign  1  shift 0  type  Convolution  Xbar start layer 0 

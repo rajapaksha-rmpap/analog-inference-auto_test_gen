@@ -1,0 +1,61 @@
+{
+    "num_in_cols" : 8,
+    "num_in_filters" : 3,
+    "num_in_rows" : 8,
+
+    "io_module" : 
+    {
+        "layers" : 
+        [
+            {
+                "layer_id" : 0,
+                "dest_id" : 99,
+                "layer_type" : "input_ext"
+            },
+            {
+                "layer_id" : 99,
+                "dest_id" : 1,
+                "layer_type" : "io_bypass"
+            },
+            {
+                "layer_id" : 2,
+                "dest_id" : 3,
+                "layer_type" : "output_ext"
+            }
+        ]
+    },
+    "mac_rows" : 
+    [
+        {
+            "layers" : 
+            [
+                {
+                    "dilation" : 1,
+                    "filter_size" : 3,
+                    "layer_id" : 1,
+                    "layer_type" : "conv",
+                    "nconvs" : 
+                    [
+                        1,
+                        1
+                    ],
+                    "num_blocks" : 4,
+                    "num_xbars" : 
+                    [
+                        2,
+                        2
+                    ],
+                    "num_out_filters": 9,
+                    "pad_bot" : 1,
+                    "pad_left" : 1,
+                    "pad_right" : 1,
+                    "pad_top" : 1,
+                    "stride" : 1,
+                    "dest_id" : 2
+                }
+            ],
+            "mac_row_id" : 0
+        }
+    ],
+    "residual_mems" : []
+}

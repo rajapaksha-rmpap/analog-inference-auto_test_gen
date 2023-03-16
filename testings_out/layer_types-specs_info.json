@@ -1,0 +1,266 @@
+{
+    "dest_entries": {
+        "times": 244,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 244,
+            "values": "not recorded due to having a complicated value to represent"
+        }
+    },
+    "dest_entries/addr": {
+        "times": 284,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 284,
+            "values": {
+                "0x0": 245,
+                "0x20": 2,
+                "0x7000": 1,
+                "0x120": 18,
+                "0x180": 18
+            }
+        }
+    },
+    "dest_entries/dest_details": {
+        "times": 284,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 284,
+            "values": "not recorded due to having a complicated value to represent"
+        }
+    },
+    "dest_entries/dest_details/addr_incr": {
+        "times": 316,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 316,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "dest_entries/dest_details/dest_addr": {
+        "times": 316,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 316,
+            "values": {
+                "0x0": 280,
+                "0x120": 18,
+                "0x60": 18
+            }
+        }
+    },
+    "dest_entries/dest_details/dest_layer": {
+        "times": 316,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 316,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "dest_entries/dest_details/gen_sync": {
+        "times": 96,
+        "type": [
+            "boolean"
+        ],
+        "boolean": {
+            "times": 96,
+            "values": {
+                "true": 96
+            }
+        }
+    },
+    "dest_entries/dest_details/mem_index": {
+        "times": 316,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 316,
+            "values": {
+                "0": 315,
+                "1": 1
+            }
+        }
+    },
+    "dest_entries/dest_details/mem_type": {
+        "times": 316,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 316,
+            "values": {
+                "layer_mem": 316
+            }
+        }
+    },
+    "dest_entries/len": {
+        "times": 284,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 284,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "dma_id": {
+        "times": 102,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 102,
+            "values": {
+                "-1": 52,
+                "0": 47,
+                "1": 2,
+                "2": 1
+            }
+        }
+    },
+    "layer_class": {
+        "times": 151,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 151,
+            "values": {
+                "input": 151
+            }
+        }
+    },
+    "layer_id": {
+        "times": 244,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 244,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_key": {
+        "times": 16,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 16,
+            "values": {
+                "110": 14,
+                "112": 2
+            }
+        }
+    },
+    "layer_mems": {
+        "times": 244,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 244,
+            "values": "not recorded due to having a complicated value to represent"
+        }
+    },
+    "layer_mems/lm_max_rows": {
+        "times": 244,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 244,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_mems/lm_row_size": {
+        "times": 244,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 244,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_type": {
+        "times": 244,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 244,
+            "values": {
+                "input": 244
+            }
+        }
+    },
+    "num_in_cols": {
+        "times": 244,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 244,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "num_in_filters": {
+        "times": 244,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 244,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "num_in_rows": {
+        "times": 244,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 244,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "qmodel_id": {
+        "times": 14,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 14,
+            "values": {
+                "0": 12,
+                "1": 2
+            }
+        }
+    },
+    "src_entries": {
+        "times": 244,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 244,
+            "values": {
+                "[]": 244
+            }
+        }
+    }
+}

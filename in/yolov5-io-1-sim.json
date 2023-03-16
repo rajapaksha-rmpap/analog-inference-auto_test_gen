@@ -1,0 +1,35 @@
+{
+    "xbar_width" : 1024,   
+    "use_block_transfer" : true,
+    "read_in_image" : true,
+    "write_out_image" : true,
+    "input_image_file" : "../../qmodels/yolov5_ag/inputs/i_0.txt",
+    "output_image_file" : "image.txt",
+    "image_fill_method" : 1,
+    "out_data_file" : "out.txt",
+    "num_in_cols" : 672,
+    "num_in_rows" : 224,
+    "num_in_filters" : 3,
+    "filter_size" : 6,
+    "num_out_cols" : 336,
+    "num_out_filters" : 32,
+    "num_out_rows" : 112,
+    "pos_neg_acts" : false,
+    "output_layer" : 101,
+    "max_ticks" : 1000000,
+    "step_ticks" : 2000,
+    "asm_max_ticks" : 10000000,
+    "asm_step_ticks" : 2000000,
+    "asm_out_data_file" : "asmout.txt",
+    "asm_results_file" : "results.txt",
+    "asm_sim" : true,
+    "weights" :
+    {
+        "weights_dir" : "../../qmodels/yolov5_ag/weight_bias",
+        "load_weights" : true,
+        "load_weights_by_layer" : true,
+        "write_weights" : true,
+        "out_file" : "weights_out.txt",
+        "include_bias" : true
+    }
+}

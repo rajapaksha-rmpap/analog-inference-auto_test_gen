@@ -1,0 +1,13 @@
+Start Configure Chip 0-----------------------------
+Start Configure Row 32------------
+from row list:
+Row 0 Layer 2 Sync_Counter 1
+to row list:
+Row 0 Layer 1 Dest_Entry 0 Dest_Entry_Count 1 Dest_Count 0 Sync_Counter 0
+
+Start Configure Row 0-----------------------------
+from row list:
+Row 32 Layer 0 Sync_Counter 1
+to row list:
+Row 32 Layer 0 Dest_Entry 0 Dest_Entry_Count 1 Dest_Count 0 Sync_Counter 0
+

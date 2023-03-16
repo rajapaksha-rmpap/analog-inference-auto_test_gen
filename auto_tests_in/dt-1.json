@@ -53,7 +53,7 @@
                             
                             "num_blocks": 1, 
                             "num_xbars": [1, 1], 
-                            "num_convs": [1, 1]
+                            "nconvs": [1, 1]
                         },
 
                         {
@@ -68,7 +68,7 @@
                             "pad_right": 0, 
                             "stride": 2, 
 
-                            "num_pools": [8, 8]
+                            "pool_out_filters": [8, 8]
                         }
                     ]
                 } 

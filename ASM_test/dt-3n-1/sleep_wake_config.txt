@@ -1,0 +1,21 @@
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0

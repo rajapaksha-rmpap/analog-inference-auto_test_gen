@@ -1,0 +1,38 @@
+{
+    "input": [
+        "input_ext",
+        "input"
+    ],
+    "gap": [
+        "gap"
+    ],
+    "output": [
+        "output_ext",
+        "output"
+    ],
+    "conv": [
+        "transpose",
+        "dilate",
+        "conv"
+    ],
+    "pool": [
+        "pool",
+        "argmax"
+    ],
+    "bypass": [
+        "upsample",
+        "fetch_global",
+        "concat",
+        "space2depth",
+        "gap_reorder",
+        "split",
+        "bypass",
+        "add",
+        "bypass_pad",
+        "upsamplex",
+        "upsamplermap"
+    ],
+    "io_bypass": [
+        "io_bypass"
+    ]
+}

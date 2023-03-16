@@ -1,0 +1,18 @@
+{
+    "inputs" : 
+    [
+        {
+            "num_in_cols" : 10,
+            "num_in_filters" : 8,
+            "num_in_rows" : 10
+        }
+    ],
+    "outputs" : 
+    [
+        {
+            "num_out_cols" : 6,
+            "num_out_filters" : 16,
+            "num_out_rows" : 6
+        }
+    ]
+}
