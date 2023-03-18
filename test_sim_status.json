@@ -1,0 +1,28 @@
+{
+    "not enabled": [
+        "dt-io-mchip-conv-conv-2n-1"
+    ],
+    "fsim failing": {
+        "ExecutionError": [],
+        "OutTXTMistmatchError": [],
+        "ResultComparisonError": []
+    },
+    "asmsim failing": {
+        "AsmsimDisabled": [
+            "dt-io-2n-1",
+            "dt-io-ext-pull-2n-1"
+        ],
+        "AsmsimExecutionError": [
+            "dt-2n-1",
+            "dt-2n-2",
+            "dt-2n-3",
+            "dt-3n-1",
+            "dt-io-mchip-conv-conv-conv-1",
+            "dt-io-multi-out-1"
+        ]
+    },
+    "unknown error": [],
+    "successes": [
+        "dt-io-ext-pull-multi-out-1"
+    ]
+}

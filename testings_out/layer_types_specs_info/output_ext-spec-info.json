@@ -1,0 +1,298 @@
+{
+    "dest_entries": {
+        "times": 204,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 204,
+            "values": {
+                "array of dicts": 204
+            }
+        }
+    },
+    "dest_entries/addr": {
+        "times": 204,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 204,
+            "values": {
+                "0x0": 204
+            }
+        }
+    },
+    "dest_entries/dest_details": {
+        "times": 204,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 204,
+            "values": {
+                "array of dicts": 204
+            }
+        }
+    },
+    "dest_entries/dest_details/addr_incr": {
+        "times": 204,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 204,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "dest_entries/dest_details/dest_addr": {
+        "times": 204,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 204,
+            "values": {
+                "0x904000": 51,
+                "0x0": 1,
+                "0x908000": 51,
+                "0x8003000": 1,
+                "0x3008000": 39,
+                "0x90C000": 5,
+                "0x90c000": 5,
+                "0x300c000": 3,
+                "0x93c000": 2,
+                "0x93C000": 7,
+                "0x924000": 1,
+                "0x908200": 1,
+                "0x908004": 1,
+                "0x3014000": 11,
+                "0x3018000": 11,
+                "0x301c000": 11,
+                "0x910000": 3
+            }
+        }
+    },
+    "dest_entries/dest_details/dest_layer": {
+        "times": 204,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 204,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "dest_entries/dest_details/gen_sync": {
+        "times": 68,
+        "type": [
+            "boolean"
+        ],
+        "boolean": {
+            "times": 68,
+            "values": {
+                "True": 68
+            }
+        }
+    },
+    "dest_entries/dest_details/mem_index": {
+        "times": 204,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 204,
+            "values": {
+                "0": 204
+            }
+        }
+    },
+    "dest_entries/dest_details/mem_type": {
+        "times": 204,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 204,
+            "values": {
+                "layer_mem": 204
+            }
+        }
+    },
+    "dest_entries/len": {
+        "times": 204,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 204,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_class": {
+        "times": 115,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 115,
+            "values": {
+                "output": 115
+            }
+        }
+    },
+    "layer_id": {
+        "times": 204,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 204,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_mems": {
+        "times": 204,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 204,
+            "values": {
+                "array of dicts": 204
+            }
+        }
+    },
+    "layer_mems/lm_max_rows": {
+        "times": 205,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 205,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_mems/lm_row_size": {
+        "times": 205,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 205,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_type": {
+        "times": 204,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 204,
+            "values": {
+                "output_ext": 204
+            }
+        }
+    },
+    "num_out_cols": {
+        "times": 204,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 204,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "num_out_filters": {
+        "times": 204,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 204,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "num_out_rows": {
+        "times": 204,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 204,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "src_entries": {
+        "times": 204,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 204,
+            "values": {
+                "[]": 204
+            }
+        }
+    },
+    "layer_key": {
+        "times": 11,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 11,
+            "values": {
+                "111": 6,
+                "113": 3,
+                "112": 1,
+                "114": 1
+            }
+        }
+    },
+    "qmodel_id": {
+        "times": 11,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 11,
+            "values": {
+                "0": 9,
+                "1": 2
+            }
+        }
+    },
+    "num_rows_per_pcie_transfer": {
+        "times": 21,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 21,
+            "values": {
+                "8": 1,
+                "6": 1,
+                "9": 1,
+                "1": 1,
+                "7": 17
+            }
+        }
+    },
+    "dma_id": {
+        "times": 17,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 17,
+            "values": {
+                "2": 4,
+                "3": 12,
+                "0": 1
+            }
+        }
+    }
+}

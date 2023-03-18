@@ -47,7 +47,7 @@ def runhwtests(test_name, fsim=True, asmsim=True, vcd=False, input_="home"):
     # a custom version of /home/akila/redo_project/sw_be/desgen/hwtests/testdb.json 
     # will contain only few parameters compared to the original testdb.json 
     home_dir = os.getcwd()
-    testdb_json_file = "../sw_be/desgen/hwtests/testdb.json" # ****** change this later *******
+    testdb_json_file = "testdb.json" # ****** change this later *******
     if proj_path != None:
         print("proj path problem")
         desgen_path = proj_path + "/desgen/hwtests"
@@ -61,23 +61,18 @@ def runhwtests(test_name, fsim=True, asmsim=True, vcd=False, input_="home"):
     home_ref_dir = home_dir + "/ref/"
     hwtests_ref_dir = hwtests_dir + "/ref/"
     
-    cmd = home_dir + "/../sw_be/desgen/desgenhw" + " "
+    cmd = home_dir + "/../sw_be/desgen/desgenhw "
 
     with open(testdb_json_file) as tf:
         testdb = json.load(tf)
     
     sim_json_file = in_dir + test_name + "-sim.json"
     spec_json_file = in_dir + test_name + "-spec.json"
-
-    with open(sim_json_file) as simf:
-        simjson = json.load(simf)
     
     # pick the simulator based on test spec
-    for test in testdb["tests"]:
-        if test["name"] == test_name:
-            selected_test = test
-            break
-    else: 
+    try: 
+        selected_test = testdb[test_name]
+    except KeyError: 
         print ("%s is not included in testdb.json" %test_name)
         return "FatalError"
 
@@ -97,6 +92,14 @@ def runhwtests(test_name, fsim=True, asmsim=True, vcd=False, input_="home"):
         asmsys_test = False
         scmd = hwtests_dir + "/../../simtop/" + selected_test["asm_sim"] + " "                    
 
+    # opening sim file (after checking in testdb.json)
+    try:
+        with open(sim_json_file) as simf:
+            simjson = json.load(simf)
+    except FileNotFoundError:
+        print("%s has no sim json file")
+        return "FatalError"
+        
     # clean output artifacts before testing
     os.chdir(home_dir)
 
@@ -107,6 +110,15 @@ def runhwtests(test_name, fsim=True, asmsim=True, vcd=False, input_="home"):
         shutil.rmtree(home_dir + "/ASM_test/" + selected_test["name"], True, None)
         os.mkdir(home_dir + "/ASM_test/" + selected_test["name"])
         os.chdir(home_dir + "/ASM_test/" + selected_test["name"])
+
+        if selected_test["asm_test"] == True:
+            shutil.rmtree(home_dir + "/ASM_test/" + selected_test["name"], True, None)
+            os.mkdir(home_dir + "/ASM_test/" + selected_test["name"])
+            os.chdir(home_dir + "/ASM_test/" + selected_test["name"])
+        else:
+            shutil.rmtree(home_dir + "/results/" + selected_test["name"], True, None)
+            os.mkdir(home_dir + "/results/" + selected_test["name"])
+            os.chdir(home_dir + "/results/" + selected_test["name"])
 
         print("Results Directory: " + os.getcwd())
 
@@ -250,12 +262,12 @@ def runhwtests(test_name, fsim=True, asmsim=True, vcd=False, input_="home"):
             print(selected_test["name"] + ": Failed; the result may not be comling with the ref map.rpt or out.txt")
             
             # intermediate output checks for each layer if data mismatch in final output of level 1
-            if res2 !=0 or res5 !=0:
-                mismatch_check(selected_test["name"])
+            # if res2 !=0 or res5 !=0:
+            #     mismatch_check(selected_test["name"])
             return "ResultComparisonError"
     
     else: 
-        print("%s: has not been enabled" %test["name"])
+        print("%s: has not been enabled" %test_name)
         return "NotEnabledError"
     #Moving activity file to simtop and running vcd script for every test case
     activity_file_path = home_dir + "/activity.txt"

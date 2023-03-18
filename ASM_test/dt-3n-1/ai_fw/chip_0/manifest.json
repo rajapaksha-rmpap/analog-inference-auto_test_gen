@@ -1,0 +1,11 @@
+{
+    "id" : 0,
+    "mac_rows" : 
+    [
+        "pe_0",
+        "pe_1",
+        "pe_2",
+        "iope"
+    ],
+    "mlcConfig" : "mlc_config.bin"
+}

@@ -1,0 +1,2210 @@
+# Assembler for Chip - Output Processor 
+# Output uP Assembly Code 
+0:NOP # 
+1:MOV,r448,4 # # Init process count 
+2:MOV,r449,0 ## Initialize current process id
+3:MOV,r492,1 # # Initialize address offset reg
+4:LLSHIFT,r492,r492,23 # 
+5:MOV,r471,9 # # Initialize base address offset reg
+6:LLSHIFT,r471,r471,20 # 
+7:MOV,r480,8204 # 
+8:OR,r480,r494,r492 # # Initialize Output DMA bsy address reg
+9:MOV,r480,8200 # 
+10:OR,r480,r493,r492 # # Initialize Output DMA enable address reg
+11:MOV,r480,12300 # 
+12:OR,r480,r496,r492 # # Initialize Prefetch DMA bsy address reg
+13:MOV,r480,12296 # 
+14:OR,r480,r495,r492 # # Initialize Prefetch DMA enable address reg
+15:MOV,r491,0 ## Initialize grab status reg
+16:MOV,r468,0 ## Initialize image end status reg
+17:MOV,r470,0 ## Initialize context switch reg
+18:MOV,r488,1 ## Initialize current process id
+19:LLSHIFTREG,r488,r488,r448 # 
+20:SUBI,r488,r488,1 # 
+21:MOV,r450,26 # # store proc0 start loc
+22:MOV,r460,26 # # store proc0 last loc  
+23:MOV,r451,544 # # store proc1 start loc
+24:MOV,r461,544 # # store proc1 last loc  
+25:MOV,r452,1116 # # store proc2 start loc
+26:MOV,r462,1116 # # store proc2 last loc  
+27:MOV,r453,1634 # # store proc3 start loc
+28:MOV,r463,1634 # # store proc3 last loc  
+29:NOP #
+30:NOP #
+31:NOP #
+32:NOP #
+33:NOP #
+34:NOP #
+35:NOP #
+36:NOP #
+37:MOV,r449,0 ## curr proc id
+# Switch to proc id
+38:ADDI,r449,r510,0 # 
+39:SUBI,r510,r510,0 # 
+40:BRANZ,2 # 
+41:BRAREG,r460 ## branch to counter proc 0 
+42:SUBI,r510,r510,1 # 
+43:BRANZ,2 # 
+44:BRAREG,r461 ## branch to counter proc 1 
+45:SUBI,r510,r510,1 # 
+46:BRANZ,2 # 
+47:BRAREG,r462 ## branch to counter proc 2 
+48:SUBI,r510,r510,1 # 
+49:BRANZ,2 # 
+50:BRAREG,r463 ## branch to counter proc 3 
+51:SUBI,r510,r510,1 # 
+52:BRANZ,2 # 
+53:BRAREG,r464 ## branch to counter proc 4 
+54:SUBI,r510,r510,1 # 
+55:BRANZ,2 # 
+56:BRAREG,r465 ## branch to counter proc 5 
+57:SUBI,r510,r510,1 # 
+58:BRANZ,2 # 
+59:BRAREG,r466 ## branch to counter proc 6 
+60:SUBI,r510,r510,1 # 
+61:BRANZ,2 # 
+62:BRAREG,r467 ## branch to counter proc 7 
+# Entry point for context switch
+63:NOP # 
+64:SUB,r448,r510,r449 # 
+65:BRANZ,-27 # 
+66:BRAUNCOND,-29 # 
+# Layer Instruction Start
+67:MOV,r1,0 # 
+68:MOV,r42,0 # 
+69:MOV,r48,0 # 
+70:MOV,r54,0 # 
+71:MOV,r480,0 # 
+72:LLSHIFT,r480,r480,16 # 
+73:OR,r54,r54,r480 # 
+74:MOV,r43,0 # 
+75:MOV,r49,0 # 
+76:MOV,r55,0 # 
+77:MOV,r480,0 # 
+78:LLSHIFT,r480,r480,16 # 
+79:OR,r55,r55,r480 # 
+80:MOV,r44,0 # 
+81:MOV,r50,0 # 
+82:MOV,r56,0 # 
+83:MOV,r480,0 # 
+84:LLSHIFT,r480,r480,16 # 
+85:OR,r56,r56,r480 # 
+86:MOV,r45,0 # 
+87:MOV,r51,0 # 
+88:MOV,r57,0 # 
+89:MOV,r480,0 # 
+90:LLSHIFT,r480,r480,16 # 
+91:OR,r57,r57,r480 # 
+92:MOV,r480,33120 ##Start READ_FROM_SCRATCH
+93:MOV,r481,208 # 
+94:OR,r481,r481,r492 # 
+95:STORE,r481,r480 # write process_memory_addr
+96:MOV,r481,212 # 
+97:OR,r481,r481,r492 # 
+98:LOAD,r481,r42 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+99:MOV,r480,33124 ##Start READ_FROM_SCRATCH
+100:MOV,r481,208 # 
+101:OR,r481,r481,r492 # 
+102:STORE,r481,r480 # write process_memory_addr
+103:MOV,r481,212 # 
+104:OR,r481,r481,r492 # 
+105:LOAD,r481,r48 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+106:MOV,r480,33128 ##Start READ_FROM_SCRATCH
+107:MOV,r481,208 # 
+108:OR,r481,r481,r492 # 
+109:STORE,r481,r480 # write process_memory_addr
+110:MOV,r481,212 # 
+111:OR,r481,r481,r492 # 
+112:LOAD,r481,r54 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+113:MOV,r5,0 # 
+114:MOV,r22,1 # 
+115:MOV,r41,256 # 
+116:MOV,r25,0 # 
+117:MOV,r27,0 # 
+118:ADDI,r22,r484,0 # # Start SET_MULTICAST_ADDR
+119:SUBI,r484,r484,1 # 
+120:BRALEZ,69 # 
+121:ADDI,r41,r480,0 # 
+122:OR,r480,r480,r492 # 
+123:ADDI,r22,r484,1 # 
+124:SUBI,r27,r485,0 # 
+125:BRALEZ,8 # # Jump to first dest_detail
+126:SUBI,r27,r485,1 # 
+127:BRALEZ,19 # # Jump to second dest detail 
+128:SUBI,r27,r485,2 # 
+129:BRALEZ,31 # # Jump to third dest detail 
+130:SUBI,r27,r485,3 # 
+131:BRALEZ,43 # # Jumpt to fourth dest detail 
+132:BRAUNCOND,57 # 
+133:AND,r48,r481,r42 # 
+134:ADDI,r54,r481,0 # 
+135:SUBI,r484,r484,1 # 
+136:BRALEZ,4 # 
+137:ORI,r481,r481,1 # 
+138:ADDI,r484,r484,0 # 
+139:BRAUNCOND,2 # 
+140:MOV,r481,0 # 
+141:STORE,r480,r481 # 
+142:ADDI,r480,r481,4 # 
+143:STORE,r481,r48 # 
+144:ADDI,r480,r481,8 # 
+145:STORE,r481,r42 # 
+146:ADDI,r480,r486,16 # 
+147:AND,r49,r481,r43 # 
+148:ADDI,r55,r481,0 # 
+149:SUBI,r484,r484,1 # 
+150:BRALEZ,4 # 
+151:ORI,r481,r481,1 # 
+152:ADDI,r484,r484,0 # 
+153:BRAUNCOND,2 # 
+154:MOV,r481,0 # 
+155:STORE,r486,r481 # 
+156:ADDI,r486,r481,4 # 
+157:STORE,r481,r49 # 
+158:ADDI,r486,r481,8 # 
+159:STORE,r481,r43 # 
+160:ADDI,r480,r486,32 # 
+161:AND,r50,r481,r44 # 
+162:ADDI,r56,r481,0 # 
+163:SUBI,r484,r484,1 # 
+164:BRALEZ,4 # 
+165:ORI,r481,r481,1 # 
+166:ADDI,r484,r484,0 # 
+167:BRAUNCOND,2 # 
+168:MOV,r481,0 # 
+169:STORE,r486,r481 # 
+170:ADDI,r486,r481,4 # 
+171:STORE,r481,r50 # 
+172:ADDI,r486,r481,8 # 
+173:STORE,r481,r44 # 
+174:ADDI,r480,r486,48 # 
+175:AND,r51,r481,r45 # 
+176:ADDI,r57,r481,0 # 
+177:SUBI,r484,r484,1 # 
+178:BRALEZ,4 # 
+179:ORI,r481,r481,1 # 
+180:ADDI,r484,r484,0 # 
+181:BRAUNCOND,2 # 
+182:MOV,r481,0 # 
+183:STORE,r486,r481 # 
+184:ADDI,r486,r481,4 # 
+185:STORE,r481,r51 # 
+186:ADDI,r486,r481,8 # 
+187:STORE,r481,r45 # 
+188:NOP # # End SET_MULTICAST_ADDR
+189:MOV,r15,0 # 
+190:MOV,r18,1 # 
+191:MOV,r19,0 # 
+192:MOV,r38,0 # 
+193:MOV,r33,48 # 
+194:MOV,r480,784 # 
+195:LLSHIFT,r480,r480,16 # 
+196:OR,r33,r33,r480 # 
+197:MOV,r480,0 # # start STORE_TO_MEMORY 
+198:STORE,r33,r480 # # end STORE_TO_MEMORY - write data to address
+199:MOV,r0,3584 # 
+200:MOV,r23,8 # 
+201:MOV,r33,1 # 
+202:MOV,r40,121 # 
+203:MOV,r30,0 # 
+204:MOV,r2,0 # 
+205:MOV,r58,0 # 
+206:MOV,r480,0 # 
+207:LLSHIFT,r480,r480,16 # 
+208:OR,r58,r58,r480 # 
+209:MOV,r46,65535 # 
+210:MOV,r480,511 # 
+211:LLSHIFT,r480,r480,16 # 
+212:OR,r46,r46,r480 # 
+213:MOV,r53,64 # 
+214:MOV,r36,1 # 
+215:MOV,r4,8960 # 
+216:MOV,r9,64 # 
+217:MOV,r19,0 # 
+218:MOV,r33,0 # 
+219:ADDI,r4,r480,0 ## Start SET_LYR_REG 
+220:OR,r480,r480,r492 # 
+221:STORE,r480,r19 # # write to addr_mask_reg
+222:ADDI,r480,r483,4 # 
+223:STORE,r483,r19 # # write to base_addr_reg
+224:LLSHIFT,r19,r482,16 # 
+225:OR,r482,r482,r9 # 
+226:ADDI,r480,r483,8 # 
+227:STORE,r483,r482 # #wite to addr_stp_reg
+228:MOV,r480,8228 # 
+229:OR,r480,r480,r492 # 
+230:LOAD,r480,r481 # 
+231:OR,r481,r481,r33 # 
+232:STORE,r480,r481 # # end SET_OUTPUT_LYR_REG - write to xbar_grp_reg
+233:MOV,r4,13056 # 
+234:MOV,r9,64 # 
+235:ADDI,r4,r480,0 ## Start SET_LYR_REG 
+236:OR,r480,r480,r492 # 
+237:LLSHIFT,r19,r482,16 # 
+238:OR,r482,r482,r9 # 
+239:ADDI,r480,r483,8 # 
+240:STORE,r483,r482 # #write to address_step_reg 
+241:MOV,r480,12324 # 
+242:OR,r480,r480,r492 # 
+243:LOAD,r480,r481 # 
+244:OR,r481,r481,r33 # 
+245:STORE,r480,r481 ## end SET_PREFETCH_LYR_REGS - write to prefetch_grp_reg
+246:MOV,r4,1 # 
+247:MOV,r2,0 # 
+248:MOV,r33,16777215 # 
+249:MOV,r480,8224 ## Start SET_HORSPLIT_REG
+250:OR,r480,r480,r492 # 
+251:LOAD,r480,r481 ##load split_group_reg 
+252:OR,r481,r481,r2 # 
+253:STORE,r480,r481 ## End SET_HORSPLIT_REG 
+254:MOV,r14,1 # 
+255:MOV,r33,170 # 
+256:MOV,r2,4369 # 
+257:MOV,r480,4369 # 
+258:LLSHIFT,r480,r480,16 # 
+259:OR,r2,r2,r480 # 
+260:MOV,r3,512 # 
+261:ADDI,r3,r480,0 # 
+262:OR,r480,r480,r492 # 
+263:STORE,r480,r14 # #write to colgrp_reg 
+264:ADDI,r480,r480,4 # 
+265:STORE,r480,r33 # # write to colsign_reg 
+266:ADDI,r480,r480,4 # 
+267:STORE,r480,r2 # # End SET_COL_GRP_REGS - write to colshift_reg
+268:MOV,r26,64 # 
+269:MOV,r33,3584 # 
+270:MOV,r11,1 # 
+271:MOV,r47,9216 # 
+272:MOV,r2,0 # 
+273:MOV,r14,0 # 
+274:OR,r47,r480,r492 ## Start SET_OUT_XBAR_REGS 
+275:ADDI,r480,r481,20 # 
+276:ADDI,r30,r482,0 # 
+277:LLSHIFT,r14,r483,16 # 
+278:OR,r482,r482,r483 # 
+279:STORE,r481,r482 # #write to mac blk mb_config_reg
+280:ADDI,r480,r485,0 # 
+281:LLSHIFT,r11,r481,16 # 
+282:OR,r26,r481,r481 # 
+283:STORE,r485,r481 ## write to mac blk bt_size_reg 
+284:ADDI,r480,r481,28 # 
+285:LLSHIFT,r36,r482,31 # 
+286:OR,r33,r482,r482 # 
+287:STORE,r481,r482 # # End SET_OUT_XBAR_REGS - write to mac blk row_step_reg
+288:MOV,r14,9216 # 
+289:MOV,r47,13312 # 
+290:MOV,r2,0 # 
+291:SUBI,r2,r2,0 # 
+292:BRAZ,6 # 
+293:ADDI,r14,r14,128 # 
+294:ADDI,r47,r47,128 # 
+295:SUBI,r2,r2,1 # 
+296:BRALEZ,2 # 
+297:BRAUNCOND,-4 # 
+298:MOV,r33,0 # 
+299:MOV,r11,1 # 
+300:MOV,r59,0 # 
+301:MOV,r37,65535 # 
+302:MOV,r480,255 # 
+303:LLSHIFT,r480,r480,16 # 
+304:OR,r37,r37,r480 # 
+305:MOV,r35,0 # 
+306:MOV,r3,56 # 
+307:NOP # # Instruction not used in Assembly Generation
+308:MOV,r17,0 # 
+309:ADDI,r14,r24,0 # 
+310:MOV,r27,0 # 
+311:MOV,r10,0 # 
+312:ADDI,r47,r34,0 # 
+313:MOV,r22,1 # 
+314:MOV,r31,0 # 
+315:MOV,r12,0 # 
+316:MOV,r5,0 # 
+317:MOV,r41,256 # 
+318:MOV,r480,32976 ##Start READ_FROM_SCRATCH
+319:MOV,r481,208 # 
+320:OR,r481,r481,r492 # 
+321:STORE,r481,r480 # write process_memory_addr
+322:MOV,r481,212 # 
+323:OR,r481,r481,r492 # 
+324:LOAD,r481,r38 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+325:MOV,r18,32767 # 
+326:MOV,r480,0 # 
+327:LLSHIFT,r480,r480,16 # 
+328:OR,r18,r18,r480 # 
+329:MOV,r8,0 # 
+330:MOV,r28,0 # 
+331:MOV,r52,0 # 
+332:SUBI,r52,r52,0 # 
+333:BRAZ,3 # 
+334:MOV,r33,0 # 
+335:NOP # # Instruction not used in Assembly Generation
+336:MOV,r52,0 # 
+337:SUBI,r52,r52,0 # 
+338:BRAZ,73 # 
+339:MOV,r10,0 # 
+340:MOV,r29,0 # 
+341:MOV,r6,0 # 
+342:NOP # # Instruction not used in Assembly Generation
+343:MOV,r21,1 # 
+344:ADDI,r24,r480,0 # 
+345:OR,r480,r480,r492 # 
+346:ADDI,r480,r485,32 # 
+347:ADDI,r29,r481,0 # 
+348:LLSHIFT,r481,r481,16 # 
+349:ORI,r481,r481,1 # 
+350:STORE,r485,r481 # #write to cmd_wd0_reg
+351:ADD,r1,r481,r17 # 
+352:AND,r481,r481,r46 # 
+353:ADDI,r485,r485,4 # 
+354:STORE,r485,r481 # # end SET_XBAR_WIDTH_SPLIT_REG - write to cmd_wd1_reg
+355:MOV,r486,1 # 
+356:LLSHIFTREG,r486,r486,r10 # 
+357:LOAD,r493,r482 ## read output_dma_cmd_lst_enable_reg 
+358:NOT,r486,r484 # 
+359:AND,r484,r485,r482 # 
+360:STORE,r493,r485 ## write to output_dma_cmd_lst_enable_reg 
+361:OR,r486,r482,r482 # 
+362:STORE,r493,r482 ## write to output_dma_cmd_lst_enable_reg - End ADD_XBAR_TO_STARTQ  
+363:STOREI,r53,r38 # #Start SET_SIMD_BASE- write to simd_base_addr_reg
+364:ADDI,r53,r480,4 # 
+365:STOREI,r480,r18 # #write to simd_addr_mask_reg - End SET_SIMD_BASE 
+366:ADD,r1,r1,r29 # 
+367:MOV,r486,33554431 # 
+368:AND,r1,r1,r486 # 
+369:NOP # # Instruction not used in Assembly Generation
+370:MOV,r460,336 # # Start FORCED_CONTEXT SWITCH  
+371:MOV,r449,1 # 
+372:MOV,r480,960 # 
+373:OR,r480,r480,r492 # 
+374:MOV,r481,377 # 
+375:STORE,r480,r481 # #write to wake_vec_reg 
+376:BRAUNCOND,-313 # # End FORCED_CONTEXT SWITCH
+377:MOV,r480,960 # 
+378:OR,r480,r480,r492 # 
+379:MOV,r482,388 # 
+380:STORE,r480,r482 # # write to wake_vec_reg 
+381:LOAD,r480,r482 ##End SET_UP_WAKE_VEC - read wake_vec_reg
+382:MOV,r460,341 #  # start CHECK_XBAR_LAYER 
+383:MOV,r449,0 # 
+384:NOP # 
+385:NOP # 
+386:HALT # 
+387:NOP # 
+388:MOV,r480,48 # 
+389:LOADI,r480,r484 # # read simd_lyr_cntrl_reg
+390:MOV,r480,4 # 
+391:LOADI,r480,r472 # # read mac_cmd_reg
+392:LRSHIFT,r472,r480,24 # 
+393:ANDI,r480,r13,255 # 
+394:ADDI,r13,r13,1 # 
+395:LLSHIFT,r13,r29,3 # 
+396:AND,r472,r32,r37 # 
+397:LRSHIFT,r484,r484,4 # 
+398:ANDI,r484,r16,8191 # 
+399:LRSHIFT,r16,r20,9 # # End CHECK_XBAR_LAYER 
+400:MOV,r480,44 # 
+401:LLSHIFT,r40,r481,13 # 
+402:OR,r16,r481,r481 # 
+403:STOREI,r480,r481 ## write simd_cmd2_reg 
+404:MOV,r480,0 # 
+405:ADD,r472,r482,r31 # 
+406:ADD,r482,r482,r33 # 
+407:STOREI,r480,r482 # # End Set_SIMD_MAC - write simd_cmd1_reg 
+408:MOV,r486,3584 # 
+409:SUB,r29,r29,r486 # 
+410:BRAGEZ,130 # 
+411:ADDI,r47,r52,0 # 
+412:MOV,r6,0 # 
+413:MOV,r16,1 # 
+414:MOV,r13,1 # 
+415:MOV,r21,1 # 
+416:SUBI,r35,r35,0 # 
+417:BRANZ,51 # 
+418:MOV,r20,0 # 
+419:MOV,r2,0 # 
+420:MOV,r29,3584 # 
+421:MOV,r9,64 # 
+422:NOP # # Instruction not used in Assembly Generation
+423:SUBI,r15,r15,0 # 
+424:BRAZ,19 # 
+425:MOV,r25,3584 # 
+426:NOP # # Instruction not used in Assembly Generation
+427:LOAD,r496,r481 # 
+428:AND,r481,r481,r4 # 
+429:BRAZ,2 # 
+430:BRAUNCOND,-3 # #Check for prefetch_dma_busy
+431:ADDI,r34,r480,0 # 
+432:OR,r480,r480,r492 # 
+433:ADDI,r480,r480,32 # 
+434:ADDI,r29,r482,0 # 
+435:LLSHIFT,r482,r482,16 # 
+436:ORI,r482,r482,1 # 
+437:STORE,r480,r482 # # write to cmd_wd0_reg 
+438:ADD,r1,r481,r17 # 
+439:AND,r481,r481,r61 # 
+440:ADDI,r480,r480,4 # 
+441:STORE,r480,r481 # # End PREFETCH - write to cmd_wd1_reg
+442:ADDI,r34,r34,128 # 
+443:MOV,r25,0 # 
+444:ADDI,r24,r480,0 # 
+445:OR,r480,r480,r492 # 
+446:ADDI,r480,r485,32 # 
+447:ADDI,r29,r481,0 # 
+448:LLSHIFT,r481,r481,16 # 
+449:ORI,r481,r481,1 # 
+450:STORE,r485,r481 # #write to cmd_wd0_reg
+451:ADD,r1,r481,r17 # 
+452:AND,r481,r481,r46 # 
+453:ADDI,r485,r485,4 # 
+454:STORE,r485,r481 # # end SET_XBAR_WIDTH_SPLIT_REG - write to cmd_wd1_reg
+455:ADDI,r10,r10,1 # 
+456:ADDI,r20,r20,1 # 
+457:MOV,r25,1 # 
+458:ADDI,r24,r24,128 # 
+459:ADDI,r6,r6,512 # 
+460:SUBI,r25,r25,1 # 
+461:BRALEZ,2 # 
+462:BRAUNCOND,-4 # 
+463:SUBI,r2,r2,1 # 
+464:BRAGEZ,-9 # 
+465:SUBI,r13,r13,1 # 
+466:BRALEZ,2 # 
+467:BRAUNCOND,-12 # 
+468:SUBI,r15,r15,0 # 
+469:BRAZ,7 # 
+470:LOAD,r495,r482 # # Start ADD_PREFETCH_TO_STARTQ - read cmd_lst_enable_reg
+471:NOT,r4,r484 # 
+472:AND,r484,r485,r482 # 
+473:STORE,r495,r485 # #write to cmd_lst_enable_reg
+474:OR,r4,r482,r482 # 
+475:STORE,r495,r482 ## write to cmd_lst_enable_reg - End ADD_PREFETCH_TO_STARTQ  
+476:LOAD,r494,r481 # 
+477:AND,r481,r481,r4 # 
+478:BRAZ,2 # 
+479:BRAUNCOND,-3 # 
+480:LOAD,r493,r482 # 
+481:NOT,r4,r484 # # read op_dma_cmd_lst_enable_reg
+482:AND,r484,r485,r482 # 
+483:STORE,r493,r485 ## write op_dma_cmd_lst_enable_reg 
+484:OR,r4,r482,r482 # 
+485:STORE,r493,r482 # # End ADD_TO_STARTQ_ALL_XBARS - write op_dma_cmd_lst_enable_reg
+486:STOREI,r53,r38 # #Start SET_SIMD_BASE- write to simd_base_addr_reg
+487:ADDI,r53,r480,4 # 
+488:STOREI,r480,r18 # #write to simd_addr_mask_reg - End SET_SIMD_BASE 
+489:NOP # # Instruction not used in Assembly Generation
+490:MOV,r460,456 # # Start FORCED_CONTEXT SWITCH  
+491:MOV,r449,1 # 
+492:MOV,r480,960 # 
+493:OR,r480,r480,r492 # 
+494:MOV,r481,497 # 
+495:STORE,r480,r481 # #write to wake_vec_reg 
+496:BRAUNCOND,-433 # # End FORCED_CONTEXT SWITCH
+497:MOV,r480,960 # 
+498:OR,r480,r480,r492 # 
+499:MOV,r482,511 # 
+500:STORE,r480,r482 # # write to wake_vec_reg 
+501:LOAD,r480,r482 ##End SET_UP_WAKE_VEC - read wake_vec_reg
+502:MOV,r17,0 # 
+503:MOV,r25,1 # 
+504:MOV,r6,448 # 
+505:MOV,r460,464 #  # start CHECK_XBAR_LAYER 
+506:MOV,r449,0 # 
+507:NOP # 
+508:NOP # 
+509:HALT # 
+510:NOP # 
+511:MOV,r480,48 # 
+512:LOADI,r480,r484 # # read simd_lyr_cntrl_reg
+513:MOV,r480,4 # 
+514:LOADI,r480,r472 # # read mac_cmd_reg
+515:LRSHIFT,r472,r480,24 # 
+516:ANDI,r480,r21,255 # 
+517:ADDI,r21,r21,1 # 
+518:LLSHIFT,r21,r20,3 # 
+519:AND,r472,r39,r37 # 
+520:LRSHIFT,r484,r484,4 # 
+521:ANDI,r484,r32,8191 # 
+522:LRSHIFT,r32,r10,9 # # End CHECK_XBAR_LAYER 
+523:MOV,r480,44 # 
+524:LLSHIFT,r40,r481,13 # 
+525:OR,r32,r481,r481 # 
+526:STOREI,r480,r481 ## write simd_cmd2_reg 
+527:MOV,r480,0 # 
+528:ADD,r472,r482,r31 # 
+529:ADD,r482,r482,r33 # 
+530:STOREI,r480,r482 # # End Set_SIMD_MAC - write simd_cmd1_reg 
+531:ADD,r17,r17,r20 # 
+532:SUB,r6,r6,r21 # 
+533:BRALEZ,2 # 
+534:BRAUNCOND,-29 # 
+535:ADDI,r27,r27,1 # 
+536:MOV,r486,3584 # 
+537:ADD,r1,r1,r486 # 
+538:MOV,r486,33554431 # 
+539:AND,r1,r1,r486 # 
+540:MOV,r486,3584 # 
+541:ADD,r42,r42,r486 # 
+542:MOV,r6,0 # 
+543:MOV,r25,1 # 
+544:MOV,r20,1 # 
+545:LOAD,r496,r481 # # start CHECK_PREFETCH_DONE - read prefetch_dma_busy_reg 
+546:AND,r481,r481,r4 # 
+547:BRAZ,2 # 
+548:BRAUNCOND,-3 # #end CHECK_XBAR_DONE
+549:MOV,r480,12 # 
+550:LOADI,r480,r481 # #read simd_wbuf_addr_status_reg 
+551:ANDI,r481,r481,1 # 
+552:BRANZ,2 # 
+553:BRAUNCOND,-3 # End END_BLOCK 
+554:MOV,r480,1044 # 
+555:OR,r480,r480,r492 # 
+556:STORE,r480,r25 # # End INCREMENT_OBUF_COUNTER  
+557:MOV,r482,1048 ## Start SEND_SYNC_NEXT 
+558:OR,r482,r482,r492 # 
+559:STORE,r482,r25 # # End SEND_SYNC_NEXT
+560:SUBI,r20,r20,1 # 
+561:BRALEZ,2 # 
+562:BRAUNCOND,-13 # 
+563:ADDI,r35,r35,1 # 
+564:SUBI,r3,r3,1 # 
+565:BRALEZ,2 # 
+566:BRAUNCOND,-259 # 
+567:MOV,r28,1 # 
+568:MOV,r29,0 # 
+569:MOV,r30,1192 # 
+570:MOV,r31,0 # 
+571:MOV,r32,1 # 
+572:MOV,r33,48 # 
+573:MOV,r480,784 # 
+574:LLSHIFT,r480,r480,16 # 
+575:OR,r33,r33,r480 # 
+576:NOP ##Start SET_UP_NEXT 
+577:NOP # 
+578:NOP # 
+579:MOV,r460,148 # 
+580:MOV,r449,0 # 
+581:BRAUNCOND,-518 # #Branch to the same layer, instruction start location
+582:NOP # 
+583:NOP # 
+584:NOP # 
+585:NOP # 
+586:HALT # 
+587:NOP ##End SET_UP_NEXT 
+588:MOV,r65,0 # 
+589:MOV,r106,0 # 
+590:MOV,r112,0 # 
+591:MOV,r118,0 # 
+592:MOV,r480,0 # 
+593:LLSHIFT,r480,r480,16 # 
+594:OR,r118,r118,r480 # 
+595:MOV,r107,0 # 
+596:MOV,r113,0 # 
+597:MOV,r119,0 # 
+598:MOV,r480,0 # 
+599:LLSHIFT,r480,r480,16 # 
+600:OR,r119,r119,r480 # 
+601:MOV,r108,0 # 
+602:MOV,r114,0 # 
+603:MOV,r120,0 # 
+604:MOV,r480,0 # 
+605:LLSHIFT,r480,r480,16 # 
+606:OR,r120,r120,r480 # 
+607:MOV,r109,0 # 
+608:MOV,r115,0 # 
+609:MOV,r121,0 # 
+610:MOV,r480,0 # 
+611:LLSHIFT,r480,r480,16 # 
+612:OR,r121,r121,r480 # 
+613:MOV,r480,33184 ##Start READ_FROM_SCRATCH
+614:MOV,r481,208 # 
+615:OR,r481,r481,r492 # 
+616:STORE,r481,r480 # write process_memory_addr
+617:MOV,r481,212 # 
+618:OR,r481,r481,r492 # 
+619:LOAD,r481,r106 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+620:MOV,r480,33188 ##Start READ_FROM_SCRATCH
+621:MOV,r481,208 # 
+622:OR,r481,r481,r492 # 
+623:STORE,r481,r480 # write process_memory_addr
+624:MOV,r481,212 # 
+625:OR,r481,r481,r492 # 
+626:LOAD,r481,r112 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+627:MOV,r480,33192 ##Start READ_FROM_SCRATCH
+628:MOV,r481,208 # 
+629:OR,r481,r481,r492 # 
+630:STORE,r481,r480 # write process_memory_addr
+631:MOV,r481,212 # 
+632:OR,r481,r481,r492 # 
+633:LOAD,r481,r118 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+634:MOV,r480,33200 ##Start READ_FROM_SCRATCH
+635:MOV,r481,208 # 
+636:OR,r481,r481,r492 # 
+637:STORE,r481,r480 # write process_memory_addr
+638:MOV,r481,212 # 
+639:OR,r481,r481,r492 # 
+640:LOAD,r481,r107 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+641:MOV,r480,33204 ##Start READ_FROM_SCRATCH
+642:MOV,r481,208 # 
+643:OR,r481,r481,r492 # 
+644:STORE,r481,r480 # write process_memory_addr
+645:MOV,r481,212 # 
+646:OR,r481,r481,r492 # 
+647:LOAD,r481,r113 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+648:MOV,r480,33208 ##Start READ_FROM_SCRATCH
+649:MOV,r481,208 # 
+650:OR,r481,r481,r492 # 
+651:STORE,r481,r480 # write process_memory_addr
+652:MOV,r481,212 # 
+653:OR,r481,r481,r492 # 
+654:LOAD,r481,r119 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+655:MOV,r69,0 # 
+656:MOV,r86,2 # 
+657:MOV,r105,256 # 
+658:MOV,r89,0 # 
+659:MOV,r91,0 # 
+660:ADDI,r86,r484,0 # # Start SET_MULTICAST_ADDR
+661:SUBI,r484,r484,1 # 
+662:BRALEZ,69 # 
+663:ADDI,r105,r480,0 # 
+664:OR,r480,r480,r492 # 
+665:ADDI,r86,r484,1 # 
+666:SUBI,r91,r485,0 # 
+667:BRALEZ,8 # # Jump to first dest_detail
+668:SUBI,r91,r485,1 # 
+669:BRALEZ,19 # # Jump to second dest detail 
+670:SUBI,r91,r485,2 # 
+671:BRALEZ,31 # # Jump to third dest detail 
+672:SUBI,r91,r485,3 # 
+673:BRALEZ,43 # # Jumpt to fourth dest detail 
+674:BRAUNCOND,57 # 
+675:AND,r112,r481,r106 # 
+676:ADDI,r118,r481,0 # 
+677:SUBI,r484,r484,1 # 
+678:BRALEZ,4 # 
+679:ORI,r481,r481,1 # 
+680:ADDI,r484,r484,0 # 
+681:BRAUNCOND,2 # 
+682:MOV,r481,0 # 
+683:STORE,r480,r481 # 
+684:ADDI,r480,r481,4 # 
+685:STORE,r481,r112 # 
+686:ADDI,r480,r481,8 # 
+687:STORE,r481,r106 # 
+688:ADDI,r480,r486,16 # 
+689:AND,r113,r481,r107 # 
+690:ADDI,r119,r481,0 # 
+691:SUBI,r484,r484,1 # 
+692:BRALEZ,4 # 
+693:ORI,r481,r481,1 # 
+694:ADDI,r484,r484,0 # 
+695:BRAUNCOND,2 # 
+696:MOV,r481,0 # 
+697:STORE,r486,r481 # 
+698:ADDI,r486,r481,4 # 
+699:STORE,r481,r113 # 
+700:ADDI,r486,r481,8 # 
+701:STORE,r481,r107 # 
+702:ADDI,r480,r486,32 # 
+703:AND,r114,r481,r108 # 
+704:ADDI,r120,r481,0 # 
+705:SUBI,r484,r484,1 # 
+706:BRALEZ,4 # 
+707:ORI,r481,r481,1 # 
+708:ADDI,r484,r484,0 # 
+709:BRAUNCOND,2 # 
+710:MOV,r481,0 # 
+711:STORE,r486,r481 # 
+712:ADDI,r486,r481,4 # 
+713:STORE,r481,r114 # 
+714:ADDI,r486,r481,8 # 
+715:STORE,r481,r108 # 
+716:ADDI,r480,r486,48 # 
+717:AND,r115,r481,r109 # 
+718:ADDI,r121,r481,0 # 
+719:SUBI,r484,r484,1 # 
+720:BRALEZ,4 # 
+721:ORI,r481,r481,1 # 
+722:ADDI,r484,r484,0 # 
+723:BRAUNCOND,2 # 
+724:MOV,r481,0 # 
+725:STORE,r486,r481 # 
+726:ADDI,r486,r481,4 # 
+727:STORE,r481,r115 # 
+728:ADDI,r486,r481,8 # 
+729:STORE,r481,r109 # 
+730:NOP # # End SET_MULTICAST_ADDR
+731:MOV,r79,1 # 
+732:MOV,r82,1 # 
+733:MOV,r83,0 # 
+734:MOV,r102,0 # 
+735:MOV,r97,48 # 
+736:MOV,r480,784 # 
+737:LLSHIFT,r480,r480,16 # 
+738:OR,r97,r97,r480 # 
+739:MOV,r480,0 # # start STORE_TO_MEMORY 
+740:STORE,r97,r480 # # end STORE_TO_MEMORY - write data to address
+741:MOV,r64,3584 # 
+742:MOV,r87,8 # 
+743:MOV,r97,1 # 
+744:MOV,r104,2113 # 
+745:MOV,r94,1 # 
+746:MOV,r66,0 # 
+747:MOV,r122,0 # 
+748:MOV,r480,0 # 
+749:LLSHIFT,r480,r480,16 # 
+750:OR,r122,r122,r480 # 
+751:MOV,r110,65535 # 
+752:MOV,r480,511 # 
+753:LLSHIFT,r480,r480,16 # 
+754:OR,r110,r110,r480 # 
+755:MOV,r117,80 # 
+756:MOV,r100,0 # 
+757:MOV,r68,8976 # 
+758:MOV,r73,64 # 
+759:MOV,r83,0 # 
+760:MOV,r97,0 # 
+761:ADDI,r68,r480,0 ## Start SET_LYR_REG 
+762:OR,r480,r480,r492 # 
+763:STORE,r480,r83 # # write to addr_mask_reg
+764:ADDI,r480,r483,4 # 
+765:STORE,r483,r83 # # write to base_addr_reg
+766:LLSHIFT,r83,r482,16 # 
+767:OR,r482,r482,r73 # 
+768:ADDI,r480,r483,8 # 
+769:STORE,r483,r482 # #wite to addr_stp_reg
+770:MOV,r480,8228 # 
+771:OR,r480,r480,r492 # 
+772:LOAD,r480,r481 # 
+773:OR,r481,r481,r97 # 
+774:STORE,r480,r481 # # end SET_OUTPUT_LYR_REG - write to xbar_grp_reg
+775:MOV,r68,13072 # 
+776:MOV,r73,64 # 
+777:ADDI,r68,r480,0 ## Start SET_LYR_REG 
+778:OR,r480,r480,r492 # 
+779:LLSHIFT,r83,r482,16 # 
+780:OR,r482,r482,r73 # 
+781:ADDI,r480,r483,8 # 
+782:STORE,r483,r482 # #write to address_step_reg 
+783:MOV,r480,12324 # 
+784:OR,r480,r480,r492 # 
+785:LOAD,r480,r481 # 
+786:OR,r481,r481,r97 # 
+787:STORE,r480,r481 ## end SET_PREFETCH_LYR_REGS - write to prefetch_grp_reg
+788:MOV,r68,2 # 
+789:MOV,r66,0 # 
+790:MOV,r97,16777215 # 
+791:MOV,r480,8224 ## Start SET_HORSPLIT_REG
+792:OR,r480,r480,r492 # 
+793:LOAD,r480,r481 ##load split_group_reg 
+794:OR,r481,r481,r66 # 
+795:STORE,r480,r481 ## End SET_HORSPLIT_REG 
+796:MOV,r78,1 # 
+797:MOV,r97,170 # 
+798:MOV,r66,0 # 
+799:MOV,r480,0 # 
+800:LLSHIFT,r480,r480,16 # 
+801:OR,r66,r66,r480 # 
+802:MOV,r67,528 # 
+803:ADDI,r67,r480,0 # 
+804:OR,r480,r480,r492 # 
+805:STORE,r480,r78 # #write to colgrp_reg 
+806:ADDI,r480,r480,4 # 
+807:STORE,r480,r97 # # write to colsign_reg 
+808:ADDI,r480,r480,4 # 
+809:STORE,r480,r66 # # End SET_COL_GRP_REGS - write to colshift_reg
+810:MOV,r90,64 # 
+811:MOV,r97,3584 # 
+812:MOV,r75,1 # 
+813:MOV,r124,0 # 
+814:MOV,r480,544 # 
+815:LLSHIFT,r480,r480,16 # 
+816:OR,r124,r124,r480 # 
+817:MOV,r125,65535 # 
+818:MOV,r480,3 # 
+819:LLSHIFT,r480,r480,16 # 
+820:OR,r125,r125,r480 # 
+821:MOV,r126,13072 # 
+822:ADDI,r126,r480,0 ## Start SET_PREFETCH_REGS
+823:OR,r480,r480,r492 # 
+824:STORE,r480,r125 # # write to addr_mask_reg
+825:ADDI,r480,r483,4 # 
+826:STORE,r483,r124 # # end SET_PRFETCH_LYR_REG- write to base_addr_reg
+827:MOV,r111,9344 # 
+828:MOV,r66,1 # 
+829:MOV,r78,512 # 
+830:OR,r111,r480,r492 ## Start SET_OUT_XBAR_REGS 
+831:ADDI,r480,r481,20 # 
+832:ADDI,r94,r482,0 # 
+833:LLSHIFT,r78,r483,16 # 
+834:OR,r482,r482,r483 # 
+835:STORE,r481,r482 # #write to mac blk mb_config_reg
+836:ADDI,r480,r485,0 # 
+837:LLSHIFT,r75,r481,16 # 
+838:OR,r90,r481,r481 # 
+839:STORE,r485,r481 ## write to mac blk bt_size_reg 
+840:ADDI,r480,r481,28 # 
+841:LLSHIFT,r100,r482,31 # 
+842:OR,r97,r482,r482 # 
+843:STORE,r481,r482 # # End SET_OUT_XBAR_REGS - write to mac blk row_step_reg
+844:MOV,r111,13440 # 
+845:OR,r111,r480,r492 # 
+846:ADDI,r480,r481,20 # 
+847:MOV,r482,0 # 
+848:LLSHIFT,r482,r482,4 # 
+849:OR,r94,r482,r482 # 
+850:STORE,r481,r482 # # write to mb_config_reg
+851:ADDI,r480,r485,0 # 
+852:ADDI,r90,r481,0 # 
+853:STORE,r485,r481 # #write to mb_bt_size_reg
+854:ADDI,r480,r481,28 # 
+855:LLSHIFT,r100,r482,31 # 
+856:OR,r482,r482,r97 # 
+857:STORE,r481,r482 ## End SET_OUT_PREFETCH_REGS - write to mb_row_step_reg 
+858:MOV,r78,9216 # 
+859:MOV,r111,13312 # 
+860:MOV,r66,1 # 
+861:SUBI,r66,r66,0 # 
+862:BRAZ,6 # 
+863:ADDI,r78,r78,128 # 
+864:ADDI,r111,r111,128 # 
+865:SUBI,r66,r66,1 # 
+866:BRALEZ,2 # 
+867:BRAUNCOND,-4 # 
+868:MOV,r97,0 # 
+869:MOV,r75,2 # 
+870:MOV,r123,1 # 
+871:MOV,r101,65535 # 
+872:MOV,r480,255 # 
+873:LLSHIFT,r480,r480,16 # 
+874:OR,r101,r101,r480 # 
+875:MOV,r99,0 # 
+876:MOV,r67,56 # 
+877:NOP # # Instruction not used in Assembly Generation
+878:MOV,r81,0 # 
+879:ADDI,r78,r88,0 # 
+880:MOV,r91,64 # 
+881:MOV,r74,1 # 
+882:ADDI,r111,r98,0 # 
+883:MOV,r86,2 # 
+884:MOV,r95,0 # 
+885:MOV,r76,0 # 
+886:MOV,r69,0 # 
+887:MOV,r105,256 # 
+888:MOV,r480,32992 ##Start READ_FROM_SCRATCH
+889:MOV,r481,208 # 
+890:OR,r481,r481,r492 # 
+891:STORE,r481,r480 # write process_memory_addr
+892:MOV,r481,212 # 
+893:OR,r481,r481,r492 # 
+894:LOAD,r481,r102 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+895:MOV,r82,65535 # 
+896:MOV,r480,3 # 
+897:LLSHIFT,r480,r480,16 # 
+898:OR,r82,r82,r480 # 
+899:MOV,r72,0 # 
+900:MOV,r92,0 # 
+901:MOV,r116,1 # 
+902:SUBI,r116,r116,0 # 
+903:BRAZ,3 # 
+904:MOV,r97,0 # 
+905:NOP # # Instruction not used in Assembly Generation
+906:MOV,r116,0 # 
+907:SUBI,r116,r116,0 # 
+908:BRAZ,73 # 
+909:MOV,r74,0 # 
+910:MOV,r93,0 # 
+911:MOV,r70,0 # 
+912:NOP # # Instruction not used in Assembly Generation
+913:MOV,r85,1 # 
+914:ADDI,r88,r480,0 # 
+915:OR,r480,r480,r492 # 
+916:ADDI,r480,r485,32 # 
+917:ADDI,r93,r481,0 # 
+918:LLSHIFT,r481,r481,16 # 
+919:ORI,r481,r481,1 # 
+920:STORE,r485,r481 # #write to cmd_wd0_reg
+921:ADD,r65,r481,r81 # 
+922:AND,r481,r481,r110 # 
+923:ADDI,r485,r485,4 # 
+924:STORE,r485,r481 # # end SET_XBAR_WIDTH_SPLIT_REG - write to cmd_wd1_reg
+925:MOV,r486,1 # 
+926:LLSHIFTREG,r486,r486,r74 # 
+927:LOAD,r493,r482 ## read output_dma_cmd_lst_enable_reg 
+928:NOT,r486,r484 # 
+929:AND,r484,r485,r482 # 
+930:STORE,r493,r485 ## write to output_dma_cmd_lst_enable_reg 
+931:OR,r486,r482,r482 # 
+932:STORE,r493,r482 ## write to output_dma_cmd_lst_enable_reg - End ADD_XBAR_TO_STARTQ  
+933:STOREI,r117,r102 # #Start SET_SIMD_BASE- write to simd_base_addr_reg
+934:ADDI,r117,r480,4 # 
+935:STOREI,r480,r82 # #write to simd_addr_mask_reg - End SET_SIMD_BASE 
+936:ADD,r65,r65,r93 # 
+937:MOV,r486,33554431 # 
+938:AND,r65,r65,r486 # 
+939:NOP # # Instruction not used in Assembly Generation
+940:MOV,r461,903 # # Start FORCED_CONTEXT SWITCH  
+941:MOV,r449,2 # 
+942:MOV,r480,964 # 
+943:OR,r480,r480,r492 # 
+944:MOV,r481,947 # 
+945:STORE,r480,r481 # #write to wake_vec_reg 
+946:BRAUNCOND,-883 # # End FORCED_CONTEXT SWITCH
+947:MOV,r480,964 # 
+948:OR,r480,r480,r492 # 
+949:MOV,r482,958 # 
+950:STORE,r480,r482 # # write to wake_vec_reg 
+951:LOAD,r480,r482 ##End SET_UP_WAKE_VEC - read wake_vec_reg
+952:MOV,r461,908 #  # start CHECK_XBAR_LAYER 
+953:MOV,r449,1 # 
+954:NOP # 
+955:NOP # 
+956:HALT # 
+957:NOP # 
+958:MOV,r480,48 # 
+959:LOADI,r480,r484 # # read simd_lyr_cntrl_reg
+960:MOV,r480,4 # 
+961:LOADI,r480,r472 # # read mac_cmd_reg
+962:LRSHIFT,r472,r480,24 # 
+963:ANDI,r480,r77,255 # 
+964:ADDI,r77,r77,1 # 
+965:LLSHIFT,r77,r93,3 # 
+966:AND,r472,r96,r101 # 
+967:LRSHIFT,r484,r484,4 # 
+968:ANDI,r484,r80,8191 # 
+969:LRSHIFT,r80,r84,9 # # End CHECK_XBAR_LAYER 
+970:MOV,r480,44 # 
+971:LLSHIFT,r104,r481,13 # 
+972:OR,r80,r481,r481 # 
+973:STOREI,r480,r481 ## write simd_cmd2_reg 
+974:MOV,r480,0 # 
+975:ADD,r472,r482,r95 # 
+976:ADD,r482,r482,r97 # 
+977:STOREI,r480,r482 # # End Set_SIMD_MAC - write simd_cmd1_reg 
+978:MOV,r486,3584 # 
+979:SUB,r93,r93,r486 # 
+980:BRAGEZ,130 # 
+981:ADDI,r111,r116,0 # 
+982:MOV,r70,512 # 
+983:MOV,r80,1 # 
+984:MOV,r77,1 # 
+985:MOV,r85,1 # 
+986:SUBI,r99,r99,0 # 
+987:BRANZ,51 # 
+988:MOV,r84,0 # 
+989:MOV,r66,0 # 
+990:MOV,r93,3584 # 
+991:MOV,r73,64 # 
+992:NOP # # Instruction not used in Assembly Generation
+993:SUBI,r79,r79,0 # 
+994:BRAZ,19 # 
+995:MOV,r89,3584 # 
+996:NOP # # Instruction not used in Assembly Generation
+997:LOAD,r496,r481 # 
+998:AND,r481,r481,r68 # 
+999:BRAZ,2 # 
+1000:BRAUNCOND,-3 # #Check for prefetch_dma_busy
+1001:ADDI,r98,r480,0 # 
+1002:OR,r480,r480,r492 # 
+1003:ADDI,r480,r480,32 # 
+1004:ADDI,r93,r482,0 # 
+1005:LLSHIFT,r482,r482,16 # 
+1006:ORI,r482,r482,1 # 
+1007:STORE,r480,r482 # # write to cmd_wd0_reg 
+1008:ADD,r65,r481,r81 # 
+1009:AND,r481,r481,r125 # 
+1010:ADDI,r480,r480,4 # 
+1011:STORE,r480,r481 # # End PREFETCH - write to cmd_wd1_reg
+1012:ADDI,r98,r98,128 # 
+1013:MOV,r89,0 # 
+1014:ADDI,r88,r480,0 # 
+1015:OR,r480,r480,r492 # 
+1016:ADDI,r480,r485,32 # 
+1017:ADDI,r93,r481,0 # 
+1018:LLSHIFT,r481,r481,16 # 
+1019:ORI,r481,r481,1 # 
+1020:STORE,r485,r481 # #write to cmd_wd0_reg
+1021:ADD,r65,r481,r81 # 
+1022:AND,r481,r481,r110 # 
+1023:ADDI,r485,r485,4 # 
+1024:STORE,r485,r481 # # end SET_XBAR_WIDTH_SPLIT_REG - write to cmd_wd1_reg
+1025:ADDI,r74,r74,1 # 
+1026:ADDI,r84,r84,1 # 
+1027:MOV,r89,1 # 
+1028:ADDI,r88,r88,128 # 
+1029:ADDI,r70,r70,512 # 
+1030:SUBI,r89,r89,1 # 
+1031:BRALEZ,2 # 
+1032:BRAUNCOND,-4 # 
+1033:SUBI,r66,r66,1 # 
+1034:BRAGEZ,-9 # 
+1035:SUBI,r77,r77,1 # 
+1036:BRALEZ,2 # 
+1037:BRAUNCOND,-12 # 
+1038:SUBI,r79,r79,0 # 
+1039:BRAZ,7 # 
+1040:LOAD,r495,r482 # # Start ADD_PREFETCH_TO_STARTQ - read cmd_lst_enable_reg
+1041:NOT,r68,r484 # 
+1042:AND,r484,r485,r482 # 
+1043:STORE,r495,r485 # #write to cmd_lst_enable_reg
+1044:OR,r68,r482,r482 # 
+1045:STORE,r495,r482 ## write to cmd_lst_enable_reg - End ADD_PREFETCH_TO_STARTQ  
+1046:LOAD,r494,r481 # 
+1047:AND,r481,r481,r68 # 
+1048:BRAZ,2 # 
+1049:BRAUNCOND,-3 # 
+1050:LOAD,r493,r482 # 
+1051:NOT,r68,r484 # # read op_dma_cmd_lst_enable_reg
+1052:AND,r484,r485,r482 # 
+1053:STORE,r493,r485 ## write op_dma_cmd_lst_enable_reg 
+1054:OR,r68,r482,r482 # 
+1055:STORE,r493,r482 # # End ADD_TO_STARTQ_ALL_XBARS - write op_dma_cmd_lst_enable_reg
+1056:STOREI,r117,r102 # #Start SET_SIMD_BASE- write to simd_base_addr_reg
+1057:ADDI,r117,r480,4 # 
+1058:STOREI,r480,r82 # #write to simd_addr_mask_reg - End SET_SIMD_BASE 
+1059:NOP # # Instruction not used in Assembly Generation
+1060:MOV,r461,1023 # # Start FORCED_CONTEXT SWITCH  
+1061:MOV,r449,2 # 
+1062:MOV,r480,964 # 
+1063:OR,r480,r480,r492 # 
+1064:MOV,r481,1067 # 
+1065:STORE,r480,r481 # #write to wake_vec_reg 
+1066:BRAUNCOND,-1003 # # End FORCED_CONTEXT SWITCH
+1067:MOV,r480,964 # 
+1068:OR,r480,r480,r492 # 
+1069:MOV,r482,1081 # 
+1070:STORE,r480,r482 # # write to wake_vec_reg 
+1071:LOAD,r480,r482 ##End SET_UP_WAKE_VEC - read wake_vec_reg
+1072:MOV,r81,0 # 
+1073:MOV,r89,1 # 
+1074:MOV,r70,448 # 
+1075:MOV,r461,1031 #  # start CHECK_XBAR_LAYER 
+1076:MOV,r449,1 # 
+1077:NOP # 
+1078:NOP # 
+1079:HALT # 
+1080:NOP # 
+1081:MOV,r480,48 # 
+1082:LOADI,r480,r484 # # read simd_lyr_cntrl_reg
+1083:MOV,r480,4 # 
+1084:LOADI,r480,r472 # # read mac_cmd_reg
+1085:LRSHIFT,r472,r480,24 # 
+1086:ANDI,r480,r85,255 # 
+1087:ADDI,r85,r85,1 # 
+1088:LLSHIFT,r85,r84,3 # 
+1089:AND,r472,r103,r101 # 
+1090:LRSHIFT,r484,r484,4 # 
+1091:ANDI,r484,r96,8191 # 
+1092:LRSHIFT,r96,r74,9 # # End CHECK_XBAR_LAYER 
+1093:MOV,r480,44 # 
+1094:LLSHIFT,r104,r481,13 # 
+1095:OR,r96,r481,r481 # 
+1096:STOREI,r480,r481 ## write simd_cmd2_reg 
+1097:MOV,r480,0 # 
+1098:ADD,r472,r482,r95 # 
+1099:ADD,r482,r482,r97 # 
+1100:STOREI,r480,r482 # # End Set_SIMD_MAC - write simd_cmd1_reg 
+1101:ADD,r81,r81,r84 # 
+1102:SUB,r70,r70,r85 # 
+1103:BRALEZ,2 # 
+1104:BRAUNCOND,-29 # 
+1105:ADDI,r91,r91,2 # 
+1106:MOV,r486,3584 # 
+1107:ADD,r65,r65,r486 # 
+1108:MOV,r486,33554431 # 
+1109:AND,r65,r65,r486 # 
+1110:MOV,r486,3584 # 
+1111:ADD,r106,r106,r486 # 
+1112:MOV,r70,9502720 # 
+1113:MOV,r486,3584 # 
+1114:ADD,r107,r107,r486 # 
+1115:MOV,r70,20185088 # 
+1116:MOV,r486,3584 # 
+1117:ADD,r124,r124,r486 # 
+1118:MOV,r89,2 # 
+1119:MOV,r84,1 # 
+1120:LOAD,r496,r481 # # start CHECK_PREFETCH_DONE - read prefetch_dma_busy_reg 
+1121:AND,r481,r481,r68 # 
+1122:BRAZ,2 # 
+1123:BRAUNCOND,-3 # #end CHECK_XBAR_DONE
+1124:MOV,r480,12 # 
+1125:LOADI,r480,r481 # #read simd_wbuf_addr_status_reg 
+1126:ANDI,r481,r481,1 # 
+1127:BRANZ,2 # 
+1128:BRAUNCOND,-3 # End END_BLOCK 
+1129:MOV,r480,1044 # 
+1130:OR,r480,r480,r492 # 
+1131:STORE,r480,r89 # # End INCREMENT_OBUF_COUNTER  
+1132:MOV,r482,1048 ## Start SEND_SYNC_NEXT 
+1133:OR,r482,r482,r492 # 
+1134:STORE,r482,r89 # # End SEND_SYNC_NEXT
+1135:SUBI,r84,r84,1 # 
+1136:BRALEZ,2 # 
+1137:BRAUNCOND,-13 # 
+1138:ADDI,r99,r99,0 # 
+1139:SUBI,r67,r67,1 # 
+1140:BRALEZ,2 # 
+1141:BRAUNCOND,-264 # 
+1142:MOV,r92,2 # 
+1143:MOV,r93,1 # 
+1144:MOV,r94,1304 # 
+1145:MOV,r95,1 # 
+1146:MOV,r96,1 # 
+1147:MOV,r97,48 # 
+1148:MOV,r480,784 # 
+1149:LLSHIFT,r480,r480,16 # 
+1150:OR,r97,r97,r480 # 
+1151:NOP ##Start SET_UP_NEXT 
+1152:NOP # 
+1153:NOP # 
+1154:MOV,r461,687 # 
+1155:MOV,r449,1 # 
+1156:BRAUNCOND,-1093 # #Branch to the same layer, instruction start location
+1157:NOP # 
+1158:NOP # 
+1159:NOP # 
+1160:NOP # 
+1161:HALT # 
+1162:NOP ##End SET_UP_NEXT 
+1163:MOV,r129,0 # 
+1164:MOV,r170,0 # 
+1165:MOV,r176,0 # 
+1166:MOV,r182,0 # 
+1167:MOV,r480,0 # 
+1168:LLSHIFT,r480,r480,16 # 
+1169:OR,r182,r182,r480 # 
+1170:MOV,r171,0 # 
+1171:MOV,r177,0 # 
+1172:MOV,r183,0 # 
+1173:MOV,r480,0 # 
+1174:LLSHIFT,r480,r480,16 # 
+1175:OR,r183,r183,r480 # 
+1176:MOV,r172,0 # 
+1177:MOV,r178,0 # 
+1178:MOV,r184,0 # 
+1179:MOV,r480,0 # 
+1180:LLSHIFT,r480,r480,16 # 
+1181:OR,r184,r184,r480 # 
+1182:MOV,r173,0 # 
+1183:MOV,r179,0 # 
+1184:MOV,r185,0 # 
+1185:MOV,r480,0 # 
+1186:LLSHIFT,r480,r480,16 # 
+1187:OR,r185,r185,r480 # 
+1188:MOV,r480,33248 ##Start READ_FROM_SCRATCH
+1189:MOV,r481,208 # 
+1190:OR,r481,r481,r492 # 
+1191:STORE,r481,r480 # write process_memory_addr
+1192:MOV,r481,212 # 
+1193:OR,r481,r481,r492 # 
+1194:LOAD,r481,r170 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+1195:MOV,r480,33252 ##Start READ_FROM_SCRATCH
+1196:MOV,r481,208 # 
+1197:OR,r481,r481,r492 # 
+1198:STORE,r481,r480 # write process_memory_addr
+1199:MOV,r481,212 # 
+1200:OR,r481,r481,r492 # 
+1201:LOAD,r481,r176 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+1202:MOV,r480,33256 ##Start READ_FROM_SCRATCH
+1203:MOV,r481,208 # 
+1204:OR,r481,r481,r492 # 
+1205:STORE,r481,r480 # write process_memory_addr
+1206:MOV,r481,212 # 
+1207:OR,r481,r481,r492 # 
+1208:LOAD,r481,r182 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+1209:MOV,r133,1 # 
+1210:MOV,r150,1 # 
+1211:MOV,r169,320 # 
+1212:MOV,r153,0 # 
+1213:MOV,r155,0 # 
+1214:ADDI,r150,r484,0 # # Start SET_MULTICAST_ADDR
+1215:SUBI,r484,r484,1 # 
+1216:BRALEZ,69 # 
+1217:ADDI,r169,r480,0 # 
+1218:OR,r480,r480,r492 # 
+1219:ADDI,r150,r484,1 # 
+1220:SUBI,r155,r485,0 # 
+1221:BRALEZ,8 # # Jump to first dest_detail
+1222:SUBI,r155,r485,1 # 
+1223:BRALEZ,19 # # Jump to second dest detail 
+1224:SUBI,r155,r485,2 # 
+1225:BRALEZ,31 # # Jump to third dest detail 
+1226:SUBI,r155,r485,3 # 
+1227:BRALEZ,43 # # Jumpt to fourth dest detail 
+1228:BRAUNCOND,57 # 
+1229:AND,r176,r481,r170 # 
+1230:ADDI,r182,r481,0 # 
+1231:SUBI,r484,r484,1 # 
+1232:BRALEZ,4 # 
+1233:ORI,r481,r481,1 # 
+1234:ADDI,r484,r484,0 # 
+1235:BRAUNCOND,2 # 
+1236:MOV,r481,0 # 
+1237:STORE,r480,r481 # 
+1238:ADDI,r480,r481,4 # 
+1239:STORE,r481,r176 # 
+1240:ADDI,r480,r481,8 # 
+1241:STORE,r481,r170 # 
+1242:ADDI,r480,r486,16 # 
+1243:AND,r177,r481,r171 # 
+1244:ADDI,r183,r481,0 # 
+1245:SUBI,r484,r484,1 # 
+1246:BRALEZ,4 # 
+1247:ORI,r481,r481,1 # 
+1248:ADDI,r484,r484,0 # 
+1249:BRAUNCOND,2 # 
+1250:MOV,r481,0 # 
+1251:STORE,r486,r481 # 
+1252:ADDI,r486,r481,4 # 
+1253:STORE,r481,r177 # 
+1254:ADDI,r486,r481,8 # 
+1255:STORE,r481,r171 # 
+1256:ADDI,r480,r486,32 # 
+1257:AND,r178,r481,r172 # 
+1258:ADDI,r184,r481,0 # 
+1259:SUBI,r484,r484,1 # 
+1260:BRALEZ,4 # 
+1261:ORI,r481,r481,1 # 
+1262:ADDI,r484,r484,0 # 
+1263:BRAUNCOND,2 # 
+1264:MOV,r481,0 # 
+1265:STORE,r486,r481 # 
+1266:ADDI,r486,r481,4 # 
+1267:STORE,r481,r178 # 
+1268:ADDI,r486,r481,8 # 
+1269:STORE,r481,r172 # 
+1270:ADDI,r480,r486,48 # 
+1271:AND,r179,r481,r173 # 
+1272:ADDI,r185,r481,0 # 
+1273:SUBI,r484,r484,1 # 
+1274:BRALEZ,4 # 
+1275:ORI,r481,r481,1 # 
+1276:ADDI,r484,r484,0 # 
+1277:BRAUNCOND,2 # 
+1278:MOV,r481,0 # 
+1279:STORE,r486,r481 # 
+1280:ADDI,r486,r481,4 # 
+1281:STORE,r481,r179 # 
+1282:ADDI,r486,r481,8 # 
+1283:STORE,r481,r173 # 
+1284:NOP # # End SET_MULTICAST_ADDR
+1285:MOV,r143,0 # 
+1286:MOV,r146,1 # 
+1287:MOV,r147,0 # 
+1288:MOV,r166,0 # 
+1289:MOV,r161,48 # 
+1290:MOV,r480,784 # 
+1291:LLSHIFT,r480,r480,16 # 
+1292:OR,r161,r161,r480 # 
+1293:MOV,r480,0 # # start STORE_TO_MEMORY 
+1294:STORE,r161,r480 # # end STORE_TO_MEMORY - write data to address
+1295:MOV,r128,3584 # 
+1296:MOV,r151,8 # 
+1297:MOV,r161,1 # 
+1298:MOV,r168,121 # 
+1299:MOV,r158,2 # 
+1300:MOV,r130,0 # 
+1301:MOV,r186,0 # 
+1302:MOV,r480,0 # 
+1303:LLSHIFT,r480,r480,16 # 
+1304:OR,r186,r186,r480 # 
+1305:MOV,r174,65535 # 
+1306:MOV,r480,511 # 
+1307:LLSHIFT,r480,r480,16 # 
+1308:OR,r174,r174,r480 # 
+1309:MOV,r181,96 # 
+1310:MOV,r164,1 # 
+1311:MOV,r132,8992 # 
+1312:MOV,r137,128 # 
+1313:MOV,r147,0 # 
+1314:MOV,r161,0 # 
+1315:ADDI,r132,r480,0 ## Start SET_LYR_REG 
+1316:OR,r480,r480,r492 # 
+1317:STORE,r480,r147 # # write to addr_mask_reg
+1318:ADDI,r480,r483,4 # 
+1319:STORE,r483,r147 # # write to base_addr_reg
+1320:LLSHIFT,r147,r482,16 # 
+1321:OR,r482,r482,r137 # 
+1322:ADDI,r480,r483,8 # 
+1323:STORE,r483,r482 # #wite to addr_stp_reg
+1324:MOV,r480,8228 # 
+1325:OR,r480,r480,r492 # 
+1326:LOAD,r480,r481 # 
+1327:OR,r481,r481,r161 # 
+1328:STORE,r480,r481 # # end SET_OUTPUT_LYR_REG - write to xbar_grp_reg
+1329:MOV,r132,13088 # 
+1330:MOV,r137,128 # 
+1331:ADDI,r132,r480,0 ## Start SET_LYR_REG 
+1332:OR,r480,r480,r492 # 
+1333:LLSHIFT,r147,r482,16 # 
+1334:OR,r482,r482,r137 # 
+1335:ADDI,r480,r483,8 # 
+1336:STORE,r483,r482 # #write to address_step_reg 
+1337:MOV,r480,12324 # 
+1338:OR,r480,r480,r492 # 
+1339:LOAD,r480,r481 # 
+1340:OR,r481,r481,r161 # 
+1341:STORE,r480,r481 ## end SET_PREFETCH_LYR_REGS - write to prefetch_grp_reg
+1342:MOV,r132,4 # 
+1343:MOV,r130,0 # 
+1344:MOV,r161,16777215 # 
+1345:MOV,r480,8224 ## Start SET_HORSPLIT_REG
+1346:OR,r480,r480,r492 # 
+1347:LOAD,r480,r481 ##load split_group_reg 
+1348:OR,r481,r481,r130 # 
+1349:STORE,r480,r481 ## End SET_HORSPLIT_REG 
+1350:MOV,r142,1 # 
+1351:MOV,r161,170 # 
+1352:MOV,r130,4369 # 
+1353:MOV,r480,4369 # 
+1354:LLSHIFT,r480,r480,16 # 
+1355:OR,r130,r130,r480 # 
+1356:MOV,r131,544 # 
+1357:ADDI,r131,r480,0 # 
+1358:OR,r480,r480,r492 # 
+1359:STORE,r480,r142 # #write to colgrp_reg 
+1360:ADDI,r480,r480,4 # 
+1361:STORE,r480,r161 # # write to colsign_reg 
+1362:ADDI,r480,r480,4 # 
+1363:STORE,r480,r130 # # End SET_COL_GRP_REGS - write to colshift_reg
+1364:MOV,r154,128 # 
+1365:MOV,r161,3584 # 
+1366:MOV,r139,1 # 
+1367:MOV,r175,9472 # 
+1368:MOV,r130,2 # 
+1369:MOV,r142,1024 # 
+1370:OR,r175,r480,r492 ## Start SET_OUT_XBAR_REGS 
+1371:ADDI,r480,r481,20 # 
+1372:ADDI,r158,r482,0 # 
+1373:LLSHIFT,r142,r483,16 # 
+1374:OR,r482,r482,r483 # 
+1375:STORE,r481,r482 # #write to mac blk mb_config_reg
+1376:ADDI,r480,r485,0 # 
+1377:LLSHIFT,r139,r481,16 # 
+1378:OR,r154,r481,r481 # 
+1379:STORE,r485,r481 ## write to mac blk bt_size_reg 
+1380:ADDI,r480,r481,28 # 
+1381:LLSHIFT,r164,r482,31 # 
+1382:OR,r161,r482,r482 # 
+1383:STORE,r481,r482 # # End SET_OUT_XBAR_REGS - write to mac blk row_step_reg
+1384:MOV,r142,9216 # 
+1385:MOV,r175,13312 # 
+1386:MOV,r130,2 # 
+1387:SUBI,r130,r130,0 # 
+1388:BRAZ,6 # 
+1389:ADDI,r142,r142,128 # 
+1390:ADDI,r175,r175,128 # 
+1391:SUBI,r130,r130,1 # 
+1392:BRALEZ,2 # 
+1393:BRAUNCOND,-4 # 
+1394:MOV,r161,0 # 
+1395:MOV,r139,4 # 
+1396:MOV,r187,2 # 
+1397:MOV,r165,65535 # 
+1398:MOV,r480,255 # 
+1399:LLSHIFT,r480,r480,16 # 
+1400:OR,r165,r165,r480 # 
+1401:MOV,r163,0 # 
+1402:MOV,r131,28 # 
+1403:NOP # # Instruction not used in Assembly Generation
+1404:MOV,r145,0 # 
+1405:ADDI,r142,r152,0 # 
+1406:MOV,r155,128 # 
+1407:MOV,r138,2 # 
+1408:ADDI,r175,r162,0 # 
+1409:MOV,r150,1 # 
+1410:MOV,r159,0 # 
+1411:MOV,r140,0 # 
+1412:MOV,r133,1 # 
+1413:MOV,r169,320 # 
+1414:MOV,r480,33008 ##Start READ_FROM_SCRATCH
+1415:MOV,r481,208 # 
+1416:OR,r481,r481,r492 # 
+1417:STORE,r481,r480 # write process_memory_addr
+1418:MOV,r481,212 # 
+1419:OR,r481,r481,r492 # 
+1420:LOAD,r481,r166 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+1421:MOV,r146,32767 # 
+1422:MOV,r480,0 # 
+1423:LLSHIFT,r480,r480,16 # 
+1424:OR,r146,r146,r480 # 
+1425:MOV,r136,0 # 
+1426:MOV,r156,0 # 
+1427:MOV,r180,0 # 
+1428:SUBI,r180,r180,0 # 
+1429:BRAZ,3 # 
+1430:MOV,r161,0 # 
+1431:NOP # # Instruction not used in Assembly Generation
+1432:MOV,r180,0 # 
+1433:SUBI,r180,r180,0 # 
+1434:BRAZ,73 # 
+1435:MOV,r138,0 # 
+1436:MOV,r157,0 # 
+1437:MOV,r134,0 # 
+1438:NOP # # Instruction not used in Assembly Generation
+1439:MOV,r149,1 # 
+1440:ADDI,r152,r480,0 # 
+1441:OR,r480,r480,r492 # 
+1442:ADDI,r480,r485,32 # 
+1443:ADDI,r157,r481,0 # 
+1444:LLSHIFT,r481,r481,16 # 
+1445:ORI,r481,r481,1 # 
+1446:STORE,r485,r481 # #write to cmd_wd0_reg
+1447:ADD,r129,r481,r145 # 
+1448:AND,r481,r481,r174 # 
+1449:ADDI,r485,r485,4 # 
+1450:STORE,r485,r481 # # end SET_XBAR_WIDTH_SPLIT_REG - write to cmd_wd1_reg
+1451:MOV,r486,1 # 
+1452:LLSHIFTREG,r486,r486,r138 # 
+1453:LOAD,r493,r482 ## read output_dma_cmd_lst_enable_reg 
+1454:NOT,r486,r484 # 
+1455:AND,r484,r485,r482 # 
+1456:STORE,r493,r485 ## write to output_dma_cmd_lst_enable_reg 
+1457:OR,r486,r482,r482 # 
+1458:STORE,r493,r482 ## write to output_dma_cmd_lst_enable_reg - End ADD_XBAR_TO_STARTQ  
+1459:STOREI,r181,r166 # #Start SET_SIMD_BASE- write to simd_base_addr_reg
+1460:ADDI,r181,r480,4 # 
+1461:STOREI,r480,r146 # #write to simd_addr_mask_reg - End SET_SIMD_BASE 
+1462:ADD,r129,r129,r157 # 
+1463:MOV,r486,33554431 # 
+1464:AND,r129,r129,r486 # 
+1465:NOP # # Instruction not used in Assembly Generation
+1466:MOV,r462,1426 # # Start FORCED_CONTEXT SWITCH  
+1467:MOV,r449,3 # 
+1468:MOV,r480,968 # 
+1469:OR,r480,r480,r492 # 
+1470:MOV,r481,1473 # 
+1471:STORE,r480,r481 # #write to wake_vec_reg 
+1472:BRAUNCOND,-1409 # # End FORCED_CONTEXT SWITCH
+1473:MOV,r480,968 # 
+1474:OR,r480,r480,r492 # 
+1475:MOV,r482,1484 # 
+1476:STORE,r480,r482 # # write to wake_vec_reg 
+1477:LOAD,r480,r482 ##End SET_UP_WAKE_VEC - read wake_vec_reg
+1478:MOV,r462,1431 #  # start CHECK_XBAR_LAYER 
+1479:MOV,r449,2 # 
+1480:NOP # 
+1481:NOP # 
+1482:HALT # 
+1483:NOP # 
+1484:MOV,r480,48 # 
+1485:LOADI,r480,r484 # # read simd_lyr_cntrl_reg
+1486:MOV,r480,4 # 
+1487:LOADI,r480,r472 # # read mac_cmd_reg
+1488:LRSHIFT,r472,r480,24 # 
+1489:ANDI,r480,r141,255 # 
+1490:ADDI,r141,r141,1 # 
+1491:LLSHIFT,r141,r157,3 # 
+1492:AND,r472,r160,r165 # 
+1493:LRSHIFT,r484,r484,4 # 
+1494:ANDI,r484,r144,8191 # 
+1495:LRSHIFT,r144,r148,9 # # End CHECK_XBAR_LAYER 
+1496:MOV,r480,44 # 
+1497:LLSHIFT,r168,r481,13 # 
+1498:OR,r144,r481,r481 # 
+1499:STOREI,r480,r481 ## write simd_cmd2_reg 
+1500:MOV,r480,0 # 
+1501:ADD,r472,r482,r159 # 
+1502:ADD,r482,r482,r161 # 
+1503:STOREI,r480,r482 # # End Set_SIMD_MAC - write simd_cmd1_reg 
+1504:MOV,r486,3584 # 
+1505:SUB,r157,r157,r486 # 
+1506:BRAGEZ,130 # 
+1507:ADDI,r175,r180,0 # 
+1508:MOV,r134,1024 # 
+1509:MOV,r144,1 # 
+1510:MOV,r141,1 # 
+1511:MOV,r149,1 # 
+1512:SUBI,r163,r163,0 # 
+1513:BRANZ,51 # 
+1514:MOV,r148,0 # 
+1515:MOV,r130,0 # 
+1516:MOV,r157,3584 # 
+1517:MOV,r137,128 # 
+1518:NOP # # Instruction not used in Assembly Generation
+1519:SUBI,r143,r143,0 # 
+1520:BRAZ,19 # 
+1521:MOV,r153,3584 # 
+1522:NOP # # Instruction not used in Assembly Generation
+1523:LOAD,r496,r481 # 
+1524:AND,r481,r481,r132 # 
+1525:BRAZ,2 # 
+1526:BRAUNCOND,-3 # #Check for prefetch_dma_busy
+1527:ADDI,r162,r480,0 # 
+1528:OR,r480,r480,r492 # 
+1529:ADDI,r480,r480,32 # 
+1530:ADDI,r157,r482,0 # 
+1531:LLSHIFT,r482,r482,16 # 
+1532:ORI,r482,r482,1 # 
+1533:STORE,r480,r482 # # write to cmd_wd0_reg 
+1534:ADD,r129,r481,r145 # 
+1535:AND,r481,r481,r189 # 
+1536:ADDI,r480,r480,4 # 
+1537:STORE,r480,r481 # # End PREFETCH - write to cmd_wd1_reg
+1538:ADDI,r162,r162,128 # 
+1539:MOV,r153,0 # 
+1540:ADDI,r152,r480,0 # 
+1541:OR,r480,r480,r492 # 
+1542:ADDI,r480,r485,32 # 
+1543:ADDI,r157,r481,0 # 
+1544:LLSHIFT,r481,r481,16 # 
+1545:ORI,r481,r481,1 # 
+1546:STORE,r485,r481 # #write to cmd_wd0_reg
+1547:ADD,r129,r481,r145 # 
+1548:AND,r481,r481,r174 # 
+1549:ADDI,r485,r485,4 # 
+1550:STORE,r485,r481 # # end SET_XBAR_WIDTH_SPLIT_REG - write to cmd_wd1_reg
+1551:ADDI,r138,r138,1 # 
+1552:ADDI,r148,r148,1 # 
+1553:MOV,r153,1 # 
+1554:ADDI,r152,r152,128 # 
+1555:ADDI,r134,r134,512 # 
+1556:SUBI,r153,r153,1 # 
+1557:BRALEZ,2 # 
+1558:BRAUNCOND,-4 # 
+1559:SUBI,r130,r130,1 # 
+1560:BRAGEZ,-9 # 
+1561:SUBI,r141,r141,1 # 
+1562:BRALEZ,2 # 
+1563:BRAUNCOND,-12 # 
+1564:SUBI,r143,r143,0 # 
+1565:BRAZ,7 # 
+1566:LOAD,r495,r482 # # Start ADD_PREFETCH_TO_STARTQ - read cmd_lst_enable_reg
+1567:NOT,r132,r484 # 
+1568:AND,r484,r485,r482 # 
+1569:STORE,r495,r485 # #write to cmd_lst_enable_reg
+1570:OR,r132,r482,r482 # 
+1571:STORE,r495,r482 ## write to cmd_lst_enable_reg - End ADD_PREFETCH_TO_STARTQ  
+1572:LOAD,r494,r481 # 
+1573:AND,r481,r481,r132 # 
+1574:BRAZ,2 # 
+1575:BRAUNCOND,-3 # 
+1576:LOAD,r493,r482 # 
+1577:NOT,r132,r484 # # read op_dma_cmd_lst_enable_reg
+1578:AND,r484,r485,r482 # 
+1579:STORE,r493,r485 ## write op_dma_cmd_lst_enable_reg 
+1580:OR,r132,r482,r482 # 
+1581:STORE,r493,r482 # # End ADD_TO_STARTQ_ALL_XBARS - write op_dma_cmd_lst_enable_reg
+1582:STOREI,r181,r166 # #Start SET_SIMD_BASE- write to simd_base_addr_reg
+1583:ADDI,r181,r480,4 # 
+1584:STOREI,r480,r146 # #write to simd_addr_mask_reg - End SET_SIMD_BASE 
+1585:NOP # # Instruction not used in Assembly Generation
+1586:MOV,r462,1546 # # Start FORCED_CONTEXT SWITCH  
+1587:MOV,r449,3 # 
+1588:MOV,r480,968 # 
+1589:OR,r480,r480,r492 # 
+1590:MOV,r481,1593 # 
+1591:STORE,r480,r481 # #write to wake_vec_reg 
+1592:BRAUNCOND,-1529 # # End FORCED_CONTEXT SWITCH
+1593:MOV,r480,968 # 
+1594:OR,r480,r480,r492 # 
+1595:MOV,r482,1607 # 
+1596:STORE,r480,r482 # # write to wake_vec_reg 
+1597:LOAD,r480,r482 ##End SET_UP_WAKE_VEC - read wake_vec_reg
+1598:MOV,r145,0 # 
+1599:MOV,r153,1 # 
+1600:MOV,r134,448 # 
+1601:MOV,r462,1554 #  # start CHECK_XBAR_LAYER 
+1602:MOV,r449,2 # 
+1603:NOP # 
+1604:NOP # 
+1605:HALT # 
+1606:NOP # 
+1607:MOV,r480,48 # 
+1608:LOADI,r480,r484 # # read simd_lyr_cntrl_reg
+1609:MOV,r480,4 # 
+1610:LOADI,r480,r472 # # read mac_cmd_reg
+1611:LRSHIFT,r472,r480,24 # 
+1612:ANDI,r480,r149,255 # 
+1613:ADDI,r149,r149,1 # 
+1614:LLSHIFT,r149,r148,3 # 
+1615:AND,r472,r167,r165 # 
+1616:LRSHIFT,r484,r484,4 # 
+1617:ANDI,r484,r160,8191 # 
+1618:LRSHIFT,r160,r138,9 # # End CHECK_XBAR_LAYER 
+1619:MOV,r480,44 # 
+1620:LLSHIFT,r168,r481,13 # 
+1621:OR,r160,r481,r481 # 
+1622:STOREI,r480,r481 ## write simd_cmd2_reg 
+1623:MOV,r480,0 # 
+1624:ADD,r472,r482,r159 # 
+1625:ADD,r482,r482,r161 # 
+1626:STOREI,r480,r482 # # End Set_SIMD_MAC - write simd_cmd1_reg 
+1627:ADD,r145,r145,r148 # 
+1628:SUB,r134,r134,r149 # 
+1629:BRALEZ,2 # 
+1630:BRAUNCOND,-29 # 
+1631:ADDI,r155,r155,1 # 
+1632:MOV,r486,3584 # 
+1633:ADD,r129,r129,r486 # 
+1634:MOV,r486,33554431 # 
+1635:AND,r129,r129,r486 # 
+1636:MOV,r486,3584 # 
+1637:ADD,r170,r170,r486 # 
+1638:MOV,r134,0 # 
+1639:MOV,r153,4 # 
+1640:MOV,r148,1 # 
+1641:LOAD,r496,r481 # # start CHECK_PREFETCH_DONE - read prefetch_dma_busy_reg 
+1642:AND,r481,r481,r132 # 
+1643:BRAZ,2 # 
+1644:BRAUNCOND,-3 # #end CHECK_XBAR_DONE
+1645:MOV,r480,12 # 
+1646:LOADI,r480,r481 # #read simd_wbuf_addr_status_reg 
+1647:ANDI,r481,r481,1 # 
+1648:BRANZ,2 # 
+1649:BRAUNCOND,-3 # End END_BLOCK 
+1650:MOV,r480,1044 # 
+1651:OR,r480,r480,r492 # 
+1652:STORE,r480,r153 # # End INCREMENT_OBUF_COUNTER  
+1653:MOV,r482,1048 ## Start SEND_SYNC_NEXT 
+1654:OR,r482,r482,r492 # 
+1655:STORE,r482,r153 # # End SEND_SYNC_NEXT
+1656:SUBI,r148,r148,1 # 
+1657:BRALEZ,2 # 
+1658:BRAUNCOND,-13 # 
+1659:ADDI,r163,r163,1 # 
+1660:SUBI,r131,r131,1 # 
+1661:BRALEZ,2 # 
+1662:BRAUNCOND,-259 # 
+1663:MOV,r156,4 # 
+1664:MOV,r157,2 # 
+1665:MOV,r158,1416 # 
+1666:MOV,r159,2 # 
+1667:MOV,r160,1 # 
+1668:MOV,r161,48 # 
+1669:MOV,r480,784 # 
+1670:LLSHIFT,r480,r480,16 # 
+1671:OR,r161,r161,r480 # 
+1672:NOP ##Start SET_UP_NEXT 
+1673:NOP # 
+1674:NOP # 
+1675:MOV,r462,1238 # 
+1676:MOV,r449,2 # 
+1677:BRAUNCOND,-1614 # #Branch to the same layer, instruction start location
+1678:NOP # 
+1679:NOP # 
+1680:NOP # 
+1681:NOP # 
+1682:HALT # 
+1683:NOP ##End SET_UP_NEXT 
+1684:MOV,r193,0 # 
+1685:MOV,r234,0 # 
+1686:MOV,r240,0 # 
+1687:MOV,r246,0 # 
+1688:MOV,r480,0 # 
+1689:LLSHIFT,r480,r480,16 # 
+1690:OR,r246,r246,r480 # 
+1691:MOV,r235,0 # 
+1692:MOV,r241,0 # 
+1693:MOV,r247,0 # 
+1694:MOV,r480,0 # 
+1695:LLSHIFT,r480,r480,16 # 
+1696:OR,r247,r247,r480 # 
+1697:MOV,r236,0 # 
+1698:MOV,r242,0 # 
+1699:MOV,r248,0 # 
+1700:MOV,r480,0 # 
+1701:LLSHIFT,r480,r480,16 # 
+1702:OR,r248,r248,r480 # 
+1703:MOV,r237,0 # 
+1704:MOV,r243,0 # 
+1705:MOV,r249,0 # 
+1706:MOV,r480,0 # 
+1707:LLSHIFT,r480,r480,16 # 
+1708:OR,r249,r249,r480 # 
+1709:MOV,r480,33312 ##Start READ_FROM_SCRATCH
+1710:MOV,r481,208 # 
+1711:OR,r481,r481,r492 # 
+1712:STORE,r481,r480 # write process_memory_addr
+1713:MOV,r481,212 # 
+1714:OR,r481,r481,r492 # 
+1715:LOAD,r481,r234 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+1716:MOV,r480,33316 ##Start READ_FROM_SCRATCH
+1717:MOV,r481,208 # 
+1718:OR,r481,r481,r492 # 
+1719:STORE,r481,r480 # write process_memory_addr
+1720:MOV,r481,212 # 
+1721:OR,r481,r481,r492 # 
+1722:LOAD,r481,r240 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+1723:MOV,r480,33320 ##Start READ_FROM_SCRATCH
+1724:MOV,r481,208 # 
+1725:OR,r481,r481,r492 # 
+1726:STORE,r481,r480 # write process_memory_addr
+1727:MOV,r481,212 # 
+1728:OR,r481,r481,r492 # 
+1729:LOAD,r481,r246 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+1730:MOV,r197,1 # 
+1731:MOV,r214,1 # 
+1732:MOV,r233,320 # 
+1733:MOV,r217,0 # 
+1734:MOV,r219,0 # 
+1735:ADDI,r214,r484,0 # # Start SET_MULTICAST_ADDR
+1736:SUBI,r484,r484,1 # 
+1737:BRALEZ,69 # 
+1738:ADDI,r233,r480,0 # 
+1739:OR,r480,r480,r492 # 
+1740:ADDI,r214,r484,1 # 
+1741:SUBI,r219,r485,0 # 
+1742:BRALEZ,8 # # Jump to first dest_detail
+1743:SUBI,r219,r485,1 # 
+1744:BRALEZ,19 # # Jump to second dest detail 
+1745:SUBI,r219,r485,2 # 
+1746:BRALEZ,31 # # Jump to third dest detail 
+1747:SUBI,r219,r485,3 # 
+1748:BRALEZ,43 # # Jumpt to fourth dest detail 
+1749:BRAUNCOND,57 # 
+1750:AND,r240,r481,r234 # 
+1751:ADDI,r246,r481,0 # 
+1752:SUBI,r484,r484,1 # 
+1753:BRALEZ,4 # 
+1754:ORI,r481,r481,1 # 
+1755:ADDI,r484,r484,0 # 
+1756:BRAUNCOND,2 # 
+1757:MOV,r481,0 # 
+1758:STORE,r480,r481 # 
+1759:ADDI,r480,r481,4 # 
+1760:STORE,r481,r240 # 
+1761:ADDI,r480,r481,8 # 
+1762:STORE,r481,r234 # 
+1763:ADDI,r480,r486,16 # 
+1764:AND,r241,r481,r235 # 
+1765:ADDI,r247,r481,0 # 
+1766:SUBI,r484,r484,1 # 
+1767:BRALEZ,4 # 
+1768:ORI,r481,r481,1 # 
+1769:ADDI,r484,r484,0 # 
+1770:BRAUNCOND,2 # 
+1771:MOV,r481,0 # 
+1772:STORE,r486,r481 # 
+1773:ADDI,r486,r481,4 # 
+1774:STORE,r481,r241 # 
+1775:ADDI,r486,r481,8 # 
+1776:STORE,r481,r235 # 
+1777:ADDI,r480,r486,32 # 
+1778:AND,r242,r481,r236 # 
+1779:ADDI,r248,r481,0 # 
+1780:SUBI,r484,r484,1 # 
+1781:BRALEZ,4 # 
+1782:ORI,r481,r481,1 # 
+1783:ADDI,r484,r484,0 # 
+1784:BRAUNCOND,2 # 
+1785:MOV,r481,0 # 
+1786:STORE,r486,r481 # 
+1787:ADDI,r486,r481,4 # 
+1788:STORE,r481,r242 # 
+1789:ADDI,r486,r481,8 # 
+1790:STORE,r481,r236 # 
+1791:ADDI,r480,r486,48 # 
+1792:AND,r243,r481,r237 # 
+1793:ADDI,r249,r481,0 # 
+1794:SUBI,r484,r484,1 # 
+1795:BRALEZ,4 # 
+1796:ORI,r481,r481,1 # 
+1797:ADDI,r484,r484,0 # 
+1798:BRAUNCOND,2 # 
+1799:MOV,r481,0 # 
+1800:STORE,r486,r481 # 
+1801:ADDI,r486,r481,4 # 
+1802:STORE,r481,r243 # 
+1803:ADDI,r486,r481,8 # 
+1804:STORE,r481,r237 # 
+1805:NOP # # End SET_MULTICAST_ADDR
+1806:MOV,r207,0 # 
+1807:MOV,r210,0 # 
+1808:MOV,r211,0 # 
+1809:MOV,r230,0 # 
+1810:MOV,r225,48 # 
+1811:MOV,r480,784 # 
+1812:LLSHIFT,r480,r480,16 # 
+1813:OR,r225,r225,r480 # 
+1814:MOV,r480,0 # # start STORE_TO_MEMORY 
+1815:STORE,r225,r480 # # end STORE_TO_MEMORY - write data to address
+1816:MOV,r192,3584 # 
+1817:MOV,r215,8 # 
+1818:MOV,r225,1 # 
+1819:MOV,r232,249 # 
+1820:MOV,r222,3 # 
+1821:MOV,r194,0 # 
+1822:MOV,r250,0 # 
+1823:MOV,r480,0 # 
+1824:LLSHIFT,r480,r480,16 # 
+1825:OR,r250,r250,r480 # 
+1826:MOV,r238,65535 # 
+1827:MOV,r480,511 # 
+1828:LLSHIFT,r480,r480,16 # 
+1829:OR,r238,r238,r480 # 
+1830:MOV,r245,112 # 
+1831:MOV,r228,1 # 
+1832:MOV,r196,9008 # 
+1833:MOV,r201,384 # 
+1834:MOV,r211,0 # 
+1835:MOV,r225,0 # 
+1836:ADDI,r196,r480,0 ## Start SET_LYR_REG 
+1837:OR,r480,r480,r492 # 
+1838:STORE,r480,r211 # # write to addr_mask_reg
+1839:ADDI,r480,r483,4 # 
+1840:STORE,r483,r211 # # write to base_addr_reg
+1841:LLSHIFT,r211,r482,16 # 
+1842:OR,r482,r482,r201 # 
+1843:ADDI,r480,r483,8 # 
+1844:STORE,r483,r482 # #wite to addr_stp_reg
+1845:MOV,r480,8228 # 
+1846:OR,r480,r480,r492 # 
+1847:LOAD,r480,r481 # 
+1848:OR,r481,r481,r225 # 
+1849:STORE,r480,r481 # # end SET_OUTPUT_LYR_REG - write to xbar_grp_reg
+1850:MOV,r196,13104 # 
+1851:MOV,r201,384 # 
+1852:ADDI,r196,r480,0 ## Start SET_LYR_REG 
+1853:OR,r480,r480,r492 # 
+1854:LLSHIFT,r211,r482,16 # 
+1855:OR,r482,r482,r201 # 
+1856:ADDI,r480,r483,8 # 
+1857:STORE,r483,r482 # #write to address_step_reg 
+1858:MOV,r480,12324 # 
+1859:OR,r480,r480,r492 # 
+1860:LOAD,r480,r481 # 
+1861:OR,r481,r481,r225 # 
+1862:STORE,r480,r481 ## end SET_PREFETCH_LYR_REGS - write to prefetch_grp_reg
+1863:MOV,r196,8 # 
+1864:MOV,r194,0 # 
+1865:MOV,r225,16777215 # 
+1866:MOV,r480,8224 ## Start SET_HORSPLIT_REG
+1867:OR,r480,r480,r492 # 
+1868:LOAD,r480,r481 ##load split_group_reg 
+1869:OR,r481,r481,r194 # 
+1870:STORE,r480,r481 ## End SET_HORSPLIT_REG 
+1871:MOV,r206,1 # 
+1872:MOV,r225,170 # 
+1873:MOV,r194,0 # 
+1874:MOV,r480,0 # 
+1875:LLSHIFT,r480,r480,16 # 
+1876:OR,r194,r194,r480 # 
+1877:MOV,r195,560 # 
+1878:ADDI,r195,r480,0 # 
+1879:OR,r480,r480,r492 # 
+1880:STORE,r480,r206 # #write to colgrp_reg 
+1881:ADDI,r480,r480,4 # 
+1882:STORE,r480,r225 # # write to colsign_reg 
+1883:ADDI,r480,r480,4 # 
+1884:STORE,r480,r194 # # End SET_COL_GRP_REGS - write to colshift_reg
+1885:MOV,r218,384 # 
+1886:MOV,r225,3584 # 
+1887:MOV,r203,1 # 
+1888:MOV,r239,9600 # 
+1889:MOV,r194,3 # 
+1890:MOV,r206,1536 # 
+1891:OR,r239,r480,r492 ## Start SET_OUT_XBAR_REGS 
+1892:ADDI,r480,r481,20 # 
+1893:ADDI,r222,r482,0 # 
+1894:LLSHIFT,r206,r483,16 # 
+1895:OR,r482,r482,r483 # 
+1896:STORE,r481,r482 # #write to mac blk mb_config_reg
+1897:ADDI,r480,r485,0 # 
+1898:LLSHIFT,r203,r481,16 # 
+1899:OR,r218,r481,r481 # 
+1900:STORE,r485,r481 ## write to mac blk bt_size_reg 
+1901:ADDI,r480,r481,28 # 
+1902:LLSHIFT,r228,r482,31 # 
+1903:OR,r225,r482,r482 # 
+1904:STORE,r481,r482 # # End SET_OUT_XBAR_REGS - write to mac blk row_step_reg
+1905:MOV,r206,9216 # 
+1906:MOV,r239,13312 # 
+1907:MOV,r194,3 # 
+1908:SUBI,r194,r194,0 # 
+1909:BRAZ,6 # 
+1910:ADDI,r206,r206,128 # 
+1911:ADDI,r239,r239,128 # 
+1912:SUBI,r194,r194,1 # 
+1913:BRALEZ,2 # 
+1914:BRAUNCOND,-4 # 
+1915:MOV,r225,0 # 
+1916:MOV,r203,8 # 
+1917:MOV,r251,3 # 
+1918:MOV,r229,65535 # 
+1919:MOV,r480,255 # 
+1920:LLSHIFT,r480,r480,16 # 
+1921:OR,r229,r229,r480 # 
+1922:MOV,r227,0 # 
+1923:MOV,r195,28 # 
+1924:NOP # # Instruction not used in Assembly Generation
+1925:MOV,r209,0 # 
+1926:ADDI,r206,r216,0 # 
+1927:MOV,r219,192 # 
+1928:MOV,r202,3 # 
+1929:ADDI,r239,r226,0 # 
+1930:MOV,r214,1 # 
+1931:MOV,r223,0 # 
+1932:MOV,r204,0 # 
+1933:MOV,r197,1 # 
+1934:MOV,r233,320 # 
+1935:MOV,r480,33024 ##Start READ_FROM_SCRATCH
+1936:MOV,r481,208 # 
+1937:OR,r481,r481,r492 # 
+1938:STORE,r481,r480 # write process_memory_addr
+1939:MOV,r481,212 # 
+1940:OR,r481,r481,r492 # 
+1941:LOAD,r481,r230 ## End READ_FROM_SCRATCH - read from process_memory_loc 
+1942:MOV,r210,65535 # 
+1943:MOV,r480,1 # 
+1944:LLSHIFT,r480,r480,16 # 
+1945:OR,r210,r210,r480 # 
+1946:MOV,r200,0 # 
+1947:MOV,r220,0 # 
+1948:MOV,r244,0 # 
+1949:SUBI,r244,r244,0 # 
+1950:BRAZ,3 # 
+1951:MOV,r225,0 # 
+1952:NOP # # Instruction not used in Assembly Generation
+1953:MOV,r244,0 # 
+1954:SUBI,r244,r244,0 # 
+1955:BRAZ,73 # 
+1956:MOV,r202,0 # 
+1957:MOV,r221,0 # 
+1958:MOV,r198,0 # 
+1959:NOP # # Instruction not used in Assembly Generation
+1960:MOV,r213,1 # 
+1961:ADDI,r216,r480,0 # 
+1962:OR,r480,r480,r492 # 
+1963:ADDI,r480,r485,32 # 
+1964:ADDI,r221,r481,0 # 
+1965:LLSHIFT,r481,r481,16 # 
+1966:ORI,r481,r481,1 # 
+1967:STORE,r485,r481 # #write to cmd_wd0_reg
+1968:ADD,r193,r481,r209 # 
+1969:AND,r481,r481,r238 # 
+1970:ADDI,r485,r485,4 # 
+1971:STORE,r485,r481 # # end SET_XBAR_WIDTH_SPLIT_REG - write to cmd_wd1_reg
+1972:MOV,r486,1 # 
+1973:LLSHIFTREG,r486,r486,r202 # 
+1974:LOAD,r493,r482 ## read output_dma_cmd_lst_enable_reg 
+1975:NOT,r486,r484 # 
+1976:AND,r484,r485,r482 # 
+1977:STORE,r493,r485 ## write to output_dma_cmd_lst_enable_reg 
+1978:OR,r486,r482,r482 # 
+1979:STORE,r493,r482 ## write to output_dma_cmd_lst_enable_reg - End ADD_XBAR_TO_STARTQ  
+1980:STOREI,r245,r230 # #Start SET_SIMD_BASE- write to simd_base_addr_reg
+1981:ADDI,r245,r480,4 # 
+1982:STOREI,r480,r210 # #write to simd_addr_mask_reg - End SET_SIMD_BASE 
+1983:ADD,r193,r193,r221 # 
+1984:MOV,r486,33554431 # 
+1985:AND,r193,r193,r486 # 
+1986:NOP # # Instruction not used in Assembly Generation
+1987:MOV,r463,1944 # # Start FORCED_CONTEXT SWITCH  
+1988:MOV,r449,4 # 
+1989:MOV,r480,972 # 
+1990:OR,r480,r480,r492 # 
+1991:MOV,r481,1994 # 
+1992:STORE,r480,r481 # #write to wake_vec_reg 
+1993:BRAUNCOND,-1930 # # End FORCED_CONTEXT SWITCH
+1994:MOV,r480,972 # 
+1995:OR,r480,r480,r492 # 
+1996:MOV,r482,2005 # 
+1997:STORE,r480,r482 # # write to wake_vec_reg 
+1998:LOAD,r480,r482 ##End SET_UP_WAKE_VEC - read wake_vec_reg
+1999:MOV,r463,1949 #  # start CHECK_XBAR_LAYER 
+2000:MOV,r449,3 # 
+2001:NOP # 
+2002:NOP # 
+2003:HALT # 
+2004:NOP # 
+2005:MOV,r480,48 # 
+2006:LOADI,r480,r484 # # read simd_lyr_cntrl_reg
+2007:MOV,r480,4 # 
+2008:LOADI,r480,r472 # # read mac_cmd_reg
+2009:LRSHIFT,r472,r480,24 # 
+2010:ANDI,r480,r205,255 # 
+2011:ADDI,r205,r205,1 # 
+2012:LLSHIFT,r205,r221,3 # 
+2013:AND,r472,r224,r229 # 
+2014:LRSHIFT,r484,r484,4 # 
+2015:ANDI,r484,r208,8191 # 
+2016:LRSHIFT,r208,r212,9 # # End CHECK_XBAR_LAYER 
+2017:MOV,r480,44 # 
+2018:LLSHIFT,r232,r481,13 # 
+2019:OR,r208,r481,r481 # 
+2020:STOREI,r480,r481 ## write simd_cmd2_reg 
+2021:MOV,r480,0 # 
+2022:ADD,r472,r482,r223 # 
+2023:ADD,r482,r482,r225 # 
+2024:STOREI,r480,r482 # # End Set_SIMD_MAC - write simd_cmd1_reg 
+2025:MOV,r486,3584 # 
+2026:SUB,r221,r221,r486 # 
+2027:BRAGEZ,130 # 
+2028:ADDI,r239,r244,0 # 
+2029:MOV,r198,1536 # 
+2030:MOV,r208,1 # 
+2031:MOV,r205,1 # 
+2032:MOV,r213,1 # 
+2033:SUBI,r227,r227,0 # 
+2034:BRANZ,51 # 
+2035:MOV,r212,0 # 
+2036:MOV,r194,0 # 
+2037:MOV,r221,3584 # 
+2038:MOV,r201,384 # 
+2039:NOP # # Instruction not used in Assembly Generation
+2040:SUBI,r207,r207,0 # 
+2041:BRAZ,19 # 
+2042:MOV,r217,3584 # 
+2043:NOP # # Instruction not used in Assembly Generation
+2044:LOAD,r496,r481 # 
+2045:AND,r481,r481,r196 # 
+2046:BRAZ,2 # 
+2047:BRAUNCOND,-3 # #Check for prefetch_dma_busy
+2048:ADDI,r226,r480,0 # 
+2049:OR,r480,r480,r492 # 
+2050:ADDI,r480,r480,32 # 
+2051:ADDI,r221,r482,0 # 
+2052:LLSHIFT,r482,r482,16 # 
+2053:ORI,r482,r482,1 # 
+2054:STORE,r480,r482 # # write to cmd_wd0_reg 
+2055:ADD,r193,r481,r209 # 
+2056:AND,r481,r481,r253 # 
+2057:ADDI,r480,r480,4 # 
+2058:STORE,r480,r481 # # End PREFETCH - write to cmd_wd1_reg
+2059:ADDI,r226,r226,128 # 
+2060:MOV,r217,0 # 
+2061:ADDI,r216,r480,0 # 
+2062:OR,r480,r480,r492 # 
+2063:ADDI,r480,r485,32 # 
+2064:ADDI,r221,r481,0 # 
+2065:LLSHIFT,r481,r481,16 # 
+2066:ORI,r481,r481,1 # 
+2067:STORE,r485,r481 # #write to cmd_wd0_reg
+2068:ADD,r193,r481,r209 # 
+2069:AND,r481,r481,r238 # 
+2070:ADDI,r485,r485,4 # 
+2071:STORE,r485,r481 # # end SET_XBAR_WIDTH_SPLIT_REG - write to cmd_wd1_reg
+2072:ADDI,r202,r202,1 # 
+2073:ADDI,r212,r212,1 # 
+2074:MOV,r217,1 # 
+2075:ADDI,r216,r216,128 # 
+2076:ADDI,r198,r198,512 # 
+2077:SUBI,r217,r217,1 # 
+2078:BRALEZ,2 # 
+2079:BRAUNCOND,-4 # 
+2080:SUBI,r194,r194,1 # 
+2081:BRAGEZ,-9 # 
+2082:SUBI,r205,r205,1 # 
+2083:BRALEZ,2 # 
+2084:BRAUNCOND,-12 # 
+2085:SUBI,r207,r207,0 # 
+2086:BRAZ,7 # 
+2087:LOAD,r495,r482 # # Start ADD_PREFETCH_TO_STARTQ - read cmd_lst_enable_reg
+2088:NOT,r196,r484 # 
+2089:AND,r484,r485,r482 # 
+2090:STORE,r495,r485 # #write to cmd_lst_enable_reg
+2091:OR,r196,r482,r482 # 
+2092:STORE,r495,r482 ## write to cmd_lst_enable_reg - End ADD_PREFETCH_TO_STARTQ  
+2093:LOAD,r494,r481 # 
+2094:AND,r481,r481,r196 # 
+2095:BRAZ,2 # 
+2096:BRAUNCOND,-3 # 
+2097:LOAD,r493,r482 # 
+2098:NOT,r196,r484 # # read op_dma_cmd_lst_enable_reg
+2099:AND,r484,r485,r482 # 
+2100:STORE,r493,r485 ## write op_dma_cmd_lst_enable_reg 
+2101:OR,r196,r482,r482 # 
+2102:STORE,r493,r482 # # End ADD_TO_STARTQ_ALL_XBARS - write op_dma_cmd_lst_enable_reg
+2103:STOREI,r245,r230 # #Start SET_SIMD_BASE- write to simd_base_addr_reg
+2104:ADDI,r245,r480,4 # 
+2105:STOREI,r480,r210 # #write to simd_addr_mask_reg - End SET_SIMD_BASE 
+2106:NOP # # Instruction not used in Assembly Generation
+2107:MOV,r463,2064 # # Start FORCED_CONTEXT SWITCH  
+2108:MOV,r449,4 # 
+2109:MOV,r480,972 # 
+2110:OR,r480,r480,r492 # 
+2111:MOV,r481,2114 # 
+2112:STORE,r480,r481 # #write to wake_vec_reg 
+2113:BRAUNCOND,-2050 # # End FORCED_CONTEXT SWITCH
+2114:MOV,r480,972 # 
+2115:OR,r480,r480,r492 # 
+2116:MOV,r482,2128 # 
+2117:STORE,r480,r482 # # write to wake_vec_reg 
+2118:LOAD,r480,r482 ##End SET_UP_WAKE_VEC - read wake_vec_reg
+2119:MOV,r209,0 # 
+2120:MOV,r217,1 # 
+2121:MOV,r198,448 # 
+2122:MOV,r463,2072 #  # start CHECK_XBAR_LAYER 
+2123:MOV,r449,3 # 
+2124:NOP # 
+2125:NOP # 
+2126:HALT # 
+2127:NOP # 
+2128:MOV,r480,48 # 
+2129:LOADI,r480,r484 # # read simd_lyr_cntrl_reg
+2130:MOV,r480,4 # 
+2131:LOADI,r480,r472 # # read mac_cmd_reg
+2132:LRSHIFT,r472,r480,24 # 
+2133:ANDI,r480,r213,255 # 
+2134:ADDI,r213,r213,1 # 
+2135:LLSHIFT,r213,r212,3 # 
+2136:AND,r472,r231,r229 # 
+2137:LRSHIFT,r484,r484,4 # 
+2138:ANDI,r484,r224,8191 # 
+2139:LRSHIFT,r224,r202,9 # # End CHECK_XBAR_LAYER 
+2140:MOV,r480,44 # 
+2141:LLSHIFT,r232,r481,13 # 
+2142:OR,r224,r481,r481 # 
+2143:STOREI,r480,r481 ## write simd_cmd2_reg 
+2144:MOV,r480,0 # 
+2145:ADD,r472,r482,r223 # 
+2146:ADD,r482,r482,r225 # 
+2147:STOREI,r480,r482 # # End Set_SIMD_MAC - write simd_cmd1_reg 
+2148:ADD,r209,r209,r212 # 
+2149:SUB,r198,r198,r213 # 
+2150:BRALEZ,2 # 
+2151:BRAUNCOND,-29 # 
+2152:ADDI,r219,r219,1 # 
+2153:MOV,r486,3584 # 
+2154:ADD,r193,r193,r486 # 
+2155:MOV,r486,33554431 # 
+2156:AND,r193,r193,r486 # 
+2157:MOV,r486,3584 # 
+2158:ADD,r234,r234,r486 # 
+2159:MOV,r198,0 # 
+2160:MOV,r217,8 # 
+2161:MOV,r212,2 # 
+2162:LOAD,r496,r481 # # start CHECK_PREFETCH_DONE - read prefetch_dma_busy_reg 
+2163:AND,r481,r481,r196 # 
+2164:BRAZ,2 # 
+2165:BRAUNCOND,-3 # #end CHECK_XBAR_DONE
+2166:MOV,r480,12 # 
+2167:LOADI,r480,r481 # #read simd_wbuf_addr_status_reg 
+2168:ANDI,r481,r481,1 # 
+2169:BRANZ,2 # 
+2170:BRAUNCOND,-3 # End END_BLOCK 
+2171:MOV,r480,1044 # 
+2172:OR,r480,r480,r492 # 
+2173:STORE,r480,r217 # # End INCREMENT_OBUF_COUNTER  
+2174:MOV,r482,1048 ## Start SEND_SYNC_NEXT 
+2175:OR,r482,r482,r492 # 
+2176:STORE,r482,r217 # # End SEND_SYNC_NEXT
+2177:SUBI,r212,r212,1 # 
+2178:BRALEZ,2 # 
+2179:BRAUNCOND,-13 # 
+2180:ADDI,r227,r227,1 # 
+2181:SUBI,r195,r195,1 # 
+2182:BRALEZ,2 # 
+2183:BRAUNCOND,-259 # 
+2184:MOV,r220,8 # 
+2185:MOV,r221,3 # 
+2186:MOV,r222,1528 # 
+2187:MOV,r223,3 # 
+2188:MOV,r224,1 # 
+2189:MOV,r225,48 # 
+2190:MOV,r480,784 # 
+2191:LLSHIFT,r480,r480,16 # 
+2192:OR,r225,r225,r480 # 
+2193:NOP ##Start SET_UP_NEXT 
+2194:NOP # 
+2195:NOP # 
+2196:MOV,r463,1756 # 
+2197:MOV,r449,3 # 
+2198:BRAUNCOND,-2135 # #Branch to the same layer, instruction start location
+2199:NOP # 
+2200:NOP # 
+2201:NOP # 
+2202:NOP # 
+2203:HALT # 
+2204:NOP ##End SET_UP_NEXT 

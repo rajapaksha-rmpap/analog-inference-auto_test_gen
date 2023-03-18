@@ -1,0 +1,16 @@
+{
+    "not enabled": [],
+    "fsim failing": {
+        "ExecutionError": [
+            "yolov5-io-pre-relu128"
+        ],
+        "OutTXTMistmatchError": [],
+        "ResultComparisonError": []
+    },
+    "asmsim failing": {
+        "AsmsimDisabled": [],
+        "AsmsimExecutionError": []
+    },
+    "unknown error": [],
+    "successes": []
+}

@@ -1,0 +1,28 @@
+{
+    "inputs" : 
+    [
+        {
+            "num_in_cols" : 224,
+            "num_in_filters" : 3,
+            "num_in_rows" : 224
+        },
+        {
+            "num_in_cols" : 224,
+            "num_in_filters" : 3,
+            "num_in_rows" : 224
+        }
+    ],
+    "outputs" : 
+    [
+        {
+            "num_out_cols" : 7,
+            "num_out_filters" : 21,
+            "num_out_rows" : 7
+        },
+        {
+            "num_out_cols" : 7,
+            "num_out_filters" : 21,
+            "num_out_rows" : 7
+        }
+    ]
+}

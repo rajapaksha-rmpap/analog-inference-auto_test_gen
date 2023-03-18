@@ -2,19 +2,17 @@
 
 import os
 import json
+import time
 from argparse import ArgumentParser
 from runhwtests_custom import runhwtests
 from json_handling import get_a_file_list
 
 tab = '\t'
 hwtests_in_dir = "../sw_be/desgen/hwtests/in/" # change later
-in_test_list = get_a_file_list(hwtests_in_dir, trailor="-spec.json", name_only=False)
+in_test_list = get_a_file_list(hwtests_in_dir, trailor="-spec.json", name_only=True)
 in_test_list.sort()
 cwd = os.getcwd()
-
-def simulate(testnames, fsim=True, asmsim=True, vcd=False):
-    "run fsim and asmsim for the specified input tests"
-    json_template = {
+json_template = {
         "not enabled": [],
         "fsim failing": {
             "ExecutionError": [], 
@@ -23,11 +21,14 @@ def simulate(testnames, fsim=True, asmsim=True, vcd=False):
         }, 
         "asmsim failing": {
             "AsmsimDisabled": [], 
-            "asmsimExecutionError": []
+            "AsmsimExecutionError": []
         },
         "unknown error": [],
         "successes": []
     }
+
+def simulate(testnames, fsim=True, asmsim=True, vcd=False):
+    "run fsim and asmsim for the specified input tests"
 
     if len(testnames) == 0:
         # if no test case is specified, run all the input test casees in input dir
@@ -53,9 +54,22 @@ def simulate(testnames, fsim=True, asmsim=True, vcd=False):
         print('\n')
         try:
             flag = runhwtests(test, fsim, asmsim, input_="hwtests")
+
+        except:
+            flag = "UnknownError"
+            unknown_errors += 1
+            json_template["unknown error"].append(test)
+            # by far unknown errors can occur due to following reasons
+            #   -> due to not having a testdb.json entry (fatal error)
+            #   -> not having a sim.json file
+            # fsim execution errors can occur due to an error in log file
+            # "Cannot find weights file" which only occurs when run from home dir
+
+        else:
             if flag == "FatalError":
-                exit(0)
-            if flag == "NotEnabledError":
+                unknown_errors += 1
+                json_template["unknown error"].append(test)
+            elif flag == "NotEnabledError":
                 globally_disbaled += 1
                 json_template["not enabled"].append(test)
             
@@ -80,10 +94,6 @@ def simulate(testnames, fsim=True, asmsim=True, vcd=False):
             else:
                 successes += 1
                 json_template["successes"].append(test)
-        except:
-            flag = "UnknownError"
-            unknown_errors += 1
-            json_template["unknown error"].append(test)
 
         print(f"------------------------------ {i+1}/{total_num_tests} completed")
         
@@ -107,8 +117,7 @@ def simulate(testnames, fsim=True, asmsim=True, vcd=False):
     print("successful simulations: %d out of %d" %(successes, total_num_tests))
 
     print("current working dir: %s" %(os.getcwd()))
-    # with open("testings_out/test_sim_status.json", 'w') as test_sim_status_file:
-    #     json.dump(json_template, test_sim_status_file, indent=4)
+    return json_template
 
 # creating the sub parser for simulation 
 parser = ArgumentParser(prog="simulate", description="simulate a test given in the specified input directory")
@@ -126,10 +135,10 @@ arr = []
 for test in in_test_list:
     output_count = 0
     try:
-        with open(hwtests_in_dir + test) as test_file:
+        with open(hwtests_in_dir + test + '-spec.json') as test_file:
             test_json = json.load(test_file)
     except:
-        print("%s has an errorneous json spec file!!!" %(hwtests_in_dir + test))
+        print("%s has an errorneous json spec file!!!" %(hwtests_in_dir + test + '-spec.json'))
         continue
     if "chips" in test_json:
         for chip in test_json["chips"]:
@@ -137,16 +146,23 @@ for test in in_test_list:
                 if io_layer["layer_type"] == "output" or io_layer["layer_type"] == "output_ext":
                     output_count += 1
                 if output_count > 1: 
-                    arr.append(test.strip("-spec.json"))
+                    arr.append(test)
                     break
     elif "io_module" in test_json:
         for io_layer in test_json["io_module"]["layers"]:
             if io_layer["layer_type"] == "output" or io_layer["layer_type"] == "output_ext":
                 output_count += 1
             if output_count > 1: 
-                arr.append(test.strip("-spec.json"))
+                arr.append(test)
                 break
     else:
         pass
 
-simulate(arr)
+start_time = time.time()
+test_sim_status = simulate(arr[10:14])
+
+with open("test_sim_status.json", 'w') as test_sim_status_file:
+    json.dump(test_sim_status, test_sim_status_file, indent=4)
+
+end_time = time.time()
+print("time:", end_time-start_time)

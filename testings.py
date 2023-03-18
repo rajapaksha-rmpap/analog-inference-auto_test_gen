@@ -6,6 +6,7 @@ import copy
 import time # for testing time usage 
 from json_handling import get_a_file_list, traverse_spec 
 
+tab = '\t'
 # template for storing data of a layer spec 
 data_template = {
     "times": 0, 
@@ -47,13 +48,32 @@ def gather_data(spec, value, existing_data):
     existing_data[spec][dtype]["times"] = existing_data[spec][dtype]["times"] + 1
 
     # gather data about the value of the spec 
-    if (type(value) == dict) or (type(value) == list and len(value) and type(value[0]) == dict):
-        # if value is a dict or the value is a list and that list's element are dicts
-        # then, do not gather what are the exact values of those specs
-        existing_data[spec][dtype]["values"] = "not recorded due to having a complicated value to represent"
+    if (type(value) == dict):
+        # if value is a dict, then do not gather values of those specs
+        existing_data[spec][dtype]["values"] = "not recorded due to being complicated to represent"
+    
+    elif (type(value) == list):
+        # the value is a list
+        if len(value) == 0:
+            # if the list is empty 
+            if "[]" not in existing_data[spec][dtype]["values"].keys():
+                existing_data[spec][dtype]["values"]["[]"] = 0
+            existing_data[spec][dtype]["values"]["[]"] += 1
+        elif type(value[0]) == dict:
+            # ASSUMPTION here is that all the elements in an array would have the same data type
+            if "array of dicts" not in existing_data[spec][dtype]["values"].keys():
+                existing_data[spec][dtype]["values"]["array of dicts"] = 0
+            existing_data[spec][dtype]["values"]["array of dicts"] += 1
+        else:
+            # there is a non-empty list whose elements are not dict types, thus must be either int, float, str, or else another list
+            if str(value) not in existing_data[spec][dtype]["values"].keys():
+                existing_data[spec][dtype]["values"][str(value)] = 0
+            existing_data[spec][dtype]["values"][str(value)] += 1
+    
     elif (spec in delete): 
         # if user specify not to consider a spec
         existing_data[spec][dtype]["values"] = "not recorded due to being already well defined"
+    
     else: 
         # ohterwise, do gather what are the values used for that spec and the number of times each of those values appear
         if str(value) not in existing_data[spec][dtype]["values"].keys():
@@ -114,12 +134,19 @@ def testing_function(DICT, count=0):
 start_time = time.time()
 
 in_path = "../sw_be/desgen/hwtests/in/"
+ref_path = "../sw_be/desgen/hwtests/ref/"
 testings_in = "testings_in/"
 testings_out = "testings_out/"
 
 # getting a list of all the input SPEC files in "../desgen/hwtests/in" dir
-in_spec_list = get_a_file_list(in_path, trailor="-spec.json")
+in_spec_list = get_a_file_list(in_path, trailor="-spec.json", name_only=True)
 in_spec_list.sort()
+# getting a list of all the input SIM files in "../desgen/hwtests/in" dir
+in_sim_list = get_a_file_list(in_path, trailor="-sim.json", name_only=True)
+in_sim_list.sort()
+# getting a list of all the reference RPT files in "../desgen/hwtests/ref" dir
+ref_rpt_list = get_a_file_list(ref_path, trailor=".rpt", name_only=True)
+ref_rpt_list.sort()
 
 # -------------------------------------------------------- creating a list of all the layers specified in the test cases ---------------------------------------------------------------------------
 # layers_arr = []
@@ -153,45 +180,108 @@ in_spec_list.sort()
 
 
 # --------------------------------------------------------------------- creating the default json structure ----------------------------------------------------------------------------------------
-with open("testings_out/layers_categorized.json") as layers_cat_file:
-    layer_cat = json.load(layers_cat_file)
+# with open("testings_out/layers_categorized.json") as layers_cat_file:
+#     layer_cat = json.load(layers_cat_file)
 
-# for layer_type in layer_types.keys():
-for layer_type in layer_cat.keys():
-    defaults = copy.deepcopy({})
-    for layer in layer_cat[layer_type]:
-        defaults = traverse_layer(layer, defaults, operation="gather_data", delete=delete)
+# for layer_type in layer_cat.keys():
+#     defaults = copy.deepcopy({})
+#     for layer in layer_cat[layer_type]:
+#         try:
+#             defaults = traverse_layer(layer, defaults, operation="gather_data", delete=delete)
+#         except:
+#             print(layer_type, '\n\n', json.dumps(layer, indent=4))
+#             print('\n', json.dumps(defaults, indent=4))
+#             defaults = traverse_layer(layer, defaults, operation="gather_data", delete=delete)
+#             exit(0)
+#     layer_types_spec_info_file_name = ("%s-spec-info.json" %(layer_type)) 
+#     with open("testings_out/layer_types_specs_info/%s" %layer_types_spec_info_file_name, 'w') as layer_types_spec_info_file:
+#         json.dump(defaults, layer_types_spec_info_file, indent=4)
 
-    layer_types_spec_info_file_name = ("%s-spec-info.json" %(layer_type)) 
-    with open("testings_out/layer_types_specs_info/%s" %layer_types_spec_info_file_name, 'w') as layer_types_spec_info_file:
-        json.dump(defaults, layer_types_spec_info_file, indent=4)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# for layer_type in layer_types.keys():
-#     for spec in layer_types[layer_type].keys():
-#         # verifying that each spec has only one associate data type 
-#         if len(layer_types[layer_type][spec]["type"]) != 1:
-#             data_types = str(layer_types[layer_type][spec]["type"])
-#             spec = layer_type + "/" + spec
-#             tab = '\t'
-#             if 16 < len(spec) <= 24: print(f'{spec}{tab}{tab}{tab}{data_types}')
-#             elif len(spec) <= 16: print(f'{spec}{tab}{tab}{data_types}') 
-#             else: print(f'{spec}{tab}{data_types}')
+# ------------------------------------------------------------ categorizing the tests based on their num. of layers --------------------------------------------------------------------------------
+# layer_cnt_space = [0] * 20 # max layer count is 200
+# examples = {}
+# for test in in_spec_list:
+#     try:
+#         with open(in_path + test + "-spec.json") as test_file:
+#             test_json = json.load(test_file)
+#     except:
+#         print("%s has an errorneous json spec file!!!" %(in_path + test))
+#         continue
+#     if "chips" in test_json.keys():
+#         layer_cnt = sum([len(chip["io_module"]["layers"]) + sum([len(mac_row["layers"]) for mac_row in chip["mac_rows"]]) for chip in test_json["chips"]])
+#     elif "io_module" in test_json.keys():
+#         layer_cnt = len(test_json["io_module"]["layers"]) + sum([len(mac_row["layers"]) for mac_row in test_json["mac_rows"]])
+#     else:
+#         layer_cnt = sum([len(mac_row["layers"]) for mac_row in test_json["mac_rows"]])
+#     layer_cnt_sz = layer_cnt // 10
+#     layer_cnt_space[layer_cnt_sz] += 1
+#     if layer_cnt_sz not in examples.keys():
+#         examples[layer_cnt_sz] = []
+#     examples[layer_cnt_sz].append(test)
+# print(layer_cnt_space)
 
-# ----------------------------------------------------------- creating a json file just with layer types and their specs --------------------------------------------------------------------------
-# for layer_type in layer_types.keys():
-#     default = []
-#     for layer in layer_types[layer_type]:
-#         default = traverse_layer(layer, default, operation="specname_only")
-#     layer_types[layer_type] = default 
+# with open("testings_out/layers_cat_on_layer_cnt.json", 'w') as layers_cat_on_layer_cnt_file:
+#     json.dump(examples, layers_cat_on_layer_cnt_file, indent=4)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# with open("testings_out/layer_types-specs.json", 'w') as file:
-#     json.dump(layer_types, file, indent=4)
 
-# with open("testings_out/defaults.json", 'w') as defaults_file:
-#     json.dump(layer_types, defaults_file, indent=4)
+# ------------------------------------------------------------ creating a new easy to search testdb.json file --------------------------------------------------------------------------------------
+# cwd = os.getcwd()
+# old_testdb = cwd + '/../sw_be/desgen/hwtests/testdb.json'
+# with open(old_testdb) as old_tb_file:
+#     old_tb = json.load(old_tb_file)
+# tests = old_tb["tests"]
+# new_tb = {}
+# for test in tests:
+#     new_tb[test["name"]] = test
+# with open("testdb.json", 'w') as new_tb_file:
+#     json.dump(new_tb, new_tb_file, indent=4)
 
-# print(json.dumps(layer_types, indent=4))
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------- finding the tests whose sim json file contains a 'num_auto_images' spec ---------------------------------------------------------------------
+# sim_nati_arr = []
+# for sim_file in in_sim_list:
+#     try:
+#         with open(in_path + sim_file + "-sim.json") as test_file:
+#             sim_json = json.load(test_file)
+#     except:
+#         print("%s has an errorneous json spec file!!!" %(in_path + sim_file))
+#         continue
+#     if "num_auto_images" in sim_json.keys() and sim_json["num_auto_images"] > 1:
+#         sim_nati_arr.append(sim_file)
+# print("sim files with num_auto_images greater than 1: " + ', '.join(sim_nati_arr) + '\n')
+
+# # ****** now let's check out of those with 'num_auto_images', who have .rpt and .txt files 
+# sim_nati_with_rpt = set(sim_nati_arr) & set(ref_rpt_list)
+# print(f"{tab} who have .rpt files: " + '')
+# ***************************** not completed yet ******************************** 
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# ------------------------------------------------------------ finding common and specific specs for layers types ----------------------------------------------------------------------------------
+with open("testings_out/layer_types-specs.json") as layer_types_specs_file:
+    layer_types_specs = json.load(layer_types_specs_file)
+
+common_specs = set(layer_types_specs["input"])
+for layer_type in layer_types_specs:
+    common_specs &= set(layer_types_specs[layer_type])
+
+common_specs_arr = list(common_specs)
+common_specs_arr.sort()
+specific_specs = {"common_specs": common_specs_arr}
+
+for layer_type in layer_types_specs:
+    specific_specs_arr = list(set(layer_types_specs[layer_type]) - common_specs)
+    specific_specs_arr.sort()
+    specific_specs[layer_type] = specific_specs_arr
+
+with open("testings_out/layer_types-specs-commonspecific.json", 'w') as layer_types_specs_file_:
+    json.dump(specific_specs, layer_types_specs_file_, indent=4)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 end_time = time.time()
 print("time usage =", end_time-start_time)

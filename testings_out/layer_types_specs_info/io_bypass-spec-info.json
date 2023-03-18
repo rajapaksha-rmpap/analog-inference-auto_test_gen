@@ -1,0 +1,271 @@
+{
+    "dest_entries": {
+        "times": 175,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 175,
+            "values": {
+                "array of dicts": 175
+            }
+        }
+    },
+    "dest_entries/addr": {
+        "times": 191,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 191,
+            "values": {
+                "0x0": 175,
+                "0x120": 8,
+                "0x180": 8
+            }
+        }
+    },
+    "dest_entries/dest_details": {
+        "times": 191,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 191,
+            "values": {
+                "array of dicts": 191
+            }
+        }
+    },
+    "dest_entries/dest_details/addr_incr": {
+        "times": 219,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 219,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "dest_entries/dest_details/dest_addr": {
+        "times": 219,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 219,
+            "values": {
+                "0x0": 203,
+                "0x120": 8,
+                "0x60": 8
+            }
+        }
+    },
+    "dest_entries/dest_details/dest_layer": {
+        "times": 219,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 219,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "dest_entries/dest_details/gen_sync": {
+        "times": 96,
+        "type": [
+            "boolean"
+        ],
+        "boolean": {
+            "times": 96,
+            "values": {
+                "True": 96
+            }
+        }
+    },
+    "dest_entries/dest_details/mem_index": {
+        "times": 219,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 219,
+            "values": {
+                "0": 219
+            }
+        }
+    },
+    "dest_entries/dest_details/mem_type": {
+        "times": 219,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 219,
+            "values": {
+                "layer_mem": 219
+            }
+        }
+    },
+    "dest_entries/len": {
+        "times": 191,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 191,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "dma_id": {
+        "times": 81,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 81,
+            "values": {
+                "0": 39,
+                "-1": 19,
+                "1": 23
+            }
+        }
+    },
+    "layer_class": {
+        "times": 89,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 89,
+            "values": {
+                "io_bypass": 89
+            }
+        }
+    },
+    "layer_id": {
+        "times": 175,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 175,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_mems": {
+        "times": 175,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 175,
+            "values": {
+                "array of dicts": 175
+            }
+        }
+    },
+    "layer_mems/lm_max_rows": {
+        "times": 175,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 175,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_mems/lm_row_size": {
+        "times": 175,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 175,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_type": {
+        "times": 175,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 175,
+            "values": {
+                "io_bypass": 175
+            }
+        }
+    },
+    "num_in_cols": {
+        "times": 175,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 175,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "num_in_filters": {
+        "times": 175,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 175,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "num_in_rows": {
+        "times": 175,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 175,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "src_entries": {
+        "times": 175,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 175,
+            "values": {
+                "[]": 175
+            }
+        }
+    },
+    "layer_key": {
+        "times": 7,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 7,
+            "values": {
+                "110": 1,
+                "114": 1,
+                "115": 2,
+                "116": 2,
+                "111": 1
+            }
+        }
+    },
+    "qmodel_id": {
+        "times": 7,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 7,
+            "values": {
+                "0": 5,
+                "1": 2
+            }
+        }
+    }
+}

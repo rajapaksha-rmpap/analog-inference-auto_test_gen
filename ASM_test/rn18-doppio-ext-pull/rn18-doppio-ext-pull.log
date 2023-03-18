@@ -1,0 +1,47 @@
+
+Analog Inference Back-end Compiler
+Version 1.0
+(c) 2021 Analog Inference, Inc.
+Reading simulation parameters from:/home/akila/redo_project/auto_test_gen/../sw_be/desgen/hwtests/in/rn18-doppio-ext-pull-sim.json ...
+Reading design specification from: /home/akila/redo_project/auto_test_gen/../sw_be/desgen/hwtests/in/rn18-doppio-ext-pull-spec.json ...
+Validating parameters and building functional system instance ...
+Layer_Mem_Type 1 index 0 rowsz 3584 nrows 56 alloc 262144 mask 3ffff 262143
+Layer_Mem_Type 1 index 1 rowsz 3584 nrows 56 alloc 262144 mask 3ffff 262143
+Layer_Mem_Type 1 index 2 rowsz 3584 nrows 28 alloc 131072 mask 1ffff 131071
+Layer_Mem_Type 1 index 3 rowsz 3584 nrows 28 alloc 131072 mask 1ffff 131071
+Layer_Mem_Type 1 index 4 rowsz 3584 nrows 14 alloc 65536 mask ffff 65535
+Layer_Mem_Type 1 index 5 rowsz 3584 nrows 14 alloc 65536 mask ffff 65535
+Layer_Mem_Type 1 index 6 rowsz 3584 nrows 7 alloc 32768 mask 7fff 32767
+Layer_Mem_Type 1 index 7 rowsz 3584 nrows 7 alloc 32768 mask 7fff 32767
+Layer_Mem_Type 1 index 8 rowsz 3584 nrows 56 alloc 262144 mask 3ffff 262143
+Layer_Mem_Type 1 index 9 rowsz 3584 nrows 56 alloc 262144 mask 3ffff 262143
+Layer_Mem_Type 1 index 10 rowsz 3584 nrows 28 alloc 131072 mask 1ffff 131071
+Layer_Mem_Type 1 index 11 rowsz 3584 nrows 28 alloc 131072 mask 1ffff 131071
+Layer_Mem_Type 1 index 12 rowsz 3584 nrows 14 alloc 65536 mask ffff 65535
+Layer_Mem_Type 1 index 13 rowsz 3584 nrows 14 alloc 65536 mask ffff 65535
+Layer_Mem_Type 1 index 14 rowsz 3584 nrows 7 alloc 32768 mask 7fff 32767
+Layer_Mem_Type 1 index 15 rowsz 3584 nrows 7 alloc 32768 mask 7fff 32767
+Building back-end model for Chip ID: 0
+Layer_Mem_Type 3 index 110 rowsz 672 nrows 9 alloc 16384 mask 3fff 16383
+Total Layer memory size  3300 tot size 0
+Layer_Mem_Type 3 index 112 rowsz 672 nrows 9 alloc 16384 mask 3fff 16383
+Total Layer memory size  3300 tot size 0
+Layer_Mem_Type 0 index 115 rowsz 672 nrows 9 alloc 16384 mask 3fff 16383
+Total Layer memory size  3300 tot size 16384
+Set Input DMA blk ID layer 115 0
+Layer_Mem_Type 0 index 116 rowsz 672 nrows 9 alloc 16384 mask 3fff 16383
+Total Layer memory size  3300 tot size 32768
+Set Input DMA blk ID layer 116 1
+Layer_Mem_Type 0 index 114 rowsz 25088 nrows 1 alloc 32768 mask 7fff 32767
+Total Layer memory size  3300 tot size 65536
+Layer_Mem_Type 0 index 111 rowsz 2 nrows 2 alloc 16384 mask 3fff 16383
+Layer_Mem_Type 3 index 111 rowsz 2 nrows 2 alloc 16384 mask 3fff 16383
+Total Layer memory size  3300 tot size 81920
+Layer_Mem_Type 0 index 113 rowsz 3584 nrows 4 alloc 16384 mask 3fff 16383
+Layer_Mem_Type 3 index 113 rowsz 3584 nrows 4 alloc 16384 mask 3fff 16383
+Total Layer memory size  3300 tot size 98304
+Layer_Mem_Type 0 index 0 rowsz 672 nrows 9 alloc 16384 mask 3fff 16383
+Total Layer memory size  100 tot size 16384
+SIMD MEM ALLOC conv layer 100 xbar 0 _simd_bias_address[] 0
+SIMD MEM ALLOC conv layer 100 xbar 1 _simd_bias_address[] 512
+Cannot find weights file 

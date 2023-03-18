@@ -1,0 +1,5 @@
+{
+    "config" : "config.csv",
+    "id" : 32,
+    "outputProgram" : "output.bin"
+}

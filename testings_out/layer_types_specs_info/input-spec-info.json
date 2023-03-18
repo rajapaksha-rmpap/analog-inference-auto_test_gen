@@ -6,7 +6,9 @@
         ],
         "list": {
             "times": 244,
-            "values": "not recorded due to having a complicated value to represent"
+            "values": {
+                "array of dicts": 244
+            }
         }
     },
     "dest_entries/addr": {
@@ -32,7 +34,9 @@
         ],
         "list": {
             "times": 284,
-            "values": "not recorded due to having a complicated value to represent"
+            "values": {
+                "array of dicts": 284
+            }
         }
     },
     "dest_entries/dest_details/addr_incr": {
@@ -173,7 +177,9 @@
         ],
         "list": {
             "times": 244,
-            "values": "not recorded due to having a complicated value to represent"
+            "values": {
+                "array of dicts": 244
+            }
         }
     },
     "layer_mems/lm_max_rows": {

@@ -1,0 +1,99 @@
+Start Configure layer 0------------------------
+simd_base_addr 0  d0<<--1000000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 32 block 0
+layer_sync_message_send_address 0 layer 0 to layer 3 (chip 0, row 0, idx 0, cntr 1)  460<--ffc004
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--0
+layer_sync_asq_message_rcvd_counter_enable  454<--0
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--4
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 1------------------------
+simd_base_addr 0  e0<<--1040000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--ffffffff
+remap_base_addr 0  1a8<<--0
+------Configuring Sync block, chip 0 row 32 block 1
+layer_sync_message_send_address 0 layer 1 to layer 4 (chip 0, row 1, idx 0, cntr 1)  4d0<--ffc104
+layer_sync_csq_message_send enable  4b0<--1
+layer_sync_csq_message_rcvd_counter_enable  4b4<--1
+layer_sync_asq_message_send enable  4c0<--0
+layer_sync_asq_message_rcvd_counter_enable  4c4<--0
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--4
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Start Configure layer 2------------------------
+simd_base_addr 0  f0<<--1080000
+dest_addr 0  1e0<<--0
+remap_base_mask 0  1e4<<--ffffffff
+remap_base_addr 0  1e8<<--0
+------Configuring Sync block, chip 0 row 32 block 2
+layer_sync_message_send_address 0 layer 2 to layer 5 (chip 0, row 2, idx 0, cntr 1)  540<--ffc204
+layer_sync_csq_message_send enable  520<--1
+layer_sync_csq_message_rcvd_counter_enable  524<--1
+layer_sync_asq_message_send enable  530<--0
+layer_sync_asq_message_rcvd_counter_enable  534<--0
+layer_sync_input_buffer_empty_level  570<--1
+layer_sync_input_buffer_decrement_step  574<--1
+layer_sync_output_buffer_full_level  580<--4
+layer_sync_output_buffer_decrement_step  584<--1
+------End Configuring Sync block
+Start Configure layer 6------------------------
+simd_base_addr 0  100<<--904000
+dest_addr 0  220<<--904000
+remap_base_mask 0  224<<--ffffffff
+remap_base_addr 0  228<<--0
+------Configuring Sync block, chip 0 row 32 block 3
+Output Sync block 
+layer_sync_message_send_address 0 layer 6 to layer 3 (chip 0, row 0, idx 0, cntr 0)  5b0<--ffc000
+layer_sync_csq_message_send enable  590<--0
+layer_sync_csq_message_rcvd_counter_enable  594<--0
+layer_sync_asq_message_send enable  5a0<--1
+layer_sync_asq_message_rcvd_counter_enable  5a4<--1
+layer_sync_input_buffer_empty_level  5e0<--1
+layer_sync_input_buffer_decrement_step  5e4<--1
+layer_sync_output_buffer_full_level  5f0<--f
+layer_sync_output_buffer_decrement_step  5f4<--1
+------End Configuring Sync block
+Start Configure layer 7------------------------
+simd_base_addr 0  110<<--908000
+dest_addr 0  260<<--908000
+remap_base_mask 0  264<<--ffffffff
+remap_base_addr 0  268<<--0
+------Configuring Sync block, chip 0 row 32 block 4
+Output Sync block 
+layer_sync_message_send_address 0 layer 7 to layer 4 (chip 0, row 1, idx 0, cntr 0)  620<--ffc100
+layer_sync_csq_message_send enable  600<--0
+layer_sync_csq_message_rcvd_counter_enable  604<--0
+layer_sync_asq_message_send enable  610<--1
+layer_sync_asq_message_rcvd_counter_enable  614<--1
+layer_sync_input_buffer_empty_level  650<--1
+layer_sync_input_buffer_decrement_step  654<--1
+layer_sync_output_buffer_full_level  660<--f
+layer_sync_output_buffer_decrement_step  664<--1
+------End Configuring Sync block
+Start Configure layer 8------------------------
+simd_base_addr 0  120<<--912000
+dest_addr 0  2a0<<--912000
+remap_base_mask 0  2a4<<--ffffffff
+remap_base_addr 0  2a8<<--0
+------Configuring Sync block, chip 0 row 32 block 5
+Output Sync block 
+layer_sync_message_send_address 0 layer 8 to layer 5 (chip 0, row 2, idx 0, cntr 0)  690<--ffc200
+layer_sync_csq_message_send enable  670<--0
+layer_sync_csq_message_rcvd_counter_enable  674<--0
+layer_sync_asq_message_send enable  680<--1
+layer_sync_asq_message_rcvd_counter_enable  684<--1
+layer_sync_input_buffer_empty_level  6c0<--1
+layer_sync_input_buffer_decrement_step  6c4<--1
+layer_sync_output_buffer_full_level  6d0<--f
+layer_sync_output_buffer_decrement_step  6d4<--1
+------End Configuring Sync block

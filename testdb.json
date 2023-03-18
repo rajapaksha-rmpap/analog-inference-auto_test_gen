@@ -1,12 +1,4545 @@
 {
-    "tests": {
-        "dt-1": {
-            "enabled" : true,
-            "asm_test" : true,
-            "dv_test" : false,
-            "dv_tb": "iss",
-            "asm_sim" : "simtop",
-            "neg_test" : false
-        }
+    "dt-poolmulticast-1": {
+        "name": "dt-poolmulticast-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolconcat-6": {
+        "name": "dt-poolconcat-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-bypasspad-2": {
+        "name": "dt-bypasspad-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "audio-1": {
+        "name": "audio-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dla34-49l-mchip": {
+        "name": "dla34-49l-mchip",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dla34-49l": {
+        "name": "dla34-49l",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "dla_sim",
+        "neg_test": false
+    },
+    "dla46-mchip": {
+        "name": "dla46-mchip",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dla46": {
+        "name": "dla46",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "dla_sim",
+        "neg_test": false
+    },
+    "dt-1-fc": {
+        "name": "dt-1-fc",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-1-bt": {
+        "name": "dt-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2-bt": {
+        "name": "dt-2-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-3-bt": {
+        "name": "dt-3-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-4-bt": {
+        "name": "dt-4-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2l-1": {
+        "name": "dt-2l-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2l-2": {
+        "name": "dt-2l-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2l-3": {
+        "name": "dt-2l-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2l-2r": {
+        "name": "dt-2l-2r",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2l-2r-bt": {
+        "name": "dt-2l-2r-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2l-4-bt": {
+        "name": "dt-2l-4-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2n-1": {
+        "name": "dt-2n-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2n-2": {
+        "name": "dt-2n-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2n-3": {
+        "name": "dt-2n-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-3n-1": {
+        "name": "dt-3n-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-1": {
+        "name": "dt-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2": {
+        "name": "dt-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-3": {
+        "name": "dt-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-4": {
+        "name": "dt-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-adc-1-bt": {
+        "name": "dt-adc-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-adc-1": {
+        "name": "dt-adc-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-argmax-1": {
+        "name": "dt-argmax-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-argmax-1": {
+        "name": "dt-io-argmax-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-argmax-2": {
+        "name": "dt-argmax-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-argmax-2": {
+        "name": "dt-io-argmax-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-argmax-5": {
+        "name": "dt-argmax-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-argmax-5": {
+        "name": "dt-io-argmax-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-argmax-6": {
+        "name": "dt-argmax-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-argmax-6": {
+        "name": "dt-io-argmax-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-argmax-7": {
+        "name": "dt-argmax-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-argmax-7": {
+        "name": "dt-io-argmax-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-bias-1": {
+        "name": "dt-bias-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-bias-1-bt": {
+        "name": "dt-bias-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-bias-1": {
+        "name": "dt-io-bias-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-big-1": {
+        "name": "dt-big-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-big-2": {
+        "name": "dt-big-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-big-3": {
+        "name": "dt-big-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-big-1-bt": {
+        "name": "dt-big-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-big-2-bt": {
+        "name": "dt-big-2-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-big-3-bt": {
+        "name": "dt-big-3-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-big-1": {
+        "name": "dt-io-big-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-big-2": {
+        "name": "dt-io-big-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-big-3": {
+        "name": "dt-io-big-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-bypass-1-bt": {
+        "name": "dt-bypass-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-bypass-1-bt": {
+        "name": "dt-io-bypass-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-bypass-add-1": {
+        "name": "dt-bypass-add-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-bypass-add-2": {
+        "name": "dt-bypass-add-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-bypass-add-2": {
+        "name": "dt-io-bypass-add-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-chan-split-1": {
+        "name": "dt-chan-split-1",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-chan-split-2": {
+        "name": "dt-chan-split-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-concat-new-1": {
+        "name": "dt-concat-new-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-1": {
+        "name": "dt-conv-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-2": {
+        "name": "dt-conv-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-3": {
+        "name": "dt-conv-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-4": {
+        "name": "dt-conv-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-5": {
+        "name": "dt-conv-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-6": {
+        "name": "dt-conv-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-1-bt": {
+        "name": "dt-conv-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-conv-1-bt": {
+        "name": "dt-io-conv-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-2-bt": {
+        "name": "dt-conv-2-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-3-bt": {
+        "name": "dt-conv-3-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-4-bt": {
+        "name": "dt-conv-4-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-5-bt": {
+        "name": "dt-conv-5-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-6-bt": {
+        "name": "dt-conv-6-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-7-bt": {
+        "name": "dt-conv-7-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-8-bt": {
+        "name": "dt-conv-8-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-csplit-1": {
+        "name": "dt-csplit-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-csplit-2": {
+        "name": "dt-csplit-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-csplit-3": {
+        "name": "dt-csplit-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-csplit-4": {
+        "name": "dt-csplit-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": true
+    },
+    "dt-csplit-5": {
+        "name": "dt-csplit-5",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": true
+    },
+    "dt-csplit-6": {
+        "name": "dt-csplit-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": true
+    },
+    "dt-io-conv-1": {
+        "name": "dt-io-conv-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-conv-2": {
+        "name": "dt-io-conv-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-conv-3": {
+        "name": "dt-io-conv-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-conv-4": {
+        "name": "dt-io-conv-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-conv-5": {
+        "name": "dt-io-conv-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-conv-6": {
+        "name": "dt-io-conv-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-conv-7": {
+        "name": "dt-io-conv-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-conv-8": {
+        "name": "dt-io-conv-8",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-dilated-conv-1": {
+        "name": "dt-io-dilated-conv-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-fetchglobal-1": {
+        "name": "dt-fetchglobal-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-fetchglobal-1": {
+        "name": "dt-io-fetchglobal-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-gap-reorder-1": {
+        "name": "dt-gap-reorder-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-gap-reordered-1": {
+        "name": "dt-io-gap-reordered-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-idup-1": {
+        "name": "dt-idup-1",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-idup-2": {
+        "name": "dt-idup-2",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-idup-1-bt": {
+        "name": "dt-idup-1-bt",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-idup-2-bt": {
+        "name": "dt-idup-2-bt",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-idup-1": {
+        "name": "dt-io-idup-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-idup-2": {
+        "name": "dt-io-idup-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-concat-new-1": {
+        "name": "dt-io-concat-new-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-concat-1": {
+        "name": "dt-io-concat-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-concat-rm-2": {
+        "name": "dt-io-concat-rm-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-concat-rm-1": {
+        "name": "dt-io-concat-rm-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-concat-2": {
+        "name": "dt-io-concat-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-concat-3": {
+        "name": "dt-io-concat-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-conv-pool-2r-bt": {
+        "name": "dt-io-conv-pool-2r-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-csplit-1": {
+        "name": "dt-io-csplit-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-csplit-2": {
+        "name": "dt-io-csplit-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-csplit-3": {
+        "name": "dt-io-csplit-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-csplit-4": {
+        "name": "dt-io-csplit-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-csplit-5": {
+        "name": "dt-io-csplit-5",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-csplit-6": {
+        "name": "dt-io-csplit-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-csplit-10": {
+        "name": "dt-io-csplit-10",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": true
+    },
+    "dt-io-ext-1": {
+        "name": "dt-io-ext-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "dt-io-ext-2": {
+        "name": "dt-io-ext-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "dt-io-ext-3": {
+        "name": "dt-io-ext-3",
+        "enabled": true,
+        "asm_test": false,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "dt-io-ext-2l-3": {
+        "name": "dt-io-ext-2l-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-2n-1": {
+        "name": "dt-io-ext-pull-2n-1",
+        "enabled": true,
+        "asm_test": false,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-3": {
+        "name": "dt-io-ext-pull-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-1": {
+        "name": "dt-io-ext-pull-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-2": {
+        "name": "dt-io-ext-pull-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-4": {
+        "name": "dt-io-ext-pull-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-2l-1": {
+        "name": "dt-io-ext-pull-2l-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-2l-2": {
+        "name": "dt-io-ext-pull-2l-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-2l-3": {
+        "name": "dt-io-ext-pull-2l-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-2l-2r": {
+        "name": "dt-io-ext-pull-2l-2r",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-2l-2r-bt": {
+        "name": "dt-io-ext-pull-2l-2r-bt",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-adc-1-bt": {
+        "name": "dt-io-ext-pull-adc-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-argmax-1": {
+        "name": "dt-io-ext-pull-argmax-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-argmax-2": {
+        "name": "dt-io-ext-pull-argmax-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-argmax-5": {
+        "name": "dt-io-ext-pull-argmax-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-argmax-6": {
+        "name": "dt-io-ext-pull-argmax-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-argmax-7": {
+        "name": "dt-io-ext-pull-argmax-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-bias-1": {
+        "name": "dt-io-ext-pull-bias-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-bias-1": {
+        "name": "dt-io-ext-bias-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-big-1": {
+        "name": "dt-io-ext-pull-big-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-big-2": {
+        "name": "dt-io-ext-pull-big-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-big-3": {
+        "name": "dt-io-ext-pull-big-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-bypass-1-bt": {
+        "name": "dt-io-ext-pull-bypass-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-bypass-1-bt": {
+        "name": "dt-io-ext-bypass-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-bypass-add-1": {
+        "name": "dt-io-ext-pull-bypass-add-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-concat-new-1": {
+        "name": "dt-io-ext-pull-concat-new-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-concat-new-1": {
+        "name": "dt-io-ext-concat-new-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-conv-1": {
+        "name": "dt-io-ext-pull-conv-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-conv-2": {
+        "name": "dt-io-ext-pull-conv-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-conv-3": {
+        "name": "dt-io-ext-pull-conv-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-conv-4": {
+        "name": "dt-io-ext-pull-conv-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-conv-5": {
+        "name": "dt-io-ext-pull-conv-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-conv-6": {
+        "name": "dt-io-ext-pull-conv-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-conv-7": {
+        "name": "dt-io-ext-pull-conv-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-conv-8": {
+        "name": "dt-io-ext-pull-conv-8",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-mimage-1": {
+        "name": "dt-io-ext-pull-mimage-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-mimage-bypass": {
+        "name": "dt-io-ext-pull-mimage-bypass",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-mimage-concat": {
+        "name": "dt-io-ext-pull-mimage-concat",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-conv-pool-2r-bt": {
+        "name": "dt-io-ext-pull-conv-pool-2r-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-csplit-1": {
+        "name": "dt-io-ext-pull-csplit-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-csplit-2": {
+        "name": "dt-io-ext-pull-csplit-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-csplit-3": {
+        "name": "dt-io-ext-pull-csplit-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-csplit-4": {
+        "name": "dt-io-ext-pull-csplit-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-csplit-5": {
+        "name": "dt-io-ext-pull-csplit-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-csplit-6": {
+        "name": "dt-io-ext-pull-csplit-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-csplit-10": {
+        "name": "dt-io-ext-pull-csplit-10",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": true
+    },
+    "dt-io-ext-pull-fetchglobal-1": {
+        "name": "dt-io-ext-pull-fetchglobal-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-idup-1": {
+        "name": "dt-io-ext-pull-idup-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-idup-2": {
+        "name": "dt-io-ext-pull-idup-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-mcast-1": {
+        "name": "dt-io-ext-pull-mcast-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-multi-1": {
+        "name": "dt-io-ext-pull-multi-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-multi-2": {
+        "name": "dt-io-ext-pull-multi-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-oscale-1": {
+        "name": "dt-io-ext-pull-oscale-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-oscale-2": {
+        "name": "dt-io-ext-pull-oscale-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-oscale-2": {
+        "name": "dt-io-ext-oscale-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-pool-1-bt": {
+        "name": "dt-io-ext-pull-pool-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-pool-1": {
+        "name": "dt-io-ext-pull-pool-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-1-bt": {
+        "name": "dt-io-ext-pull-poolo-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-1": {
+        "name": "dt-io-ext-pull-poolo-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-2": {
+        "name": "dt-io-ext-pull-poolo-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-3": {
+        "name": "dt-io-ext-pull-poolo-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-4": {
+        "name": "dt-io-ext-pull-poolo-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-6": {
+        "name": "dt-io-ext-pull-poolo-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-7": {
+        "name": "dt-io-ext-pull-poolo-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-poolo-8": {
+        "name": "dt-io-ext-poolo-8",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-8": {
+        "name": "dt-io-ext-pull-poolo-8",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-9": {
+        "name": "dt-io-ext-pull-poolo-9",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-10": {
+        "name": "dt-io-ext-pull-poolo-10",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-11": {
+        "name": "dt-io-ext-pull-poolo-11",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-12": {
+        "name": "dt-io-ext-pull-poolo-12",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-posneg-1": {
+        "name": "dt-io-ext-pull-posneg-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-posneg-2": {
+        "name": "dt-io-ext-pull-posneg-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-posneg-3": {
+        "name": "dt-io-ext-pull-posneg-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-posneg-4": {
+        "name": "dt-io-ext-pull-posneg-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-posneg-5": {
+        "name": "dt-io-ext-pull-posneg-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-posneg-6": {
+        "name": "dt-io-ext-pull-posneg-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-posneg-7": {
+        "name": "dt-io-ext-pull-posneg-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-relu-1-bt": {
+        "name": "dt-io-ext-pull-relu-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-rn-1": {
+        "name": "dt-io-ext-pull-rn-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-s2d-1": {
+        "name": "dt-io-ext-pull-s2d-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-skip-add-1": {
+        "name": "dt-io-ext-pull-skip-add-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-skip-add-2": {
+        "name": "dt-io-ext-pull-skip-add-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-skip-1-bt": {
+        "name": "dt-io-ext-pull-skip-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-skip-2-bt": {
+        "name": "dt-io-ext-pull-skip-2-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-trans-2": {
+        "name": "dt-io-ext-pull-trans-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-trans-3": {
+        "name": "dt-io-ext-pull-trans-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-trans-4": {
+        "name": "dt-io-ext-pull-trans-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-trans-6": {
+        "name": "dt-io-ext-pull-trans-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-upsample-1": {
+        "name": "dt-io-ext-pull-upsample-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-upsample-2": {
+        "name": "dt-io-ext-pull-upsample-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-upsample-2": {
+        "name": "dt-io-ext-upsample-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-upsampleremap-1": {
+        "name": "dt-io-ext-pull-upsampleremap-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-vsplit-1": {
+        "name": "dt-io-ext-pull-vsplit-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-bypass-add-2": {
+        "name": "dt-io-ext-pull-bypass-add-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn50-io-ext-pull-ag-2": {
+        "name": "rn50-io-ext-pull-ag-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ext-pull-ag-cmplt": {
+        "name": "rn50-io-ext-pull-ag-cmplt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "yolov5-io-ext-pull-ag-9": {
+        "name": "yolov5-io-ext-pull-ag-9",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-ext-pull-ag-full": {
+        "name": "yolov5-io-ext-pull-ag-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-multi-out-1": {
+        "name": "dt-io-ext-pull-multi-out-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-chan-split-2": {
+        "name": "dt-io-ext-pull-chan-split-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn50-io-ext-pull-ag-fast-cmplt": {
+        "name": "rn50-io-ext-pull-ag-fast-cmplt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn50-io-ext-pull-ag-fast-9p": {
+        "name": "rn50-io-ext-pull-ag-fast-9p",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn50-io-ext-pull-hwc-full": {
+        "name": "rn50-io-ext-pull-hwc-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "yolov5-io-ext-pull-ag-remap-full": {
+        "name": "yolov5-io-ext-pull-ag-remap-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "fcn-io-ext-pull-ag-chip1": {
+        "name": "fcn-io-ext-pull-ag-chip1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "fcn-io-ext-pull-ag-52": {
+        "name": "fcn-io-ext-pull-ag-52",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "fcn-io-ext-pull-ag-6": {
+        "name": "fcn-io-ext-pull-ag-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "fcn-io-ext-pull-ag-chip2": {
+        "name": "fcn-io-ext-pull-ag-chip2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "fcn-io-ext-pull-ag-chip2-arg": {
+        "name": "fcn-io-ext-pull-ag-chip2-arg",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn18-doppio-ext-pull": {
+        "name": "rn18-doppio-ext-pull",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "fcn18-doppio-ext-pull": {
+        "name": "fcn18-doppio-ext-pull",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "yolov5-io-ag-full-ext-pull": {
+        "name": "yolov5-io-ag-full-ext-pull",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "yolov5-io-ag-full-ext": {
+        "name": "yolov5-io-ag-full-ext",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn50-io-ext-ag-fast-cmplt": {
+        "name": "rn50-io-ext-ag-fast-cmplt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn50-io-ext-pull-ag-fast-22p": {
+        "name": "rn50-io-ext-pull-ag-fast-22p",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn50-io-ext-pull-ag-fast-2": {
+        "name": "rn50-io-ext-pull-ag-fast-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-conv-pool-2r-bt": {
+        "name": "dt-io-ext-conv-pool-2r-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "dt-io-ext-conv-2": {
+        "name": "dt-io-ext-conv-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "dt-io-mcast-1": {
+        "name": "dt-io-mcast-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-mcast-2": {
+        "name": "dt-io-mcast-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-mcast-3": {
+        "name": "dt-io-mcast-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-oscale-1": {
+        "name": "dt-io-oscale-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-oscale-2": {
+        "name": "dt-io-oscale-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-poolo-2": {
+        "name": "dt-io-poolo-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-poolo-3": {
+        "name": "dt-io-poolo-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-poolo-4": {
+        "name": "dt-io-poolo-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-poolo-6": {
+        "name": "dt-io-poolo-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-poolo-7": {
+        "name": "dt-io-poolo-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-poolo-8": {
+        "name": "dt-io-poolo-8",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-poolo-9": {
+        "name": "dt-io-poolo-9",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-poolo-10": {
+        "name": "dt-io-poolo-10",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-poolo-11": {
+        "name": "dt-io-poolo-11",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-poolo-12": {
+        "name": "dt-io-poolo-12",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "rn50-best-ext": {
+        "name": "rn50-best-ext",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "yolov5-best-ext": {
+        "name": "yolov5-best-ext",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "yolov5-io-ext-pull-remap-v2": {
+        "name": "yolov5-io-ext-pull-remap-v2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "yolov5-io-ext-pull-remap-v3": {
+        "name": "yolov5-io-ext-pull-remap-v3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-1-multi": {
+        "name": "dt-io-1-multi",
+        "enabled": true,
+        "asm_test": false,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "asmsyspull_st",
+        "neg_test": false
+    },
+    "dt-io-2-multi": {
+        "name": "dt-io-2-multi",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "asmsyspull_st",
+        "neg_test": false
+    },
+    "dt-io-2-multi-v2": {
+        "name": "dt-io-2-multi-v2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "asmsyspull_st",
+        "neg_test": false
+    },
+    "dt-io-3-multi": {
+        "name": "dt-io-3-multi",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "asmsyspull_st",
+        "neg_test": false
+    },
+    "dt-io-4-multi": {
+        "name": "dt-io-4-multi",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "asmsyspull_st",
+        "neg_test": false
+    },
+    "dt-io-big-1-multi": {
+        "name": "dt-io-big-1-multi",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "asmsyspull_st",
+        "neg_test": false
+    },
+    "fcn-io-ag-6-multi": {
+        "name": "fcn-io-ag-6-multi",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "asmsyspull_st",
+        "neg_test": false
+    },
+    "rn50-best-multi": {
+        "name": "rn50-best-multi",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "asmsyspull_st",
+        "neg_test": false
+    },
+    "yolov5-io-ag-remap-full-multi": {
+        "name": "yolov5-io-ag-remap-full-multi",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "asmsyspull_st",
+        "neg_test": false
+    },
+    "rn50-io-l55": {
+        "name": "rn50-io-l55",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-gap": {
+        "name": "rn50-io-gap",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-1": {
+        "name": "rn50-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-1-mini": {
+        "name": "rn50-io-1-mini",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-1-v2": {
+        "name": "rn50-io-1-v2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-5": {
+        "name": "rn50-io-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-1-v2": {
+        "name": "rn50-io-ag-1-v2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-1-v3": {
+        "name": "rn50-io-1-v3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-2-v2": {
+        "name": "rn50-io-2-v2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-3": {
+        "name": "rn50-io-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-3-v2": {
+        "name": "rn50-io-3-v2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-1w": {
+        "name": "rn50-1w",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-2": {
+        "name": "rn50-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-lyr-2": {
+        "name": "rn50-lyr-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-3": {
+        "name": "rn50-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-4": {
+        "name": "rn50-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-4w": {
+        "name": "rn50-4w",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-5": {
+        "name": "rn50-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-5w": {
+        "name": "rn50-5w",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-6": {
+        "name": "rn50-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-9": {
+        "name": "rn50-9",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-9": {
+        "name": "rn50-io-9",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-22": {
+        "name": "rn50-io-22",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-full": {
+        "name": "rn50-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-full": {
+        "name": "rn50-io-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-1": {
+        "name": "rn50-io-ag-fast-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-2": {
+        "name": "rn50-io-ag-fast-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-12": {
+        "name": "rn50-io-ag-fast-12",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-25": {
+        "name": "rn50-io-ag-fast-25",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-44": {
+        "name": "rn50-io-ag-fast-44",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-53": {
+        "name": "rn50-io-ag-fast-53",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-22p": {
+        "name": "rn50-io-ag-fast-22p",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-9p": {
+        "name": "rn50-io-ag-fast-9p",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-9": {
+        "name": "rn50-io-ag-fast-9",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-2": {
+        "name": "rn50-io-ag-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-6": {
+        "name": "rn50-io-ag-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-1": {
+        "name": "rn50-io-ag-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "fcn-io-1": {
+        "name": "fcn-io-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-6": {
+        "name": "fcn-io-ag-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-16": {
+        "name": "fcn-io-ag-16",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-39": {
+        "name": "fcn-io-ag-39",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-44": {
+        "name": "fcn-io-ag-44",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-52": {
+        "name": "fcn-io-ag-52",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-ext-chip1": {
+        "name": "fcn-io-ag-ext-chip1",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "fcn224-io-chip1": {
+        "name": "fcn224-io-chip1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "fcn224-io-chip2-split-2": {
+        "name": "fcn224-io-chip2-split-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "fcn224-io-swap-chip1": {
+        "name": "fcn224-io-swap-chip1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-2chips": {
+        "name": "fcn-2chips",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn224-io-hsplit-chip1": {
+        "name": "fcn224-io-hsplit-chip1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn224-io-hsplit-chip2": {
+        "name": "fcn224-io-hsplit-chip2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "dt-io-mchip-2l-1": {
+        "name": "dt-io-mchip-2l-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-bypass": {
+        "name": "dt-io-mchip-conv-bypass",
+        "enabled": false,
+        "asm_test": false,
+        "dv_test": false,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-bypass-1": {
+        "name": "dt-io-mchip-conv-bypass-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-conv-2n-1": {
+        "name": "dt-io-mchip-conv-conv-2n-1",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-conv-1": {
+        "name": "dt-io-mchip-conv-conv-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-conv-3": {
+        "name": "dt-io-mchip-conv-conv-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-conv-4": {
+        "name": "dt-io-mchip-conv-conv-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-conv-5": {
+        "name": "dt-io-mchip-conv-conv-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-conv-6": {
+        "name": "dt-io-mchip-conv-conv-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-conv-bypass-1": {
+        "name": "dt-io-mchip-conv-conv-bypass-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-conv-7": {
+        "name": "dt-io-mchip-conv-conv-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-bypass-2": {
+        "name": "dt-io-mchip-conv-bypass-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-mchip-conv-conv-conv-1": {
+        "name": "dt-io-mchip-conv-conv-conv-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "fcn-best-mchip": {
+        "name": "fcn-best-mchip",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "rn50-best-mchip": {
+        "name": "rn50-best-mchip",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "yolov5-remap-mchip": {
+        "name": "yolov5-remap-mchip",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": true,
+        "dv_tb": "mchip",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "yolov5-full": {
+        "name": "yolov5-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-36": {
+        "name": "yolov5-io-36",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-46": {
+        "name": "yolov5-io-46",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-full": {
+        "name": "yolov5-io-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-15": {
+        "name": "yolov5-io-15",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-18": {
+        "name": "yolov5-io-18",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-24l": {
+        "name": "yolov5-24l",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-24l": {
+        "name": "yolov5-io-24l",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-27": {
+        "name": "yolov5-io-27",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-29": {
+        "name": "yolov5-io-29",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-ag-1": {
+        "name": "yolov5-io-ag-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-ag-9": {
+        "name": "yolov5-io-ag-9",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-ag-speed-full": {
+        "name": "yolov5-io-ag-speed-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "ssd-6": {
+        "name": "ssd-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-vsplit-1": {
+        "name": "dt-vsplit-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-vsplit-1-bt": {
+        "name": "dt-vsplit-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-trans-6": {
+        "name": "dt-trans-6",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-trans-4": {
+        "name": "dt-trans-4",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-trans-3": {
+        "name": "dt-trans-3",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-trans-2": {
+        "name": "dt-trans-2",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-skip-2-bt": {
+        "name": "dt-io-skip-2-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-skip-1-bt": {
+        "name": "dt-io-skip-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-pull-ext-1": {
+        "name": "dt-io-pull-ext-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-pull-ext-multi-1": {
+        "name": "dt-io-pull-ext-multi-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-pull-ext-multi-2": {
+        "name": "dt-io-pull-ext-multi-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-pull-ext-multi-3": {
+        "name": "dt-io-pull-ext-multi-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-mchip-1": {
+        "name": "dt-io-mchip-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-mchip-2": {
+        "name": "dt-io-mchip-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-mchip-v2-1": {
+        "name": "dt-io-mchip-v2-1",
+        "enabled": true,
+        "asm_test": false,
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-mchip-v2-1": {
+        "name": "dt-io-ext-pull-mchip-v2-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "asmsyspull_mchip",
+        "neg_test": false
+    },
+    "dt-io-rne-0": {
+        "name": "dt-io-rne-0",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-upsample-1": {
+        "name": "dt-io-upsample-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-upsample-2": {
+        "name": "dt-io-upsample-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-upsample-3": {
+        "name": "dt-io-upsample-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-upsampleremap-1": {
+        "name": "dt-io-upsampleremap-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-skip-add-1": {
+        "name": "dt-io-skip-add-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-skip-add-2": {
+        "name": "dt-io-skip-add-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-bypass-add-1": {
+        "name": "dt-io-bypass-add-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "rn50-io-fast-2": {
+        "name": "rn50-io-fast-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "dt-mcast-1": {
+        "name": "dt-mcast-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolo-4": {
+        "name": "dt-poolo-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-2": {
+        "name": "dt-io-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-oscale-2": {
+        "name": "dt-oscale-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-relu-1": {
+        "name": "dt-relu-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-skip-1-bt": {
+        "name": "dt-skip-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-skip-2": {
+        "name": "dt-skip-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-upsample-1": {
+        "name": "dt-upsample-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-upsample-2": {
+        "name": "dt-upsample-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-conv-9-bt": {
+        "name": "dt-conv-9-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-1": {
+        "name": "dt-io-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-2n-1": {
+        "name": "dt-io-2n-1",
+        "enabled": true,
+        "asm_test": false,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-3": {
+        "name": "dt-io-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-4": {
+        "name": "dt-io-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-2l-1": {
+        "name": "dt-io-2l-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-2l-2": {
+        "name": "dt-io-2l-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-2l-3": {
+        "name": "dt-io-2l-3",
+        "enabled": true,
+        "asm_test": false,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-2l-2r": {
+        "name": "dt-io-2l-2r",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-adc-1-bt": {
+        "name": "dt-io-adc-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-bypass-2": {
+        "name": "dt-io-bypass-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-bypass-rm-1": {
+        "name": "dt-io-bypass-rm-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-relu-1-bt": {
+        "name": "dt-io-relu-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-bypass-pad": {
+        "name": "dt-io-bypass-pad",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "dt-io-multi-1": {
+        "name": "dt-io-multi-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "dt-io-multi-2": {
+        "name": "dt-io-multi-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-multi-image-1": {
+        "name": "dt-io-multi-image-1",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-multi-image-1": {
+        "name": "dt-multi-image-1",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "rn50-best": {
+        "name": "rn50-best",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "yolov5-io-ag-full": {
+        "name": "yolov5-io-ag-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-ext-pull-ag-remap": {
+        "name": "yolov5-io-ext-pull-ag-remap",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-multi-out-1": {
+        "name": "dt-io-multi-out-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-chan-split-2": {
+        "name": "dt-io-chan-split-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "yolov5-best": {
+        "name": "yolov5-best",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "rn18-doppio": {
+        "name": "rn18-doppio",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "fcn18-doppio": {
+        "name": "fcn18-doppio",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn18-doppio-n1": {
+        "name": "fcn18-doppio-n1",
+        "enabled": true,
+        "asm_test": false,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-best-chip1": {
+        "name": "fcn-best-chip1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-best-chip2": {
+        "name": "fcn-best-chip2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-arg-ext-pull": {
+        "name": "rn50-io-ag-fast-arg-ext-pull",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-arg-swap": {
+        "name": "rn50-io-ag-fast-arg-swap",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "yolov5-io-pre-relu": {
+        "name": "yolov5-io-pre-relu",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "fcn-ext-pull-best-chip1": {
+        "name": "fcn-ext-pull-best-chip1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "fcn-ext-pull-best-chip2": {
+        "name": "fcn-ext-pull-best-chip2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-posneg-2": {
+        "name": "dt-io-posneg-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-posneg-1": {
+        "name": "dt-posneg-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-posneg-2": {
+        "name": "dt-posneg-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-posneg-3": {
+        "name": "dt-posneg-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-posneg-4": {
+        "name": "dt-posneg-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-posneg-5": {
+        "name": "dt-posneg-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "dt-posneg-6": {
+        "name": "dt-posneg-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-posneg-7": {
+        "name": "dt-posneg-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-posneg-cas-1": {
+        "name": "dt-posneg-cas-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-rn-1": {
+        "name": "dt-io-rn-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-vsplit-1": {
+        "name": "dt-io-vsplit-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "dt-oscale-1": {
+        "name": "dt-oscale-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolo-1": {
+        "name": "dt-poolo-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolo-2": {
+        "name": "dt-poolo-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolo-3": {
+        "name": "dt-poolo-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolo-5": {
+        "name": "dt-poolo-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolo-6": {
+        "name": "dt-poolo-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolo-7": {
+        "name": "dt-poolo-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolo-8": {
+        "name": "dt-poolo-8",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolo-9": {
+        "name": "dt-poolo-9",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolo-10": {
+        "name": "dt-poolo-10",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-poolo-11": {
+        "name": "dt-poolo-11",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "dt-poolo-12": {
+        "name": "dt-poolo-12",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-poolo-1": {
+        "name": "dt-io-poolo-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-bypass-1": {
+        "name": "dt-bypass-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-bypass-2": {
+        "name": "dt-bypass-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-skip-1": {
+        "name": "dt-skip-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-pool-1": {
+        "name": "dt-pool-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-posneg-1": {
+        "name": "dt-io-posneg-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-posneg-3": {
+        "name": "dt-io-posneg-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-posneg-4": {
+        "name": "dt-io-posneg-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-posneg-5": {
+        "name": "dt-io-posneg-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-posneg-6": {
+        "name": "dt-io-posneg-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-posneg-7": {
+        "name": "dt-io-posneg-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-trans-2": {
+        "name": "dt-io-trans-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-trans-3": {
+        "name": "dt-io-trans-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-trans-4": {
+        "name": "dt-io-trans-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-trans-6": {
+        "name": "dt-io-trans-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-s2d-1": {
+        "name": "dt-s2d-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-oscale-2-bt": {
+        "name": "dt-oscale-2-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2l-2-bt": {
+        "name": "dt-2l-2-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-2l-3-bt": {
+        "name": "dt-2l-3-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-mcast-1-bt": {
+        "name": "dt-mcast-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-relu-1-bt": {
+        "name": "dt-relu-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-pool-1-bt": {
+        "name": "dt-pool-1-bt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "rn50-io-hwc-full": {
+        "name": "rn50-io-hwc-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-hwc-22": {
+        "name": "rn50-io-hwc-22",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-hwc-9": {
+        "name": "rn50-io-hwc-9",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-hwc-full": {
+        "name": "rn50-hwc-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-fast-1": {
+        "name": "rn50-io-fast-1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-fast-5": {
+        "name": "rn50-io-fast-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-fast-6": {
+        "name": "rn50-io-fast-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-fast-9": {
+        "name": "rn50-io-fast-9",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-fast-22": {
+        "name": "rn50-io-fast-22",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-fast-full": {
+        "name": "rn50-io-fast-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-cmplt": {
+        "name": "rn50-cmplt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-gaporder-cmplt": {
+        "name": "rn50-io-ag-fast-gaporder-cmplt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-gaporder-cmplt-ext": {
+        "name": "rn50-io-ag-fast-gaporder-cmplt-ext",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-gaporder-cmplt-ext-split": {
+        "name": "rn50-io-ag-fast-gaporder-cmplt-ext-split",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "yolo-face-io": {
+        "name": "yolo-face-io",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-cmplt": {
+        "name": "rn50-io-ag-fast-cmplt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-9p-ext": {
+        "name": "rn50-io-ag-fast-9p-ext",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-cmplt-ext-split": {
+        "name": "rn50-io-ag-fast-cmplt-ext-split",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-9p-ext-split": {
+        "name": "rn50-io-ag-fast-9p-ext-split",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "fcn-io-ag-chip1": {
+        "name": "fcn-io-ag-chip1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-chip2": {
+        "name": "fcn-io-ag-chip2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-chip2-arg": {
+        "name": "fcn-io-ag-chip2-arg",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-chip2-arg-only": {
+        "name": "fcn-io-ag-chip2-arg-only",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "yolov5-io-ext-pull-map": {
+        "name": "yolov5-io-ext-pull-map",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "yolov5-io-ag-remap-full": {
+        "name": "yolov5-io-ag-remap-full",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "yolov5-io-ag-full-img": {
+        "name": "yolov5-io-ag-full-img",
+        "enabled": false,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-arg": {
+        "name": "rn50-io-ag-fast-arg",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-cmplt-swap": {
+        "name": "rn50-io-ag-fast-cmplt-swap",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-fast-gaporder-arg": {
+        "name": "rn50-io-ag-fast-gaporder-arg",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-hsplit": {
+        "name": "rn50-io-ag-hsplit",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "rn50-io-ag-hsplit-ext": {
+        "name": "rn50-io-ag-hsplit-ext",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "push",
+        "neg_test": false
+    },
+    "rn50-io-ag-cmplt": {
+        "name": "rn50-io-ag-cmplt",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "resnet_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-chip1-simd": {
+        "name": "fcn-io-ag-chip1-simd",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-swap-chip1": {
+        "name": "fcn-io-ag-swap-chip1",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-chip2-simd": {
+        "name": "fcn-io-ag-chip2-simd",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "fcn-io-ag-chip2-simd-arg": {
+        "name": "fcn-io-ag-chip2-simd-arg",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "fcn_sim",
+        "neg_test": false
+    },
+    "yolov5-io-ag-remap-full-ext": {
+        "name": "yolov5-io-ag-remap-full-ext",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "yolov5-io-ag-remap-v2": {
+        "name": "yolov5-io-ag-remap-v2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-io-pre-relu128": {
+        "name": "yolov5-io-pre-relu128",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "yolo_sim",
+        "neg_test": false
+    },
+    "yolov5-hd": {
+        "name": "yolov5-hd",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "large_sim",
+        "neg_test": false
+    },
+    "dt-io-upsamplextended": {
+        "name": "dt-io-upsamplextended",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "simtop",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-5": {
+        "name": "dt-io-ext-pull-5",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-6": {
+        "name": "dt-io-ext-pull-6",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-7": {
+        "name": "dt-io-ext-pull-7",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-pool-2": {
+        "name": "dt-io-ext-pull-pool-2",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-pool-3": {
+        "name": "dt-io-ext-pull-pool-3",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-pool-4": {
+        "name": "dt-io-ext-pull-pool-4",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-1i": {
+        "name": "dt-io-ext-pull-poolo-1i",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-1-atg": {
+        "name": "dt-1-atg",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
+    },
+    "dt-io-ext-pull-poolo-1-atg": {
+        "name": "dt-io-ext-pull-poolo-1-atg",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
     }
 }

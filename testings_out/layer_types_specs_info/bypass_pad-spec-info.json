@@ -1,0 +1,484 @@
+{
+    "add_residuals": {
+        "times": 5,
+        "type": [
+            "boolean"
+        ],
+        "boolean": {
+            "times": 5,
+            "values": {
+                "False": 5
+            }
+        }
+    },
+    "bias_add_round_shift": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": {
+                "0": 5
+            }
+        }
+    },
+    "bypass_filters": {
+        "times": 5,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 5,
+            "values": {
+                "[21, 11]": 5
+            }
+        }
+    },
+    "dest_entries": {
+        "times": 5,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 5,
+            "values": {
+                "array of dicts": 5
+            }
+        }
+    },
+    "dest_entries/addr": {
+        "times": 5,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 5,
+            "values": {
+                "0x0": 5
+            }
+        }
+    },
+    "dest_entries/dest_details": {
+        "times": 5,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 5,
+            "values": {
+                "array of dicts": 5
+            }
+        }
+    },
+    "dest_entries/dest_details/addr_incr": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "dest_entries/dest_details/dest_addr": {
+        "times": 5,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 5,
+            "values": {
+                "0x0": 5
+            }
+        }
+    },
+    "dest_entries/dest_details/dest_layer": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "dest_entries/dest_details/gen_sync": {
+        "times": 5,
+        "type": [
+            "boolean"
+        ],
+        "boolean": {
+            "times": 5,
+            "values": {
+                "True": 5
+            }
+        }
+    },
+    "dest_entries/dest_details/mem_index": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": {
+                "0": 5
+            }
+        }
+    },
+    "dest_entries/dest_details/mem_type": {
+        "times": 5,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 5,
+            "values": {
+                "layer_mem": 5
+            }
+        }
+    },
+    "dest_entries/len": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "dma_id": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": {
+                "0": 5
+            }
+        }
+    },
+    "dma_layer_usage": {
+        "times": 5,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 5,
+            "values": {
+                "single_layer": 5
+            }
+        }
+    },
+    "in_scale": {
+        "times": 5,
+        "type": [
+            "float"
+        ],
+        "float": {
+            "times": 5,
+            "values": {
+                "1.0": 5
+            }
+        }
+    },
+    "layer_class": {
+        "times": 5,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 5,
+            "values": {
+                "bypass": 5
+            }
+        }
+    },
+    "layer_id": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_mems": {
+        "times": 5,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 5,
+            "values": {
+                "array of dicts": 5
+            }
+        }
+    },
+    "layer_mems/lm_max_rows": {
+        "times": 10,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 10,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_mems/lm_row_size": {
+        "times": 10,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 10,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "layer_type": {
+        "times": 5,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 5,
+            "values": {
+                "bypass_pad": 5
+            }
+        }
+    },
+    "num_in_cols": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "num_in_filters": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "num_in_rows": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "num_out_cols": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "num_out_filters": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "num_out_rows": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": "not recorded due to being already well defined"
+        }
+    },
+    "out_scale": {
+        "times": 5,
+        "type": [
+            "float"
+        ],
+        "float": {
+            "times": 5,
+            "values": {
+                "1.0": 5
+            }
+        }
+    },
+    "out_scale_mult": {
+        "times": 5,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 5,
+            "values": {
+                "[1, 1, 1, 1]": 5
+            }
+        }
+    },
+    "out_scale_shift": {
+        "times": 5,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 5,
+            "values": {
+                "[0, 0, 0, 0]": 5
+            }
+        }
+    },
+    "out_sync_mult": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": {
+                "1": 5
+            }
+        }
+    },
+    "pad_value": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": {
+                "-1": 1,
+                "0": 1,
+                "-127": 3
+            }
+        }
+    },
+    "prefetch_scale_mult": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": {
+                "1": 5
+            }
+        }
+    },
+    "prefetch_scale_shift": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": {
+                "0": 5
+            }
+        }
+    },
+    "relu": {
+        "times": 5,
+        "type": [
+            "string"
+        ],
+        "string": {
+            "times": 5,
+            "values": {
+                "none": 5
+            }
+        }
+    },
+    "scale_output": {
+        "times": 5,
+        "type": [
+            "boolean"
+        ],
+        "boolean": {
+            "times": 5,
+            "values": {
+                "False": 5
+            }
+        }
+    },
+    "scale_path_flip": {
+        "times": 5,
+        "type": [
+            "boolean"
+        ],
+        "boolean": {
+            "times": 5,
+            "values": {
+                "False": 5
+            }
+        }
+    },
+    "scale_prefetch": {
+        "times": 5,
+        "type": [
+            "boolean"
+        ],
+        "boolean": {
+            "times": 5,
+            "values": {
+                "False": 5
+            }
+        }
+    },
+    "scale_size": {
+        "times": 5,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 5,
+            "values": {
+                "1": 5
+            }
+        }
+    },
+    "src_entries": {
+        "times": 5,
+        "type": [
+            "list"
+        ],
+        "list": {
+            "times": 5,
+            "values": {
+                "[]": 5
+            }
+        }
+    },
+    "remap_region": {
+        "times": 4,
+        "type": [
+            "int"
+        ],
+        "int": {
+            "times": 4,
+            "values": {
+                "0": 4
+            }
+        }
+    }
+}

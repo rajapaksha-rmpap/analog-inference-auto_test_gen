@@ -1,0 +1,355 @@
+
+Analog Inference Back-end Compiler
+Version 1.0
+(c) 2021 Analog Inference, Inc.
+Reading simulation parameters from:/home/akila/redo_project/auto_test_gen/../sw_be/desgen/hwtests/in/yolov5-io-pre-relu128-sim.json ...
+Reading design specification from: /home/akila/redo_project/auto_test_gen/../sw_be/desgen/hwtests/in/yolov5-io-pre-relu128-spec.json ...
+Validating parameters and building functional system instance ...
+Layer_Mem_Type 1 index 0 rowsz 5376 nrows 48 alloc 262144 mask 3ffff 262143
+Layer_Mem_Type 1 index 1 rowsz 5376 nrows 48 alloc 262144 mask 3ffff 262143
+Layer_Mem_Type 1 index 2 rowsz 5376 nrows 28 alloc 262144 mask 3ffff 262143
+Layer_Mem_Type 1 index 3 rowsz 5376 nrows 28 alloc 262144 mask 3ffff 262143
+Layer_Mem_Type 1 index 4 rowsz 5376 nrows 28 alloc 262144 mask 3ffff 262143
+Layer_Mem_Type 1 index 5 rowsz 10752 nrows 32 alloc 524288 mask 7ffff 524287
+Layer_Mem_Type 1 index 6 rowsz 5376 nrows 14 alloc 131072 mask 1ffff 131071
+Layer_Mem_Type 1 index 7 rowsz 5376 nrows 14 alloc 131072 mask 1ffff 131071
+Layer_Mem_Type 1 index 8 rowsz 5376 nrows 14 alloc 131072 mask 1ffff 131071
+Layer_Mem_Type 1 index 9 rowsz 5376 nrows 7 alloc 65536 mask ffff 65535
+Layer_Mem_Type 1 index 10 rowsz 10752 nrows 24 alloc 262144 mask 3ffff 262143
+Building back-end model for Chip ID: 0
+Layer_Mem_Type 0 index 110 rowsz 2016 nrows 8 alloc 16384 mask 3fff 16383
+Total Layer memory size  3300 tot size 16384
+Set Input DMA blk ID layer 110 0
+Layer_Mem_Type 0 index 111 rowsz 6300 nrows 2 alloc 16384 mask 3fff 16383
+Total Layer memory size  3300 tot size 32768
+Layer_Mem_Type 0 index 112 rowsz 3150 nrows 2 alloc 16384 mask 3fff 16383
+Total Layer memory size  3300 tot size 49152
+Layer_Mem_Type 0 index 113 rowsz 1575 nrows 2 alloc 16384 mask 3fff 16383
+Total Layer memory size  3300 tot size 65536
+Layer_Mem_Type 0 index 0 rowsz 2016 nrows 8 alloc 16384 mask 3fff 16383
+Total Layer memory size  100 tot size 16384
+SIMD MEM ALLOC conv layer 100 xbar 0 _simd_bias_address[] 0
+Layer Layer 0 subid 0 Dims 6 6 6 32  len 6912
+Collected 6912
+Layer Layer 0 subid 1 Dims 32  len 32
+Input Ranges 0 [0,31]Add xbar range layer 0 xbar 0 range [0,31]
+[32,63]Add xbar range layer 0 xbar 0 range [32,63]
+[64,95]Add xbar range layer 0 xbar 0 range [64,95]
+[96,127]Add xbar range layer 0 xbar 0 range [96,127]
+[128,159]Add xbar range layer 0 xbar 0 range [128,159]
+[160,191]Add xbar range layer 0 xbar 0 range [160,191]
+Xbar range 0 0 , 31
+Weight Efficiency 0.0032959 Row Efficiency 0.105469 Column Efficiency 0.03125
+Layer_Mem_Type 0 index 1 rowsz 10752 nrows 8 alloc 131072 mask 1ffff 131071
+Total Layer memory size  100 tot size 147456
+SIMD MEM ALLOC conv layer 100 xbar 1 _simd_bias_address[] 512
+Layer Layer 1 subid 0 Dims 3 3 32 64  len 18432
+Collected 18432
+Layer Layer 1 subid 1 Dims 64  len 64
+Input Ranges 1 [0,95]Add xbar range layer 1 xbar 0 range [0,95]
+[96,191]Add xbar range layer 1 xbar 0 range [96,191]
+[192,287]Add xbar range layer 1 xbar 0 range [192,287]
+Xbar range 0 0 , 63
+Weight Efficiency 0.00878906 Row Efficiency 0.140625 Column Efficiency 0.0625
+Layer_Mem_Type 0 index 86 rowsz 10752 nrows 6 alloc 65536 mask ffff 65535
+Total Layer memory size  100 tot size 212992
+SIMD MEM ALLOC conv layer 100 xbar 2 _simd_bias_address[] 1024
+Layer Layer 86 subid 0 Dims 1 1 512 256  len 131072
+Collected 131072
+Layer Layer 86 subid 1 Dims 256  len 256
+Input Ranges 86 [0,1023]Add xbar range layer 86 xbar 0 range [0,1023]
+Xbar range 0 0 , 511
+Weight Efficiency 0.125 Row Efficiency 0.5 Column Efficiency 0.5
+Layer_Mem_Type 0 index 87 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  100 tot size 245760
+SIMD MEM ALLOC conv layer 100 xbar 3 _simd_bias_address[] 1536
+Layer Layer 87 subid 0 Dims 1 1 256 75  len 19200
+Collected 19200
+Layer Layer 87 subid 1 Dims 75  len 75
+Input Ranges 87 [0,255]Add xbar range layer 87 xbar 0 range [0,255]
+Xbar range 0 0 , 74
+Weight Efficiency 0.00915527 Row Efficiency 0.125 Column Efficiency 0.0732422
+Layer_Mem_Type 0 index 2 rowsz 10752 nrows 8 alloc 131072 mask 1ffff 131071
+Total Layer memory size  200 tot size 131072
+SIMD MEM ALLOC conv layer 200 xbar 0 _simd_bias_address[] 0
+Layer Layer 2 subid 0 Dims 1 1 512 32  len 16384
+Collected 16384
+Layer Layer 2 subid 1 Dims 32  len 32
+Input Ranges 2 [0,255]Add xbar range layer 2 xbar 0 range [0,255]
+Xbar range 0 0 , 127
+Weight Efficiency 0.03125 Row Efficiency 1 Column Efficiency 0.125
+Layer_Mem_Type 0 index 3 rowsz 5376 nrows 8 alloc 65536 mask ffff 65535
+Total Layer memory size  200 tot size 196608
+SIMD MEM ALLOC conv layer 200 xbar 1 _simd_bias_address[] 512
+Layer Layer 3 subid 0 Dims 1 1 512 32  len 16384
+Collected 16384
+Layer Layer 3 subid 1 Dims 32  len 32
+Input Ranges 3 [0,127]Add xbar range layer 3 xbar 0 range [0,127]
+Xbar range 0 0 , 127
+Weight Efficiency 0.03125 Row Efficiency 1 Column Efficiency 0.125
+Layer_Mem_Type 0 index 4 rowsz 5376 nrows 8 alloc 65536 mask ffff 65535
+Total Layer memory size  200 tot size 262144
+SIMD MEM ALLOC conv layer 200 xbar 2 _simd_bias_address[] 1024
+Layer Layer 4 subid 0 Dims 3 3 32 32  len 9216
+Collected 9216
+Layer Layer 4 subid 1 Dims 32  len 32
+Input Ranges 4 [0,95]Add xbar range layer 4 xbar 0 range [0,95]
+[96,191]Add xbar range layer 4 xbar 0 range [96,191]
+[192,287]Add xbar range layer 4 xbar 0 range [192,287]
+Xbar range 0 0 , 31
+Weight Efficiency 0.00439453 Row Efficiency 0.140625 Column Efficiency 0.03125
+Layer_Mem_Type 0 index 5 rowsz 5376 nrows 8 alloc 65536 mask ffff 65535
+Total Layer memory size  300 tot size 65536
+SIMD MEM ALLOC conv layer 300 xbar 0 _simd_bias_address[] 0
+Layer Layer 5 subid 0 Dims 1 1 512 32  len 16384
+Collected 16384
+Layer Layer 5 subid 1 Dims 32  len 32
+Input Ranges 5 [0,127]Add xbar range layer 5 xbar 0 range [0,127]
+Xbar range 0 0 , 127
+Weight Efficiency 0.03125 Row Efficiency 1 Column Efficiency 0.125
+Layer_Mem_Type 0 index 6 rowsz 5376 nrows 8 alloc 65536 mask ffff 65535
+Total Layer memory size  300 tot size 131072
+SIMD MEM ALLOC conv layer 300 xbar 1 _simd_bias_address[] 512
+Layer Layer 6 subid 0 Dims 3 3 32 32  len 9216
+Collected 9216
+Layer Layer 6 subid 1 Dims 32  len 32
+Input Ranges 6 [0,95]Add xbar range layer 6 xbar 0 range [0,95]
+[96,191]Add xbar range layer 6 xbar 0 range [96,191]
+[192,287]Add xbar range layer 6 xbar 0 range [192,287]
+Xbar range 0 0 , 31
+Weight Efficiency 0.00439453 Row Efficiency 0.140625 Column Efficiency 0.03125
+Layer_Mem_Type 0 index 7 rowsz 10752 nrows 8 alloc 131072 mask 1ffff 131071
+Total Layer memory size  300 tot size 262144
+SIMD MEM ALLOC conv layer 300 xbar 2 _simd_bias_address[] 1024
+Layer Layer 7 subid 0 Dims 1 1 512 32  len 16384
+Collected 16384
+Layer Layer 7 subid 1 Dims 32  len 32
+Input Ranges 7 [0,255]Add xbar range layer 7 xbar 0 range [0,255]
+Xbar range 0 0 , 127
+Weight Efficiency 0.03125 Row Efficiency 1 Column Efficiency 0.125
+Layer_Mem_Type 0 index 8 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Layer_Mem_Type 0 index 8 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  400 tot size 65536
+Set DMA blk ID layer 8 0
+SIMD MEM ALLOC Bypass layer 400 dmaid 0 _simd_bias_address[] 0
+Layer_Mem_Type 0 index 9 rowsz 10752 nrows 6 alloc 65536 mask ffff 65535
+Total Layer memory size  400 tot size 131072
+SIMD MEM ALLOC conv layer 400 xbar 1 _simd_bias_address[] 512
+Layer Layer 9 subid 0 Dims 1 1 512 64  len 32768
+Collected 32768
+Layer Layer 9 subid 1 Dims 64  len 64
+Input Ranges 9 [0,255]Add xbar range layer 9 xbar 0 range [0,255]
+Xbar range 0 0 , 255
+Weight Efficiency 0.0625 Row Efficiency 1 Column Efficiency 0.25
+Layer_Mem_Type 0 index 10 rowsz 10752 nrows 6 alloc 65536 mask ffff 65535
+Total Layer memory size  400 tot size 196608
+SIMD MEM ALLOC conv layer 400 xbar 2 _simd_bias_address[] 1024
+Layer Layer 10 subid 0 Dims 3 3 64 128  len 73728
+Collected 73728
+Layer Layer 10 subid 1 Dims 128  len 128
+Input Ranges 10 [0,191]Add xbar range layer 10 xbar 0 range [0,191]
+[192,383]Add xbar range layer 10 xbar 0 range [192,383]
+[384,575]Add xbar range layer 10 xbar 0 range [384,575]
+Xbar range 0 0 , 127
+Weight Efficiency 0.0351562 Row Efficiency 0.28125 Column Efficiency 0.125
+Layer_Mem_Type 0 index 11 rowsz 10752 nrows 6 alloc 65536 mask ffff 65535
+Total Layer memory size  400 tot size 262144
+SIMD MEM ALLOC conv layer 400 xbar 3 _simd_bias_address[] 1536
+Layer Layer 11 subid 0 Dims 1 1 512 64  len 32768
+Collected 32768
+Layer Layer 11 subid 1 Dims 64  len 64
+Input Ranges 11 [0,511]Add xbar range layer 11 xbar 0 range [0,511]
+Xbar range 0 0 , 255
+Weight Efficiency 0.0625 Row Efficiency 1 Column Efficiency 0.25
+Layer_Mem_Type 0 index 12 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  500 tot size 32768
+SIMD MEM ALLOC conv layer 500 xbar 0 _simd_bias_address[] 0
+Layer Layer 12 subid 0 Dims 1 1 512 64  len 32768
+Collected 32768
+Layer Layer 12 subid 1 Dims 64  len 64
+Input Ranges 12 [0,255]Add xbar range layer 12 xbar 0 range [0,255]
+Xbar range 0 0 , 255
+Weight Efficiency 0.0625 Row Efficiency 1 Column Efficiency 0.25
+Layer_Mem_Type 0 index 13 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  500 tot size 65536
+SIMD MEM ALLOC conv layer 500 xbar 1 _simd_bias_address[] 512
+Layer Layer 13 subid 0 Dims 3 3 64 64  len 36864
+Collected 36864
+Layer Layer 13 subid 1 Dims 64  len 64
+Input Ranges 13 [0,191]Add xbar range layer 13 xbar 0 range [0,191]
+[192,383]Add xbar range layer 13 xbar 0 range [192,383]
+[384,575]Add xbar range layer 13 xbar 0 range [384,575]
+Xbar range 0 0 , 63
+Weight Efficiency 0.0175781 Row Efficiency 0.28125 Column Efficiency 0.0625
+Layer_Mem_Type 0 index 14 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  500 tot size 98304
+SIMD MEM ALLOC conv layer 500 xbar 2 _simd_bias_address[] 1024
+Layer Layer 14 subid 0 Dims 1 1 512 64  len 32768
+Collected 32768
+Layer Layer 14 subid 1 Dims 64  len 64
+Input Ranges 14 [0,255]Add xbar range layer 14 xbar 0 range [0,255]
+Xbar range 0 0 , 255
+Weight Efficiency 0.0625 Row Efficiency 1 Column Efficiency 0.25
+Layer_Mem_Type 0 index 15 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  500 tot size 131072
+SIMD MEM ALLOC conv layer 500 xbar 3 _simd_bias_address[] 1536
+Layer Layer 15 subid 0 Dims 3 3 64 64  len 36864
+Collected 36864
+Layer Layer 15 subid 1 Dims 64  len 64
+Input Ranges 15 [0,191]Add xbar range layer 15 xbar 0 range [0,191]
+[192,383]Add xbar range layer 15 xbar 0 range [192,383]
+[384,575]Add xbar range layer 15 xbar 0 range [384,575]
+Xbar range 0 0 , 63
+Weight Efficiency 0.0175781 Row Efficiency 0.28125 Column Efficiency 0.0625
+Layer_Mem_Type 0 index 16 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  600 tot size 32768
+SIMD MEM ALLOC conv layer 600 xbar 0 _simd_bias_address[] 0
+Layer Layer 16 subid 0 Dims 1 1 512 64  len 32768
+Collected 32768
+Layer Layer 16 subid 1 Dims 64  len 64
+Input Ranges 16 [0,255]Add xbar range layer 16 xbar 0 range [0,255]
+Xbar range 0 0 , 255
+Weight Efficiency 0.0625 Row Efficiency 1 Column Efficiency 0.25
+Layer_Mem_Type 0 index 17 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  600 tot size 65536
+SIMD MEM ALLOC conv layer 600 xbar 1 _simd_bias_address[] 512
+Layer Layer 17 subid 0 Dims 3 3 64 64  len 36864
+Collected 36864
+Layer Layer 17 subid 1 Dims 64  len 64
+Input Ranges 17 [0,191]Add xbar range layer 17 xbar 0 range [0,191]
+[192,383]Add xbar range layer 17 xbar 0 range [192,383]
+[384,575]Add xbar range layer 17 xbar 0 range [384,575]
+Xbar range 0 0 , 63
+Weight Efficiency 0.0175781 Row Efficiency 0.28125 Column Efficiency 0.0625
+Layer_Mem_Type 0 index 18 rowsz 10752 nrows 6 alloc 65536 mask ffff 65535
+Total Layer memory size  600 tot size 131072
+SIMD MEM ALLOC conv layer 600 xbar 2 _simd_bias_address[] 1024
+Layer Layer 18 subid 0 Dims 1 1 512 64  len 32768
+Collected 32768
+Layer Layer 18 subid 1 Dims 64  len 64
+Input Ranges 18 [0,511]Add xbar range layer 18 xbar 0 range [0,511]
+Xbar range 0 0 , 255
+Weight Efficiency 0.0625 Row Efficiency 1 Column Efficiency 0.25
+Layer_Mem_Type 0 index 19 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Layer_Mem_Type 0 index 19 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  600 tot size 196608
+Set DMA blk ID layer 19 3
+SIMD MEM ALLOC Bypass layer 600 dmaid 3 _simd_bias_address[] 1536
+Layer_Mem_Type 0 index 20 rowsz 10752 nrows 6 alloc 65536 mask ffff 65535
+Total Layer memory size  700 tot size 65536
+SIMD MEM ALLOC conv layer 700 xbar 0 _simd_bias_address[] 0
+Layer Layer 20 subid 0 Dims 1 1 512 128  len 65536
+Collected 65536
+Layer Layer 20 subid 1 Dims 128  len 128
+Input Ranges 20 [0,127]Add xbar range layer 20 xbar 0 range [0,127]
+Xbar range 0 0 , 127
+Weight Efficiency 0.03125 Row Efficiency 0.25 Column Efficiency 0.125
+Layer_Mem_Type 0 index 21 rowsz 10752 nrows 6 alloc 65536 mask ffff 65535
+Total Layer memory size  700 tot size 131072
+SIMD MEM ALLOC conv layer 700 xbar 1 _simd_bias_address[] 512
+Layer Layer 21 subid 0 Dims 3 3 128 256  len 294912
+Collected 294912
+Layer Layer 21 subid 1 Dims 256  len 256
+Input Ranges 21 [0,383]Add xbar range layer 21 xbar 0 range [0,383]
+[384,767]Add xbar range layer 21 xbar 0 range [384,767]
+[768,1151]Add xbar range layer 21 xbar 0 range [768,1151]
+Xbar range 0 0 , 255
+Weight Efficiency 0.140625 Row Efficiency 0.5625 Column Efficiency 0.25
+Layer_Mem_Type 0 index 22 rowsz 10752 nrows 6 alloc 65536 mask ffff 65535
+Total Layer memory size  700 tot size 196608
+SIMD MEM ALLOC conv layer 700 xbar 2 _simd_bias_address[] 1024
+Layer Layer 22 subid 0 Dims 1 1 512 128  len 65536
+Collected 65536
+Layer Layer 22 subid 1 Dims 128  len 128
+Input Ranges 22 [0,255]Add xbar range layer 22 xbar 0 range [0,255]
+Xbar range 0 0 , 127
+Weight Efficiency 0.03125 Row Efficiency 0.25 Column Efficiency 0.125
+Layer_Mem_Type 0 index 23 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  700 tot size 229376
+SIMD MEM ALLOC conv layer 700 xbar 3 _simd_bias_address[] 1536
+Layer Layer 23 subid 0 Dims 1 1 512 128  len 65536
+Collected 65536
+Layer Layer 23 subid 1 Dims 128  len 128
+Input Ranges 23 [0,127]Add xbar range layer 23 xbar 0 range [0,127]
+Xbar range 0 0 , 127
+Weight Efficiency 0.03125 Row Efficiency 0.25 Column Efficiency 0.125
+Layer_Mem_Type 0 index 24 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  800 tot size 32768
+SIMD MEM ALLOC conv layer 800 xbar 0 _simd_bias_address[] 0
+Layer Layer 24 subid 0 Dims 3 3 128 128  len 147456
+Collected 147456
+Layer Layer 24 subid 1 Dims 128  len 128
+Input Ranges 24 [0,639]Add xbar range layer 24 xbar 0 range [0,639]
+[640,1279]Add xbar range layer 24 xbar 0 range [640,1279]
+[1280,1919]Add xbar range layer 24 xbar 0 range [1280,1919]
+Xbar range 0 0 , 383
+Weight Efficiency 0.210938 Row Efficiency 0.9375 Column Efficiency 0.375
+Layer_Mem_Type 0 index 25 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  800 tot size 65536
+SIMD MEM ALLOC conv layer 800 xbar 1 _simd_bias_address[] 512
+Layer Layer 25 subid 0 Dims 1 1 512 128  len 65536
+Collected 65536
+Layer Layer 25 subid 1 Dims 128  len 128
+Input Ranges 25 [0,127]Add xbar range layer 25 xbar 0 range [0,127]
+Xbar range 0 0 , 127
+Weight Efficiency 0.03125 Row Efficiency 0.25 Column Efficiency 0.125
+Layer_Mem_Type 0 index 26 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  800 tot size 98304
+SIMD MEM ALLOC conv layer 800 xbar 2 _simd_bias_address[] 1024
+Layer Layer 26 subid 0 Dims 3 3 128 128  len 147456
+Collected 147456
+Layer Layer 26 subid 1 Dims 128  len 128
+Input Ranges 26 [0,639]Add xbar range layer 26 xbar 0 range [0,639]
+[640,1279]Add xbar range layer 26 xbar 0 range [640,1279]
+[1280,1919]Add xbar range layer 26 xbar 0 range [1280,1919]
+Xbar range 0 0 , 383
+Weight Efficiency 0.210938 Row Efficiency 0.9375 Column Efficiency 0.375
+Layer_Mem_Type 0 index 27 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  800 tot size 131072
+SIMD MEM ALLOC conv layer 800 xbar 3 _simd_bias_address[] 1536
+Layer Layer 27 subid 0 Dims 1 1 512 128  len 65536
+Collected 65536
+Layer Layer 27 subid 1 Dims 128  len 128
+Input Ranges 27 [0,127]Add xbar range layer 27 xbar 0 range [0,127]
+Xbar range 0 0 , 127
+Weight Efficiency 0.03125 Row Efficiency 0.25 Column Efficiency 0.125
+Layer_Mem_Type 0 index 28 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  900 tot size 32768
+SIMD MEM ALLOC conv layer 900 xbar 0 _simd_bias_address[] 0
+Layer Layer 28 subid 0 Dims 3 3 128 128  len 147456
+Collected 147456
+Layer Layer 28 subid 1 Dims 128  len 128
+Input Ranges 28 [0,639]Add xbar range layer 28 xbar 0 range [0,639]
+[640,1279]Add xbar range layer 28 xbar 0 range [640,1279]
+[1280,1919]Add xbar range layer 28 xbar 0 range [1280,1919]
+Xbar range 0 0 , 383
+Weight Efficiency 0.210938 Row Efficiency 0.9375 Column Efficiency 0.375
+Layer_Mem_Type 0 index 29 rowsz 10752 nrows 6 alloc 65536 mask ffff 65535
+Total Layer memory size  900 tot size 98304
+SIMD MEM ALLOC conv layer 900 xbar 1 _simd_bias_address[] 512
+Layer Layer 29 subid 0 Dims 1 1 512 128  len 65536
+Collected 65536
+Layer Layer 29 subid 1 Dims 128  len 128
+Input Ranges 29 [0,255]Add xbar range layer 29 xbar 0 range [0,255]
+Xbar range 0 0 , 127
+Weight Efficiency 0.03125 Row Efficiency 0.25 Column Efficiency 0.125
+Layer_Mem_Type 0 index 30 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Layer_Mem_Type 0 index 30 rowsz 5376 nrows 6 alloc 32768 mask 7fff 32767
+Total Layer memory size  900 tot size 163840
+Set DMA blk ID layer 30 2
+SIMD MEM ALLOC Bypass layer 900 dmaid 2 _simd_bias_address[] 1024
+Layer_Mem_Type 0 index 31 rowsz 10752 nrows 6 alloc 65536 mask ffff 65535
+Total Layer memory size  900 tot size 229376
+SIMD MEM ALLOC conv layer 900 xbar 3 _simd_bias_address[] 1536
+Layer Layer 31 subid 0 Dims 1 1 512 256  len 131072
+Collected 131072
+Layer Layer 31 subid 1 Dims 256  len 256
+Input Ranges 31 [0,511]Add xbar range layer 31 xbar 0 range [0,511]
+Xbar range 0 0 , 511
+Weight Efficiency 0.125 Row Efficiency 0.5 Column Efficiency 0.5
+Layer_Mem_Type 0 index 32 rowsz 10752 nrows 6 alloc 65536 mask ffff 65535
+Total Layer memory size  1000 tot size 65536
+SIMD MEM ALLOC conv layer 1000 xbar 0 _simd_bias_address[] 0
+SIMD MEM ALLOC conv layer 1000 xbar 1 _simd_bias_address[] 512
+SIMD MEM ALLOC conv layer 1000 xbar 2 _simd_bias_address[] 1024
+Layer Layer 32 subid 0 Dims 3 3 256 512  len 1179648

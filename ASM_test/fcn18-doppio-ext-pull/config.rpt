@@ -1,0 +1,2123 @@
+Start Configure Chip 0------------------------------------------
+-----Input Sync block -----------
+Start Configure IO Module 32---------------------------
+gap_enable  24<--1
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+Start Configure layer 110------------------------
+simd_base_addr 0  d0<<--3008000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 32 block 0
+layer_sync_message_send_address 0 layer 110 to layer 115 (chip 0, row 32, idx 2, cntr 1)  460<--8fff44
+layer_sync_message_send_address 1 layer 110 to layer 0 (chip 0, row 0, idx 0, cntr 0)  464<--23ffff00
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--9
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 112------------------------
+simd_base_addr 0  e0<<--300c000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--ffffffff
+remap_base_addr 0  1a8<<--0
+------Configuring Sync block, chip 0 row 32 block 1
+layer_sync_message_send_address 0 layer 112 to layer 116 (chip 0, row 32, idx 3, cntr 1)  4d0<--8fff64
+layer_sync_message_send_address 1 layer 112 to layer 1 (chip 0, row 0, idx 0, cntr 0)  4d4<--23ffff04
+layer_sync_csq_message_send enable  4b0<--1
+layer_sync_csq_message_rcvd_counter_enable  4b4<--1
+layer_sync_asq_message_send enable  4c0<--2
+layer_sync_asq_message_rcvd_counter_enable  4c4<--2
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--9
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Start Configure layer 115------------------------
+simd_base_addr 0  f0<<--1020000
+dest_addr 0  1e0<<--0
+remap_base_mask 0  1e4<<--ffffffff
+remap_base_addr 0  1e8<<--0
+------Configuring Sync block, chip 0 row 32 block 2
+layer_sync_message_send_address 0 layer 115 to layer 0 (chip 0, row 0, idx 0, cntr 1)  540<--ffc004
+layer_sync_message_send_address 1 layer 115 to layer 110 (chip 0, row 32, idx 0, cntr 0)  544<--8fff00
+layer_sync_csq_message_send enable  520<--1
+layer_sync_csq_message_rcvd_counter_enable  524<--1
+layer_sync_asq_message_send enable  530<--2
+layer_sync_asq_message_rcvd_counter_enable  534<--2
+layer_sync_input_buffer_empty_level  570<--1
+layer_sync_input_buffer_decrement_step  574<--1
+layer_sync_output_buffer_full_level  580<--9
+layer_sync_output_buffer_decrement_step  584<--1
+------End Configuring Sync block
+Start Configure layer 116------------------------
+simd_base_addr 0  100<<--12e0000
+dest_addr 0  220<<--0
+remap_base_mask 0  224<<--ffffffff
+remap_base_addr 0  228<<--0
+------Configuring Sync block, chip 0 row 32 block 3
+layer_sync_message_send_address 0 layer 116 to layer 23 (chip 0, row 11, idx 0, cntr 1)  5b0<--ffcb04
+layer_sync_message_send_address 1 layer 116 to layer 112 (chip 0, row 32, idx 1, cntr 0)  5b4<--8fff20
+layer_sync_csq_message_send enable  590<--1
+layer_sync_csq_message_rcvd_counter_enable  594<--1
+layer_sync_asq_message_send enable  5a0<--2
+layer_sync_asq_message_rcvd_counter_enable  5a4<--2
+layer_sync_input_buffer_empty_level  5e0<--1
+layer_sync_input_buffer_decrement_step  5e4<--1
+layer_sync_output_buffer_full_level  5f0<--9
+layer_sync_output_buffer_decrement_step  5f4<--1
+------End Configuring Sync block
+Start Configure layer 111------------------------
+simd_base_addr 0  110<<--904000
+dest_addr 0  260<<--904000
+remap_base_mask 0  264<<--ffffffff
+remap_base_addr 0  268<<--0
+------Configuring Sync block, chip 0 row 32 block 4
+Output Sync block 
+layer_sync_message_send_address 0 layer 111 to layer 2 (chip 0, row 0, idx 0, cntr 0)  620<--23ffff08
+layer_sync_message_send_address 1 layer 111 to layer 22 (chip 0, row 10, idx 1, cntr 0)  624<--ffca20
+layer_sync_csq_message_send enable  600<--1
+layer_sync_csq_message_rcvd_counter_enable  604<--2
+layer_sync_asq_message_send enable  610<--2
+layer_sync_asq_message_rcvd_counter_enable  614<--1
+layer_sync_input_buffer_empty_level  650<--1
+layer_sync_input_buffer_decrement_step  654<--1
+layer_sync_output_buffer_full_level  660<--f
+layer_sync_output_buffer_decrement_step  664<--1
+------End Configuring Sync block
+Start Configure layer 113------------------------
+simd_base_addr 0  120<<--908200
+dest_addr 0  2a0<<--908200
+remap_base_mask 0  2a4<<--ffffffff
+remap_base_addr 0  2a8<<--0
+------Configuring Sync block, chip 0 row 32 block 5
+Output Sync block 
+layer_sync_message_send_address 0 layer 113 to layer 3 (chip 0, row 0, idx 0, cntr 0)  690<--23ffff0c
+layer_sync_message_send_address 1 layer 113 to layer 45 (chip 0, row 21, idx 1, cntr 0)  694<--ffd520
+layer_sync_csq_message_send enable  670<--1
+layer_sync_csq_message_rcvd_counter_enable  674<--2
+layer_sync_asq_message_send enable  680<--2
+layer_sync_asq_message_rcvd_counter_enable  684<--1
+layer_sync_input_buffer_empty_level  6c0<--1
+layer_sync_input_buffer_decrement_step  6c4<--1
+layer_sync_output_buffer_full_level  6d0<--f
+layer_sync_output_buffer_decrement_step  6d4<--1
+------End Configuring Sync block
+End Configure IO Module 32---------------------------
+Start Configure Row 0------------------------------------------
+mac_blk_enable  0<--1f
+simd_enable  24<--1
+input up sleep wake enable  300<--3
+input up sleep wake lut0 run  310<--1999
+input up sleep wake lut1 run  314<--1
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--f
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--3210
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--0
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 0------------------------
+simd_base_addr 0  d0<<--900000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 0 block 0
+layer_sync_message_send_address 0 layer 0 to layer 1 (chip 0, row 0, idx 1, cntr 2)  460<--8fff28
+layer_sync_message_send_address 1 layer 0 to layer 115 (chip 0, row 32, idx 2, cntr 0)  464<--3ffff40
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 1------------------------
+pool_filter_height  30<--3
+pool_filter_width  34<--3
+simd_base_addr 0  e0<<--a00000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--7fff
+remap_base_addr 0  1a8<<--910000
+dest_addr 1  1b0<<--0
+remap_base_mask 1  1b4<<--3ffff
+remap_base_addr 1  1b8<<--2000000
+------Configuring Sync block, chip 0 row 0 block 1
+layer_sync_message_send_address 0 layer 1 to layer 2 (chip 0, row 0, idx 2, cntr 1)  4d0<--8fff44
+layer_sync_message_send_address 1 layer 1 to layer 3 (chip 0, row 0, idx 3, cntr 3)  4d4<--8fff6c
+layer_sync_message_send_address 2 layer 1 to layer 0 (chip 0, row 0, idx 0, cntr 0)  4d8<--8fff00
+layer_sync_csq_message_send enable  4b0<--3
+layer_sync_csq_message_rcvd_counter_enable  4b4<--3
+layer_sync_asq_message_send enable  4c0<--4
+layer_sync_asq_message_rcvd_counter_enable  4c4<--4
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--8
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Start Configure layer 2------------------------
+simd_base_addr 0  f0<<--918000
+dest_addr 0  1e0<<--0
+remap_base_mask 0  1e4<<--ffffffff
+remap_base_addr 0  1e8<<--0
+------Configuring Sync block, chip 0 row 0 block 2
+layer_sync_message_send_address 0 layer 2 to layer 3 (chip 0, row 0, idx 3, cntr 2)  540<--8fff68
+layer_sync_message_send_address 1 layer 2 to layer 1 (chip 0, row 0, idx 1, cntr 0)  544<--8fff20
+layer_sync_csq_message_send enable  520<--1
+layer_sync_csq_message_rcvd_counter_enable  524<--1
+layer_sync_asq_message_send enable  530<--2
+layer_sync_asq_message_rcvd_counter_enable  534<--2
+layer_sync_input_buffer_empty_level  570<--1
+layer_sync_input_buffer_decrement_step  574<--1
+layer_sync_output_buffer_full_level  580<--8
+layer_sync_output_buffer_decrement_step  584<--1
+------End Configuring Sync block
+Start Configure layer 3------------------------
+simd_base_addr 0  100<<--a40000
+dest_addr 0  220<<--0
+remap_base_mask 0  224<<--7fff
+remap_base_addr 0  228<<--1040000
+dest_addr 1  230<<--0
+remap_base_mask 1  234<<--3ffff
+remap_base_addr 1  238<<--2040000
+------Configuring Sync block, chip 0 row 0 block 3
+layer_sync_message_send_address 0 layer 3 to layer 4 (chip 0, row 1, idx 0, cntr 1)  5b0<--ffc104
+layer_sync_message_send_address 1 layer 3 to layer 5 (chip 0, row 1, idx 1, cntr 3)  5b4<--ffc12c
+layer_sync_message_send_address 2 layer 3 to layer 2 (chip 0, row 0, idx 2, cntr 0)  5b8<--8fff40
+layer_sync_message_send_address 3 layer 3 to layer 1 (chip 0, row 0, idx 1, cntr 1)  5bc<--8fff24
+layer_sync_csq_message_send enable  590<--3
+layer_sync_csq_message_rcvd_counter_enable  594<--3
+layer_sync_asq_message_send enable  5a0<--c
+layer_sync_asq_message_rcvd_counter_enable  5a4<--c
+layer_sync_input_buffer_empty_level  5e0<--1
+layer_sync_input_buffer_decrement_step  5e4<--1
+layer_sync_output_buffer_full_level  5f0<--8
+layer_sync_output_buffer_decrement_step  5f4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 14 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+End Configure Row 0--------------------------------------------
+Start Configure Row 1------------------------------------------
+mac_blk_enable  0<--f
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--7fff
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--f
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--3210
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--0
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 4------------------------
+simd_base_addr 0  d0<<--908000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 1 block 0
+layer_sync_message_send_address 0 layer 4 to layer 5 (chip 0, row 1, idx 1, cntr 2)  460<--8fff28
+layer_sync_message_send_address 1 layer 4 to layer 3 (chip 0, row 0, idx 3, cntr 0)  464<--ffc060
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 5------------------------
+simd_base_addr 0  e0<<--a00000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--7fff
+remap_base_addr 0  1a8<<--910000
+dest_addr 1  1b0<<--0
+remap_base_mask 1  1b4<<--7fff
+remap_base_addr 1  1b8<<--1080000
+------Configuring Sync block, chip 0 row 1 block 1
+layer_sync_message_send_address 0 layer 5 to layer 6 (chip 0, row 1, idx 2, cntr 1)  4d0<--8fff44
+layer_sync_message_send_address 1 layer 5 to layer 8 (chip 0, row 2, idx 0, cntr 2)  4d4<--ffc208
+layer_sync_message_send_address 2 layer 5 to layer 4 (chip 0, row 1, idx 0, cntr 0)  4d8<--8fff00
+layer_sync_message_send_address 3 layer 5 to layer 3 (chip 0, row 0, idx 3, cntr 1)  4dc<--ffc064
+layer_sync_csq_message_send enable  4b0<--3
+layer_sync_csq_message_rcvd_counter_enable  4b4<--3
+layer_sync_asq_message_send enable  4c0<--c
+layer_sync_asq_message_rcvd_counter_enable  4c4<--c
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--8
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Start Configure layer 6------------------------
+simd_base_addr 0  f0<<--918000
+dest_addr 0  1e0<<--0
+remap_base_mask 0  1e4<<--ffffffff
+remap_base_addr 0  1e8<<--0
+------Configuring Sync block, chip 0 row 1 block 2
+layer_sync_message_send_address 0 layer 6 to layer 7 (chip 0, row 1, idx 3, cntr 1)  540<--8fff64
+layer_sync_message_send_address 1 layer 6 to layer 5 (chip 0, row 1, idx 1, cntr 0)  544<--8fff20
+layer_sync_csq_message_send enable  520<--1
+layer_sync_csq_message_rcvd_counter_enable  524<--1
+layer_sync_asq_message_send enable  530<--2
+layer_sync_asq_message_rcvd_counter_enable  534<--2
+layer_sync_input_buffer_empty_level  570<--1
+layer_sync_input_buffer_decrement_step  574<--1
+layer_sync_output_buffer_full_level  580<--8
+layer_sync_output_buffer_decrement_step  584<--1
+------End Configuring Sync block
+Start Configure layer 7------------------------
+simd_base_addr 0  100<<--2080000
+dest_addr 0  220<<--0
+remap_base_mask 0  224<<--ffffffff
+remap_base_addr 0  228<<--0
+------Configuring Sync block, chip 0 row 1 block 3
+layer_sync_message_send_address 0 layer 7 to layer 8 (chip 0, row 2, idx 0, cntr 3)  5b0<--ffc20c
+layer_sync_message_send_address 1 layer 7 to layer 6 (chip 0, row 1, idx 2, cntr 0)  5b4<--8fff40
+layer_sync_csq_message_send enable  590<--1
+layer_sync_csq_message_rcvd_counter_enable  594<--1
+layer_sync_asq_message_send enable  5a0<--2
+layer_sync_asq_message_rcvd_counter_enable  5a4<--2
+layer_sync_input_buffer_empty_level  5e0<--1
+layer_sync_input_buffer_decrement_step  5e4<--1
+layer_sync_output_buffer_full_level  5f0<--f
+layer_sync_output_buffer_decrement_step  5f4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 14 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+End Configure Row 1--------------------------------------------
+Start Configure Row 2------------------------------------------
+mac_blk_enable  0<--f
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--7fff
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--f
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--3210
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--0
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 8------------------------
+simd_base_addr 0  d0<<--a00000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--7fff
+remap_base_addr 0  168<<--908000
+dest_addr 1  170<<--0
+remap_base_mask 1  174<<--1ffff
+remap_base_addr 1  178<<--20a0000
+------Configuring Sync block, chip 0 row 2 block 0
+layer_sync_message_send_address 0 layer 8 to layer 9 (chip 0, row 2, idx 1, cntr 1)  460<--8fff24
+layer_sync_message_send_address 1 layer 8 to layer 10 (chip 0, row 2, idx 2, cntr 3)  464<--8fff4c
+layer_sync_message_send_address 2 layer 8 to layer 5 (chip 0, row 1, idx 1, cntr 1)  468<--ffc124
+layer_sync_message_send_address 3 layer 8 to layer 7 (chip 0, row 1, idx 3, cntr 0)  46c<--ffc160
+layer_sync_csq_message_send enable  440<--3
+layer_sync_csq_message_rcvd_counter_enable  444<--3
+layer_sync_asq_message_send enable  450<--c
+layer_sync_asq_message_rcvd_counter_enable  454<--c
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 9------------------------
+simd_base_addr 0  e0<<--910000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--ffffffff
+remap_base_addr 0  1a8<<--0
+------Configuring Sync block, chip 0 row 2 block 1
+layer_sync_message_send_address 0 layer 9 to layer 10 (chip 0, row 2, idx 2, cntr 2)  4d0<--8fff48
+layer_sync_message_send_address 1 layer 9 to layer 8 (chip 0, row 2, idx 0, cntr 0)  4d4<--8fff00
+layer_sync_csq_message_send enable  4b0<--1
+layer_sync_csq_message_rcvd_counter_enable  4b4<--1
+layer_sync_asq_message_send enable  4c0<--2
+layer_sync_asq_message_rcvd_counter_enable  4c4<--2
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--8
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Start Configure layer 10------------------------
+simd_base_addr 0  f0<<--a40000
+dest_addr 0  1e0<<--0
+remap_base_mask 0  1e4<<--7fff
+remap_base_addr 0  1e8<<--918000
+dest_addr 1  1f0<<--0
+remap_base_mask 1  1f4<<--7fff
+remap_base_addr 1  1f8<<--10c8000
+------Configuring Sync block, chip 0 row 2 block 2
+layer_sync_message_send_address 0 layer 10 to layer 11 (chip 0, row 2, idx 3, cntr 1)  540<--8fff64
+layer_sync_message_send_address 1 layer 10 to layer 13 (chip 0, row 3, idx 1, cntr 2)  544<--ffc328
+layer_sync_message_send_address 2 layer 10 to layer 9 (chip 0, row 2, idx 1, cntr 0)  548<--8fff20
+layer_sync_message_send_address 3 layer 10 to layer 8 (chip 0, row 2, idx 0, cntr 1)  54c<--8fff04
+layer_sync_csq_message_send enable  520<--3
+layer_sync_csq_message_rcvd_counter_enable  524<--3
+layer_sync_asq_message_send enable  530<--c
+layer_sync_asq_message_rcvd_counter_enable  534<--c
+layer_sync_input_buffer_empty_level  570<--1
+layer_sync_input_buffer_decrement_step  574<--1
+layer_sync_output_buffer_full_level  580<--8
+layer_sync_output_buffer_decrement_step  584<--1
+------End Configuring Sync block
+Start Configure layer 11------------------------
+simd_base_addr 0  100<<--10c0000
+dest_addr 0  220<<--0
+remap_base_mask 0  224<<--ffffffff
+remap_base_addr 0  228<<--0
+------Configuring Sync block, chip 0 row 2 block 3
+layer_sync_message_send_address 0 layer 11 to layer 12 (chip 0, row 3, idx 0, cntr 1)  5b0<--ffc304
+layer_sync_message_send_address 1 layer 11 to layer 10 (chip 0, row 2, idx 2, cntr 0)  5b4<--8fff40
+layer_sync_csq_message_send enable  590<--1
+layer_sync_csq_message_rcvd_counter_enable  594<--1
+layer_sync_asq_message_send enable  5a0<--2
+layer_sync_asq_message_rcvd_counter_enable  5a4<--2
+layer_sync_input_buffer_empty_level  5e0<--1
+layer_sync_input_buffer_decrement_step  5e4<--1
+layer_sync_output_buffer_full_level  5f0<--8
+layer_sync_output_buffer_decrement_step  5f4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+End Configure Row 2--------------------------------------------
+Start Configure Row 3------------------------------------------
+mac_blk_enable  0<--f
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--181
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--3
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--10
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 12------------------------
+simd_base_addr 0  d0<<--20c0000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 3 block 0
+layer_sync_message_send_address 0 layer 12 to layer 13 (chip 0, row 3, idx 1, cntr 3)  460<--8fff2c
+layer_sync_message_send_address 1 layer 12 to layer 11 (chip 0, row 2, idx 3, cntr 0)  464<--ffc260
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--f
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 13------------------------
+simd_base_addr 0  e0<<--a00000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--7fff
+remap_base_addr 0  1a8<<--1100000
+dest_addr 1  1b0<<--0
+remap_base_mask 1  1b4<<--ffff
+remap_base_addr 1  1b8<<--20d0000
+------Configuring Sync block, chip 0 row 3 block 1
+layer_sync_message_send_address 0 layer 13 to layer 14 (chip 0, row 4, idx 0, cntr 1)  4d0<--ffc404
+layer_sync_message_send_address 1 layer 13 to layer 15 (chip 0, row 5, idx 0, cntr 3)  4d4<--ffc50c
+layer_sync_message_send_address 2 layer 13 to layer 10 (chip 0, row 2, idx 2, cntr 1)  4d8<--ffc244
+layer_sync_message_send_address 3 layer 13 to layer 12 (chip 0, row 3, idx 0, cntr 0)  4dc<--8fff00
+layer_sync_csq_message_send enable  4b0<--3
+layer_sync_csq_message_rcvd_counter_enable  4b4<--3
+layer_sync_asq_message_send enable  4c0<--c
+layer_sync_asq_message_rcvd_counter_enable  4c4<--c
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--8
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+End Configure Row 3--------------------------------------------
+Start Configure Row 4------------------------------------------
+mac_blk_enable  0<--7
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--0
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 14------------------------
+simd_base_addr 0  d0<<--1140000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 4 block 0
+layer_sync_message_send_address 0 layer 14 to layer 15 (chip 0, row 5, idx 0, cntr 2)  460<--ffc508
+layer_sync_message_send_address 1 layer 14 to layer 13 (chip 0, row 3, idx 1, cntr 0)  464<--ffc320
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 13 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 13 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 13 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 0 mac_gain 1 pe_gain 1 ag_shift 1
+End Configure Row 4--------------------------------------------
+Start Configure Row 5------------------------------------------
+mac_blk_enable  0<--7
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 15------------------------
+simd_base_addr 0  d0<<--a00000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--7fff
+remap_base_addr 0  168<<--1180000
+dest_addr 1  170<<--0
+remap_base_mask 1  174<<--7fff
+remap_base_addr 1  178<<--11c8000
+------Configuring Sync block, chip 0 row 5 block 0
+layer_sync_message_send_address 0 layer 15 to layer 16 (chip 0, row 6, idx 0, cntr 1)  460<--ffc604
+layer_sync_message_send_address 1 layer 15 to layer 18 (chip 0, row 7, idx 1, cntr 2)  464<--ffc728
+layer_sync_message_send_address 2 layer 15 to layer 14 (chip 0, row 4, idx 0, cntr 0)  468<--ffc400
+layer_sync_message_send_address 3 layer 15 to layer 13 (chip 0, row 3, idx 1, cntr 1)  46c<--ffc324
+layer_sync_csq_message_send enable  440<--3
+layer_sync_csq_message_rcvd_counter_enable  444<--3
+layer_sync_asq_message_send enable  450<--c
+layer_sync_asq_message_rcvd_counter_enable  454<--c
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 0 mac_gain 1 pe_gain 1 ag_shift 1
+End Configure Row 5--------------------------------------------
+Start Configure Row 6------------------------------------------
+mac_blk_enable  0<--7
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--0
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 16------------------------
+simd_base_addr 0  d0<<--11c0000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 6 block 0
+layer_sync_message_send_address 0 layer 16 to layer 17 (chip 0, row 7, idx 0, cntr 1)  460<--ffc704
+layer_sync_message_send_address 1 layer 16 to layer 15 (chip 0, row 5, idx 0, cntr 0)  464<--ffc500
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 0 mac_gain 1 pe_gain 1 ag_shift 1
+End Configure Row 6--------------------------------------------
+Start Configure Row 7------------------------------------------
+mac_blk_enable  0<--f
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--181
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--3
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--10
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 17------------------------
+simd_base_addr 0  d0<<--21c0000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 7 block 0
+layer_sync_message_send_address 0 layer 17 to layer 18 (chip 0, row 7, idx 1, cntr 3)  460<--8fff2c
+layer_sync_message_send_address 1 layer 17 to layer 16 (chip 0, row 6, idx 0, cntr 0)  464<--ffc600
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--f
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 18------------------------
+simd_base_addr 0  e0<<--a00000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--7fff
+remap_base_addr 0  1a8<<--1200000
+dest_addr 1  1b0<<--0
+remap_base_mask 1  1b4<<--7fff
+remap_base_addr 1  1b8<<--20e0000
+------Configuring Sync block, chip 0 row 7 block 1
+layer_sync_message_send_address 0 layer 18 to layer 19 (chip 0, row 8, idx 0, cntr 1)  4d0<--ffc804
+layer_sync_message_send_address 1 layer 18 to layer 20 (chip 0, row 9, idx 0, cntr 2)  4d4<--ffc908
+layer_sync_message_send_address 2 layer 18 to layer 15 (chip 0, row 5, idx 0, cntr 1)  4d8<--ffc504
+layer_sync_message_send_address 3 layer 18 to layer 17 (chip 0, row 7, idx 0, cntr 0)  4dc<--8fff00
+layer_sync_csq_message_send enable  4b0<--3
+layer_sync_csq_message_rcvd_counter_enable  4b4<--3
+layer_sync_asq_message_send enable  4c0<--c
+layer_sync_asq_message_rcvd_counter_enable  4c4<--c
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--8
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 9 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 9 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 9 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+End Configure Row 7--------------------------------------------
+Start Configure Row 8------------------------------------------
+mac_blk_enable  0<--7
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--0
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 19------------------------
+simd_base_addr 0  d0<<--1240000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 8 block 0
+layer_sync_message_send_address 0 layer 19 to layer 20 (chip 0, row 9, idx 0, cntr 1)  460<--ffc904
+layer_sync_message_send_address 1 layer 19 to layer 18 (chip 0, row 7, idx 1, cntr 0)  464<--ffc720
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 0 mac_gain 1 pe_gain 1 ag_shift 1
+End Configure Row 8--------------------------------------------
+Start Configure Row 9------------------------------------------
+mac_blk_enable  0<--7
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 20------------------------
+simd_base_addr 0  d0<<--1280000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 9 block 0
+layer_sync_message_send_address 0 layer 20 to layer 21 (chip 0, row 10, idx 0, cntr 1)  460<--ffca04
+layer_sync_message_send_address 1 layer 20 to layer 19 (chip 0, row 8, idx 0, cntr 0)  464<--ffc800
+layer_sync_message_send_address 2 layer 20 to layer 18 (chip 0, row 7, idx 1, cntr 1)  468<--ffc724
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--6
+layer_sync_asq_message_rcvd_counter_enable  454<--6
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 12 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 12 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 12 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 0 mac_gain 1 pe_gain 1 ag_shift 1
+End Configure Row 9--------------------------------------------
+Start Configure Row 10------------------------------------------
+mac_blk_enable  0<--f
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--181
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--3
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--10
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--0
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 21------------------------
+simd_base_addr 0  d0<<--908000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 10 block 0
+layer_sync_message_send_address 0 layer 21 to layer 22 (chip 0, row 10, idx 1, cntr 1)  460<--8fff24
+layer_sync_message_send_address 1 layer 21 to layer 20 (chip 0, row 9, idx 0, cntr 0)  464<--ffc900
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 22------------------------
+simd_base_addr 0  e0<<--3010000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--ffffffff
+remap_base_addr 0  1a8<<--0
+------Configuring Sync block, chip 0 row 10 block 1
+layer_sync_message_send_address 0 layer 22 to layer 111 (chip 0, row 32, idx 4, cntr 0)  4d0<--3ffff80
+layer_sync_message_send_address 1 layer 22 to layer 21 (chip 0, row 10, idx 0, cntr 0)  4d4<--8fff00
+layer_sync_csq_message_send enable  4b0<--1
+layer_sync_csq_message_rcvd_counter_enable  4b4<--1
+layer_sync_asq_message_send enable  4c0<--2
+layer_sync_asq_message_rcvd_counter_enable  4c4<--2
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--2
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 1 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 1 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 1 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 14 pe_gain 8 ag_shift 16
+End Configure Row 10--------------------------------------------
+Start Configure Row 11------------------------------------------
+mac_blk_enable  0<--1f
+simd_enable  24<--1
+input up sleep wake enable  300<--3
+input up sleep wake lut0 run  310<--1999
+input up sleep wake lut1 run  314<--1
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--f
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--3210
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--0
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 23------------------------
+simd_base_addr 0  d0<<--900000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 11 block 0
+layer_sync_message_send_address 0 layer 23 to layer 24 (chip 0, row 11, idx 1, cntr 2)  460<--8fff28
+layer_sync_message_send_address 1 layer 23 to layer 116 (chip 0, row 32, idx 3, cntr 0)  464<--3ffff60
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 24------------------------
+pool_filter_height  30<--3
+pool_filter_width  34<--3
+simd_base_addr 0  e0<<--a00000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--7fff
+remap_base_addr 0  1a8<<--910000
+dest_addr 1  1b0<<--0
+remap_base_mask 1  1b4<<--3ffff
+remap_base_addr 1  1b8<<--22c0000
+------Configuring Sync block, chip 0 row 11 block 1
+layer_sync_message_send_address 0 layer 24 to layer 25 (chip 0, row 11, idx 2, cntr 1)  4d0<--8fff44
+layer_sync_message_send_address 1 layer 24 to layer 26 (chip 0, row 11, idx 3, cntr 3)  4d4<--8fff6c
+layer_sync_message_send_address 2 layer 24 to layer 23 (chip 0, row 11, idx 0, cntr 0)  4d8<--8fff00
+layer_sync_csq_message_send enable  4b0<--3
+layer_sync_csq_message_rcvd_counter_enable  4b4<--3
+layer_sync_asq_message_send enable  4c0<--4
+layer_sync_asq_message_rcvd_counter_enable  4c4<--4
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--8
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Start Configure layer 25------------------------
+simd_base_addr 0  f0<<--918000
+dest_addr 0  1e0<<--0
+remap_base_mask 0  1e4<<--ffffffff
+remap_base_addr 0  1e8<<--0
+------Configuring Sync block, chip 0 row 11 block 2
+layer_sync_message_send_address 0 layer 25 to layer 26 (chip 0, row 11, idx 3, cntr 2)  540<--8fff68
+layer_sync_message_send_address 1 layer 25 to layer 24 (chip 0, row 11, idx 1, cntr 0)  544<--8fff20
+layer_sync_csq_message_send enable  520<--1
+layer_sync_csq_message_rcvd_counter_enable  524<--1
+layer_sync_asq_message_send enable  530<--2
+layer_sync_asq_message_rcvd_counter_enable  534<--2
+layer_sync_input_buffer_empty_level  570<--1
+layer_sync_input_buffer_decrement_step  574<--1
+layer_sync_output_buffer_full_level  580<--8
+layer_sync_output_buffer_decrement_step  584<--1
+------End Configuring Sync block
+Start Configure layer 26------------------------
+simd_base_addr 0  100<<--a40000
+dest_addr 0  220<<--0
+remap_base_mask 0  224<<--7fff
+remap_base_addr 0  228<<--1300000
+dest_addr 1  230<<--0
+remap_base_mask 1  234<<--3ffff
+remap_base_addr 1  238<<--2200000
+------Configuring Sync block, chip 0 row 11 block 3
+layer_sync_message_send_address 0 layer 26 to layer 27 (chip 0, row 12, idx 0, cntr 1)  5b0<--ffcc04
+layer_sync_message_send_address 1 layer 26 to layer 28 (chip 0, row 12, idx 1, cntr 3)  5b4<--ffcc2c
+layer_sync_message_send_address 2 layer 26 to layer 25 (chip 0, row 11, idx 2, cntr 0)  5b8<--8fff40
+layer_sync_message_send_address 3 layer 26 to layer 24 (chip 0, row 11, idx 1, cntr 1)  5bc<--8fff24
+layer_sync_csq_message_send enable  590<--3
+layer_sync_csq_message_rcvd_counter_enable  594<--3
+layer_sync_asq_message_send enable  5a0<--c
+layer_sync_asq_message_rcvd_counter_enable  5a4<--c
+layer_sync_input_buffer_empty_level  5e0<--1
+layer_sync_input_buffer_decrement_step  5e4<--1
+layer_sync_output_buffer_full_level  5f0<--8
+layer_sync_output_buffer_decrement_step  5f4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 14 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+End Configure Row 11--------------------------------------------
+Start Configure Row 12------------------------------------------
+mac_blk_enable  0<--f
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--7fff
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--f
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--3210
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--0
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 27------------------------
+simd_base_addr 0  d0<<--908000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 12 block 0
+layer_sync_message_send_address 0 layer 27 to layer 28 (chip 0, row 12, idx 1, cntr 2)  460<--8fff28
+layer_sync_message_send_address 1 layer 27 to layer 26 (chip 0, row 11, idx 3, cntr 0)  464<--ffcb60
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 28------------------------
+simd_base_addr 0  e0<<--a00000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--7fff
+remap_base_addr 0  1a8<<--910000
+dest_addr 1  1b0<<--0
+remap_base_mask 1  1b4<<--7fff
+remap_base_addr 1  1b8<<--1340000
+------Configuring Sync block, chip 0 row 12 block 1
+layer_sync_message_send_address 0 layer 28 to layer 29 (chip 0, row 12, idx 2, cntr 1)  4d0<--8fff44
+layer_sync_message_send_address 1 layer 28 to layer 31 (chip 0, row 13, idx 0, cntr 2)  4d4<--ffcd08
+layer_sync_message_send_address 2 layer 28 to layer 27 (chip 0, row 12, idx 0, cntr 0)  4d8<--8fff00
+layer_sync_message_send_address 3 layer 28 to layer 26 (chip 0, row 11, idx 3, cntr 1)  4dc<--ffcb64
+layer_sync_csq_message_send enable  4b0<--3
+layer_sync_csq_message_rcvd_counter_enable  4b4<--3
+layer_sync_asq_message_send enable  4c0<--c
+layer_sync_asq_message_rcvd_counter_enable  4c4<--c
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--8
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Start Configure layer 29------------------------
+simd_base_addr 0  f0<<--918000
+dest_addr 0  1e0<<--0
+remap_base_mask 0  1e4<<--ffffffff
+remap_base_addr 0  1e8<<--0
+------Configuring Sync block, chip 0 row 12 block 2
+layer_sync_message_send_address 0 layer 29 to layer 30 (chip 0, row 12, idx 3, cntr 1)  540<--8fff64
+layer_sync_message_send_address 1 layer 29 to layer 28 (chip 0, row 12, idx 1, cntr 0)  544<--8fff20
+layer_sync_csq_message_send enable  520<--1
+layer_sync_csq_message_rcvd_counter_enable  524<--1
+layer_sync_asq_message_send enable  530<--2
+layer_sync_asq_message_rcvd_counter_enable  534<--2
+layer_sync_input_buffer_empty_level  570<--1
+layer_sync_input_buffer_decrement_step  574<--1
+layer_sync_output_buffer_full_level  580<--8
+layer_sync_output_buffer_decrement_step  584<--1
+------End Configuring Sync block
+Start Configure layer 30------------------------
+simd_base_addr 0  100<<--2300000
+dest_addr 0  220<<--0
+remap_base_mask 0  224<<--ffffffff
+remap_base_addr 0  228<<--0
+------Configuring Sync block, chip 0 row 12 block 3
+layer_sync_message_send_address 0 layer 30 to layer 31 (chip 0, row 13, idx 0, cntr 3)  5b0<--ffcd0c
+layer_sync_message_send_address 1 layer 30 to layer 29 (chip 0, row 12, idx 2, cntr 0)  5b4<--8fff40
+layer_sync_csq_message_send enable  590<--1
+layer_sync_csq_message_rcvd_counter_enable  594<--1
+layer_sync_asq_message_send enable  5a0<--2
+layer_sync_asq_message_rcvd_counter_enable  5a4<--2
+layer_sync_input_buffer_empty_level  5e0<--1
+layer_sync_input_buffer_decrement_step  5e4<--1
+layer_sync_output_buffer_full_level  5f0<--f
+layer_sync_output_buffer_decrement_step  5f4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 14 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+End Configure Row 12--------------------------------------------
+Start Configure Row 13------------------------------------------
+mac_blk_enable  0<--f
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--7fff
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--f
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--3210
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--0
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 31------------------------
+simd_base_addr 0  d0<<--a00000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--7fff
+remap_base_addr 0  168<<--908000
+dest_addr 1  170<<--0
+remap_base_mask 1  174<<--1ffff
+remap_base_addr 1  178<<--2340000
+------Configuring Sync block, chip 0 row 13 block 0
+layer_sync_message_send_address 0 layer 31 to layer 32 (chip 0, row 13, idx 1, cntr 1)  460<--8fff24
+layer_sync_message_send_address 1 layer 31 to layer 33 (chip 0, row 13, idx 2, cntr 3)  464<--8fff4c
+layer_sync_message_send_address 2 layer 31 to layer 28 (chip 0, row 12, idx 1, cntr 1)  468<--ffcc24
+layer_sync_message_send_address 3 layer 31 to layer 30 (chip 0, row 12, idx 3, cntr 0)  46c<--ffcc60
+layer_sync_csq_message_send enable  440<--3
+layer_sync_csq_message_rcvd_counter_enable  444<--3
+layer_sync_asq_message_send enable  450<--c
+layer_sync_asq_message_rcvd_counter_enable  454<--c
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 32------------------------
+simd_base_addr 0  e0<<--910000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--ffffffff
+remap_base_addr 0  1a8<<--0
+------Configuring Sync block, chip 0 row 13 block 1
+layer_sync_message_send_address 0 layer 32 to layer 33 (chip 0, row 13, idx 2, cntr 2)  4d0<--8fff48
+layer_sync_message_send_address 1 layer 32 to layer 31 (chip 0, row 13, idx 0, cntr 0)  4d4<--8fff00
+layer_sync_csq_message_send enable  4b0<--1
+layer_sync_csq_message_rcvd_counter_enable  4b4<--1
+layer_sync_asq_message_send enable  4c0<--2
+layer_sync_asq_message_rcvd_counter_enable  4c4<--2
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--8
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Start Configure layer 33------------------------
+simd_base_addr 0  f0<<--a40000
+dest_addr 0  1e0<<--0
+remap_base_mask 0  1e4<<--7fff
+remap_base_addr 0  1e8<<--918000
+dest_addr 1  1f0<<--0
+remap_base_mask 1  1f4<<--7fff
+remap_base_addr 1  1f8<<--1388000
+------Configuring Sync block, chip 0 row 13 block 2
+layer_sync_message_send_address 0 layer 33 to layer 34 (chip 0, row 13, idx 3, cntr 1)  540<--8fff64
+layer_sync_message_send_address 1 layer 33 to layer 36 (chip 0, row 14, idx 1, cntr 2)  544<--ffce28
+layer_sync_message_send_address 2 layer 33 to layer 32 (chip 0, row 13, idx 1, cntr 0)  548<--8fff20
+layer_sync_message_send_address 3 layer 33 to layer 31 (chip 0, row 13, idx 0, cntr 1)  54c<--8fff04
+layer_sync_csq_message_send enable  520<--3
+layer_sync_csq_message_rcvd_counter_enable  524<--3
+layer_sync_asq_message_send enable  530<--c
+layer_sync_asq_message_rcvd_counter_enable  534<--c
+layer_sync_input_buffer_empty_level  570<--1
+layer_sync_input_buffer_decrement_step  574<--1
+layer_sync_output_buffer_full_level  580<--8
+layer_sync_output_buffer_decrement_step  584<--1
+------End Configuring Sync block
+Start Configure layer 34------------------------
+simd_base_addr 0  100<<--1380000
+dest_addr 0  220<<--0
+remap_base_mask 0  224<<--ffffffff
+remap_base_addr 0  228<<--0
+------Configuring Sync block, chip 0 row 13 block 3
+layer_sync_message_send_address 0 layer 34 to layer 35 (chip 0, row 14, idx 0, cntr 1)  5b0<--ffce04
+layer_sync_message_send_address 1 layer 34 to layer 33 (chip 0, row 13, idx 2, cntr 0)  5b4<--8fff40
+layer_sync_csq_message_send enable  590<--1
+layer_sync_csq_message_rcvd_counter_enable  594<--1
+layer_sync_asq_message_send enable  5a0<--2
+layer_sync_asq_message_rcvd_counter_enable  5a4<--2
+layer_sync_input_buffer_empty_level  5e0<--1
+layer_sync_input_buffer_decrement_step  5e4<--1
+layer_sync_output_buffer_full_level  5f0<--8
+layer_sync_output_buffer_decrement_step  5f4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+End Configure Row 13--------------------------------------------
+Start Configure Row 14------------------------------------------
+mac_blk_enable  0<--f
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--181
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--3
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--10
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 35------------------------
+simd_base_addr 0  d0<<--2380000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 14 block 0
+layer_sync_message_send_address 0 layer 35 to layer 36 (chip 0, row 14, idx 1, cntr 3)  460<--8fff2c
+layer_sync_message_send_address 1 layer 35 to layer 34 (chip 0, row 13, idx 3, cntr 0)  464<--ffcd60
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--f
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 36------------------------
+simd_base_addr 0  e0<<--a00000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--7fff
+remap_base_addr 0  1a8<<--13c0000
+dest_addr 1  1b0<<--0
+remap_base_mask 1  1b4<<--ffff
+remap_base_addr 1  1b8<<--2240000
+------Configuring Sync block, chip 0 row 14 block 1
+layer_sync_message_send_address 0 layer 36 to layer 37 (chip 0, row 15, idx 0, cntr 1)  4d0<--ffcf04
+layer_sync_message_send_address 1 layer 36 to layer 38 (chip 0, row 16, idx 0, cntr 3)  4d4<--ffd00c
+layer_sync_message_send_address 2 layer 36 to layer 33 (chip 0, row 13, idx 2, cntr 1)  4d8<--ffcd44
+layer_sync_message_send_address 3 layer 36 to layer 35 (chip 0, row 14, idx 0, cntr 0)  4dc<--8fff00
+layer_sync_csq_message_send enable  4b0<--3
+layer_sync_csq_message_rcvd_counter_enable  4b4<--3
+layer_sync_asq_message_send enable  4c0<--c
+layer_sync_asq_message_rcvd_counter_enable  4c4<--c
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--8
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+End Configure Row 14--------------------------------------------
+Start Configure Row 15------------------------------------------
+mac_blk_enable  0<--7
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--0
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 37------------------------
+simd_base_addr 0  d0<<--1400000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 15 block 0
+layer_sync_message_send_address 0 layer 37 to layer 38 (chip 0, row 16, idx 0, cntr 2)  460<--ffd008
+layer_sync_message_send_address 1 layer 37 to layer 36 (chip 0, row 14, idx 1, cntr 0)  464<--ffce20
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 13 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 13 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 13 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 0 mac_gain 1 pe_gain 1 ag_shift 1
+End Configure Row 15--------------------------------------------
+Start Configure Row 16------------------------------------------
+mac_blk_enable  0<--7
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 38------------------------
+simd_base_addr 0  d0<<--a00000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--7fff
+remap_base_addr 0  168<<--1440000
+dest_addr 1  170<<--0
+remap_base_mask 1  174<<--7fff
+remap_base_addr 1  178<<--1488000
+------Configuring Sync block, chip 0 row 16 block 0
+layer_sync_message_send_address 0 layer 38 to layer 39 (chip 0, row 17, idx 0, cntr 1)  460<--ffd104
+layer_sync_message_send_address 1 layer 38 to layer 41 (chip 0, row 18, idx 1, cntr 2)  464<--ffd228
+layer_sync_message_send_address 2 layer 38 to layer 37 (chip 0, row 15, idx 0, cntr 0)  468<--ffcf00
+layer_sync_message_send_address 3 layer 38 to layer 36 (chip 0, row 14, idx 1, cntr 1)  46c<--ffce24
+layer_sync_csq_message_send enable  440<--3
+layer_sync_csq_message_rcvd_counter_enable  444<--3
+layer_sync_asq_message_send enable  450<--c
+layer_sync_asq_message_rcvd_counter_enable  454<--c
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 15 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 0 mac_gain 1 pe_gain 1 ag_shift 1
+End Configure Row 16--------------------------------------------
+Start Configure Row 17------------------------------------------
+mac_blk_enable  0<--7
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--0
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 39------------------------
+simd_base_addr 0  d0<<--1480000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 17 block 0
+layer_sync_message_send_address 0 layer 39 to layer 40 (chip 0, row 18, idx 0, cntr 1)  460<--ffd204
+layer_sync_message_send_address 1 layer 39 to layer 38 (chip 0, row 16, idx 0, cntr 0)  464<--ffd000
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 0 mac_gain 1 pe_gain 1 ag_shift 1
+End Configure Row 17--------------------------------------------
+Start Configure Row 18------------------------------------------
+mac_blk_enable  0<--f
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--181
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--3
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--10
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 40------------------------
+simd_base_addr 0  d0<<--2480000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 18 block 0
+layer_sync_message_send_address 0 layer 40 to layer 41 (chip 0, row 18, idx 1, cntr 3)  460<--8fff2c
+layer_sync_message_send_address 1 layer 40 to layer 39 (chip 0, row 17, idx 0, cntr 0)  464<--ffd100
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--f
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 41------------------------
+simd_base_addr 0  e0<<--a00000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--7fff
+remap_base_addr 0  1a8<<--14c0000
+dest_addr 1  1b0<<--0
+remap_base_mask 1  1b4<<--7fff
+remap_base_addr 1  1b8<<--2400000
+------Configuring Sync block, chip 0 row 18 block 1
+layer_sync_message_send_address 0 layer 41 to layer 42 (chip 0, row 19, idx 0, cntr 1)  4d0<--ffd304
+layer_sync_message_send_address 1 layer 41 to layer 43 (chip 0, row 20, idx 0, cntr 2)  4d4<--ffd408
+layer_sync_message_send_address 2 layer 41 to layer 38 (chip 0, row 16, idx 0, cntr 1)  4d8<--ffd004
+layer_sync_message_send_address 3 layer 41 to layer 40 (chip 0, row 18, idx 0, cntr 0)  4dc<--8fff00
+layer_sync_csq_message_send enable  4b0<--3
+layer_sync_csq_message_rcvd_counter_enable  4b4<--3
+layer_sync_asq_message_send enable  4c0<--c
+layer_sync_asq_message_rcvd_counter_enable  4c4<--c
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--8
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 9 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 9 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 9 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+End Configure Row 18--------------------------------------------
+Start Configure Row 19------------------------------------------
+mac_blk_enable  0<--7
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--0
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 42------------------------
+simd_base_addr 0  d0<<--1500000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 19 block 0
+layer_sync_message_send_address 0 layer 42 to layer 43 (chip 0, row 20, idx 0, cntr 1)  460<--ffd404
+layer_sync_message_send_address 1 layer 42 to layer 41 (chip 0, row 18, idx 1, cntr 0)  464<--ffd220
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 16 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 0 mac_gain 1 pe_gain 1 ag_shift 1
+End Configure Row 19--------------------------------------------
+Start Configure Row 20------------------------------------------
+mac_blk_enable  0<--7
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--1
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--1
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--0
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--1
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 43------------------------
+simd_base_addr 0  d0<<--1540000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 20 block 0
+layer_sync_message_send_address 0 layer 43 to layer 44 (chip 0, row 21, idx 0, cntr 1)  460<--ffd504
+layer_sync_message_send_address 1 layer 43 to layer 42 (chip 0, row 19, idx 0, cntr 0)  464<--ffd300
+layer_sync_message_send_address 2 layer 43 to layer 41 (chip 0, row 18, idx 1, cntr 1)  468<--ffd224
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--6
+layer_sync_asq_message_rcvd_counter_enable  454<--6
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 12 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 12 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 12 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 0 mac_gain 1 pe_gain 1 ag_shift 1
+End Configure Row 20--------------------------------------------
+Start Configure Row 21------------------------------------------
+mac_blk_enable  0<--f
+simd_enable  24<--1
+input up sleep wake enable  300<--1
+input up sleep wake lut0 run  310<--181
+input up sleep wake lut1 run  314<--0
+output up sleep wake enable  380<--1
+output up sleep wake lut0 run  390<--3
+output up sleep wake vec enable  384<--1
+output up sleep wake vec select  3a0<--10
+frame_end flag  3dc<--0
+layer_sync_input_buffer_available_status  400<--0
+layer_sync_output_buffer_status  410<--ff
+layer_sync_csq_message_rcvd_counters  448<--0
+layer_sync_asq_message_rcvd_counters  458<--0
+layer_sync_csq_message_rcvd_counters  4b8<--0
+layer_sync_asq_message_rcvd_counters  4c8<--0
+layer_sync_csq_message_rcvd_counters  528<--0
+layer_sync_asq_message_rcvd_counters  538<--0
+layer_sync_csq_message_rcvd_counters  598<--0
+layer_sync_asq_message_rcvd_counters  5a8<--0
+layer_sync_csq_message_rcvd_counters  608<--0
+layer_sync_asq_message_rcvd_counters  618<--0
+layer_sync_csq_message_rcvd_counters  678<--0
+layer_sync_asq_message_rcvd_counters  688<--0
+layer_sync_csq_message_rcvd_counters  6e8<--0
+layer_sync_asq_message_rcvd_counters  6f8<--0
+layer_sync_csq_message_rcvd_counters  758<--0
+layer_sync_asq_message_rcvd_counters  768<--0
+input dma mac_blk_dma_enable  1000<--1
+input dma mac_blk_dma_enable  1004<--0
+input dma mac_blk_dma_enable  100c<--0
+input dma mac_blk_dma_split_group  1020<--0
+output dma mac_blk_dma_enable  2000<--1
+output dma mac_blk_dma_enable  2004<--0
+output dma mac_blk_dma_enable  200c<--0
+output dma mac_blk_dma_split_group  2020<--39
+prefetch dma mac_blk_dma_enable  3000<--0
+prefetch dma mac_blk_dma_enable  3004<--0
+prefetch dma mac_blk_dma_enable  300c<--0
+simd_cmd_fifo_status  8<<--1
+wbuf_addr_fifo_status  c<<--1
+wbuf_data_fifo_status  10<<--1
+mac_cmd_fifo_status  14<<--1
+mac_data_fifo_status  18<<--1
+prefetch_dma_fifo_status  1c<<--1
+Start Configure layer 44------------------------
+simd_base_addr 0  d0<<--908000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 21 block 0
+layer_sync_message_send_address 0 layer 44 to layer 45 (chip 0, row 21, idx 1, cntr 1)  460<--8fff24
+layer_sync_message_send_address 1 layer 44 to layer 43 (chip 0, row 20, idx 0, cntr 0)  464<--ffd400
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--2
+layer_sync_asq_message_rcvd_counter_enable  454<--2
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--8
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 45------------------------
+simd_base_addr 0  e0<<--3018000
+dest_addr 0  1a0<<--0
+remap_base_mask 0  1a4<<--ffffffff
+remap_base_addr 0  1a8<<--0
+------Configuring Sync block, chip 0 row 21 block 1
+layer_sync_message_send_address 0 layer 45 to layer 113 (chip 0, row 32, idx 5, cntr 0)  4d0<--3ffffa0
+layer_sync_message_send_address 1 layer 45 to layer 44 (chip 0, row 21, idx 0, cntr 0)  4d4<--8fff00
+layer_sync_csq_message_send enable  4b0<--1
+layer_sync_csq_message_rcvd_counter_enable  4b4<--1
+layer_sync_asq_message_send enable  4c0<--2
+layer_sync_asq_message_rcvd_counter_enable  4c4<--2
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--2
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Xbar 0 ADC Gain enable 1 mac_gain 1 pe_gain 8 ag_shift 16
+Xbar 1 ADC Gain enable 1 mac_gain 1 pe_gain 8 ag_shift 16
+Xbar 2 ADC Gain enable 1 mac_gain 1 pe_gain 8 ag_shift 16
+Xbar 3 ADC Gain enable 1 mac_gain 14 pe_gain 8 ag_shift 16
+End Configure Row 21--------------------------------------------

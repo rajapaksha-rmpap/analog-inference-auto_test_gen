@@ -1,0 +1,20 @@
+{
+    "not enabled": [],
+    "fsim failing": {
+        "ExecutionError": [],
+        "OutTXTMistmatchError": [],
+        "ResultComparisonError": [
+            "dt-io-ext-pull-2"
+        ]
+    },
+    "asmsim failing": {
+        "AsmsimDisabled": [],
+        "AsmsimExecutionError": [
+            "dt-1"
+        ]
+    },
+    "unknown error": [],
+    "successes": [
+        "dt-io-ext-pull-1"
+    ]
+}

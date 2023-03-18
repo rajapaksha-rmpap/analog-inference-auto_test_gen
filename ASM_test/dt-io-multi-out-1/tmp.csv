@@ -1,0 +1,50 @@
+Start Configure layer 100------------------------
+simd_base_addr 0  d0<<--1000000
+dest_addr 0  160<<--0
+remap_base_mask 0  164<<--ffffffff
+remap_base_addr 0  168<<--0
+------Configuring Sync block, chip 0 row 32 block 0
+layer_sync_message_send_address 0 layer 100 to layer 0 (chip 0, row 0, idx 0, cntr 2)  460<--ffc008
+layer_sync_csq_message_send enable  440<--1
+layer_sync_csq_message_rcvd_counter_enable  444<--1
+layer_sync_asq_message_send enable  450<--0
+layer_sync_asq_message_rcvd_counter_enable  454<--0
+layer_sync_input_buffer_empty_level  490<--1
+layer_sync_input_buffer_decrement_step  494<--1
+layer_sync_output_buffer_full_level  4a0<--3
+layer_sync_output_buffer_decrement_step  4a4<--1
+------End Configuring Sync block
+Start Configure layer 101------------------------
+simd_base_addr 0  e0<<--90c000
+dest_addr 0  1a0<<--90c000
+remap_base_mask 0  1a4<<--ffffffff
+remap_base_addr 0  1a8<<--0
+------Configuring Sync block, chip 0 row 32 block 1
+Output Sync block 
+layer_sync_message_send_address 0 layer 101 to layer 1 (chip 0, row 0, idx 1, cntr 0)  4d0<--ffc020
+layer_sync_csq_message_send enable  4b0<--0
+layer_sync_csq_message_rcvd_counter_enable  4b4<--0
+layer_sync_asq_message_send enable  4c0<--1
+layer_sync_asq_message_rcvd_counter_enable  4c4<--1
+layer_sync_input_buffer_empty_level  500<--1
+layer_sync_input_buffer_decrement_step  504<--1
+layer_sync_output_buffer_full_level  510<--f
+layer_sync_output_buffer_decrement_step  514<--1
+------End Configuring Sync block
+Start Configure layer 102------------------------
+simd_base_addr 0  f0<<--90c000
+dest_addr 0  1e0<<--90c000
+remap_base_mask 0  1e4<<--ffffffff
+remap_base_addr 0  1e8<<--0
+------Configuring Sync block, chip 0 row 32 block 2
+Output Sync block 
+layer_sync_message_send_address 0 layer 102 to layer 2 (chip 0, row 1, idx 0, cntr 0)  540<--ffc100
+layer_sync_csq_message_send enable  520<--0
+layer_sync_csq_message_rcvd_counter_enable  524<--0
+layer_sync_asq_message_send enable  530<--1
+layer_sync_asq_message_rcvd_counter_enable  534<--1
+layer_sync_input_buffer_empty_level  570<--1
+layer_sync_input_buffer_decrement_step  574<--1
+layer_sync_output_buffer_full_level  580<--f
+layer_sync_output_buffer_decrement_step  584<--1
+------End Configuring Sync block
