@@ -1,0 +1,3393 @@
+{
+    "add": {
+        "optionality": {
+            "mandatory": [
+                "add_residuals",
+                "bias_add_round_shift",
+                "bypass_filters",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dma_id",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "scale_output",
+                "scale_path_flip",
+                "scale_prefetch",
+                "scale_size",
+                "src_entries",
+                "src_entries/dst_index",
+                "src_entries/dst_layer",
+                "src_entries/dst_mem_type",
+                "src_entries/src_addr",
+                "src_entries/src_addr_incr",
+                "src_entries/src_index",
+                "src_entries/src_layer",
+                "src_entries/src_len",
+                "src_entries/src_mem_type"
+            ],
+            "optional": [
+                "dma_layer_usage",
+                "in_scale",
+                "remap_region",
+                "relu",
+                "layer_key",
+                "qmodel_id"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "add_residuals": [
+                    "true"
+                ],
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x904000",
+                    "0x0",
+                    "0x938000"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "global_residual_mem",
+                    "layer_mem"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "layer_class": [
+                    "bypass"
+                ],
+                "layer_type": [
+                    "add"
+                ],
+                "out_scale": [
+                    "1.0",
+                    "0"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]",
+                    "[6, 0, 0, 0]",
+                    "[5, 0, 0, 0]",
+                    "[4, 0, 0, 0]"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "7",
+                    "0"
+                ],
+                "remap_region": [
+                    "1",
+                    "0"
+                ],
+                "scale_output": [
+                    "false",
+                    "true"
+                ],
+                "scale_path_flip": [
+                    "false",
+                    "true"
+                ],
+                "scale_prefetch": [
+                    "false",
+                    "true"
+                ],
+                "scale_size": [
+                    "1"
+                ],
+                "src_entries/dst_index": [
+                    "0"
+                ],
+                "src_entries/dst_mem_type": [
+                    "residual_mem"
+                ],
+                "src_entries/src_addr": [
+                    "0x0"
+                ],
+                "src_entries/src_mem_type": [
+                    "global_residual_mem"
+                ],
+                "relu": [
+                    "relu",
+                    "none"
+                ],
+                "qmodel_id": [
+                    "0"
+                ]
+            },
+            "variable": [
+                "bypass_filters",
+                "dma_id",
+                "out_scale_mult",
+                "prefetch_scale_mult",
+                "src_entries/dst_layer",
+                "src_entries/src_addr_incr",
+                "src_entries/src_index",
+                "src_entries/src_layer",
+                "src_entries/src_len",
+                "layer_key"
+            ]
+        }
+    },
+    "argmax": {
+        "optionality": {
+            "mandatory": [
+                "bias_add_round_shift",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "filter_size",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "pad_bot",
+                "pad_left",
+                "pad_right",
+                "pad_top",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "scale_output",
+                "scale_path_flip",
+                "scale_prefetch",
+                "src_entries",
+                "stride"
+            ],
+            "optional": [
+                "layer_key",
+                "qmodel_id",
+                "dma_layer_usage",
+                "in_scale",
+                "out_scale",
+                "remap_region"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x920000",
+                    "0x904000",
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "filter_size": [
+                    "0"
+                ],
+                "layer_class": [
+                    "pool"
+                ],
+                "layer_type": [
+                    "argmax"
+                ],
+                "out_scale_mult": [
+                    "[1, 1, 1, 1]",
+                    "[]"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]",
+                    "[]"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "pad_bot": [
+                    "0"
+                ],
+                "pad_left": [
+                    "0"
+                ],
+                "pad_right": [
+                    "0"
+                ],
+                "pad_top": [
+                    "0"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "qmodel_id": [
+                    "0"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_path_flip": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "stride": [
+                    "1",
+                    "0"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "out_scale": [
+                    "1.0"
+                ],
+                "remap_region": [
+                    "0"
+                ]
+            },
+            "variable": [
+                "layer_key"
+            ]
+        }
+    },
+    "bypass": {
+        "optionality": {
+            "mandatory": [
+                "add_residuals",
+                "bypass_filters",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dma_layer_usage",
+                "in_scale",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "scale_output",
+                "scale_prefetch",
+                "src_entries",
+                "dest_entries/dest_details/gen_sync"
+            ],
+            "optional": [
+                "remap_region",
+                "start_xbar",
+                "bias_add_round_shift",
+                "dma_id",
+                "layer_class",
+                "out_sync_mult",
+                "relu",
+                "scale_path_flip",
+                "scale_size",
+                "layer_mems/rm_index",
+                "layer_mems/mem_type"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "add_residuals": [
+                    "false"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "1",
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "global_residual_mem",
+                    "layer_mem"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0",
+                    "1"
+                ],
+                "layer_type": [
+                    "bypass"
+                ],
+                "out_scale": [
+                    "1.0",
+                    "1"
+                ],
+                "out_scale_mult": [
+                    "[1, 1, 1, 1]",
+                    "1",
+                    "0"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]",
+                    "0"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "remap_region": [
+                    "1",
+                    "0"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "start_xbar": [
+                    "0"
+                ],
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "false",
+                    "true"
+                ],
+                "layer_class": [
+                    "bypass"
+                ],
+                "out_sync_mult": [
+                    "1",
+                    "0"
+                ],
+                "relu": [
+                    "none"
+                ],
+                "scale_path_flip": [
+                    "false"
+                ],
+                "scale_size": [
+                    "1"
+                ],
+                "layer_mems/mem_type": [
+                    "regional_mem"
+                ]
+            },
+            "variable": [
+                "bypass_filters",
+                "dest_entries/addr",
+                "dest_entries/dest_details/dest_addr",
+                "dma_id",
+                "layer_mems/rm_index"
+            ]
+        }
+    },
+    "bypass_pad": {
+        "optionality": {
+            "mandatory": [
+                "add_residuals",
+                "bias_add_round_shift",
+                "bypass_filters",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dma_id",
+                "dma_layer_usage",
+                "in_scale",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "pad_value",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "relu",
+                "scale_output",
+                "scale_path_flip",
+                "scale_prefetch",
+                "scale_size",
+                "src_entries"
+            ],
+            "optional": [
+                "remap_region"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "add_residuals": [
+                    "false"
+                ],
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "bypass_filters": [
+                    "[21, 11]"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_id": [
+                    "0"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "layer_class": [
+                    "bypass"
+                ],
+                "layer_type": [
+                    "bypass_pad"
+                ],
+                "out_scale": [
+                    "1.0"
+                ],
+                "out_scale_mult": [
+                    "[1, 1, 1, 1]"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "pad_value": [
+                    "-127",
+                    "-1",
+                    "0"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "relu": [
+                    "none"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_path_flip": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "scale_size": [
+                    "1"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "remap_region": [
+                    "0"
+                ]
+            },
+            "variable": []
+        }
+    },
+    "concat": {
+        "optionality": {
+            "mandatory": [
+                "add_residuals",
+                "bias_add_round_shift",
+                "bypass_filters",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dma_id",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "scale_output",
+                "scale_path_flip",
+                "scale_prefetch",
+                "scale_size",
+                "src_entries"
+            ],
+            "optional": [
+                "dma_layer_usage",
+                "in_scale",
+                "relu",
+                "remap_region",
+                "layer_key",
+                "qmodel_id",
+                "start_xbar",
+                "layer_mems/rm_index",
+                "layer_mems/mem_type",
+                "adc_gain",
+                "adc_gndx",
+                "adc_iref",
+                "ag_shift",
+                "mac_gain",
+                "pe_gain",
+                "add_bias",
+                "alt_signs",
+                "input_dup",
+                "num_blocks",
+                "wgts_bias_file",
+                "wgts_file",
+                "wgts_file_has_bias",
+                "wgts_layer_name",
+                "xbar_cnt",
+                "xbar_start_layer"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "add_residuals": [
+                    "false"
+                ],
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x940000",
+                    "0x908000",
+                    "0x0",
+                    "0x938000"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "layer_class": [
+                    "bypass"
+                ],
+                "layer_type": [
+                    "concat"
+                ],
+                "out_scale": [
+                    "1.0",
+                    "0"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "relu": [
+                    "none"
+                ],
+                "remap_region": [
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "scale_output": [
+                    "false",
+                    "true"
+                ],
+                "scale_path_flip": [
+                    "false",
+                    "true"
+                ],
+                "scale_prefetch": [
+                    "false",
+                    "true"
+                ],
+                "scale_size": [
+                    "1"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "qmodel_id": [
+                    "0"
+                ],
+                "start_xbar": [
+                    "0"
+                ],
+                "layer_mems/mem_type": [
+                    "global_residual_mem",
+                    "regional_mem",
+                    "layer_mem"
+                ],
+                "adc_gain": [
+                    "false"
+                ],
+                "adc_gndx": [
+                    "0"
+                ],
+                "adc_iref": [
+                    "0"
+                ],
+                "ag_shift": [
+                    "14"
+                ],
+                "mac_gain": [
+                    "14"
+                ],
+                "pe_gain": [
+                    "8"
+                ],
+                "add_bias": [
+                    "false"
+                ],
+                "alt_signs": [
+                    "false"
+                ],
+                "input_dup": [
+                    "1"
+                ],
+                "num_blocks": [
+                    "4"
+                ],
+                "wgts_bias_file": [
+                    ""
+                ],
+                "wgts_file": [
+                    ""
+                ],
+                "wgts_file_has_bias": [
+                    "true"
+                ],
+                "wgts_layer_name": [
+                    ""
+                ],
+                "xbar_cnt": [
+                    "4"
+                ],
+                "xbar_start_layer": [
+                    "0"
+                ]
+            },
+            "variable": [
+                "bypass_filters",
+                "dma_id",
+                "out_scale_mult",
+                "out_scale_shift",
+                "layer_key",
+                "layer_mems/rm_index"
+            ]
+        }
+    },
+    "conv": {
+        "optionality": {
+            "mandatory": [
+                "add_bias",
+                "add_residuals",
+                "col_splits",
+                "col_splits/grp_shift",
+                "col_splits/splits",
+                "col_splits/splits/shift",
+                "col_splits/splits/sign",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dilation",
+                "filter_size",
+                "horz_splits",
+                "input_dup",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "nconvs",
+                "num_blocks",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "num_xbars",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "pad_bot",
+                "pad_left",
+                "pad_right",
+                "pad_top",
+                "pos_neg_acts",
+                "pos_neg_wgts",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "relu",
+                "scale_output",
+                "scale_prefetch",
+                "src_entries",
+                "start_xbar",
+                "stride",
+                "vert_splits",
+                "xbar_cnt"
+            ],
+            "optional": [
+                "ag_shift",
+                "bias_add_round_shift",
+                "conv_start_col",
+                "layer_key",
+                "mac_gain",
+                "pe_gain",
+                "qmodel_id",
+                "scale_path_flip",
+                "wgts_bias_file",
+                "wgts_file",
+                "wgts_file_has_bias",
+                "wgts_layer_name",
+                "alt_signs",
+                "dma_layer_usage",
+                "in_scale",
+                "remap_region",
+                "start_col",
+                "xbar_start_layer",
+                "src_entries/dst_index",
+                "src_entries/dst_layer",
+                "src_entries/dst_mem_type",
+                "src_entries/src_addr",
+                "src_entries/src_addr_incr",
+                "src_entries/src_index",
+                "src_entries/src_layer",
+                "src_entries/src_len",
+                "src_entries/src_mem_type",
+                "adc_en",
+                "col_split_signs",
+                "shifts",
+                "adc_scale",
+                "adc_gain",
+                "adc_gndx",
+                "adc_iref",
+                "adc_shift",
+                "residual_add",
+                "type",
+                "act",
+                "pre_act",
+                "bias_file"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "add_bias": [
+                    "false",
+                    "true"
+                ],
+                "add_residuals": [
+                    "false",
+                    "true"
+                ],
+                "bias_add_round_shift": [
+                    "2",
+                    "1",
+                    "-1",
+                    "0"
+                ],
+                "col_splits/grp_shift": [
+                    "2",
+                    "0"
+                ],
+                "col_splits/splits/sign": [
+                    "false",
+                    "true"
+                ],
+                "dest_entries/addr": [
+                    "0x40",
+                    "0x3fc0",
+                    "0x5e0",
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "false",
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "3",
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "global_residual_mem",
+                    "layer_mem"
+                ],
+                "dilation": [
+                    "2",
+                    "1",
+                    "4"
+                ],
+                "layer_class": [
+                    "conv"
+                ],
+                "layer_type": [
+                    "conv"
+                ],
+                "out_scale": [
+                    "1.0",
+                    "1",
+                    "0"
+                ],
+                "out_sync_mult": [
+                    "2",
+                    "1"
+                ],
+                "pos_neg_acts": [
+                    "false",
+                    "true"
+                ],
+                "pos_neg_wgts": [
+                    "false",
+                    "true"
+                ],
+                "prefetch_scale_shift": [
+                    "7",
+                    "6",
+                    "0"
+                ],
+                "qmodel_id": [
+                    "1",
+                    "0"
+                ],
+                "relu": [
+                    "relu",
+                    "none"
+                ],
+                "scale_output": [
+                    "false",
+                    "true"
+                ],
+                "scale_path_flip": [
+                    "false",
+                    "true"
+                ],
+                "scale_prefetch": [
+                    "false",
+                    "true"
+                ],
+                "stride": [
+                    "3",
+                    "2",
+                    "1"
+                ],
+                "wgts_bias_file": [
+                    ""
+                ],
+                "wgts_file_has_bias": [
+                    "false",
+                    "true"
+                ],
+                "alt_signs": [
+                    "false",
+                    "true"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0",
+                    "1"
+                ],
+                "remap_region": [
+                    "3",
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "start_col": [
+                    "0"
+                ],
+                "src_entries/dst_index": [
+                    "0"
+                ],
+                "src_entries/dst_mem_type": [
+                    "residual_mem"
+                ],
+                "src_entries/src_addr": [
+                    "0x0"
+                ],
+                "src_entries/src_mem_type": [
+                    "global_residual_mem"
+                ],
+                "adc_en": [
+                    "false",
+                    "true"
+                ],
+                "col_split_signs": [
+                    "[True]"
+                ],
+                "shifts": [
+                    "[0]"
+                ],
+                "adc_gain": [
+                    "false",
+                    "true"
+                ],
+                "residual_add": [
+                    "false"
+                ],
+                "type": [
+                    "conv"
+                ],
+                "act": [
+                    "relu",
+                    "none"
+                ],
+                "pre_act": [
+                    "relu",
+                    "none"
+                ]
+            },
+            "variable": [
+                "ag_shift",
+                "col_splits/splits/shift",
+                "conv_start_col",
+                "dest_entries/dest_details/dest_addr",
+                "filter_size",
+                "horz_splits",
+                "input_dup",
+                "layer_key",
+                "mac_gain",
+                "nconvs",
+                "num_blocks",
+                "num_xbars",
+                "out_scale_mult",
+                "out_scale_shift",
+                "pad_bot",
+                "pad_left",
+                "pad_right",
+                "pad_top",
+                "pe_gain",
+                "prefetch_scale_mult",
+                "start_xbar",
+                "vert_splits",
+                "wgts_file",
+                "wgts_layer_name",
+                "xbar_cnt",
+                "xbar_start_layer",
+                "src_entries/dst_layer",
+                "src_entries/src_addr_incr",
+                "src_entries/src_index",
+                "src_entries/src_layer",
+                "src_entries/src_len",
+                "adc_scale",
+                "adc_gndx",
+                "adc_iref",
+                "adc_shift",
+                "bias_file"
+            ]
+        }
+    },
+    "dilate": {
+        "optionality": {
+            "mandatory": [
+                "add_bias",
+                "add_residuals",
+                "bias_add_round_shift",
+                "col_splits",
+                "col_splits/grp_shift",
+                "col_splits/splits",
+                "col_splits/splits/shift",
+                "col_splits/splits/sign",
+                "conv_start_col",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dilation",
+                "filter_size",
+                "horz_splits",
+                "input_dup",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "nconvs",
+                "num_blocks",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "num_xbars",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "pad_bot",
+                "pad_left",
+                "pad_right",
+                "pad_top",
+                "pos_neg_acts",
+                "pos_neg_wgts",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "scale_output",
+                "scale_path_flip",
+                "scale_prefetch",
+                "src_entries",
+                "start_xbar",
+                "stride",
+                "vert_splits",
+                "wgts_bias_file",
+                "wgts_file",
+                "wgts_file_has_bias",
+                "wgts_layer_name",
+                "xbar_cnt"
+            ],
+            "optional": [
+                "ag_shift",
+                "alt_signs",
+                "dma_layer_usage",
+                "in_scale",
+                "mac_gain",
+                "pe_gain",
+                "relu",
+                "remap_region",
+                "start_col",
+                "xbar_start_layer",
+                "adc_gain",
+                "adc_gndx",
+                "adc_iref",
+                "adc_scale",
+                "adc_shift",
+                "act",
+                "layer_key",
+                "pre_act",
+                "qmodel_id"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "add_bias": [
+                    "false",
+                    "true"
+                ],
+                "add_residuals": [
+                    "false"
+                ],
+                "ag_shift": [
+                    "16",
+                    "14"
+                ],
+                "alt_signs": [
+                    "false"
+                ],
+                "bias_add_round_shift": [
+                    "1",
+                    "0"
+                ],
+                "col_splits/grp_shift": [
+                    "0"
+                ],
+                "col_splits/splits/shift": [
+                    "1",
+                    "0"
+                ],
+                "col_splits/splits/sign": [
+                    "false",
+                    "true"
+                ],
+                "conv_start_col": [
+                    "6144",
+                    "0",
+                    "3072"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x1c00",
+                    "0x0",
+                    "0x938000",
+                    "0xe00"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dilation": [
+                    "6",
+                    "2",
+                    "4"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "filter_size": [
+                    "3"
+                ],
+                "horz_splits": [
+                    "[1536, 1536, 1536]",
+                    "[768, 768, 768]",
+                    "[1536, 768]",
+                    "[2048]"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "input_dup": [
+                    "1"
+                ],
+                "layer_class": [
+                    "conv"
+                ],
+                "layer_type": [
+                    "dilate"
+                ],
+                "nconvs": [
+                    "[1, 1]"
+                ],
+                "num_blocks": [
+                    "20",
+                    "28",
+                    "25",
+                    "14"
+                ],
+                "num_xbars": [
+                    "[1, 1]",
+                    "[2, 2]"
+                ],
+                "out_scale": [
+                    "1.0",
+                    "0"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]",
+                    "[6, 0, 0, 0]",
+                    "[5, 0, 0, 0]"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "pad_bot": [
+                    "2",
+                    "4",
+                    "0"
+                ],
+                "pad_left": [
+                    "2",
+                    "4",
+                    "0"
+                ],
+                "pad_right": [
+                    "2",
+                    "4",
+                    "0"
+                ],
+                "pad_top": [
+                    "2",
+                    "4",
+                    "0"
+                ],
+                "pe_gain": [
+                    "8"
+                ],
+                "pos_neg_acts": [
+                    "false"
+                ],
+                "pos_neg_wgts": [
+                    "false",
+                    "true"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "relu": [
+                    "relu"
+                ],
+                "remap_region": [
+                    "0"
+                ],
+                "scale_output": [
+                    "false",
+                    "true"
+                ],
+                "scale_path_flip": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "start_col": [
+                    "0"
+                ],
+                "start_xbar": [
+                    "2",
+                    "0"
+                ],
+                "stride": [
+                    "1"
+                ],
+                "vert_splits": [
+                    "[256]",
+                    "[512]"
+                ],
+                "wgts_bias_file": [
+                    ""
+                ],
+                "wgts_file_has_bias": [
+                    "true"
+                ],
+                "xbar_cnt": [
+                    "3",
+                    "2",
+                    "1",
+                    "4"
+                ],
+                "xbar_start_layer": [
+                    "0"
+                ],
+                "adc_gain": [
+                    "false",
+                    "true"
+                ],
+                "adc_iref": [
+                    "64",
+                    "32",
+                    "0",
+                    "128"
+                ],
+                "adc_scale": [
+                    "1.0"
+                ],
+                "adc_shift": [
+                    "17",
+                    "0"
+                ],
+                "act": [
+                    "relu"
+                ],
+                "layer_key": [
+                    "42",
+                    "52",
+                    "49",
+                    "45"
+                ],
+                "pre_act": [
+                    "none"
+                ],
+                "qmodel_id": [
+                    "0"
+                ]
+            },
+            "variable": [
+                "mac_gain",
+                "out_scale_mult",
+                "wgts_file",
+                "wgts_layer_name",
+                "adc_gndx"
+            ]
+        }
+    },
+    "fetch_global": {
+        "optionality": {
+            "mandatory": [
+                "add_residuals",
+                "bias_add_round_shift",
+                "bypass_filters",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dma_id",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "scale_output",
+                "scale_path_flip",
+                "scale_prefetch",
+                "scale_size",
+                "src_entries",
+                "src_entries/dst_index",
+                "src_entries/dst_layer",
+                "src_entries/dst_mem_type",
+                "src_entries/src_addr",
+                "src_entries/src_addr_incr",
+                "src_entries/src_index",
+                "src_entries/src_layer",
+                "src_entries/src_len",
+                "src_entries/src_mem_type"
+            ],
+            "optional": [
+                "dma_layer_usage",
+                "in_scale",
+                "remap_region",
+                "relu",
+                "layer_key",
+                "qmodel_id"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "add_residuals": [
+                    "false"
+                ],
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "bypass_filters": [
+                    "[8]",
+                    "[256]",
+                    "[128]"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x908000",
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "1",
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "layer_class": [
+                    "bypass"
+                ],
+                "layer_type": [
+                    "fetch_global"
+                ],
+                "out_scale": [
+                    "1.0",
+                    "0"
+                ],
+                "out_scale_mult": [
+                    "[1, 1, 1, 1]"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "remap_region": [
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_path_flip": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "scale_size": [
+                    "1"
+                ],
+                "src_entries/dst_index": [
+                    "0"
+                ],
+                "src_entries/dst_mem_type": [
+                    "residual_mem"
+                ],
+                "src_entries/src_addr": [
+                    "0x0"
+                ],
+                "src_entries/src_mem_type": [
+                    "global_residual_mem"
+                ],
+                "relu": [
+                    "none"
+                ],
+                "layer_key": [
+                    "auto"
+                ]
+            },
+            "variable": [
+                "dma_id",
+                "src_entries/dst_layer",
+                "src_entries/src_addr_incr",
+                "src_entries/src_index",
+                "src_entries/src_layer",
+                "src_entries/src_len",
+                "qmodel_id"
+            ]
+        }
+    },
+    "gap": {
+        "optionality": {
+            "mandatory": [
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "gap_reciprocal",
+                "gap_shift",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "src_entries"
+            ],
+            "optional": [
+                "layer_key",
+                "qmodel_id",
+                "dma_id",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "layer_class": [
+                    "gap"
+                ],
+                "layer_key": [
+                    "54",
+                    "114",
+                    "112"
+                ],
+                "layer_type": [
+                    "gap"
+                ],
+                "qmodel_id": [
+                    "0"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "dma_id": [
+                    "3",
+                    "2",
+                    "1"
+                ]
+            },
+            "variable": [
+                "gap_reciprocal",
+                "gap_shift"
+            ]
+        }
+    },
+    "gap_reorder": {
+        "optionality": {
+            "mandatory": [
+                "add_residuals",
+                "bias_add_round_shift",
+                "bypass_filters",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dma_id",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "scale_output",
+                "scale_path_flip",
+                "scale_prefetch",
+                "scale_size",
+                "src_entries"
+            ],
+            "optional": [
+                "layer_key",
+                "qmodel_id",
+                "dma_layer_usage",
+                "in_scale",
+                "relu",
+                "remap_region"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "add_residuals": [
+                    "false"
+                ],
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "bypass_filters": [
+                    "[256]",
+                    "[16]",
+                    "[512]",
+                    "[2048]"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_id": [
+                    "4",
+                    "2",
+                    "-1",
+                    "0"
+                ],
+                "layer_class": [
+                    "bypass"
+                ],
+                "layer_key": [
+                    "auto",
+                    "54"
+                ],
+                "layer_type": [
+                    "gap_reorder"
+                ],
+                "out_scale": [
+                    "1.0",
+                    "0"
+                ],
+                "out_scale_mult": [
+                    "[1, 1, 1, 1]"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "qmodel_id": [
+                    "0"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_path_flip": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "relu": [
+                    "none"
+                ],
+                "remap_region": [
+                    "0"
+                ]
+            },
+            "variable": [
+                "scale_size"
+            ]
+        }
+    },
+    "input": {
+        "optionality": {
+            "mandatory": [
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "src_entries"
+            ],
+            "optional": [
+                "dest_entries/dest_details/gen_sync",
+                "dma_id",
+                "layer_class",
+                "layer_key",
+                "qmodel_id"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "dest_entries/dest_details/dest_addr": [
+                    "0x120",
+                    "0x60",
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "1",
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_id": [
+                    "2",
+                    "1",
+                    "-1",
+                    "0"
+                ],
+                "layer_class": [
+                    "input"
+                ],
+                "layer_key": [
+                    "110",
+                    "112"
+                ],
+                "layer_type": [
+                    "input"
+                ],
+                "qmodel_id": [
+                    "1",
+                    "0"
+                ],
+                "src_entries": [
+                    "[]"
+                ]
+            },
+            "variable": [
+                "dest_entries/addr"
+            ]
+        }
+    },
+    "input_ext": {
+        "optionality": {
+            "mandatory": [
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "src_entries"
+            ],
+            "optional": [
+                "dest_entries/dest_details/gen_sync",
+                "dma_id",
+                "layer_class",
+                "layer_key",
+                "qmodel_id",
+                "num_rows_per_pcie_transfer"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_id": [
+                    "-2",
+                    "-1",
+                    "0"
+                ],
+                "layer_class": [
+                    "input"
+                ],
+                "layer_type": [
+                    "input_ext"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "layer_key": [
+                    "110",
+                    "109",
+                    "112"
+                ],
+                "qmodel_id": [
+                    "1",
+                    "0"
+                ],
+                "num_rows_per_pcie_transfer": [
+                    "7",
+                    "6",
+                    "9",
+                    "8"
+                ]
+            },
+            "variable": []
+        }
+    },
+    "io_bypass": {
+        "optionality": {
+            "mandatory": [
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "src_entries"
+            ],
+            "optional": [
+                "dest_entries/dest_details/gen_sync",
+                "dma_id",
+                "layer_class",
+                "layer_key",
+                "qmodel_id"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "dest_entries/addr": [
+                    "0x120",
+                    "0x180",
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x120",
+                    "0x60",
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_id": [
+                    "1",
+                    "-1",
+                    "0"
+                ],
+                "layer_class": [
+                    "io_bypass"
+                ],
+                "layer_type": [
+                    "io_bypass"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "qmodel_id": [
+                    "1",
+                    "0"
+                ]
+            },
+            "variable": [
+                "layer_key"
+            ]
+        }
+    },
+    "output": {
+        "optionality": {
+            "mandatory": [
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "src_entries"
+            ],
+            "optional": [
+                "dest_entries/dest_details/gen_sync",
+                "layer_class",
+                "layer_key",
+                "qmodel_id",
+                "dma_id"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "layer_class": [
+                    "output"
+                ],
+                "layer_key": [
+                    "111",
+                    "113",
+                    "112"
+                ],
+                "layer_type": [
+                    "output"
+                ],
+                "qmodel_id": [
+                    "1",
+                    "0"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "dma_id": [
+                    "2"
+                ]
+            },
+            "variable": [
+                "dest_entries/dest_details/dest_addr"
+            ]
+        }
+    },
+    "output_ext": {
+        "optionality": {
+            "mandatory": [
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "src_entries"
+            ],
+            "optional": [
+                "dest_entries/dest_details/gen_sync",
+                "layer_class",
+                "layer_key",
+                "qmodel_id",
+                "num_rows_per_pcie_transfer",
+                "dma_id"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "layer_class": [
+                    "output"
+                ],
+                "layer_type": [
+                    "output_ext"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "layer_key": [
+                    "111",
+                    "113",
+                    "114",
+                    "112"
+                ],
+                "qmodel_id": [
+                    "1",
+                    "0"
+                ],
+                "dma_id": [
+                    "3",
+                    "2",
+                    "0"
+                ]
+            },
+            "variable": [
+                "dest_entries/dest_details/dest_addr",
+                "num_rows_per_pcie_transfer"
+            ]
+        }
+    },
+    "pool": {
+        "optionality": {
+            "mandatory": [
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "filter_size",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale_mult",
+                "out_scale_shift",
+                "pad_bot",
+                "pad_left",
+                "pad_right",
+                "pad_top",
+                "pool_out_filters",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "scale_output",
+                "scale_prefetch",
+                "src_entries",
+                "stride"
+            ],
+            "optional": [
+                "bias_add_round_shift",
+                "dma_layer_usage",
+                "in_scale",
+                "layer_class",
+                "out_scale",
+                "out_sync_mult",
+                "remap_region",
+                "scale_path_flip",
+                "layer_key",
+                "qmodel_id",
+                "add_residuals",
+                "start_xbar",
+                "horz_splits",
+                "vert_splits",
+                "ag_shift",
+                "mac_gain",
+                "pe_gain",
+                "dilation",
+                "nconvs",
+                "num_blocks",
+                "num_xbars",
+                "pos_neg_wgts",
+                "pos_neg_acts",
+                "relu"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "3",
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "global_residual_mem",
+                    "layer_mem"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "filter_size": [
+                    "3",
+                    "2"
+                ],
+                "in_scale": [
+                    "1.0",
+                    "1"
+                ],
+                "layer_class": [
+                    "pool"
+                ],
+                "layer_type": [
+                    "pool"
+                ],
+                "out_scale": [
+                    "1.0",
+                    "1"
+                ],
+                "out_scale_mult": [
+                    "[]",
+                    "[1, 1, 1, 1]",
+                    "1"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]",
+                    "[]",
+                    "0"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "pad_bot": [
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "pad_left": [
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "pad_right": [
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "pad_top": [
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "remap_region": [
+                    "3",
+                    "1",
+                    "0"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_path_flip": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "stride": [
+                    "3",
+                    "2",
+                    "1"
+                ],
+                "qmodel_id": [
+                    "1",
+                    "0"
+                ],
+                "add_residuals": [
+                    "false"
+                ],
+                "start_xbar": [
+                    "0"
+                ],
+                "horz_splits": [
+                    "[2048]"
+                ],
+                "vert_splits": [
+                    "[256]"
+                ],
+                "ag_shift": [
+                    "14"
+                ],
+                "mac_gain": [
+                    "14"
+                ],
+                "pe_gain": [
+                    "8"
+                ],
+                "dilation": [
+                    "1"
+                ],
+                "nconvs": [
+                    "[1, 1]"
+                ],
+                "num_blocks": [
+                    "4",
+                    "8"
+                ],
+                "num_xbars": [
+                    "[2, 2]"
+                ],
+                "pos_neg_wgts": [
+                    "false"
+                ],
+                "pos_neg_acts": [
+                    "false"
+                ],
+                "relu": [
+                    "none"
+                ]
+            },
+            "variable": [
+                "dest_entries/dest_details/dest_addr",
+                "pool_out_filters",
+                "layer_key"
+            ]
+        }
+    },
+    "space2depth": {
+        "optionality": {
+            "mandatory": [
+                "add_residuals",
+                "bypass_filters",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dma_layer_usage",
+                "in_scale",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "remap_region",
+                "s2d_block_size",
+                "scale_output",
+                "scale_prefetch",
+                "src_entries"
+            ],
+            "optional": []
+        },
+        "variation": {
+            "constant": {
+                "add_residuals": [
+                    "false"
+                ],
+                "bypass_filters": [
+                    "[8]"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x904000",
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "layer_class": [
+                    "bypass"
+                ],
+                "layer_type": [
+                    "space2depth"
+                ],
+                "out_scale": [
+                    "1.0"
+                ],
+                "out_scale_mult": [
+                    "[1, 1, 1, 1]"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "remap_region": [
+                    "0"
+                ],
+                "s2d_block_size": [
+                    "2"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "src_entries": [
+                    "[]"
+                ]
+            },
+            "variable": []
+        }
+    },
+    "split": {
+        "optionality": {
+            "mandatory": [
+                "add_residuals",
+                "bias_add_round_shift",
+                "bypass_filters",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dma_id",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "scale_output",
+                "scale_path_flip",
+                "scale_prefetch",
+                "scale_size",
+                "src_entries"
+            ],
+            "optional": [
+                "dma_layer_usage",
+                "in_scale",
+                "remap_region",
+                "layer_key",
+                "qmodel_id",
+                "relu"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "add_residuals": [
+                    "false"
+                ],
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "bypass_filters": [
+                    "[512, 512, 512, 512]",
+                    "[32, 32]",
+                    "[2048]"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "1",
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_id": [
+                    "-1",
+                    "0"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "layer_class": [
+                    "bypass"
+                ],
+                "layer_type": [
+                    "split"
+                ],
+                "out_scale": [
+                    "1.0",
+                    "0"
+                ],
+                "out_scale_mult": [
+                    "[1, 1, 1, 1]"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "remap_region": [
+                    "0"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_path_flip": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "scale_size": [
+                    "1"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "layer_key": [
+                    "54"
+                ],
+                "qmodel_id": [
+                    "0"
+                ],
+                "relu": [
+                    "none"
+                ]
+            },
+            "variable": [
+                "dest_entries/addr"
+            ]
+        }
+    },
+    "transpose": {
+        "optionality": {
+            "mandatory": [
+                "ag_shift",
+                "mac_gain",
+                "pe_gain",
+                "add_bias",
+                "add_residuals",
+                "alt_signs",
+                "col_splits",
+                "col_splits/grp_shift",
+                "col_splits/splits",
+                "col_splits/splits/shift",
+                "col_splits/splits/sign",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dilation",
+                "dma_layer_usage",
+                "filter_size",
+                "half_pad",
+                "horz_splits",
+                "in_scale",
+                "input_dup",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "nconvs",
+                "num_blocks",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "num_sections",
+                "num_xbars",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "pad_bot",
+                "pad_left",
+                "pad_right",
+                "pad_top",
+                "pos_neg_acts",
+                "pos_neg_wgts",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "relu",
+                "remap_region",
+                "scale_output",
+                "scale_prefetch",
+                "src_entries",
+                "start_col",
+                "start_section",
+                "start_xbar",
+                "stride",
+                "trans_filter_size",
+                "trans_pad",
+                "trans_stride",
+                "vert_splits",
+                "xbar_cnt",
+                "xbar_start_layer"
+            ],
+            "optional": []
+        },
+        "variation": {
+            "constant": {
+                "ag_shift": [
+                    "14"
+                ],
+                "mac_gain": [
+                    "14"
+                ],
+                "pe_gain": [
+                    "8"
+                ],
+                "add_bias": [
+                    "false"
+                ],
+                "add_residuals": [
+                    "false"
+                ],
+                "alt_signs": [
+                    "false"
+                ],
+                "col_splits/grp_shift": [
+                    "0"
+                ],
+                "col_splits/splits/shift": [
+                    "0"
+                ],
+                "col_splits/splits/sign": [
+                    "true"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dilation": [
+                    "1"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "filter_size": [
+                    "2",
+                    "1"
+                ],
+                "half_pad": [
+                    "1",
+                    "0"
+                ],
+                "horz_splits": [
+                    "[2048]",
+                    "[4096]"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "input_dup": [
+                    "1"
+                ],
+                "layer_class": [
+                    "conv"
+                ],
+                "layer_type": [
+                    "transpose"
+                ],
+                "nconvs": [
+                    "[1, 1]"
+                ],
+                "num_blocks": [
+                    "3",
+                    "1",
+                    "4"
+                ],
+                "num_sections": [
+                    "2",
+                    "16",
+                    "4"
+                ],
+                "num_xbars": [
+                    "[1, 1]",
+                    "[5, 4]",
+                    "[4, 3]"
+                ],
+                "out_scale": [
+                    "1.0"
+                ],
+                "out_scale_mult": [
+                    "[1, 1, 1, 1]",
+                    "1"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]",
+                    "0"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "pad_bot": [
+                    "1",
+                    "0"
+                ],
+                "pad_left": [
+                    "1",
+                    "0"
+                ],
+                "pad_right": [
+                    "1",
+                    "0"
+                ],
+                "pad_top": [
+                    "1",
+                    "0"
+                ],
+                "pos_neg_acts": [
+                    "false"
+                ],
+                "pos_neg_wgts": [
+                    "false"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "relu": [
+                    "relu",
+                    "none"
+                ],
+                "remap_region": [
+                    "0"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "start_col": [
+                    "0"
+                ],
+                "start_section": [
+                    "16",
+                    "0"
+                ],
+                "start_xbar": [
+                    "0"
+                ],
+                "stride": [
+                    "1"
+                ],
+                "trans_filter_size": [
+                    "4",
+                    "0"
+                ],
+                "trans_pad": [
+                    "2",
+                    "16",
+                    "0"
+                ],
+                "trans_stride": [
+                    "2",
+                    "32",
+                    "4"
+                ],
+                "vert_splits": [
+                    "[256]"
+                ],
+                "xbar_cnt": [
+                    "5",
+                    "1",
+                    "4"
+                ],
+                "xbar_start_layer": [
+                    "0"
+                ]
+            },
+            "variable": []
+        }
+    },
+    "upsample": {
+        "optionality": {
+            "mandatory": [
+                "add_residuals",
+                "bias_add_round_shift",
+                "bypass_filters",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dma_id",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "scale_output",
+                "scale_path_flip",
+                "scale_prefetch",
+                "scale_size",
+                "src_entries"
+            ],
+            "optional": [
+                "dma_layer_usage",
+                "in_scale",
+                "remap_region",
+                "layer_key",
+                "qmodel_id",
+                "relu"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "add_residuals": [
+                    "false"
+                ],
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x904000",
+                    "0x0",
+                    "0x938000"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "1",
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "layer_class": [
+                    "bypass"
+                ],
+                "layer_type": [
+                    "upsample"
+                ],
+                "out_scale": [
+                    "1.0",
+                    "0"
+                ],
+                "out_scale_mult": [
+                    "[1, 1, 1, 1]"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "remap_region": [
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_path_flip": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "scale_size": [
+                    "2",
+                    "8"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "qmodel_id": [
+                    "0"
+                ],
+                "relu": [
+                    "relu",
+                    "none"
+                ]
+            },
+            "variable": [
+                "bypass_filters",
+                "dma_id",
+                "layer_key"
+            ]
+        }
+    },
+    "upsamplermap": {
+        "optionality": {
+            "mandatory": [
+                "add_residuals",
+                "bias_add_round_shift",
+                "bypass_filters",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dma_id",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "scale_output",
+                "scale_path_flip",
+                "scale_prefetch",
+                "scale_size",
+                "src_entries"
+            ],
+            "optional": [
+                "dma_layer_usage",
+                "in_scale",
+                "remap_region",
+                "relu",
+                "layer_key",
+                "qmodel_id"
+            ]
+        },
+        "variation": {
+            "constant": {
+                "add_residuals": [
+                    "false"
+                ],
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "bypass_filters": [
+                    "[32]",
+                    "[256]",
+                    "[128]",
+                    "[64]"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "layer_class": [
+                    "bypass"
+                ],
+                "layer_type": [
+                    "upsamplermap"
+                ],
+                "out_scale": [
+                    "1.0",
+                    "0"
+                ],
+                "out_scale_mult": [
+                    "[1, 1, 1, 1]"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "remap_region": [
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_path_flip": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "scale_size": [
+                    "2"
+                ],
+                "src_entries": [
+                    "[]"
+                ],
+                "relu": [
+                    "relu",
+                    "none"
+                ],
+                "layer_key": [
+                    "64",
+                    "49",
+                    "58",
+                    "55"
+                ],
+                "qmodel_id": [
+                    "0"
+                ]
+            },
+            "variable": [
+                "dma_id"
+            ]
+        }
+    },
+    "upsamplex": {
+        "optionality": {
+            "mandatory": [
+                "add_residuals",
+                "bias_add_round_shift",
+                "bypass_filters",
+                "dest_entries",
+                "dest_entries/addr",
+                "dest_entries/dest_details",
+                "dest_entries/dest_details/addr_incr",
+                "dest_entries/dest_details/dest_addr",
+                "dest_entries/dest_details/dest_layer",
+                "dest_entries/dest_details/gen_sync",
+                "dest_entries/dest_details/mem_index",
+                "dest_entries/dest_details/mem_type",
+                "dest_entries/len",
+                "dma_id",
+                "dma_layer_usage",
+                "in_scale",
+                "layer_class",
+                "layer_id",
+                "layer_mems",
+                "layer_mems/lm_max_rows",
+                "layer_mems/lm_row_size",
+                "layer_type",
+                "num_in_cols",
+                "num_in_filters",
+                "num_in_rows",
+                "num_out_cols",
+                "num_out_filters",
+                "num_out_rows",
+                "out_scale",
+                "out_scale_mult",
+                "out_scale_shift",
+                "out_sync_mult",
+                "prefetch_scale_mult",
+                "prefetch_scale_shift",
+                "relu",
+                "scale_output",
+                "scale_path_flip",
+                "scale_prefetch",
+                "scale_size",
+                "src_entries"
+            ],
+            "optional": []
+        },
+        "variation": {
+            "constant": {
+                "add_residuals": [
+                    "false"
+                ],
+                "bias_add_round_shift": [
+                    "0"
+                ],
+                "bypass_filters": [
+                    "[9]"
+                ],
+                "dest_entries/addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/dest_addr": [
+                    "0x0"
+                ],
+                "dest_entries/dest_details/gen_sync": [
+                    "true"
+                ],
+                "dest_entries/dest_details/mem_index": [
+                    "0"
+                ],
+                "dest_entries/dest_details/mem_type": [
+                    "layer_mem"
+                ],
+                "dma_id": [
+                    "0"
+                ],
+                "dma_layer_usage": [
+                    "single_layer"
+                ],
+                "in_scale": [
+                    "1.0"
+                ],
+                "layer_class": [
+                    "bypass"
+                ],
+                "layer_type": [
+                    "upsamplex"
+                ],
+                "out_scale": [
+                    "1.0"
+                ],
+                "out_scale_mult": [
+                    "[1, 1, 1, 1]"
+                ],
+                "out_scale_shift": [
+                    "[0, 0, 0, 0]"
+                ],
+                "out_sync_mult": [
+                    "1"
+                ],
+                "prefetch_scale_mult": [
+                    "1"
+                ],
+                "prefetch_scale_shift": [
+                    "0"
+                ],
+                "relu": [
+                    "none"
+                ],
+                "scale_output": [
+                    "false"
+                ],
+                "scale_path_flip": [
+                    "false"
+                ],
+                "scale_prefetch": [
+                    "false"
+                ],
+                "scale_size": [
+                    "2"
+                ],
+                "src_entries": [
+                    "[]"
+                ]
+            },
+            "variable": []
+        }
+    }
+}

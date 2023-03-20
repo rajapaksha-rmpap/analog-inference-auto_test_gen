@@ -7,7 +7,7 @@
         "list": {
             "times": 175,
             "values": {
-                "array of dicts": 175
+                "object_array": 175
             }
         }
     },
@@ -33,7 +33,7 @@
         "list": {
             "times": 191,
             "values": {
-                "array of dicts": 191
+                "object_array": 191
             }
         }
     },
@@ -44,7 +44,9 @@
         ],
         "int": {
             "times": 219,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 219
+            }
         }
     },
     "dest_entries/dest_details/dest_addr": {
@@ -68,7 +70,9 @@
         ],
         "int": {
             "times": 219,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 219
+            }
         }
     },
     "dest_entries/dest_details/gen_sync": {
@@ -79,7 +83,7 @@
         "boolean": {
             "times": 96,
             "values": {
-                "True": 96
+                "true": 96
             }
         }
     },
@@ -114,7 +118,9 @@
         ],
         "int": {
             "times": 191,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 191
+            }
         }
     },
     "dma_id": {
@@ -150,7 +156,9 @@
         ],
         "int": {
             "times": 175,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 175
+            }
         }
     },
     "layer_mems": {
@@ -161,7 +169,7 @@
         "list": {
             "times": 175,
             "values": {
-                "array of dicts": 175
+                "object_array": 175
             }
         }
     },
@@ -172,7 +180,9 @@
         ],
         "int": {
             "times": 175,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 175
+            }
         }
     },
     "layer_mems/lm_row_size": {
@@ -182,7 +192,9 @@
         ],
         "int": {
             "times": 175,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 175
+            }
         }
     },
     "layer_type": {
@@ -204,7 +216,9 @@
         ],
         "int": {
             "times": 175,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 175
+            }
         }
     },
     "num_in_filters": {
@@ -214,7 +228,9 @@
         ],
         "int": {
             "times": 175,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 175
+            }
         }
     },
     "num_in_rows": {
@@ -224,7 +240,9 @@
         ],
         "int": {
             "times": 175,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 175
+            }
         }
     },
     "src_entries": {
@@ -267,5 +285,6 @@
                 "1": 2
             }
         }
-    }
+    },
+    "num_layers": 175
 }

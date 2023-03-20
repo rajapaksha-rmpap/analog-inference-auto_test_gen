@@ -43,7 +43,7 @@
         "boolean": {
             "times": 12,
             "values": {
-                "False": 12
+                "false": 12
             }
         }
     },
@@ -55,7 +55,7 @@
         "boolean": {
             "times": 12,
             "values": {
-                "False": 12
+                "false": 12
             }
         }
     },
@@ -67,7 +67,7 @@
         "boolean": {
             "times": 12,
             "values": {
-                "False": 12
+                "false": 12
             }
         }
     },
@@ -78,7 +78,9 @@
         ],
         "dict": {
             "times": 12,
-            "values": "not recorded due to being complicated to represent"
+            "values": {
+                "a_json-object": 12
+            }
         }
     },
     "col_splits/grp_shift": {
@@ -101,7 +103,7 @@
         "list": {
             "times": 12,
             "values": {
-                "array of dicts": 12
+                "object_array": 12
             }
         }
     },
@@ -125,7 +127,7 @@
         "boolean": {
             "times": 12,
             "values": {
-                "True": 12
+                "true": 12
             }
         }
     },
@@ -137,7 +139,7 @@
         "list": {
             "times": 12,
             "values": {
-                "array of dicts": 12
+                "object_array": 12
             }
         }
     },
@@ -161,7 +163,7 @@
         "list": {
             "times": 12,
             "values": {
-                "array of dicts": 12
+                "object_array": 12
             }
         }
     },
@@ -172,7 +174,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "dest_entries/dest_details/dest_addr": {
@@ -194,7 +198,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "dest_entries/dest_details/mem_index": {
@@ -228,7 +234,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "dilation": {
@@ -337,7 +345,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "layer_mems": {
@@ -348,7 +358,7 @@
         "list": {
             "times": 12,
             "values": {
-                "array of dicts": 12
+                "object_array": 12
             }
         }
     },
@@ -359,7 +369,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "layer_mems/lm_row_size": {
@@ -369,7 +381,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "layer_type": {
@@ -417,7 +431,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "num_in_filters": {
@@ -427,7 +443,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "num_in_rows": {
@@ -437,7 +455,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "num_out_cols": {
@@ -447,7 +467,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "num_out_filters": {
@@ -457,7 +479,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "num_out_rows": {
@@ -467,7 +491,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 12
+            }
         }
     },
     "num_sections": {
@@ -567,7 +593,10 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "1": 6,
+                "0": 6
+            }
         }
     },
     "pad_left": {
@@ -577,7 +606,10 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "1": 6,
+                "0": 6
+            }
         }
     },
     "pad_right": {
@@ -587,7 +619,10 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "1": 6,
+                "0": 6
+            }
         }
     },
     "pad_top": {
@@ -597,7 +632,10 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "1": 6,
+                "0": 6
+            }
         }
     },
     "pos_neg_acts": {
@@ -608,7 +646,7 @@
         "boolean": {
             "times": 12,
             "values": {
-                "False": 12
+                "false": 12
             }
         }
     },
@@ -620,7 +658,7 @@
         "boolean": {
             "times": 12,
             "values": {
-                "False": 12
+                "false": 12
             }
         }
     },
@@ -681,7 +719,7 @@
         "boolean": {
             "times": 12,
             "values": {
-                "False": 12
+                "false": 12
             }
         }
     },
@@ -693,7 +731,7 @@
         "boolean": {
             "times": 12,
             "values": {
-                "False": 12
+                "false": 12
             }
         }
     },
@@ -753,7 +791,9 @@
         ],
         "int": {
             "times": 12,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "1": 12
+            }
         }
     },
     "trans_filter_size": {
@@ -834,5 +874,6 @@
                 "0": 12
             }
         }
-    }
+    },
+    "num_layers": 12
 }

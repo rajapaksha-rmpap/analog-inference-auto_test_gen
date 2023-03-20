@@ -7,7 +7,7 @@
         "boolean": {
             "times": 88,
             "values": {
-                "False": 88
+                "false": 88
             }
         }
     },
@@ -45,7 +45,7 @@
         "list": {
             "times": 88,
             "values": {
-                "array of dicts": 88
+                "object_array": 88
             }
         }
     },
@@ -69,7 +69,7 @@
         "list": {
             "times": 88,
             "values": {
-                "array of dicts": 88
+                "object_array": 88
             }
         }
     },
@@ -80,7 +80,9 @@
         ],
         "int": {
             "times": 88,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 88
+            }
         }
     },
     "dest_entries/dest_details/dest_addr": {
@@ -103,7 +105,9 @@
         ],
         "int": {
             "times": 88,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 88
+            }
         }
     },
     "dest_entries/dest_details/gen_sync": {
@@ -114,7 +118,7 @@
         "boolean": {
             "times": 88,
             "values": {
-                "True": 88
+                "true": 88
             }
         }
     },
@@ -150,7 +154,9 @@
         ],
         "int": {
             "times": 88,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 88
+            }
         }
     },
     "dma_id": {
@@ -212,7 +218,9 @@
         ],
         "int": {
             "times": 88,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 88
+            }
         }
     },
     "layer_mems": {
@@ -223,7 +231,7 @@
         "list": {
             "times": 88,
             "values": {
-                "array of dicts": 88
+                "object_array": 88
             }
         }
     },
@@ -234,7 +242,9 @@
         ],
         "int": {
             "times": 98,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 98
+            }
         }
     },
     "layer_mems/lm_row_size": {
@@ -244,7 +254,9 @@
         ],
         "int": {
             "times": 98,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 98
+            }
         }
     },
     "layer_type": {
@@ -266,7 +278,9 @@
         ],
         "int": {
             "times": 88,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 88
+            }
         }
     },
     "num_in_filters": {
@@ -276,7 +290,9 @@
         ],
         "int": {
             "times": 88,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 88
+            }
         }
     },
     "num_in_rows": {
@@ -286,7 +302,9 @@
         ],
         "int": {
             "times": 88,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 88
+            }
         }
     },
     "num_out_cols": {
@@ -296,7 +314,9 @@
         ],
         "int": {
             "times": 88,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 88
+            }
         }
     },
     "num_out_filters": {
@@ -306,7 +326,9 @@
         ],
         "int": {
             "times": 88,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 88
+            }
         }
     },
     "num_out_rows": {
@@ -316,7 +338,9 @@
         ],
         "int": {
             "times": 88,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 88
+            }
         }
     },
     "out_scale": {
@@ -420,7 +444,7 @@
         "boolean": {
             "times": 88,
             "values": {
-                "False": 88
+                "false": 88
             }
         }
     },
@@ -432,7 +456,7 @@
         "boolean": {
             "times": 88,
             "values": {
-                "False": 88
+                "false": 88
             }
         }
     },
@@ -444,7 +468,7 @@
         "boolean": {
             "times": 88,
             "values": {
-                "False": 88
+                "false": 88
             }
         }
     },
@@ -468,7 +492,7 @@
         "list": {
             "times": 88,
             "values": {
-                "array of dicts": 88
+                "object_array": 88
             }
         }
     },
@@ -658,5 +682,6 @@
                 "33": 2
             }
         }
-    }
+    },
+    "num_layers": 88
 }

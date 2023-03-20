@@ -7,8 +7,8 @@
         "boolean": {
             "times": 5922,
             "values": {
-                "True": 3749,
-                "False": 2173
+                "true": 3749,
+                "false": 2173
             }
         }
     },
@@ -20,8 +20,8 @@
         "boolean": {
             "times": 6079,
             "values": {
-                "False": 4995,
-                "True": 1084
+                "false": 4995,
+                "true": 1084
             }
         }
     },
@@ -63,7 +63,9 @@
         ],
         "dict": {
             "times": 5962,
-            "values": "not recorded due to being complicated to represent"
+            "values": {
+                "a_json-object": 5962
+            }
         }
     },
     "col_splits/grp_shift": {
@@ -87,7 +89,7 @@
         "list": {
             "times": 5962,
             "values": {
-                "array of dicts": 5962
+                "object_array": 5962
             }
         }
     },
@@ -115,8 +117,8 @@
         "boolean": {
             "times": 11744,
             "values": {
-                "True": 5966,
-                "False": 5778
+                "true": 5966,
+                "false": 5778
             }
         }
     },
@@ -146,7 +148,7 @@
         "list": {
             "times": 6079,
             "values": {
-                "array of dicts": 6079
+                "object_array": 6079
             }
         }
     },
@@ -173,7 +175,7 @@
         "list": {
             "times": 6083,
             "values": {
-                "array of dicts": 6083
+                "object_array": 6083
             }
         }
     },
@@ -184,7 +186,9 @@
         ],
         "int": {
             "times": 7698,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 7698
+            }
         }
     },
     "dest_entries/dest_details/dest_addr": {
@@ -235,7 +239,9 @@
         ],
         "int": {
             "times": 7698,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 7698
+            }
         }
     },
     "dest_entries/dest_details/gen_sync": {
@@ -246,8 +252,8 @@
         "boolean": {
             "times": 7399,
             "values": {
-                "True": 7309,
-                "False": 90
+                "true": 7309,
+                "false": 90
             }
         }
     },
@@ -286,7 +292,9 @@
         ],
         "int": {
             "times": 6083,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 6083
+            }
         }
     },
     "dilation": {
@@ -379,7 +387,9 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 6079
+            }
         }
     },
     "layer_key": {
@@ -496,7 +506,7 @@
         "list": {
             "times": 6079,
             "values": {
-                "array of dicts": 6079
+                "object_array": 6079
             }
         }
     },
@@ -507,7 +517,9 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 6079
+            }
         }
     },
     "layer_mems/lm_row_size": {
@@ -517,7 +529,9 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 6079
+            }
         }
     },
     "layer_type": {
@@ -704,7 +718,9 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 6079
+            }
         }
     },
     "num_in_filters": {
@@ -714,7 +730,9 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 6079
+            }
         }
     },
     "num_in_rows": {
@@ -724,7 +742,9 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 6079
+            }
         }
     },
     "num_out_cols": {
@@ -734,7 +754,9 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 6079
+            }
         }
     },
     "num_out_filters": {
@@ -744,7 +766,9 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 6079
+            }
         }
     },
     "num_out_rows": {
@@ -754,7 +778,9 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 6079
+            }
         }
     },
     "num_xbars": {
@@ -935,7 +961,13 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "1": 1957,
+                "0": 3881,
+                "3": 174,
+                "2": 65,
+                "4": 2
+            }
         }
     },
     "pad_left": {
@@ -945,7 +977,13 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "1": 1959,
+                "0": 3932,
+                "3": 135,
+                "2": 51,
+                "4": 2
+            }
         }
     },
     "pad_right": {
@@ -955,7 +993,13 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "1": 1952,
+                "0": 3945,
+                "3": 85,
+                "2": 95,
+                "4": 2
+            }
         }
     },
     "pad_top": {
@@ -965,7 +1009,13 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "1": 1961,
+                "0": 3868,
+                "3": 184,
+                "2": 64,
+                "4": 2
+            }
         }
     },
     "pe_gain": {
@@ -992,8 +1042,8 @@
         "boolean": {
             "times": 6079,
             "values": {
-                "False": 5815,
-                "True": 264
+                "false": 5815,
+                "true": 264
             }
         }
     },
@@ -1005,8 +1055,8 @@
         "boolean": {
             "times": 6079,
             "values": {
-                "True": 5775,
-                "False": 304
+                "true": 5775,
+                "false": 304
             }
         }
     },
@@ -1171,8 +1221,8 @@
         "boolean": {
             "times": 6079,
             "values": {
-                "True": 5721,
-                "False": 358
+                "true": 5721,
+                "false": 358
             }
         }
     },
@@ -1184,8 +1234,8 @@
         "boolean": {
             "times": 5770,
             "values": {
-                "False": 5146,
-                "True": 624
+                "false": 5146,
+                "true": 624
             }
         }
     },
@@ -1197,8 +1247,8 @@
         "boolean": {
             "times": 6079,
             "values": {
-                "False": 5003,
-                "True": 1076
+                "false": 5003,
+                "true": 1076
             }
         }
     },
@@ -1211,7 +1261,7 @@
             "times": 6079,
             "values": {
                 "[]": 4998,
-                "array of dicts": 1081
+                "object_array": 1081
             }
         }
     },
@@ -1238,7 +1288,11 @@
         ],
         "int": {
             "times": 6079,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "3": 2,
+                "2": 793,
+                "1": 5284
+            }
         }
     },
     "vert_splits": {
@@ -1463,8 +1517,8 @@
         "boolean": {
             "times": 5571,
             "values": {
-                "True": 5457,
-                "False": 114
+                "true": 5457,
+                "false": 114
             }
         }
     },
@@ -1671,8 +1725,8 @@
         "boolean": {
             "times": 4963,
             "values": {
-                "False": 4897,
-                "True": 66
+                "false": 4897,
+                "true": 66
             }
         }
     },
@@ -1974,8 +2028,8 @@
         "boolean": {
             "times": 585,
             "values": {
-                "True": 579,
-                "False": 6
+                "true": 579,
+                "false": 6
             }
         }
     },
@@ -2149,8 +2203,8 @@
         "boolean": {
             "times": 2686,
             "values": {
-                "False": 2374,
-                "True": 312
+                "false": 2374,
+                "true": 312
             }
         }
     },
@@ -2223,7 +2277,7 @@
         "boolean": {
             "times": 2,
             "values": {
-                "False": 2
+                "false": 2
             }
         }
     },
@@ -2280,5 +2334,6 @@
                 "layer3_i4_bias.npy": 1
             }
         }
-    }
+    },
+    "num_layers": 6079
 }

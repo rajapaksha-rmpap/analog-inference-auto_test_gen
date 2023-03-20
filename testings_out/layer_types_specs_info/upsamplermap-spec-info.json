@@ -7,7 +7,7 @@
         "boolean": {
             "times": 37,
             "values": {
-                "False": 37
+                "false": 37
             }
         }
     },
@@ -46,7 +46,7 @@
         "list": {
             "times": 37,
             "values": {
-                "array of dicts": 37
+                "object_array": 37
             }
         }
     },
@@ -70,7 +70,7 @@
         "list": {
             "times": 37,
             "values": {
-                "array of dicts": 37
+                "object_array": 37
             }
         }
     },
@@ -81,7 +81,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "dest_entries/dest_details/dest_addr": {
@@ -103,7 +105,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "dest_entries/dest_details/gen_sync": {
@@ -114,7 +118,7 @@
         "boolean": {
             "times": 37,
             "values": {
-                "True": 37
+                "true": 37
             }
         }
     },
@@ -149,7 +153,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "dma_id": {
@@ -211,7 +217,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "layer_mems": {
@@ -222,7 +230,7 @@
         "list": {
             "times": 37,
             "values": {
-                "array of dicts": 37
+                "object_array": 37
             }
         }
     },
@@ -233,7 +241,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "layer_mems/lm_row_size": {
@@ -243,7 +253,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "layer_type": {
@@ -265,7 +277,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "num_in_filters": {
@@ -275,7 +289,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "num_in_rows": {
@@ -285,7 +301,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "num_out_cols": {
@@ -295,7 +313,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "num_out_filters": {
@@ -305,7 +325,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "num_out_rows": {
@@ -315,7 +337,9 @@
         ],
         "int": {
             "times": 37,
-            "values": "not recorded due to being already well defined"
+            "values": {
+                "well_defined": 37
+            }
         }
     },
     "out_scale": {
@@ -419,7 +443,7 @@
         "boolean": {
             "times": 37,
             "values": {
-                "False": 37
+                "false": 37
             }
         }
     },
@@ -431,7 +455,7 @@
         "boolean": {
             "times": 37,
             "values": {
-                "False": 37
+                "false": 37
             }
         }
     },
@@ -443,7 +467,7 @@
         "boolean": {
             "times": 37,
             "values": {
-                "False": 37
+                "false": 37
             }
         }
     },
@@ -510,5 +534,6 @@
                 "0": 6
             }
         }
-    }
+    },
+    "num_layers": 37
 }

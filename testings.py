@@ -263,25 +263,85 @@ ref_rpt_list.sort()
 
 
 # ------------------------------------------------------------ finding common and specific specs for layers types ----------------------------------------------------------------------------------
-with open("testings_out/layer_types-specs.json") as layer_types_specs_file:
-    layer_types_specs = json.load(layer_types_specs_file)
+# with open("testings_out/layer_types-specs.json") as layer_types_specs_file:
+#     layer_types_specs = json.load(layer_types_specs_file)
 
-common_specs = set(layer_types_specs["input"])
-for layer_type in layer_types_specs:
-    common_specs &= set(layer_types_specs[layer_type])
+# common_specs = set(layer_types_specs["input"])
+# for layer_type in layer_types_specs:
+#     common_specs &= set(layer_types_specs[layer_type])
 
-common_specs_arr = list(common_specs)
-common_specs_arr.sort()
-specific_specs = {"common_specs": common_specs_arr}
+# common_specs_arr = list(common_specs)
+# common_specs_arr.sort()
+# specific_specs = {"common_specs": common_specs_arr}
 
-for layer_type in layer_types_specs:
-    specific_specs_arr = list(set(layer_types_specs[layer_type]) - common_specs)
-    specific_specs_arr.sort()
-    specific_specs[layer_type] = specific_specs_arr
+# for layer_type in layer_types_specs:
+#     specific_specs_arr = list(set(layer_types_specs[layer_type]) - common_specs)
+#     specific_specs_arr.sort()
+#     specific_specs[layer_type] = specific_specs_arr
 
-with open("testings_out/layer_types-specs-commonspecific.json", 'w') as layer_types_specs_file_:
-    json.dump(specific_specs, layer_types_specs_file_, indent=4)
+# with open("testings_out/layer_types-specs-commonspecific.json", 'w') as layer_types_specs_file_:
+#     json.dump(specific_specs, layer_types_specs_file_, indent=4)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# --------------------------------------------------------------------------------- finding a test who has 5 mac-rows ------------------------------------------------------------------------------
+# for a task given by Hasun ayiya 
+# for test in in_spec_list:
+#     with open(in_path + test + "-spec.json") as file:
+#         spec_json = json.load(file)
+    
+#     if "chips" in spec_json:
+#         spec_json = spec_json["chips"][0]
+    
+#     if len(spec_json["mac_rows"]) == 5:
+#         temp = True
+#         for mac_row in spec_json["mac_rows"]:
+#             if len(mac_row["layers"]) != 1:
+#                 temp = False
+#         if temp: print(test)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# finding [optional and mandatory] and [constants and variable] specs 
+container = {}
+dir = "testings_out/layer_types_specs_info/"
+mandatoy_spec_thresh = 0.95 # mandatory: specs who appear in more than 90% of the layers 
+#                             optional : specs who appear in less than 50% of the layers 
+constant_spec_thresh = 4 # if a spec shows a possible range of more than 4 values, then it is considered to be variable-valued, otherwise constant-valued
+summary_temp = {
+    "optionality": {"mandatory": [], "optional": []}, 
+    "variation": {"constant": {}, "variable": []}
+}
+iterator = os.scandir(dir)
+layer_types = [file.name.split("-")[0] for file in iterator]
+layer_types.sort()
+for layer_type in layer_types:
+    with open(dir + layer_type + "-spec-info.json") as sub_file:
+        spec_info = json.load(sub_file)
+    summary = copy.deepcopy(summary_temp)
+    num_layers = spec_info["num_layers"]
+    for spec in spec_info:
+        if spec == "num_layers": continue 
+        # optionality 
+        if spec_info[spec]["times"] >= mandatoy_spec_thresh * num_layers:
+            summary["optionality"]["mandatory"].append(spec)
+        else:
+            summary["optionality"]["optional"].append(spec)
+        # variation
+        num_values = 0; choices = set(); consider = True 
+        for type in spec_info[spec]["type"]:
+            num_values += len(spec_info[spec][type]["values"])
+            choices |= set(spec_info[spec][type]["values"].keys())
+            if {"well_defined", "object_array", "a_json-object"} & set(spec_info[spec][type]["values"].keys()): consider = False
+        if consider:
+            if num_values > constant_spec_thresh:
+                summary["variation"]["variable"].append(spec)
+            else:
+                summary["variation"]["constant"][spec] = list(choices)
+    container[layer_type] = summary
+
+with open("testings_out/layer_types_specs-coditionalityAndVariablitity.json", 'w') as file:
+    json.dump(container, file, indent=4)
 
 end_time = time.time()
 print("time usage =", end_time-start_time)

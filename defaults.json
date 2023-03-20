@@ -1,0 +1,4266 @@
+{
+    "input": {
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "optional"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            -1,
+            "optional"
+        ],
+        "layer_class": [
+            "input",
+            "optional"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_key": [
+            "110",
+            "optional"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "input",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ]
+    },
+    "gap": {
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "gap_reciprocal": [
+            1337,
+            "essential"
+        ],
+        "gap_shift": [
+            14,
+            "essential"
+        ],
+        "layer_class": [
+            "gap",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_key": [
+            "112",
+            "optional"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "gap",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "dma_id": [
+            2,
+            "optional"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "optional"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "optional"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "optional"
+        ]
+    },
+    "output": {
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x904000",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "optional"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_class": [
+            "output",
+            "optional"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_key": [
+            "111",
+            "optional"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "output",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "dma_id": [
+            2,
+            "optional"
+        ]
+    },
+    "conv": {
+        "add_bias": [
+            true,
+            "essential"
+        ],
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "ag_shift": [
+            14,
+            "optional"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "optional"
+        ],
+        "col_splits": [
+            "a_json-object",
+            "essential"
+        ],
+        "col_splits/grp_shift": [
+            0,
+            "essential"
+        ],
+        "col_splits/splits": [
+            "object_array",
+            "essential"
+        ],
+        "col_splits/splits/shift": [
+            0,
+            "essential"
+        ],
+        "col_splits/splits/sign": [
+            true,
+            "essential"
+        ],
+        "conv_start_col": [
+            0,
+            "optional"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dilation": [
+            1,
+            "essential"
+        ],
+        "filter_size": [
+            1,
+            "essential"
+        ],
+        "horz_splits": [
+            [
+                2048
+            ],
+            "essential"
+        ],
+        "input_dup": [
+            1,
+            "essential"
+        ],
+        "layer_class": [
+            "conv",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_key": [
+            "0",
+            "optional"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "conv",
+            "essential"
+        ],
+        "mac_gain": [
+            16,
+            "optional"
+        ],
+        "nconvs": [
+            [
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "num_blocks": [
+            14,
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_xbars": [
+            [
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                64,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                6,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "pad_bot": [
+            0,
+            "essential"
+        ],
+        "pad_left": [
+            0,
+            "essential"
+        ],
+        "pad_right": [
+            0,
+            "essential"
+        ],
+        "pad_top": [
+            0,
+            "essential"
+        ],
+        "pe_gain": [
+            8,
+            "optional"
+        ],
+        "pos_neg_acts": [
+            false,
+            "essential"
+        ],
+        "pos_neg_wgts": [
+            true,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "relu": [
+            "relu",
+            "essential"
+        ],
+        "scale_output": [
+            true,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "optional"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "start_xbar": [
+            0,
+            "essential"
+        ],
+        "stride": [
+            1,
+            "essential"
+        ],
+        "vert_splits": [
+            [
+                512
+            ],
+            "essential"
+        ],
+        "wgts_bias_file": [
+            "",
+            "optional"
+        ],
+        "wgts_file": [
+            "w_0.txt",
+            "optional"
+        ],
+        "wgts_file_has_bias": [
+            true,
+            "optional"
+        ],
+        "wgts_layer_name": [
+            "Layer 0",
+            "optional"
+        ],
+        "xbar_cnt": [
+            1,
+            "essential"
+        ],
+        "alt_signs": [
+            false,
+            "optional"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "optional"
+        ],
+        "in_scale": [
+            1.0,
+            "optional"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ],
+        "start_col": [
+            0,
+            "optional"
+        ],
+        "xbar_start_layer": [
+            0,
+            "optional"
+        ],
+        "src_entries/dst_index": [
+            0,
+            "optional"
+        ],
+        "src_entries/dst_layer": [
+            8,
+            "optional"
+        ],
+        "src_entries/dst_mem_type": [
+            "residual_mem",
+            "optional"
+        ],
+        "src_entries/src_addr": [
+            "0x0",
+            "optional"
+        ],
+        "src_entries/src_addr_incr": [
+            14336,
+            "optional"
+        ],
+        "src_entries/src_index": [
+            0,
+            "optional"
+        ],
+        "src_entries/src_layer": [
+            0,
+            "optional"
+        ],
+        "src_entries/src_len": [
+            14336,
+            "optional"
+        ],
+        "src_entries/src_mem_type": [
+            "global_residual_mem",
+            "optional"
+        ],
+        "adc_en": [
+            true,
+            "optional"
+        ],
+        "col_split_signs": [
+            [
+                true
+            ],
+            "optional"
+        ],
+        "shifts": [
+            [
+                0
+            ],
+            "optional"
+        ],
+        "adc_scale": [
+            1.0,
+            "optional"
+        ],
+        "adc_gain": [
+            false,
+            "optional"
+        ],
+        "adc_gndx": [
+            0,
+            "optional"
+        ],
+        "adc_iref": [
+            0,
+            "optional"
+        ],
+        "adc_shift": [
+            0,
+            "optional"
+        ],
+        "residual_add": [
+            false,
+            "optional"
+        ],
+        "type": [
+            "conv",
+            "optional"
+        ],
+        "act": [
+            "none",
+            "optional"
+        ],
+        "pre_act": [
+            "relu",
+            "optional"
+        ],
+        "bias_file": [
+            "layer0_i4_bias.npy",
+            "optional"
+        ]
+    },
+    "argmax": {
+        "bias_add_round_shift": [
+            0,
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "filter_size": [
+            0,
+            "essential"
+        ],
+        "layer_class": [
+            "pool",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_key": [
+            "62",
+            "optional"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "argmax",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "pad_bot": [
+            0,
+            "essential"
+        ],
+        "pad_left": [
+            0,
+            "essential"
+        ],
+        "pad_right": [
+            0,
+            "essential"
+        ],
+        "pad_top": [
+            0,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "stride": [
+            0,
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "optional"
+        ],
+        "in_scale": [
+            1.0,
+            "optional"
+        ],
+        "out_scale": [
+            1.0,
+            "optional"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ]
+    },
+    "gap_reorder": {
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "essential"
+        ],
+        "bypass_filters": [
+            [
+                2048
+            ],
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            4,
+            "essential"
+        ],
+        "layer_class": [
+            "bypass",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_key": [
+            "auto",
+            "optional"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "gap_reorder",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "scale_size": [
+            1,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "optional"
+        ],
+        "in_scale": [
+            1.0,
+            "optional"
+        ],
+        "relu": [
+            "none",
+            "optional"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ]
+    },
+    "input_ext": {
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "optional"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            0,
+            "optional"
+        ],
+        "layer_class": [
+            "input",
+            "optional"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "input_ext",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "layer_key": [
+            "110",
+            "optional"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "num_rows_per_pcie_transfer": [
+            7,
+            "optional"
+        ]
+    },
+    "io_bypass": {
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "optional"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            0,
+            "optional"
+        ],
+        "layer_class": [
+            "io_bypass",
+            "optional"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "io_bypass",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "layer_key": [
+            "115",
+            "optional"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ]
+    },
+    "pool": {
+        "bias_add_round_shift": [
+            0,
+            "optional"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "optional"
+        ],
+        "filter_size": [
+            3,
+            "essential"
+        ],
+        "in_scale": [
+            1.0,
+            "optional"
+        ],
+        "layer_class": [
+            "pool",
+            "optional"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "pool",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "optional"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "optional"
+        ],
+        "pad_bot": [
+            0,
+            "essential"
+        ],
+        "pad_left": [
+            1,
+            "essential"
+        ],
+        "pad_right": [
+            0,
+            "essential"
+        ],
+        "pad_top": [
+            1,
+            "essential"
+        ],
+        "pool_out_filters": [
+            [
+                64,
+                64
+            ],
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "optional"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "stride": [
+            1,
+            "essential"
+        ],
+        "layer_key": [
+            "1",
+            "optional"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "add_residuals": [
+            false,
+            "optional"
+        ],
+        "start_xbar": [
+            0,
+            "optional"
+        ],
+        "horz_splits": [
+            [
+                2048
+            ],
+            "optional"
+        ],
+        "vert_splits": [
+            [
+                256
+            ],
+            "optional"
+        ],
+        "ag_shift": [
+            14,
+            "optional"
+        ],
+        "mac_gain": [
+            14,
+            "optional"
+        ],
+        "pe_gain": [
+            8,
+            "optional"
+        ],
+        "dilation": [
+            1,
+            "optional"
+        ],
+        "nconvs": [
+            [
+                1,
+                1
+            ],
+            "optional"
+        ],
+        "num_blocks": [
+            4,
+            "optional"
+        ],
+        "num_xbars": [
+            [
+                2,
+                2
+            ],
+            "optional"
+        ],
+        "pos_neg_wgts": [
+            false,
+            "optional"
+        ],
+        "pos_neg_acts": [
+            false,
+            "optional"
+        ],
+        "relu": [
+            "none",
+            "optional"
+        ]
+    },
+    "concat": {
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "essential"
+        ],
+        "bypass_filters": [
+            [
+                128,
+                128
+            ],
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            0,
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "optional"
+        ],
+        "in_scale": [
+            1.0,
+            "optional"
+        ],
+        "layer_class": [
+            "bypass",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "concat",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                30,
+                22,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                6,
+                6,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "relu": [
+            "none",
+            "optional"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ],
+        "scale_output": [
+            true,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "scale_size": [
+            1,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "layer_key": [
+            "39",
+            "optional"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "start_xbar": [
+            0,
+            "optional"
+        ],
+        "layer_mems/rm_index": [
+            0,
+            "optional"
+        ],
+        "layer_mems/mem_type": [
+            "regional_mem",
+            "optional"
+        ],
+        "adc_gain": [
+            false,
+            "optional"
+        ],
+        "adc_gndx": [
+            0,
+            "optional"
+        ],
+        "adc_iref": [
+            0,
+            "optional"
+        ],
+        "ag_shift": [
+            14,
+            "optional"
+        ],
+        "mac_gain": [
+            14,
+            "optional"
+        ],
+        "pe_gain": [
+            8,
+            "optional"
+        ],
+        "add_bias": [
+            false,
+            "optional"
+        ],
+        "alt_signs": [
+            false,
+            "optional"
+        ],
+        "input_dup": [
+            1,
+            "optional"
+        ],
+        "num_blocks": [
+            4,
+            "optional"
+        ],
+        "wgts_bias_file": [
+            "",
+            "optional"
+        ],
+        "wgts_file": [
+            "",
+            "optional"
+        ],
+        "wgts_file_has_bias": [
+            true,
+            "optional"
+        ],
+        "wgts_layer_name": [
+            "",
+            "optional"
+        ],
+        "xbar_cnt": [
+            4,
+            "optional"
+        ],
+        "xbar_start_layer": [
+            0,
+            "optional"
+        ]
+    },
+    "output_ext": {
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x904000",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "optional"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_class": [
+            "output",
+            "optional"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "output_ext",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "layer_key": [
+            "111",
+            "optional"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "num_rows_per_pcie_transfer": [
+            7,
+            "optional"
+        ],
+        "dma_id": [
+            3,
+            "optional"
+        ]
+    },
+    "bypass": {
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "bypass_filters": [
+            [
+                8
+            ],
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "essential"
+        ],
+        "in_scale": [
+            1.0,
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "bypass",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "start_xbar": [
+            0,
+            "optional"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "optional"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dma_id": [
+            4,
+            "optional"
+        ],
+        "layer_class": [
+            "bypass",
+            "optional"
+        ],
+        "out_sync_mult": [
+            1,
+            "optional"
+        ],
+        "relu": [
+            "none",
+            "optional"
+        ],
+        "scale_path_flip": [
+            false,
+            "optional"
+        ],
+        "scale_size": [
+            1,
+            "optional"
+        ],
+        "layer_mems/rm_index": [
+            0,
+            "optional"
+        ],
+        "layer_mems/mem_type": [
+            "regional_mem",
+            "optional"
+        ]
+    },
+    "add": {
+        "add_residuals": [
+            true,
+            "essential"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "essential"
+        ],
+        "bypass_filters": [
+            [
+                64
+            ],
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            0,
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "optional"
+        ],
+        "in_scale": [
+            1.0,
+            "optional"
+        ],
+        "layer_class": [
+            "bypass",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "add",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                94,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                6,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            114,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            7,
+            "essential"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ],
+        "scale_output": [
+            true,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            true,
+            "essential"
+        ],
+        "scale_size": [
+            1,
+            "essential"
+        ],
+        "src_entries": [
+            "object_array",
+            "essential"
+        ],
+        "src_entries/dst_index": [
+            0,
+            "essential"
+        ],
+        "src_entries/dst_layer": [
+            7,
+            "essential"
+        ],
+        "src_entries/dst_mem_type": [
+            "residual_mem",
+            "essential"
+        ],
+        "src_entries/src_addr": [
+            "0x0",
+            "essential"
+        ],
+        "src_entries/src_addr_incr": [
+            5376,
+            "essential"
+        ],
+        "src_entries/src_index": [
+            0,
+            "essential"
+        ],
+        "src_entries/src_layer": [
+            0,
+            "essential"
+        ],
+        "src_entries/src_len": [
+            5376,
+            "essential"
+        ],
+        "src_entries/src_mem_type": [
+            "global_residual_mem",
+            "essential"
+        ],
+        "relu": [
+            "none",
+            "optional"
+        ],
+        "layer_key": [
+            "59",
+            "optional"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ]
+    },
+    "bypass_pad": {
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "essential"
+        ],
+        "bypass_filters": [
+            [
+                21,
+                11
+            ],
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            0,
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "essential"
+        ],
+        "in_scale": [
+            1.0,
+            "essential"
+        ],
+        "layer_class": [
+            "bypass",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "bypass_pad",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "pad_value": [
+            -127,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "relu": [
+            "none",
+            "essential"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "scale_size": [
+            1,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ]
+    },
+    "split": {
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "essential"
+        ],
+        "bypass_filters": [
+            [
+                512,
+                512,
+                512,
+                512
+            ],
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            0,
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "optional"
+        ],
+        "in_scale": [
+            1.0,
+            "optional"
+        ],
+        "layer_class": [
+            "bypass",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "split",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "scale_size": [
+            1,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "layer_key": [
+            "54",
+            "optional"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "relu": [
+            "none",
+            "optional"
+        ]
+    },
+    "fetch_global": {
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "essential"
+        ],
+        "bypass_filters": [
+            [
+                256
+            ],
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            1,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            0,
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "optional"
+        ],
+        "in_scale": [
+            1.0,
+            "optional"
+        ],
+        "layer_class": [
+            "bypass",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "fetch_global",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "scale_size": [
+            1,
+            "essential"
+        ],
+        "src_entries": [
+            "object_array",
+            "essential"
+        ],
+        "src_entries/dst_index": [
+            0,
+            "essential"
+        ],
+        "src_entries/dst_layer": [
+            58,
+            "essential"
+        ],
+        "src_entries/dst_mem_type": [
+            "residual_mem",
+            "essential"
+        ],
+        "src_entries/src_addr": [
+            "0x0",
+            "essential"
+        ],
+        "src_entries/src_addr_incr": [
+            10752,
+            "essential"
+        ],
+        "src_entries/src_index": [
+            10,
+            "essential"
+        ],
+        "src_entries/src_layer": [
+            10,
+            "essential"
+        ],
+        "src_entries/src_len": [
+            10752,
+            "essential"
+        ],
+        "src_entries/src_mem_type": [
+            "global_residual_mem",
+            "essential"
+        ],
+        "relu": [
+            "none",
+            "optional"
+        ],
+        "layer_key": [
+            "auto",
+            "optional"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ]
+    },
+    "dilate": {
+        "add_bias": [
+            false,
+            "essential"
+        ],
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "ag_shift": [
+            14,
+            "optional"
+        ],
+        "alt_signs": [
+            false,
+            "optional"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "essential"
+        ],
+        "col_splits": [
+            "a_json-object",
+            "essential"
+        ],
+        "col_splits/grp_shift": [
+            0,
+            "essential"
+        ],
+        "col_splits/splits": [
+            "object_array",
+            "essential"
+        ],
+        "col_splits/splits/shift": [
+            0,
+            "essential"
+        ],
+        "col_splits/splits/sign": [
+            true,
+            "essential"
+        ],
+        "conv_start_col": [
+            0,
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dilation": [
+            2,
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "optional"
+        ],
+        "filter_size": [
+            3,
+            "essential"
+        ],
+        "horz_splits": [
+            [
+                768,
+                768,
+                768
+            ],
+            "essential"
+        ],
+        "in_scale": [
+            1.0,
+            "optional"
+        ],
+        "input_dup": [
+            1,
+            "essential"
+        ],
+        "layer_class": [
+            "conv",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "dilate",
+            "essential"
+        ],
+        "mac_gain": [
+            2,
+            "optional"
+        ],
+        "nconvs": [
+            [
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "num_blocks": [
+            25,
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_xbars": [
+            [
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                64,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                6,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "pad_bot": [
+            2,
+            "essential"
+        ],
+        "pad_left": [
+            2,
+            "essential"
+        ],
+        "pad_right": [
+            2,
+            "essential"
+        ],
+        "pad_top": [
+            2,
+            "essential"
+        ],
+        "pe_gain": [
+            8,
+            "optional"
+        ],
+        "pos_neg_acts": [
+            false,
+            "essential"
+        ],
+        "pos_neg_wgts": [
+            true,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "relu": [
+            "relu",
+            "optional"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ],
+        "scale_output": [
+            true,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "start_col": [
+            0,
+            "optional"
+        ],
+        "start_xbar": [
+            0,
+            "essential"
+        ],
+        "stride": [
+            1,
+            "essential"
+        ],
+        "vert_splits": [
+            [
+                512
+            ],
+            "essential"
+        ],
+        "wgts_bias_file": [
+            "",
+            "essential"
+        ],
+        "wgts_file": [
+            "w_30.txt",
+            "essential"
+        ],
+        "wgts_file_has_bias": [
+            true,
+            "essential"
+        ],
+        "wgts_layer_name": [
+            "Layer 30",
+            "essential"
+        ],
+        "xbar_cnt": [
+            3,
+            "essential"
+        ],
+        "xbar_start_layer": [
+            0,
+            "optional"
+        ],
+        "adc_gain": [
+            true,
+            "optional"
+        ],
+        "adc_gndx": [
+            0,
+            "optional"
+        ],
+        "adc_iref": [
+            0,
+            "optional"
+        ],
+        "adc_scale": [
+            1.0,
+            "optional"
+        ],
+        "adc_shift": [
+            17,
+            "optional"
+        ],
+        "act": [
+            "relu",
+            "optional"
+        ],
+        "layer_key": [
+            "42",
+            "optional"
+        ],
+        "pre_act": [
+            "none",
+            "optional"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ]
+    },
+    "space2depth": {
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "bypass_filters": [
+            [
+                8
+            ],
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "essential"
+        ],
+        "in_scale": [
+            1.0,
+            "essential"
+        ],
+        "layer_class": [
+            "bypass",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "space2depth",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "remap_region": [
+            0,
+            "essential"
+        ],
+        "s2d_block_size": [
+            2,
+            "essential"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ]
+    },
+    "transpose": {
+        "ag_shift": [
+            14,
+            "essential"
+        ],
+        "mac_gain": [
+            14,
+            "essential"
+        ],
+        "pe_gain": [
+            8,
+            "essential"
+        ],
+        "add_bias": [
+            false,
+            "essential"
+        ],
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "alt_signs": [
+            false,
+            "essential"
+        ],
+        "col_splits": [
+            "a_json-object",
+            "essential"
+        ],
+        "col_splits/grp_shift": [
+            0,
+            "essential"
+        ],
+        "col_splits/splits": [
+            "object_array",
+            "essential"
+        ],
+        "col_splits/splits/shift": [
+            0,
+            "essential"
+        ],
+        "col_splits/splits/sign": [
+            true,
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dilation": [
+            1,
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "essential"
+        ],
+        "filter_size": [
+            2,
+            "essential"
+        ],
+        "half_pad": [
+            1,
+            "essential"
+        ],
+        "horz_splits": [
+            [
+                4096
+            ],
+            "essential"
+        ],
+        "in_scale": [
+            1.0,
+            "essential"
+        ],
+        "input_dup": [
+            1,
+            "essential"
+        ],
+        "layer_class": [
+            "conv",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "transpose",
+            "essential"
+        ],
+        "nconvs": [
+            [
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "num_blocks": [
+            4,
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_sections": [
+            16,
+            "essential"
+        ],
+        "num_xbars": [
+            [
+                4,
+                3
+            ],
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "pad_bot": [
+            1,
+            "essential"
+        ],
+        "pad_left": [
+            1,
+            "essential"
+        ],
+        "pad_right": [
+            1,
+            "essential"
+        ],
+        "pad_top": [
+            1,
+            "essential"
+        ],
+        "pos_neg_acts": [
+            false,
+            "essential"
+        ],
+        "pos_neg_wgts": [
+            false,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "relu": [
+            "none",
+            "essential"
+        ],
+        "remap_region": [
+            0,
+            "essential"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "start_col": [
+            0,
+            "essential"
+        ],
+        "start_section": [
+            0,
+            "essential"
+        ],
+        "start_xbar": [
+            0,
+            "essential"
+        ],
+        "stride": [
+            1,
+            "essential"
+        ],
+        "trans_filter_size": [
+            0,
+            "essential"
+        ],
+        "trans_pad": [
+            16,
+            "essential"
+        ],
+        "trans_stride": [
+            32,
+            "essential"
+        ],
+        "vert_splits": [
+            [
+                256
+            ],
+            "essential"
+        ],
+        "xbar_cnt": [
+            4,
+            "essential"
+        ],
+        "xbar_start_layer": [
+            0,
+            "essential"
+        ]
+    },
+    "upsample": {
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "essential"
+        ],
+        "bypass_filters": [
+            [
+                21
+            ],
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            0,
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "optional"
+        ],
+        "in_scale": [
+            1.0,
+            "optional"
+        ],
+        "layer_class": [
+            "bypass",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "upsample",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "remap_region": [
+            0,
+            "optional"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "scale_size": [
+            2,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "layer_key": [
+            "63",
+            "optional"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ],
+        "relu": [
+            "none",
+            "optional"
+        ]
+    },
+    "upsamplermap": {
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "essential"
+        ],
+        "bypass_filters": [
+            [
+                256
+            ],
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            2,
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "optional"
+        ],
+        "in_scale": [
+            1.0,
+            "optional"
+        ],
+        "layer_class": [
+            "bypass",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "upsamplermap",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "remap_region": [
+            1,
+            "optional"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "scale_size": [
+            2,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ],
+        "relu": [
+            "none",
+            "optional"
+        ],
+        "layer_key": [
+            "49",
+            "optional"
+        ],
+        "qmodel_id": [
+            0,
+            "optional"
+        ]
+    },
+    "upsamplex": {
+        "add_residuals": [
+            false,
+            "essential"
+        ],
+        "bias_add_round_shift": [
+            0,
+            "essential"
+        ],
+        "bypass_filters": [
+            [
+                9
+            ],
+            "essential"
+        ],
+        "dest_entries": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details": [
+            "object_array",
+            "essential"
+        ],
+        "dest_entries/dest_details/addr_incr": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_addr": [
+            "0x0",
+            "essential"
+        ],
+        "dest_entries/dest_details/dest_layer": [
+            "well_defined",
+            "essential"
+        ],
+        "dest_entries/dest_details/gen_sync": [
+            true,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_index": [
+            0,
+            "essential"
+        ],
+        "dest_entries/dest_details/mem_type": [
+            "layer_mem",
+            "essential"
+        ],
+        "dest_entries/len": [
+            "well_defined",
+            "essential"
+        ],
+        "dma_id": [
+            0,
+            "essential"
+        ],
+        "dma_layer_usage": [
+            "single_layer",
+            "essential"
+        ],
+        "in_scale": [
+            1.0,
+            "essential"
+        ],
+        "layer_class": [
+            "bypass",
+            "essential"
+        ],
+        "layer_id": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems": [
+            "object_array",
+            "essential"
+        ],
+        "layer_mems/lm_max_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_mems/lm_row_size": [
+            "well_defined",
+            "essential"
+        ],
+        "layer_type": [
+            "upsamplex",
+            "essential"
+        ],
+        "num_in_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_in_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_cols": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_filters": [
+            "well_defined",
+            "essential"
+        ],
+        "num_out_rows": [
+            "well_defined",
+            "essential"
+        ],
+        "out_scale": [
+            1.0,
+            "essential"
+        ],
+        "out_scale_mult": [
+            [
+                1,
+                1,
+                1,
+                1
+            ],
+            "essential"
+        ],
+        "out_scale_shift": [
+            [
+                0,
+                0,
+                0,
+                0
+            ],
+            "essential"
+        ],
+        "out_sync_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_mult": [
+            1,
+            "essential"
+        ],
+        "prefetch_scale_shift": [
+            0,
+            "essential"
+        ],
+        "relu": [
+            "none",
+            "essential"
+        ],
+        "scale_output": [
+            false,
+            "essential"
+        ],
+        "scale_path_flip": [
+            false,
+            "essential"
+        ],
+        "scale_prefetch": [
+            false,
+            "essential"
+        ],
+        "scale_size": [
+            2,
+            "essential"
+        ],
+        "src_entries": [
+            [],
+            "essential"
+        ]
+    }
+}

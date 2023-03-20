@@ -17,17 +17,17 @@
                     {
                         "layer_type": "input_ext",
                         "layer_id": 0,
-                        "dest_id": 1
+                        "dest_layer": 1
                     }, 
                     {
                         "layer_type": "io_bypass",
                         "layer_id": 1,
-                        "dest_id": 2
+                        "dest_layer": 2
                     }, 
                     {
                         "layer_type": "output_ext",
                         "layer_id": 4,
-                        "dest_id": 5
+                        "dest_layer": 5
                     }
                 ]
             }, 
@@ -40,7 +40,7 @@
                         {
                             "layer_type": "conv",
                             "layer_id": 2,
-                            "dest_id": 3,
+                            "dest_layer": 3,
 
                             "num_out_filters": 16,
                             "filter_size": 3,
@@ -59,7 +59,7 @@
                         {
                             "layer_type": "pool", 
                             "layer_id": 3,
-                            "dest_id": 4,
+                            "dest_layer": 4,
 
                             "filter_size": 2, 
                             "pad_top": 0,
