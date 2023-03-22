@@ -196,7 +196,8 @@ def layer_preprocess(layer):
 # -------------------------------------------------------------------------------------------
 # test code 
 start = time.time()
-with open("auto_tests_in/dt-1.json") as input_file:
+test_name = "dt-io-ext-pull-1"
+with open("auto_tests_in/" + test_name + ".json") as input_file:
     input_json = json.load(input_file)
 
 # gathering all the layers in the input.json 
@@ -214,7 +215,7 @@ for layer in layers.values():
     layer_preprocess(layer)
 
 # now, input_json must contain all the filled-in layers
-with open("auto_tests_out/dt-1-spec.json", 'w') as output_file:
+with open("auto_tests_out/" +  test_name + ".json", 'w') as output_file:
     json.dump(input_json, output_file, indent=4)
 
 end = time.time()

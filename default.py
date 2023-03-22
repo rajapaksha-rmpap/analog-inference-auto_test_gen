@@ -77,6 +77,7 @@ def traverse_layer(layer, default={}, operation="gather_data", root="", keep=Non
     # defaults -> json object containing the default parameters for the corresponding layer type
     # operaton -> "gather_data" -> gather data about the layer specs and add them to the default, return default
     #          -> "specname_only" -> add the spec name to the default array, return default (here, default is an array, NOT a dict object)
+    #          -> "reduce_layer" -> remove the specs in a layer whose spec values are "well-defined" or same as the defaults
     # delete -> delete the specs from the layer or does not consider in manipulating/creating the default 
     # delete -> only_del_from_default -> if True, the specs in delete arr will be kept in layer object, but not be included in default object
 
@@ -97,6 +98,11 @@ def traverse_layer(layer, default={}, operation="gather_data", root="", keep=Non
             if operation == "specname_only":
                 # add the spec name to the default ARRAY 
                 if (root + key) not in default: default.append(root + key)
+
+            if operation == "reduce_layer":
+                # remove the specs in a layer whose spec values are "well-defined" or same as the defaults 
+                if layer[key] == default[root + key] or default[root + key] == "well_defined": 
+                    del layer[key]                    
 
             if type(layer[key]) == dict: 
                 # if the value is a json object 

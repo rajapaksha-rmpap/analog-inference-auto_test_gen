@@ -1,79 +1,50 @@
 {
-    "num_in_rows" : 8,
-    "num_in_cols" : 8,
-    "num_in_filters" : 3,
-    "image_fill_method" : 2,
-    "max_ticks" : 100000,
-    "step_ticks" : 500,
-    
-    "aix_sys_id": 0, 
-    "chips": 
-    [
+    "mac_rows": [
         {
-            "chip_id": 0,
-
-            "io_module": {
-                "layers": [
-                    {
-                        "layer_type": "input_ext",
-                        "layer_id": 0,
-                        "dest_layer": 1
-                    }, 
-                    {
-                        "layer_type": "io_bypass",
-                        "layer_id": 1,
-                        "dest_layer": 2
-                    }, 
-                    {
-                        "layer_type": "output_ext",
-                        "layer_id": 4,
-                        "dest_layer": 5
-                    }
-                ]
-            }, 
-
-            "mac_rows": 
-            [
+            "layers": [
                 {
-                    "mac_row_id": 0, 
-                    "layers": [
+                    "mac_gain": 14,
+                    "dest_entries": [
                         {
-                            "layer_type": "conv",
-                            "layer_id": 2,
-                            "dest_layer": 3,
-
-                            "num_out_filters": 16,
-                            "filter_size": 3,
-                            "stride": 1, 
-                            "dilation": 1,
-                            "pad_top": 1,
-                            "pad_bot": 1,
-                            "pad_left": 1,
-                            "pad_right": 1, 
-                            
-                            "num_blocks": 1, 
-                            "num_xbars": [1, 1], 
-                            "nconvs": [1, 1]
-                        },
-
-                        {
-                            "layer_type": "pool", 
-                            "layer_id": 3,
-                            "dest_layer": 4,
-
-                            "filter_size": 2, 
-                            "pad_top": 0,
-                            "pad_bot": 0,
-                            "pad_left": 0,
-                            "pad_right": 0, 
-                            "stride": 2, 
-
-                            "pool_out_filters": [8, 8]
+                            "dest_details": [
+                                {
+                                    "addr_incr": 64,
+                                    "dest_addr": "0x904000",
+                                    "dest_layer": 1
+                                }
+                            ]
                         }
-                    ]
-                } 
+                    ],
+                    "filter_size": 3,
+                    "layer_id": 0,
+                    "layer_mems": [
+                        {
+                            "lm_max_rows": 4
+                        }
+                    ],
+                    "layer_type": "conv",
+                    "num_blocks": 4,
+                    "num_xbars": [
+                        2,
+                        2
+                    ],
+                    "out_scale_mult": 1,
+                    "out_scale_shift": 0,
+                    "pad_bot": 1,
+                    "pad_left": 1,
+                    "pad_right": 1,
+                    "pad_top": 1,
+                    "pos_neg_wgts": false,
+                    "relu": "none",
+                    "scale_output": false,
+                    "vert_splits": [
+                        256
+                    ],
+                    "xbar_cnt": 2
+                }
             ],
-            "residual_mems": []
+            "mac_row_id": 0
         }
-    ]
+    ],
+    "residual_mems": []
 }

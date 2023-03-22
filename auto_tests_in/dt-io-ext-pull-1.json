@@ -9,17 +9,19 @@
         [
             {
                 "layer_id" : 0,
-                "dest_id" : 99,
+                "dest_entries": [
+                    {"dest_details": [{"dest_layer" : 99}, {"dest_layer" : 100, "mem_index": 2}]}
+                ],
                 "layer_type" : "input_ext"
             },
             {
                 "layer_id" : 99,
-                "dest_id" : 1,
+                "dest_layer" : 1,
                 "layer_type" : "io_bypass"
             },
             {
                 "layer_id" : 2,
-                "dest_id" : 3,
+                "dest_layer" : 3,
                 "layer_type" : "output_ext"
             }
         ]
@@ -30,7 +32,6 @@
             "layers" : 
             [
                 {
-                    "dilation" : 1,
                     "filter_size" : 3,
                     "layer_id" : 1,
                     "layer_type" : "conv",
@@ -51,7 +52,8 @@
                     "pad_right" : 1,
                     "pad_top" : 1,
                     "stride" : 1,
-                    "dest_id" : 2
+                    "dest_layer" : 2,
+                    "mem_index": 1
                 }
             ],
             "mac_row_id" : 0

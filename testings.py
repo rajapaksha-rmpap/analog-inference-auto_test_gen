@@ -86,11 +86,14 @@ def traverse_layer(layer, default={}, operation="gather_data", root="", keep=Non
     # defaults -> json object containing the default parameters for the corresponding layer type
     # operaton -> "gather_data" -> gather data about the layer specs and add them to the default, return default
     #          -> "specname_only" -> add the spec name to the default array, return default (here, default is an array, NOT a dict object)
+    #          -> "reduce_layer" -> remove the specs in a layer whose spec values are "well-defined" or same as the defaults
     # delete -> delete the specs from the layer or does not consider in manipulating/creating the default 
     # delete -> only_del_from_default -> if True, the specs in delete arr will be kept in layer object, but not be included in default object
 
     if type(layer) == dict: 
-        for key in layer.keys():
+        # get a copy of 'layer.keys()', otherwise Exception arises when the specs get deleted when 'operation' == 'reduce_layer' 
+        keys = list(layer.keys())
+        for key in keys:
             # ***** deleting existing parameters, so they would not appear in 'layer' or 'default' *****
             # for spec in delete:
             #     if key == spec:
@@ -101,27 +104,67 @@ def traverse_layer(layer, default={}, operation="gather_data", root="", keep=Non
                 if (root + key) not in default.keys():
                     default[root + key] = copy.deepcopy(data_template)
                 # extracting the information of each spec and its value
-                gather_data(root+key, layer[key], default)
+                gather_data(root+key, layer[key], default, delete)
 
             if operation == "specname_only":
                 # add the spec name to the default ARRAY 
                 if (root + key) not in default: default.append(root + key)
 
+            if operation == "reduce_layer":
+                # remove the specs in a layer whose spec values are "well-defined" or same as the defaults 
+                if key in ("layer_type", "layer_id", "addr", "dest_layer", "lm_max_rows", "addr_incr", "len", \
+                "dst_index", "dst_layer", "dst_mem_type", "src_addr", "src_addr_incr", "src_index", "src_layer", "src_len", "src_mem_type"): 
+                    continue # these specs must be included in a reduced layer 
+                if default[root + key][0] == "well_defined" or layer[key] == default[root + key][0]: 
+                    del layer[key]
+                    continue 
+                # if root in ("layer_mems", "col_splits"): del root <- this is not complete 
+
             if type(layer[key]) == dict: 
                 # if the value is a json object 
-                traverse_layer(layer[key], default, operation=operation, root=root+key+'/')
+                traverse_layer(layer[key], default, operation=operation, root=root+key+'/', delete=delete)
             elif type(layer[key]) == list:
                 # if the value is a json array 
                 for entry in layer[key]:
-                    traverse_layer(entry, default, operation=operation, root=root+key+'/')
+                    traverse_layer(entry, default, operation=operation, root=root+key+'/', delete=delete)
             else: # if the entry corresponds to a usual json key-value pair
                 pass
     elif type(layer) == list: 
         for entry in layer: 
-            traverse_layer(entry, default, operation=operation, root=root)     
+            traverse_layer(entry, default, operation=operation, root=root, delete=delete)     
     else: pass
+
     if operation in ("gather_data", "specname_only"): 
         return default
+
+def traverse_spec(spec_json, return_arr=False, container=None, key=None):
+    "traverse through the spec json structure and return a json object containing all the io module and mac row layers"
+    # 'key' -> if not specified, for each layer, its 'layer_id' will be used as the key if the container is a 'dict' type
+    #       -> key is specifically useful to store the 'test_name' information of a given layer 
+    if container == None: container = [] if return_arr else dict()
+    
+    if "chips" in spec_json.keys():
+        # if the top most layer of the spec json file is chips, 
+        for chip in spec_json["chips"]:
+            container = traverse_spec(chip, return_arr, container)
+
+    if "io_module" in spec_json:
+        # if there is an io module in the specified spec json struct or in the chip
+        for io_layer in spec_json["io_module"]["layers"]:
+            if return_arr: container.append(io_layer)
+            else: 
+                if key == None: container[io_layer["layer_id"]] = io_layer
+                else: container[str((key, io_layer["layer_id"]))] = io_layer
+
+    if "mac_rows" in spec_json:
+        for mac_row in spec_json["mac_rows"]:
+            for mac_layer in mac_row["layers"]:
+                if return_arr: container.append(mac_layer)
+                else: 
+                    if key == None: container[mac_layer["layer_id"]] = mac_layer
+                    else: container[str((key, mac_layer["layer_id"]))] = mac_layer
+
+    return container  
 
 def testing_function(DICT, count=0):
     "checking whether an existing dict can be mainpulated using a function"
@@ -149,17 +192,17 @@ ref_rpt_list = get_a_file_list(ref_path, trailor=".rpt", name_only=True)
 ref_rpt_list.sort()
 
 # -------------------------------------------------------- creating a list of all the layers specified in the test cases ---------------------------------------------------------------------------
-# layers_arr = []
+# layers_arr = {}
 # for test in in_spec_list:
 #     try:
-#         with open(in_path + test) as test_file:
+#         with open(in_path + test + "-spec.json") as test_file:
 #             test_json = json.load(test_file)
 #     except:
 #         print("%s has an errorneous json spec file!!!" %(in_path + test))
 #         continue
-#     layers_arr = traverse_spec(test_json, return_arr=True, container=layers_arr)
+#     layers_arr = traverse_spec(test_json, return_arr=False, container=layers_arr, key=test)
 
-# with open("testings_out/all_layers.json", 'w') as all_layers_file:
+# with open("testings_out/all_layers-with_test_names.json", 'w') as all_layers_file:
 #     json.dump(layers_arr, all_layers_file, indent=4)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -169,12 +212,13 @@ ref_rpt_list.sort()
 #     layers_arr = json.load(all_layers_file)
 
 # layer_types = {}
-# for layer in layers_arr:
-#     if layer["layer_type"] not in layer_types.keys():
-#         layer_types[layer["layer_type"]] = []
-#     layer_types[layer["layer_type"]].append(layer)
+# for layer_key in layers_arr:
+#     layer_type = layers_arr[layer_key]["layer_type"]
+#     if layer_type not in layer_types.keys():
+#         layer_types[layer_type] = {}
+#     layer_types[layer_type][layer_key] = layers_arr[layer_key]
 
-# with open("testings_out/layers_categorized.json", 'w') as layers_cat_file:
+# with open("testings_out/layers_categorized-with_test_names.json", 'w') as layers_cat_file:
 #     json.dump(layer_types, layers_cat_file, indent=4)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -302,46 +346,66 @@ ref_rpt_list.sort()
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# finding [optional and mandatory] and [constants and variable] specs 
-container = {}
-dir = "testings_out/layer_types_specs_info/"
-mandatoy_spec_thresh = 0.95 # mandatory: specs who appear in more than 90% of the layers 
-#                             optional : specs who appear in less than 50% of the layers 
-constant_spec_thresh = 4 # if a spec shows a possible range of more than 4 values, then it is considered to be variable-valued, otherwise constant-valued
-summary_temp = {
-    "optionality": {"mandatory": [], "optional": []}, 
-    "variation": {"constant": {}, "variable": []}
-}
-iterator = os.scandir(dir)
-layer_types = [file.name.split("-")[0] for file in iterator]
-layer_types.sort()
-for layer_type in layer_types:
-    with open(dir + layer_type + "-spec-info.json") as sub_file:
-        spec_info = json.load(sub_file)
-    summary = copy.deepcopy(summary_temp)
-    num_layers = spec_info["num_layers"]
-    for spec in spec_info:
-        if spec == "num_layers": continue 
-        # optionality 
-        if spec_info[spec]["times"] >= mandatoy_spec_thresh * num_layers:
-            summary["optionality"]["mandatory"].append(spec)
-        else:
-            summary["optionality"]["optional"].append(spec)
-        # variation
-        num_values = 0; choices = set(); consider = True 
-        for type in spec_info[spec]["type"]:
-            num_values += len(spec_info[spec][type]["values"])
-            choices |= set(spec_info[spec][type]["values"].keys())
-            if {"well_defined", "object_array", "a_json-object"} & set(spec_info[spec][type]["values"].keys()): consider = False
-        if consider:
-            if num_values > constant_spec_thresh:
-                summary["variation"]["variable"].append(spec)
-            else:
-                summary["variation"]["constant"][spec] = list(choices)
-    container[layer_type] = summary
+# -------------------------------------------------- finding [optional and mandatory] and [constants and variable] specs ---------------------------------------------------------------------------
+# container = {}
+# dir = "testings_out/layer_types_specs_info/"
+# mandatoy_spec_thresh = 0.95 # mandatory: specs who appear in more than 90% of the layers 
+# #                             optional : specs who appear in less than 50% of the layers 
+# constant_spec_thresh = 4 # if a spec shows a possible range of more than 4 values, then it is considered to be variable-valued, otherwise constant-valued
+# summary_temp = {
+#     "optionality": {"mandatory": [], "optional": []}, 
+#     "variation": {"constant": {}, "variable": []}
+# }
+# iterator = os.scandir(dir)
+# layer_types = [file.name.split("-")[0] for file in iterator]
+# layer_types.sort()
+# for layer_type in layer_types:
+#     with open(dir + layer_type + "-spec-info.json") as sub_file:
+#         spec_info = json.load(sub_file)
+#     summary = copy.deepcopy(summary_temp)
+#     num_layers = spec_info["num_layers"]
+#     for spec in spec_info:
+#         if spec == "num_layers": continue 
+#         # optionality 
+#         if spec_info[spec]["times"] >= mandatoy_spec_thresh * num_layers:
+#             summary["optionality"]["mandatory"].append(spec)
+#         else:
+#             summary["optionality"]["optional"].append(spec)
+#         # variation
+#         num_values = 0; choices = set(); consider = True 
+#         for type in spec_info[spec]["type"]:
+#             num_values += len(spec_info[spec][type]["values"])
+#             choices |= set(spec_info[spec][type]["values"].keys())
+#             if {"well_defined", "object_array", "a_json-object"} & set(spec_info[spec][type]["values"].keys()): consider = False
+#         if consider:
+#             if num_values > constant_spec_thresh:
+#                 summary["variation"]["variable"].append(spec)
+#             else:
+#                 summary["variation"]["constant"][spec] = list(choices)
+#     container[layer_type] = summary
 
-with open("testings_out/layer_types_specs-coditionalityAndVariablitity.json", 'w') as file:
-    json.dump(container, file, indent=4)
+# with open("testings_out/layer_types_specs-coditionalityAndVariablitity.json", 'w') as file:
+#     json.dump(container, file, indent=4)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# reducing spec.json files 
+test_name = "yolov5-best"
+with open(in_path + test_name + "-spec.json") as test_file:
+    test_cnt = json.load(test_file)
+with open("defaults.json") as defaults_file:
+    defaults = json.load(defaults_file)
+
+if "chips" in test_cnt: test_cnt = test_cnt["chips"][0]
+if "io_module" in test_cnt:
+    for layer in test_cnt["io_module"]["layers"]:
+        traverse_layer(layer, default=defaults[layer["layer_type"]], operation="reduce_layer")
+        # 'dest_entries' will never be empty, 'src_entries' is not well understood yet
+for mac_row in test_cnt["mac_rows"]:
+    for layer in mac_row["layers"]:
+        traverse_layer(layer, default=defaults[layer["layer_type"]], operation="reduce_layer")
+
+with open("auto_tests_in/" + test_name + ".json", 'w') as in_file:
+    json.dump(test_cnt, in_file, indent=4)
 
 end_time = time.time()
 print("time usage =", end_time-start_time)

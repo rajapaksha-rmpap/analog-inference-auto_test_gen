@@ -1,10 +1,33 @@
 {
-    "chip_id": 0,
+    "num_in_cols": 8,
+    "num_in_filters": 3,
+    "num_in_rows": 8,
     "io_module": {
         "layers": [
             {
-                "layer_type": "input_ext",
                 "layer_id": 0,
+                "layer_type": "input_ext",
+                "dest_entries": [
+                    {
+                        "addr": "0x0",
+                        "dest_details": [
+                            {
+                                "dest_layer": 99,
+                                "dest_addr": "0x0",
+                                "mem_index": 0,
+                                "mem_type": "layer_mem"
+                            }
+                        ]
+                    }
+                ],
+                "layer_mems": [
+                    {}
+                ],
+                "src_entries": []
+            },
+            {
+                "layer_id": 99,
+                "layer_type": "io_bypass",
                 "dest_entries": [
                     {
                         "addr": "0x0",
@@ -24,35 +47,14 @@
                 "src_entries": []
             },
             {
-                "layer_type": "io_bypass",
-                "layer_id": 1,
-                "dest_entries": [
-                    {
-                        "addr": "0x0",
-                        "dest_details": [
-                            {
-                                "dest_layer": 2,
-                                "dest_addr": "0x0",
-                                "mem_index": 0,
-                                "mem_type": "layer_mem"
-                            }
-                        ]
-                    }
-                ],
-                "layer_mems": [
-                    {}
-                ],
-                "src_entries": []
-            },
-            {
+                "layer_id": 2,
                 "layer_type": "output_ext",
-                "layer_id": 4,
                 "dest_entries": [
                     {
                         "addr": "0x0",
                         "dest_details": [
                             {
-                                "dest_layer": 5,
+                                "dest_layer": 3,
                                 "dest_addr": "0x904000",
                                 "mem_index": 0,
                                 "mem_type": "layer_mem"
@@ -69,37 +71,35 @@
     },
     "mac_rows": [
         {
-            "mac_row_id": 0,
             "layers": [
                 {
-                    "layer_type": "conv",
-                    "layer_id": 2,
-                    "num_out_filters": 16,
                     "filter_size": 3,
-                    "stride": 1,
-                    "dilation": 1,
-                    "pad_top": 1,
-                    "pad_bot": 1,
-                    "pad_left": 1,
-                    "pad_right": 1,
-                    "num_blocks": 1,
-                    "num_xbars": [
-                        1,
-                        1
-                    ],
+                    "layer_id": 1,
+                    "layer_type": "conv",
                     "nconvs": [
                         1,
                         1
                     ],
+                    "num_blocks": 4,
+                    "num_xbars": [
+                        2,
+                        2
+                    ],
+                    "num_out_filters": 9,
+                    "pad_bot": 1,
+                    "pad_left": 1,
+                    "pad_right": 1,
+                    "pad_top": 1,
+                    "stride": 1,
                     "dest_entries": [
                         {
                             "addr": "0x0",
                             "dest_details": [
                                 {
-                                    "dest_layer": 3,
+                                    "dest_layer": 2,
+                                    "mem_index": 1,
                                     "dest_addr": "0x0",
                                     "gen_sync": true,
-                                    "mem_index": 0,
                                     "mem_type": "layer_mem"
                                 }
                             ]
@@ -122,6 +122,7 @@
                     ],
                     "add_bias": true,
                     "add_residuals": false,
+                    "dilation": 1,
                     "horz_splits": [
                         2048
                     ],
@@ -153,56 +154,9 @@
                         512
                     ],
                     "xbar_cnt": 1
-                },
-                {
-                    "layer_type": "pool",
-                    "layer_id": 3,
-                    "filter_size": 2,
-                    "pad_top": 0,
-                    "pad_bot": 0,
-                    "pad_left": 0,
-                    "pad_right": 0,
-                    "stride": 2,
-                    "pool_out_filters": [
-                        8,
-                        8
-                    ],
-                    "dest_entries": [
-                        {
-                            "addr": "0x0",
-                            "dest_details": [
-                                {
-                                    "dest_layer": 4,
-                                    "dest_addr": "0x0",
-                                    "gen_sync": true,
-                                    "mem_index": 0,
-                                    "mem_type": "layer_mem"
-                                }
-                            ]
-                        }
-                    ],
-                    "layer_mems": [
-                        {}
-                    ],
-                    "out_scale_mult": [
-                        1,
-                        1,
-                        1,
-                        1
-                    ],
-                    "out_scale_shift": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    "prefetch_scale_mult": 1,
-                    "prefetch_scale_shift": 0,
-                    "scale_output": false,
-                    "scale_prefetch": false,
-                    "src_entries": []
                 }
-            ]
+            ],
+            "mac_row_id": 0
         }
     ],
     "residual_mems": []

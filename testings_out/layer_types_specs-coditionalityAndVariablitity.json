@@ -70,9 +70,9 @@
                     "0x0"
                 ],
                 "dest_entries/dest_details/dest_addr": [
-                    "0x904000",
+                    "0x938000",
                     "0x0",
-                    "0x938000"
+                    "0x904000"
                 ],
                 "dest_entries/dest_details/gen_sync": [
                     "true"
@@ -81,8 +81,8 @@
                     "0"
                 ],
                 "dest_entries/dest_details/mem_type": [
-                    "global_residual_mem",
-                    "layer_mem"
+                    "layer_mem",
+                    "global_residual_mem"
                 ],
                 "dma_layer_usage": [
                     "single_layer"
@@ -101,21 +101,21 @@
                     "0"
                 ],
                 "out_scale_shift": [
-                    "[0, 0, 0, 0]",
-                    "[6, 0, 0, 0]",
                     "[5, 0, 0, 0]",
-                    "[4, 0, 0, 0]"
+                    "[4, 0, 0, 0]",
+                    "[0, 0, 0, 0]",
+                    "[6, 0, 0, 0]"
                 ],
                 "out_sync_mult": [
                     "1"
                 ],
                 "prefetch_scale_shift": [
-                    "7",
-                    "0"
+                    "0",
+                    "7"
                 ],
                 "remap_region": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "scale_output": [
                     "false",
@@ -227,8 +227,8 @@
                 ],
                 "dest_entries/dest_details/dest_addr": [
                     "0x920000",
-                    "0x904000",
-                    "0x0"
+                    "0x0",
+                    "0x904000"
                 ],
                 "dest_entries/dest_details/gen_sync": [
                     "true"
@@ -249,12 +249,12 @@
                     "argmax"
                 ],
                 "out_scale_mult": [
-                    "[1, 1, 1, 1]",
-                    "[]"
+                    "[]",
+                    "[1, 1, 1, 1]"
                 ],
                 "out_scale_shift": [
-                    "[0, 0, 0, 0]",
-                    "[]"
+                    "[]",
+                    "[0, 0, 0, 0]"
                 ],
                 "out_sync_mult": [
                     "1"
@@ -293,8 +293,8 @@
                     "[]"
                 ],
                 "stride": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "dma_layer_usage": [
                     "single_layer"
@@ -371,12 +371,12 @@
                     "false"
                 ],
                 "dest_entries/dest_details/mem_index": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "dest_entries/dest_details/mem_type": [
-                    "global_residual_mem",
-                    "layer_mem"
+                    "layer_mem",
+                    "global_residual_mem"
                 ],
                 "dma_layer_usage": [
                     "single_layer"
@@ -394,8 +394,8 @@
                 ],
                 "out_scale_mult": [
                     "[1, 1, 1, 1]",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "out_scale_shift": [
                     "[0, 0, 0, 0]",
@@ -408,8 +408,8 @@
                     "0"
                 ],
                 "remap_region": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "scale_output": [
                     "false"
@@ -434,8 +434,8 @@
                     "bypass"
                 ],
                 "out_sync_mult": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "relu": [
                     "none"
@@ -562,8 +562,8 @@
                     "1"
                 ],
                 "pad_value": [
-                    "-127",
                     "-1",
+                    "-127",
                     "0"
                 ],
                 "prefetch_scale_mult": [
@@ -678,8 +678,8 @@
                     "0x0"
                 ],
                 "dest_entries/dest_details/dest_addr": [
-                    "0x940000",
                     "0x908000",
+                    "0x940000",
                     "0x0",
                     "0x938000"
                 ],
@@ -722,8 +722,8 @@
                 ],
                 "remap_region": [
                     "2",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "scale_output": [
                     "false",
@@ -750,9 +750,9 @@
                     "0"
                 ],
                 "layer_mems/mem_type": [
+                    "layer_mem",
                     "global_residual_mem",
-                    "regional_mem",
-                    "layer_mem"
+                    "regional_mem"
                 ],
                 "adc_gain": [
                     "false"
@@ -927,10 +927,10 @@
                     "true"
                 ],
                 "bias_add_round_shift": [
-                    "2",
-                    "1",
                     "-1",
-                    "0"
+                    "2",
+                    "0",
+                    "1"
                 ],
                 "col_splits/grp_shift": [
                     "2",
@@ -953,17 +953,17 @@
                 "dest_entries/dest_details/mem_index": [
                     "3",
                     "2",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "dest_entries/dest_details/mem_type": [
-                    "global_residual_mem",
-                    "layer_mem"
+                    "layer_mem",
+                    "global_residual_mem"
                 ],
                 "dilation": [
                     "2",
-                    "1",
-                    "4"
+                    "4",
+                    "1"
                 ],
                 "layer_class": [
                     "conv"
@@ -973,8 +973,8 @@
                 ],
                 "out_scale": [
                     "1.0",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "out_sync_mult": [
                     "2",
@@ -989,13 +989,13 @@
                     "true"
                 ],
                 "prefetch_scale_shift": [
-                    "7",
                     "6",
-                    "0"
+                    "0",
+                    "7"
                 ],
                 "qmodel_id": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "relu": [
                     "relu",
@@ -1039,8 +1039,8 @@
                 "remap_region": [
                     "3",
                     "2",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "start_col": [
                     "0"
@@ -1231,15 +1231,15 @@
                     "false"
                 ],
                 "bias_add_round_shift": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "col_splits/grp_shift": [
                     "0"
                 ],
                 "col_splits/splits/shift": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "col_splits/splits/sign": [
                     "false",
@@ -1247,17 +1247,17 @@
                 ],
                 "conv_start_col": [
                     "6144",
-                    "0",
-                    "3072"
+                    "3072",
+                    "0"
                 ],
                 "dest_entries/addr": [
                     "0x0"
                 ],
                 "dest_entries/dest_details/dest_addr": [
                     "0x1c00",
+                    "0xe00",
                     "0x0",
-                    "0x938000",
-                    "0xe00"
+                    "0x938000"
                 ],
                 "dest_entries/dest_details/gen_sync": [
                     "true"
@@ -1269,9 +1269,9 @@
                     "layer_mem"
                 ],
                 "dilation": [
-                    "6",
                     "2",
-                    "4"
+                    "4",
+                    "6"
                 ],
                 "dma_layer_usage": [
                     "single_layer"
@@ -1281,9 +1281,9 @@
                 ],
                 "horz_splits": [
                     "[1536, 1536, 1536]",
-                    "[768, 768, 768]",
                     "[1536, 768]",
-                    "[2048]"
+                    "[2048]",
+                    "[768, 768, 768]"
                 ],
                 "in_scale": [
                     "1.0"
@@ -1301,9 +1301,9 @@
                     "[1, 1]"
                 ],
                 "num_blocks": [
+                    "25",
                     "20",
                     "28",
-                    "25",
                     "14"
                 ],
                 "num_xbars": [
@@ -1315,9 +1315,9 @@
                     "0"
                 ],
                 "out_scale_shift": [
+                    "[5, 0, 0, 0]",
                     "[0, 0, 0, 0]",
-                    "[6, 0, 0, 0]",
-                    "[5, 0, 0, 0]"
+                    "[6, 0, 0, 0]"
                 ],
                 "out_sync_mult": [
                     "1"
@@ -1388,8 +1388,8 @@
                     "1"
                 ],
                 "vert_splits": [
-                    "[256]",
-                    "[512]"
+                    "[512]",
+                    "[256]"
                 ],
                 "wgts_bias_file": [
                     ""
@@ -1400,8 +1400,8 @@
                 "xbar_cnt": [
                     "3",
                     "2",
-                    "1",
-                    "4"
+                    "4",
+                    "1"
                 ],
                 "xbar_start_layer": [
                     "0"
@@ -1411,10 +1411,10 @@
                     "true"
                 ],
                 "adc_iref": [
-                    "64",
                     "32",
-                    "0",
-                    "128"
+                    "64",
+                    "128",
+                    "0"
                 ],
                 "adc_scale": [
                     "1.0"
@@ -1427,10 +1427,10 @@
                     "relu"
                 ],
                 "layer_key": [
-                    "42",
+                    "45",
                     "52",
                     "49",
-                    "45"
+                    "42"
                 ],
                 "pre_act": [
                     "none"
@@ -1516,23 +1516,23 @@
                     "0"
                 ],
                 "bypass_filters": [
+                    "[128]",
                     "[8]",
-                    "[256]",
-                    "[128]"
+                    "[256]"
                 ],
                 "dest_entries/addr": [
                     "0x0"
                 ],
                 "dest_entries/dest_details/dest_addr": [
-                    "0x908000",
-                    "0x0"
+                    "0x0",
+                    "0x908000"
                 ],
                 "dest_entries/dest_details/gen_sync": [
                     "true"
                 ],
                 "dest_entries/dest_details/mem_index": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "dest_entries/dest_details/mem_type": [
                     "layer_mem"
@@ -1570,8 +1570,8 @@
                 ],
                 "remap_region": [
                     "2",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "scale_output": [
                     "false"
@@ -1672,8 +1672,8 @@
                 ],
                 "layer_key": [
                     "54",
-                    "114",
-                    "112"
+                    "112",
+                    "114"
                 ],
                 "layer_type": [
                     "gap"
@@ -1755,10 +1755,10 @@
                     "0"
                 ],
                 "bypass_filters": [
-                    "[256]",
-                    "[16]",
                     "[512]",
-                    "[2048]"
+                    "[2048]",
+                    "[16]",
+                    "[256]"
                 ],
                 "dest_entries/addr": [
                     "0x0"
@@ -1776,17 +1776,17 @@
                     "layer_mem"
                 ],
                 "dma_id": [
-                    "4",
-                    "2",
                     "-1",
+                    "2",
+                    "4",
                     "0"
                 ],
                 "layer_class": [
                     "bypass"
                 ],
                 "layer_key": [
-                    "auto",
-                    "54"
+                    "54",
+                    "auto"
                 ],
                 "layer_type": [
                     "gap_reorder"
@@ -1876,39 +1876,39 @@
         "variation": {
             "constant": {
                 "dest_entries/dest_details/dest_addr": [
-                    "0x120",
                     "0x60",
+                    "0x120",
                     "0x0"
                 ],
                 "dest_entries/dest_details/gen_sync": [
                     "true"
                 ],
                 "dest_entries/dest_details/mem_index": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "dest_entries/dest_details/mem_type": [
                     "layer_mem"
                 ],
                 "dma_id": [
-                    "2",
-                    "1",
                     "-1",
-                    "0"
+                    "2",
+                    "0",
+                    "1"
                 ],
                 "layer_class": [
                     "input"
                 ],
                 "layer_key": [
-                    "110",
-                    "112"
+                    "112",
+                    "110"
                 ],
                 "layer_type": [
                     "input"
                 ],
                 "qmodel_id": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "src_entries": [
                     "[]"
@@ -1982,19 +1982,19 @@
                     "[]"
                 ],
                 "layer_key": [
-                    "110",
                     "109",
-                    "112"
+                    "112",
+                    "110"
                 ],
                 "qmodel_id": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "num_rows_per_pcie_transfer": [
-                    "7",
-                    "6",
                     "9",
-                    "8"
+                    "6",
+                    "8",
+                    "7"
                 ]
             },
             "variable": []
@@ -2033,13 +2033,13 @@
         "variation": {
             "constant": {
                 "dest_entries/addr": [
-                    "0x120",
                     "0x180",
+                    "0x120",
                     "0x0"
                 ],
                 "dest_entries/dest_details/dest_addr": [
-                    "0x120",
                     "0x60",
+                    "0x120",
                     "0x0"
                 ],
                 "dest_entries/dest_details/gen_sync": [
@@ -2052,9 +2052,9 @@
                     "layer_mem"
                 ],
                 "dma_id": [
-                    "1",
                     "-1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "layer_class": [
                     "io_bypass"
@@ -2066,8 +2066,8 @@
                     "[]"
                 ],
                 "qmodel_id": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ]
             },
             "variable": [
@@ -2131,8 +2131,8 @@
                     "output"
                 ],
                 "qmodel_id": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "src_entries": [
                     "[]"
@@ -2203,12 +2203,12 @@
                 "layer_key": [
                     "111",
                     "113",
-                    "114",
-                    "112"
+                    "112",
+                    "114"
                 ],
                 "qmodel_id": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "dma_id": [
                     "3",
@@ -2302,12 +2302,12 @@
                 "dest_entries/dest_details/mem_index": [
                     "3",
                     "2",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "dest_entries/dest_details/mem_type": [
-                    "global_residual_mem",
-                    "layer_mem"
+                    "layer_mem",
+                    "global_residual_mem"
                 ],
                 "dma_layer_usage": [
                     "single_layer"
@@ -2331,13 +2331,13 @@
                     "1"
                 ],
                 "out_scale_mult": [
-                    "[]",
                     "[1, 1, 1, 1]",
-                    "1"
+                    "1",
+                    "[]"
                 ],
                 "out_scale_shift": [
-                    "[0, 0, 0, 0]",
                     "[]",
+                    "[0, 0, 0, 0]",
                     "0"
                 ],
                 "out_sync_mult": [
@@ -2345,23 +2345,23 @@
                 ],
                 "pad_bot": [
                     "2",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "pad_left": [
                     "2",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "pad_right": [
                     "2",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "pad_top": [
                     "2",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "prefetch_scale_mult": [
                     "1"
@@ -2371,8 +2371,8 @@
                 ],
                 "remap_region": [
                     "3",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "scale_output": [
                     "false"
@@ -2392,8 +2392,8 @@
                     "1"
                 ],
                 "qmodel_id": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "add_residuals": [
                     "false"
@@ -2501,8 +2501,8 @@
                     "0x0"
                 ],
                 "dest_entries/dest_details/dest_addr": [
-                    "0x904000",
-                    "0x0"
+                    "0x0",
+                    "0x904000"
                 ],
                 "dest_entries/dest_details/gen_sync": [
                     "true"
@@ -2621,9 +2621,9 @@
                     "0"
                 ],
                 "bypass_filters": [
-                    "[512, 512, 512, 512]",
                     "[32, 32]",
-                    "[2048]"
+                    "[2048]",
+                    "[512, 512, 512, 512]"
                 ],
                 "dest_entries/dest_details/dest_addr": [
                     "0x0"
@@ -2632,8 +2632,8 @@
                     "true"
                 ],
                 "dest_entries/dest_details/mem_index": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "dest_entries/dest_details/mem_type": [
                     "layer_mem"
@@ -2834,12 +2834,12 @@
                     "1"
                 ],
                 "half_pad": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "horz_splits": [
-                    "[2048]",
-                    "[4096]"
+                    "[4096]",
+                    "[2048]"
                 ],
                 "in_scale": [
                     "1.0"
@@ -2858,8 +2858,8 @@
                 ],
                 "num_blocks": [
                     "3",
-                    "1",
-                    "4"
+                    "4",
+                    "1"
                 ],
                 "num_sections": [
                     "2",
@@ -2867,8 +2867,8 @@
                     "4"
                 ],
                 "num_xbars": [
-                    "[1, 1]",
                     "[5, 4]",
+                    "[1, 1]",
                     "[4, 3]"
                 ],
                 "out_scale": [
@@ -2886,20 +2886,20 @@
                     "1"
                 ],
                 "pad_bot": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "pad_left": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "pad_right": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "pad_top": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "pos_neg_acts": [
                     "false"
@@ -2961,8 +2961,8 @@
                 ],
                 "xbar_cnt": [
                     "5",
-                    "1",
-                    "4"
+                    "4",
+                    "1"
                 ],
                 "xbar_start_layer": [
                     "0"
@@ -3033,16 +3033,16 @@
                     "0x0"
                 ],
                 "dest_entries/dest_details/dest_addr": [
-                    "0x904000",
+                    "0x938000",
                     "0x0",
-                    "0x938000"
+                    "0x904000"
                 ],
                 "dest_entries/dest_details/gen_sync": [
                     "true"
                 ],
                 "dest_entries/dest_details/mem_index": [
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "dest_entries/dest_details/mem_type": [
                     "layer_mem"
@@ -3080,8 +3080,8 @@
                 ],
                 "remap_region": [
                     "2",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "scale_output": [
                     "false"
@@ -3173,9 +3173,9 @@
                     "0"
                 ],
                 "bypass_filters": [
+                    "[128]",
                     "[32]",
                     "[256]",
-                    "[128]",
                     "[64]"
                 ],
                 "dest_entries/addr": [
@@ -3226,8 +3226,8 @@
                 ],
                 "remap_region": [
                     "2",
-                    "1",
-                    "0"
+                    "0",
+                    "1"
                 ],
                 "scale_output": [
                     "false"
