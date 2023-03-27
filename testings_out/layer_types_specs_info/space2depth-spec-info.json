@@ -188,7 +188,8 @@
         "int": {
             "times": 3,
             "values": {
-                "well_defined": 3
+                "2": 1,
+                "0": 2
             }
         }
     },
@@ -296,7 +297,7 @@
         "int": {
             "times": 3,
             "values": {
-                "well_defined": 3
+                "32": 3
             }
         }
     },

@@ -1,0 +1,13 @@
+# .gitignore file
+# __pychache__ folder 
+/__pycache__
+# ASM_test/ all contents and contents only
+/ASM_test/** 
+# data folder 
+/data
+# qmodels folder 
+/qmodels
+# ref/ all contents 
+/ref/**
+# results/ all contents 
+/results/**

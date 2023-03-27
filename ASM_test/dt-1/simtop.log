@@ -1,5 +1,0 @@
-Running test case /home/akila/redo_project/auto_test_gen/ASM_test/dt-1/
-Reading map file ASM_test//home/akila/redo_project/auto_test_gen/ASM_test/dt-1//map.rpt
-Unable to open map file!
-simtop: read_files.cpp:342: void read_map_file(std::string, chip_param*): Assertion `0' failed.
-Aborted

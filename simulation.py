@@ -128,41 +128,42 @@ parser.add_argument('-a', "--asmsim", action='store_false', help='when specified
 # parser.add_argument('-i', "--input_dir", choices=["home", "hwtests"], default="home", help='indicates the directory from which the input test will be read')
 args = parser.parse_args()
 
-print(args)
-# simulate(args.testnames, args.fsim, args.asmsim)
-
-arr = []
-for test in in_test_list:
-    output_count = 0
-    try:
-        with open(hwtests_in_dir + test + '-spec.json') as test_file:
-            test_json = json.load(test_file)
-    except:
-        print("%s has an errorneous json spec file!!!" %(hwtests_in_dir + test + '-spec.json'))
-        continue
-    if "chips" in test_json:
-        for chip in test_json["chips"]:
-            for io_layer in chip["io_module"]["layers"]:
-                if io_layer["layer_type"] == "output" or io_layer["layer_type"] == "output_ext":
-                    output_count += 1
-                if output_count > 1: 
-                    arr.append(test)
-                    break
-    elif "io_module" in test_json:
-        for io_layer in test_json["io_module"]["layers"]:
-            if io_layer["layer_type"] == "output" or io_layer["layer_type"] == "output_ext":
-                output_count += 1
-            if output_count > 1: 
-                arr.append(test)
-                break
-    else:
-        pass
-
 start_time = time.time()
-test_sim_status = simulate(arr[10:14])
 
-with open("test_sim_status.json", 'w') as test_sim_status_file:
-    json.dump(test_sim_status, test_sim_status_file, indent=4)
+print(args)
+simulate(args.testnames, args.fsim, args.asmsim)
+
+# arr = []
+# for test in in_test_list:
+#     output_count = 0
+#     try:
+#         with open(hwtests_in_dir + test + '-spec.json') as test_file:
+#             test_json = json.load(test_file)
+#     except:
+#         print("%s has an errorneous json spec file!!!" %(hwtests_in_dir + test + '-spec.json'))
+#         continue
+#     if "chips" in test_json:
+#         for chip in test_json["chips"]:
+#             for io_layer in chip["io_module"]["layers"]:
+#                 if io_layer["layer_type"] == "output" or io_layer["layer_type"] == "output_ext":
+#                     output_count += 1
+#                 if output_count > 1: 
+#                     arr.append(test)
+#                     break
+#     elif "io_module" in test_json:
+#         for io_layer in test_json["io_module"]["layers"]:
+#             if io_layer["layer_type"] == "output" or io_layer["layer_type"] == "output_ext":
+#                 output_count += 1
+#             if output_count > 1: 
+#                 arr.append(test)
+#                 break
+#     else:
+#         pass
+# test_sim_status = simulate(arr[10:14])
+
+# with open("test_sim_status.json", 'w') as test_sim_status_file:
+#     json.dump(test_sim_status, test_sim_status_file, indent=4)
+
 
 end_time = time.time()
 print("time:", end_time-start_time)

@@ -1,0 +1,41 @@
+{
+    "mac_rows": [
+        {
+            "layers": [
+                {
+                    "layer_id": 0,
+                    "layer_type": "conv",
+
+                    "dest_layer": 1,
+                    "addr": "0x0",
+                    "addr_incr": 64,
+                    "dest_addr": "0x904000",
+                    "len": 64,
+                    
+                    "filter_size": 3,
+                    "lm_max_rows": 4,
+                    "mac_gain": 14,
+                    "num_xbars": [
+                        2,
+                        2
+                    ],
+                    "out_scale_mult": 1,
+                    "out_scale_shift": 0,
+                    "pad_bot": 1,
+                    "pad_left": 1,
+                    "pad_right": 1,
+                    "pad_top": 1,
+                    "pos_neg_wgts": false,
+                    "relu": "none",
+                    "scale_output": false,
+                    "vert_splits": [
+                        256
+                    ],
+                    "xbar_cnt": 2
+                }
+            ],
+            "mac_row_id": 0
+        }
+    ],
+    "residual_mems": []
+}

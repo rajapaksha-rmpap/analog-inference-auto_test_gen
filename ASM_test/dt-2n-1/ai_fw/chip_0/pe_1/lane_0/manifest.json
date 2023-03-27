@@ -1,9 +1,0 @@
-{
-    "id" : 0,
-    "lanes" : 
-    [
-        "activation.mem",
-        "bias.mem",
-        "quant.mem"
-    ]
-}

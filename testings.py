@@ -80,7 +80,7 @@ def gather_data(spec, value, existing_data):
             existing_data[spec][dtype]["values"][str(value)] = 0
         existing_data[spec][dtype]["values"][str(value)] = existing_data[spec][dtype]["values"][str(value)] + 1
 
-def traverse_layer(layer, default={}, operation="gather_data", root="", keep=None, add=None, rename=None, delete=[], only_del_from_default=False):
+def traverse_layer(layer, layer_type, default={}, operation="gather_data", root="", keep=None, add=None, rename=None, delete=[], only_del_from_default=False):
     "traverse a layer specs json strcuture and simplify the object"
     # layer -> json object representing a layer that was taken from the loaded json spec object
     # defaults -> json object containing the default parameters for the corresponding layer type
@@ -115,6 +115,9 @@ def traverse_layer(layer, default={}, operation="gather_data", root="", keep=Non
                 if key in ("layer_type", "layer_id", "addr", "dest_layer", "lm_max_rows", "addr_incr", "len", \
                 "dst_index", "dst_layer", "dst_mem_type", "src_addr", "src_addr_incr", "src_index", "src_layer", "src_len", "src_mem_type"): 
                     continue # these specs must be included in a reduced layer 
+                if key == "num_blocks" and layer_type == "conv": 
+                    del layer[key]
+                    continue
                 if default[root + key][0] == "well_defined" or layer[key] == default[root + key][0]: 
                     del layer[key]
                     continue 
@@ -122,16 +125,16 @@ def traverse_layer(layer, default={}, operation="gather_data", root="", keep=Non
 
             if type(layer[key]) == dict: 
                 # if the value is a json object 
-                traverse_layer(layer[key], default, operation=operation, root=root+key+'/', delete=delete)
+                traverse_layer(layer[key], layer_type, default, operation=operation, root=root+key+'/', delete=delete)
             elif type(layer[key]) == list:
                 # if the value is a json array 
                 for entry in layer[key]:
-                    traverse_layer(entry, default, operation=operation, root=root+key+'/', delete=delete)
+                    traverse_layer(entry, layer_type, default, operation=operation, root=root+key+'/', delete=delete)
             else: # if the entry corresponds to a usual json key-value pair
                 pass
     elif type(layer) == list: 
         for entry in layer: 
-            traverse_layer(entry, default, operation=operation, root=root, delete=delete)     
+            traverse_layer(entry, layer_type, default, operation=operation, root=root, delete=delete)     
     else: pass
 
     if operation in ("gather_data", "specname_only"): 
@@ -146,14 +149,14 @@ def traverse_spec(spec_json, return_arr=False, container=None, key=None):
     if "chips" in spec_json.keys():
         # if the top most layer of the spec json file is chips, 
         for chip in spec_json["chips"]:
-            container = traverse_spec(chip, return_arr, container)
+            container = traverse_spec(chip, return_arr, container, key)
 
     if "io_module" in spec_json:
         # if there is an io module in the specified spec json struct or in the chip
         for io_layer in spec_json["io_module"]["layers"]:
             if return_arr: container.append(io_layer)
             else: 
-                if key == None: container[io_layer["layer_id"]] = io_layer
+                if key == None: container[io_layer["layer_id"]] = io_layer; print("I've been here!")
                 else: container[str((key, io_layer["layer_id"]))] = io_layer
 
     if "mac_rows" in spec_json:
@@ -161,7 +164,7 @@ def traverse_spec(spec_json, return_arr=False, container=None, key=None):
             for mac_layer in mac_row["layers"]:
                 if return_arr: container.append(mac_layer)
                 else: 
-                    if key == None: container[mac_layer["layer_id"]] = mac_layer
+                    if key == None: container[mac_layer["layer_id"]] = mac_layer; print("I've been here!")
                     else: container[str((key, mac_layer["layer_id"]))] = mac_layer
 
     return container  
@@ -173,6 +176,24 @@ def testing_function(DICT, count=0):
     for key in DICT.keys():
         if type(DICT[key]) == dict:
             testing_function(DICT[key], count)
+
+def put_specs_inorder(layer):
+    "put the specs in an easy-to-read order"
+    layer_copy = copy.deepcopy(layer)
+    for key in layer_copy: del layer[key]
+    layer["layer_id"] = layer_copy["layer_id"]
+    layer["layer_type"] = layer_copy["layer_type"]
+    for key in ("col_splits", "grp_shift", "shift", "sign"):
+        if key in layer_copy:
+            layer[key] = layer_copy[key]; del layer_copy[key]
+    for key in ("dest_layer", "dest_entries", "addr", "addr_incr", "dest_addr", "gen_sync", "mem_index", "mem_type", "len"):
+        if key in layer_copy:
+            layer[key] = layer_copy[key]; del layer_copy[key]
+    # otherwise put them in alphabetical order 
+    keys = list(layer_copy.keys()); keys.sort()
+    for key in keys:
+        layer[key] = layer_copy[key]
+
 
 start_time = time.time()
 
@@ -208,18 +229,18 @@ ref_rpt_list.sort()
 
 
 # -------------------------------------------------- let's create a dict categorizing all the layers based on their layer types --------------------------------------------------------------------
-# with open("testings_out/all_layers.json") as all_layers_file:
-#     layers_arr = json.load(all_layers_file)
+with open("testings_out/all_layers-with_test_names.json") as all_layers_file:
+    layers_arr = json.load(all_layers_file)
 
-# layer_types = {}
-# for layer_key in layers_arr:
-#     layer_type = layers_arr[layer_key]["layer_type"]
-#     if layer_type not in layer_types.keys():
-#         layer_types[layer_type] = {}
-#     layer_types[layer_type][layer_key] = layers_arr[layer_key]
+layer_types = {}
+for layer_key in layers_arr:
+    layer_type = layers_arr[layer_key]["layer_type"]
+    if layer_type not in layer_types.keys():
+        layer_types[layer_type] = {}
+    layer_types[layer_type][layer_key] = layers_arr[layer_key]
 
-# with open("testings_out/layers_categorized-with_test_names.json", 'w') as layers_cat_file:
-#     json.dump(layer_types, layers_cat_file, indent=4)
+with open("testings_out/layers_categorized-with_test_names.json", 'w') as layers_cat_file:
+    json.dump(layer_types, layers_cat_file, indent=4)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -388,24 +409,62 @@ ref_rpt_list.sort()
 #     json.dump(container, file, indent=4)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# reducing spec.json files 
-test_name = "yolov5-best"
-with open(in_path + test_name + "-spec.json") as test_file:
-    test_cnt = json.load(test_file)
-with open("defaults.json") as defaults_file:
-    defaults = json.load(defaults_file)
+# ------------------------------------------------------------------------------- reducing spec.json files -----------------------------------------------------------------------------------------
 
-if "chips" in test_cnt: test_cnt = test_cnt["chips"][0]
-if "io_module" in test_cnt:
-    for layer in test_cnt["io_module"]["layers"]:
-        traverse_layer(layer, default=defaults[layer["layer_type"]], operation="reduce_layer")
-        # 'dest_entries' will never be empty, 'src_entries' is not well understood yet
-for mac_row in test_cnt["mac_rows"]:
-    for layer in mac_row["layers"]:
-        traverse_layer(layer, default=defaults[layer["layer_type"]], operation="reduce_layer")
+# test_name = "rn50-best"
+# with open(in_path + test_name + "-spec.json") as test_file:
+#     test_cnt = json.load(test_file)
+# with open("defaults.json") as defaults_file:
+#     defaults = json.load(defaults_file)
 
-with open("auto_tests_in/" + test_name + ".json", 'w') as in_file:
-    json.dump(test_cnt, in_file, indent=4)
+# if "chips" in test_cnt: test_cnt = test_cnt["chips"][0]
+# layers_arr = []
+# if "io_module" in test_cnt:
+#     for layer in test_cnt["io_module"]["layers"]:
+#         layers_arr.append(layer)
+# for mac_row in test_cnt["mac_rows"]:
+#     for layer in mac_row["layers"]:
+#         layers_arr.append(layer)
+
+# for layer in layers_arr:
+#     traverse_layer(layer, layer["layer_type"], default=defaults[layer["layer_type"]], operation="reduce_layer")
+#     # let's do some further simplifications now
+#     # -> disolving 'dest_entries'
+#     for dest_entry in layer["dest_entries"]:
+#         if len(dest_entry["dest_details"]) == 1:
+#             for key in dest_entry["dest_details"][0]:
+#                 dest_entry[key] = dest_entry["dest_details"][0][key]
+#             del dest_entry["dest_details"]
+
+#     if len(layer["dest_entries"]) == 1:
+#         layer["dest_entries"] = layer["dest_entries"][0]
+#     if type(layer["dest_entries"]) == dict and "dest_details" not in layer["dest_entries"]:
+#         for key in layer["dest_entries"]:
+#             layer[key] = layer["dest_entries"][key]
+#         del layer["dest_entries"]
+
+#     # -> disolving 'layer_mems'
+#     if len(layer["layer_mems"]) == 1: 
+#         for key in layer["layer_mems"][0]:
+#             layer[key] = layer["layer_mems"][0][key]
+#         del layer["layer_mems"]
+
+#     # -> disolving 'col_splits'
+#     if "col_splits" in layer and len(layer["col_splits"]["splits"]) == 1:
+#         for key in layer["col_splits"]["splits"][0]:
+#             layer["col_splits"][key] = layer["col_splits"]["splits"][0][key]
+#         del layer["col_splits"]["splits"]
+
+#         for key in layer["col_splits"]:
+#             layer[key] = layer["col_splits"][key]
+#         del layer["col_splits"]
+    
+#     # put the specs in order 
+#     put_specs_inorder(layer)
+
+# with open("auto_tests_in/" + test_name + "-new.json", 'w') as in_file:
+#     json.dump(test_cnt, in_file, indent=4)
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 end_time = time.time()
 print("time usage =", end_time-start_time)

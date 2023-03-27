@@ -49,7 +49,7 @@
             "optional"
         ],
         "layer_id": [
-            "well_defined",
+            0,
             "essential"
         ],
         "layer_key": [
@@ -147,7 +147,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            57,
             "essential"
         ],
         "layer_key": [
@@ -199,7 +199,7 @@
             "optional"
         ],
         "num_out_filters": [
-            "well_defined",
+            2048,
             "optional"
         ],
         "num_out_rows": [
@@ -253,7 +253,7 @@
             "optional"
         ],
         "layer_id": [
-            "well_defined",
+            2,
             "essential"
         ],
         "layer_key": [
@@ -281,7 +281,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            64,
             "essential"
         ],
         "num_out_rows": [
@@ -405,7 +405,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            0,
             "essential"
         ],
         "layer_key": [
@@ -460,7 +460,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            256,
             "essential"
         ],
         "num_out_rows": [
@@ -765,7 +765,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            59,
             "essential"
         ],
         "layer_key": [
@@ -805,7 +805,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            1,
             "essential"
         ],
         "num_out_rows": [
@@ -963,7 +963,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            56,
             "essential"
         ],
         "layer_key": [
@@ -1003,7 +1003,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            392,
             "essential"
         ],
         "num_out_rows": [
@@ -1135,7 +1135,7 @@
             "optional"
         ],
         "layer_id": [
-            "well_defined",
+            0,
             "essential"
         ],
         "layer_mems": [
@@ -1233,7 +1233,7 @@
             "optional"
         ],
         "layer_id": [
-            "well_defined",
+            1,
             "essential"
         ],
         "layer_mems": [
@@ -1339,7 +1339,7 @@
             "optional"
         ],
         "layer_id": [
-            "well_defined",
+            1,
             "essential"
         ],
         "layer_mems": [
@@ -1375,7 +1375,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            256,
             "essential"
         ],
         "num_out_rows": [
@@ -1611,7 +1611,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            83,
             "essential"
         ],
         "layer_mems": [
@@ -1647,7 +1647,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            256,
             "essential"
         ],
         "num_out_rows": [
@@ -1847,7 +1847,7 @@
             "optional"
         ],
         "layer_id": [
-            "well_defined",
+            3,
             "essential"
         ],
         "layer_mems": [
@@ -1871,7 +1871,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            75,
             "essential"
         ],
         "num_out_rows": [
@@ -1955,7 +1955,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            110,
             "essential"
         ],
         "layer_mems": [
@@ -1991,7 +1991,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            128,
             "essential"
         ],
         "num_out_rows": [
@@ -2161,7 +2161,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            7,
             "essential"
         ],
         "layer_mems": [
@@ -2197,7 +2197,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            64,
             "essential"
         ],
         "num_out_rows": [
@@ -2384,7 +2384,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            0,
             "essential"
         ],
         "layer_mems": [
@@ -2420,7 +2420,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            32,
             "essential"
         ],
         "num_out_rows": [
@@ -2569,7 +2569,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            54,
             "essential"
         ],
         "layer_mems": [
@@ -2605,7 +2605,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            2048,
             "essential"
         ],
         "num_out_rows": [
@@ -2755,7 +2755,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            58,
             "essential"
         ],
         "layer_mems": [
@@ -2791,7 +2791,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            256,
             "essential"
         ],
         "num_out_rows": [
@@ -3023,7 +3023,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            30,
             "essential"
         ],
         "layer_mems": [
@@ -3074,7 +3074,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            256,
             "essential"
         ],
         "num_out_rows": [
@@ -3317,7 +3317,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            0,
             "essential"
         ],
         "layer_mems": [
@@ -3353,7 +3353,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            32,
             "essential"
         ],
         "num_out_rows": [
@@ -3531,7 +3531,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            2,
             "essential"
         ],
         "layer_mems": [
@@ -3578,7 +3578,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            7,
             "essential"
         ],
         "num_out_rows": [
@@ -3789,7 +3789,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            64,
             "essential"
         ],
         "layer_mems": [
@@ -3825,7 +3825,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            21,
             "essential"
         ],
         "num_out_rows": [
@@ -3975,7 +3975,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            57,
             "essential"
         ],
         "layer_mems": [
@@ -4011,7 +4011,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            256,
             "essential"
         ],
         "num_out_rows": [
@@ -4161,7 +4161,7 @@
             "essential"
         ],
         "layer_id": [
-            "well_defined",
+            1,
             "essential"
         ],
         "layer_mems": [
@@ -4197,7 +4197,7 @@
             "essential"
         ],
         "num_out_filters": [
-            "well_defined",
+            9,
             "essential"
         ],
         "num_out_rows": [

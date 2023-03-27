@@ -219,7 +219,8 @@
         "int": {
             "times": 17,
             "values": {
-                "well_defined": 17
+                "0": 4,
+                "54": 13
             }
         }
     },
@@ -327,7 +328,8 @@
         "int": {
             "times": 17,
             "values": {
-                "well_defined": 17
+                "64": 4,
+                "2048": 13
             }
         }
     },

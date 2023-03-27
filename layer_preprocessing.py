@@ -1,6 +1,7 @@
 # take layer objects from the input json file and complete them with appropriate default values based on their layer type. 
 
 import json
+import copy
 import time
 
 # change 'add_defaults' function depending on the format of the 'defaults.json' file
@@ -85,6 +86,7 @@ def process_dest_entries(layer, defaults):
                 exit(0)
             # add default 'dest_details' params 
             add_defaults(dest_details, 'dest_entries/dest_details/', defaults)
+        put_specs_inorder(dest_entry)
 
 def process_layer_mems(layer, defaults):
     "create or validate the 'layer_mems' entry and its structure"
@@ -141,6 +143,7 @@ def process_col_splits(layer, defaults):
             exit(0)
         # add default 'col_splits/splits' params 
         add_defaults(split, 'col_splits/splits/', defaults)
+    put_specs_inorder(layer)
 
 def process_src_entries(layer, defaults):
     "create or validate the 'src_entries' entry and its structure (only specified in 'conv', 'add', and 'fetch_global' layer types)"
@@ -163,6 +166,18 @@ def process_src_entries(layer, defaults):
             exit(0)
         # add default 'col_splits/splits' params 
         add_defaults(src_entry, 'src_entries/', defaults)
+
+def put_specs_inorder(layer):
+    "put the specs in an easy-to-read order"
+    layer_copy = copy.deepcopy(layer)
+    for key in layer_copy: del layer[key]
+    if "layer_id" in layer: layer["layer_id"] = layer_copy["layer_id"]
+    if "layer_type" in layer: layer["layer_type"] = layer_copy["layer_type"]
+    
+    # otherwise put them in alphabetical order 
+    keys = list(layer_copy.keys()); keys.sort()
+    for key in keys:
+        layer[key] = layer_copy[key]
 
 def layer_preprocess(layer):
     "complete the structure and add default values to a layer object based on its layer type"
@@ -188,15 +203,17 @@ def layer_preprocess(layer):
     # for layer_types; 'conv', 'add', and 'fetch_global', process 'src_entries'
     if layer["layer_type"] in ('conv', 'add', 'fetch_global'):
         process_src_entries(layer, layer_defaults)
+        if layer["src_entries"] == [{}]: layer["src_entries"] = [] # *******
 
     # fill in other default specs (this must be called at the end to avoid overwritting dest_entries, layer_mems, col_splits, and src_entries))
     # to add optional specs into final spec.json file -> set 'optional'=True
     add_defaults(layer, '', layer_defaults, optional=False)
+    put_specs_inorder(layer)
 
 # -------------------------------------------------------------------------------------------
 # test code 
 start = time.time()
-test_name = "dt-io-ext-pull-1"
+test_name = "yolov5-best-new"
 with open("auto_tests_in/" + test_name + ".json") as input_file:
     input_json = json.load(input_file)
 
@@ -215,7 +232,7 @@ for layer in layers.values():
     layer_preprocess(layer)
 
 # now, input_json must contain all the filled-in layers
-with open("auto_tests_out/" +  test_name + ".json", 'w') as output_file:
+with open("auto_tests_out/" +  test_name + "-spec.json", 'w') as output_file:
     json.dump(input_json, output_file, indent=4)
 
 end = time.time()

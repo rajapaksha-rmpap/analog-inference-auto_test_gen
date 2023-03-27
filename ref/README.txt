@@ -1,1 +1,0 @@
-This folder, 'auto_test_gen/ref', will contain the usual reference output files, '<test_name>.rpt' and '<test_name>.txt', used for verifying the output of a given test. 

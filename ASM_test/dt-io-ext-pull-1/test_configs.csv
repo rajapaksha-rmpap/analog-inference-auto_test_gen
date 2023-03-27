@@ -1,5 +1,0 @@
-row_id,layer_id,layer_type,start_xbar,total_xbar,ncols,nrows,num_in_filters,num_out_filters,filter_sz,num_left_pad,num_right_pad,num_top_pad,num_bottom_pad,dilation,nblocks,nxbars0,nxbars1,nconvs0,nconvs1,stride,n_conv_cols,n_out_rows,dest_layer,simd_base_addr,simd_mask,sync_blk,out_sync_blk,layer_mem_base_addr,layer_mem_addr_mask
-32,0,INPUT,0,0,8,8,3,3,0,0,0,0,0,1,0,0,0,0,0,0,8,8,99,50348032,16383,0,2,0,16383
-32,1,BYPASS,0,0,8,8,3,3,0,0,0,0,0,1,0,0,0,0,0,0,8,8,1,16777216,16383,1,2,16384,16383
-32,2,OUTPUT,0,0,8,8,9,9,0,0,0,0,0,1,0,0,0,0,0,0,8,8,3,9469952,16383,2,2,32768,16383
-0,0,CONV,0,2,8,8,3,9,3,1,1,1,1,1,4,2,2,1,1,1,8,8,2,50364416,16383,0,2,0,16383
