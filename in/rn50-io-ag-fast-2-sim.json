@@ -1,0 +1,35 @@
+{
+    "xbar_width" : 1024,    
+    "use_block_transfer" : true,
+    "read_in_image" : true,
+    "write_out_image" : true,
+    "input_image_file" : "../../qmodels/resnet50_adc/inputs/i_0.txt",
+    "output_image_file" : "image.txt",
+    "image_fill_method" : 1,
+    "out_data_file" : "out.txt",
+    "num_in_rows" : 224,
+    "num_in_cols" : 224,
+    "num_in_filters" : 3,
+    "filter_size" : 7,
+    "num_out_rows" : 56,
+    "num_out_cols" : 56,
+    "num_out_filters" : 64,
+    "pos_neg_acts" : true,
+    "output_layer" : 61,
+    "max_ticks" : 1000000,
+    "step_ticks" : 2000,
+    "asm_max_ticks" : 10000000,
+    "asm_step_ticks" : 2000000,
+    "asm_out_data_file" : "asmout.txt",
+    "asm_results_file" : "results.txt",
+    "asm_sim" : true,
+    "weights" :
+    {
+        "weights_dir" : "../../qmodels/resnet50_adc/weight_bias",
+        "load_weights" : true,
+        "load_weights_by_layer" : true,
+        "write_weights" : true,
+        "out_file" : "weights_out.txt",
+        "include_bias" : true
+    }
+}

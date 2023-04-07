@@ -27,7 +27,7 @@ json_template = {
         "successes": []
     }
 
-def simulate(testnames, fsim=True, asmsim=True, vcd=False):
+def simulate(testnames, fsim, asmsim, force_asmsim, vcd):
     "run fsim and asmsim for the specified input tests"
 
     if len(testnames) == 0:
@@ -53,17 +53,14 @@ def simulate(testnames, fsim=True, asmsim=True, vcd=False):
         os.chdir(cwd)
         print('\n')
         try:
-            flag = runhwtests(test, fsim, asmsim, input_="hwtests")
+            flag = runhwtests(test, fsim, asmsim, force_asmsim, input_="home")
 
         except:
             flag = "UnknownError"
             unknown_errors += 1
             json_template["unknown error"].append(test)
-            # by far unknown errors can occur due to following reasons
-            #   -> due to not having a testdb.json entry (fatal error)
-            #   -> not having a sim.json file
-            # fsim execution errors can occur due to an error in log file
-            # "Cannot find weights file" which only occurs when run from home dir
+            # if run in case of an UnknownError is set to be True
+            flag = runhwtests(test, fsim, asmsim, force_asmsim, input_="home")
 
         else:
             if flag == "FatalError":
@@ -124,6 +121,7 @@ parser = ArgumentParser(prog="simulate", description="simulate a test given in t
 parser.add_argument("testnames", nargs='*', help="one or more tests (spcified by test name only) to simulate")
 parser.add_argument('-f', "--fsim", action='store_false', help='when specified, fsim will be disabled on each of the input tests')
 parser.add_argument('-a', "--asmsim", action='store_false', help='when specified, asmsim will be disabled on each of the input tests')
+parser.add_argument('-fa', "--force_asmsim", action='store_true', help='when specified, asmsim will be forced to rnn in case of an fsim-fail due to ResultComparisonError')
 # parser.add_argument('-b', "--both", action='store_true', help='when specified, both fsim and asmsim will be run on each of the input tests')
 # parser.add_argument('-i', "--input_dir", choices=["home", "hwtests"], default="home", help='indicates the directory from which the input test will be read')
 args = parser.parse_args()
@@ -131,7 +129,7 @@ args = parser.parse_args()
 start_time = time.time()
 
 print(args)
-simulate(args.testnames, args.fsim, args.asmsim)
+simulate(args.testnames, args.fsim, args.asmsim, args.force_asmsim, vcd=False)
 
 # arr = []
 # for test in in_test_list:

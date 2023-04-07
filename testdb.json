@@ -4541,5 +4541,14 @@
         "dv_tb": "iss",
         "asm_sim": "pull",
         "neg_test": false
+    },
+    "test": {
+        "name": "test",
+        "enabled": true,
+        "asm_test": true,
+        "dv_test": false,
+        "dv_tb": "iss",
+        "asm_sim": "pull",
+        "neg_test": false
     }
 }

@@ -211,7 +211,7 @@
         "int": {
             "times": 1,
             "values": {
-                "1": 1
+                "well_defined": 1
             }
         }
     },
@@ -319,7 +319,7 @@
         "int": {
             "times": 1,
             "values": {
-                "9": 1
+                "well_defined": 1
             }
         }
     },

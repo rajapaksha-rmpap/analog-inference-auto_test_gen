@@ -49,7 +49,7 @@
             "optional"
         ],
         "layer_id": [
-            0,
+            "well_defined",
             "essential"
         ],
         "layer_key": [
@@ -147,7 +147,7 @@
             "essential"
         ],
         "layer_id": [
-            57,
+            "well_defined",
             "essential"
         ],
         "layer_key": [
@@ -199,7 +199,7 @@
             "optional"
         ],
         "num_out_filters": [
-            2048,
+            "well_defined",
             "optional"
         ],
         "num_out_rows": [
@@ -253,7 +253,7 @@
             "optional"
         ],
         "layer_id": [
-            2,
+            "well_defined",
             "essential"
         ],
         "layer_key": [
@@ -281,7 +281,7 @@
             "essential"
         ],
         "num_out_filters": [
-            64,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -405,7 +405,7 @@
             "essential"
         ],
         "layer_id": [
-            0,
+            "well_defined",
             "essential"
         ],
         "layer_key": [
@@ -460,7 +460,7 @@
             "essential"
         ],
         "num_out_filters": [
-            256,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -620,39 +620,39 @@
         ],
         "src_entries/dst_index": [
             0,
-            "optional"
+            "essential"
         ],
         "src_entries/dst_layer": [
-            8,
+            "well_defined",
             "optional"
         ],
         "src_entries/dst_mem_type": [
             "residual_mem",
-            "optional"
+            "essential"
         ],
         "src_entries/src_addr": [
             "0x0",
-            "optional"
+            "essential"
         ],
         "src_entries/src_addr_incr": [
-            14336,
+            "well_defined",
             "optional"
         ],
         "src_entries/src_index": [
-            0,
+            "well_defined",
             "optional"
         ],
         "src_entries/src_layer": [
-            0,
+            "well_defined",
             "optional"
         ],
         "src_entries/src_len": [
-            14336,
+            "well_defined",
             "optional"
         ],
         "src_entries/src_mem_type": [
             "global_residual_mem",
-            "optional"
+            "essential"
         ],
         "adc_en": [
             true,
@@ -765,7 +765,7 @@
             "essential"
         ],
         "layer_id": [
-            59,
+            "well_defined",
             "essential"
         ],
         "layer_key": [
@@ -805,7 +805,7 @@
             "essential"
         ],
         "num_out_filters": [
-            1,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -963,7 +963,7 @@
             "essential"
         ],
         "layer_id": [
-            56,
+            "well_defined",
             "essential"
         ],
         "layer_key": [
@@ -1003,7 +1003,7 @@
             "essential"
         ],
         "num_out_filters": [
-            392,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -1135,7 +1135,7 @@
             "optional"
         ],
         "layer_id": [
-            0,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -1233,7 +1233,7 @@
             "optional"
         ],
         "layer_id": [
-            1,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -1339,7 +1339,7 @@
             "optional"
         ],
         "layer_id": [
-            1,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -1375,7 +1375,7 @@
             "essential"
         ],
         "num_out_filters": [
-            256,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -1611,7 +1611,7 @@
             "essential"
         ],
         "layer_id": [
-            83,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -1647,7 +1647,7 @@
             "essential"
         ],
         "num_out_filters": [
-            256,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -1847,7 +1847,7 @@
             "optional"
         ],
         "layer_id": [
-            3,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -1871,7 +1871,7 @@
             "essential"
         ],
         "num_out_filters": [
-            75,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -1955,7 +1955,7 @@
             "essential"
         ],
         "layer_id": [
-            110,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -1991,7 +1991,7 @@
             "essential"
         ],
         "num_out_filters": [
-            128,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -2161,7 +2161,7 @@
             "essential"
         ],
         "layer_id": [
-            7,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -2197,7 +2197,7 @@
             "essential"
         ],
         "num_out_filters": [
-            64,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -2267,7 +2267,7 @@
             "essential"
         ],
         "src_entries/dst_layer": [
-            7,
+            "well_defined",
             "essential"
         ],
         "src_entries/dst_mem_type": [
@@ -2279,19 +2279,19 @@
             "essential"
         ],
         "src_entries/src_addr_incr": [
-            5376,
+            "well_defined",
             "essential"
         ],
         "src_entries/src_index": [
-            0,
+            "well_defined",
             "essential"
         ],
         "src_entries/src_layer": [
-            0,
+            "well_defined",
             "essential"
         ],
         "src_entries/src_len": [
-            5376,
+            "well_defined",
             "essential"
         ],
         "src_entries/src_mem_type": [
@@ -2384,7 +2384,7 @@
             "essential"
         ],
         "layer_id": [
-            0,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -2420,7 +2420,7 @@
             "essential"
         ],
         "num_out_filters": [
-            32,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -2569,7 +2569,7 @@
             "essential"
         ],
         "layer_id": [
-            54,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -2605,7 +2605,7 @@
             "essential"
         ],
         "num_out_filters": [
-            2048,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -2755,7 +2755,7 @@
             "essential"
         ],
         "layer_id": [
-            58,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -2791,7 +2791,7 @@
             "essential"
         ],
         "num_out_filters": [
-            256,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -2861,7 +2861,7 @@
             "essential"
         ],
         "src_entries/dst_layer": [
-            58,
+            "well_defined",
             "essential"
         ],
         "src_entries/dst_mem_type": [
@@ -2873,19 +2873,19 @@
             "essential"
         ],
         "src_entries/src_addr_incr": [
-            10752,
+            "well_defined",
             "essential"
         ],
         "src_entries/src_index": [
-            10,
+            "well_defined",
             "essential"
         ],
         "src_entries/src_layer": [
-            10,
+            "well_defined",
             "essential"
         ],
         "src_entries/src_len": [
-            10752,
+            "well_defined",
             "essential"
         ],
         "src_entries/src_mem_type": [
@@ -3023,7 +3023,7 @@
             "essential"
         ],
         "layer_id": [
-            30,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -3074,7 +3074,7 @@
             "essential"
         ],
         "num_out_filters": [
-            256,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -3317,7 +3317,7 @@
             "essential"
         ],
         "layer_id": [
-            0,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -3353,7 +3353,7 @@
             "essential"
         ],
         "num_out_filters": [
-            32,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -3531,7 +3531,7 @@
             "essential"
         ],
         "layer_id": [
-            2,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -3578,7 +3578,7 @@
             "essential"
         ],
         "num_out_filters": [
-            7,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -3789,7 +3789,7 @@
             "essential"
         ],
         "layer_id": [
-            64,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -3825,7 +3825,7 @@
             "essential"
         ],
         "num_out_filters": [
-            21,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -3975,7 +3975,7 @@
             "essential"
         ],
         "layer_id": [
-            57,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -4011,7 +4011,7 @@
             "essential"
         ],
         "num_out_filters": [
-            256,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [
@@ -4161,7 +4161,7 @@
             "essential"
         ],
         "layer_id": [
-            1,
+            "well_defined",
             "essential"
         ],
         "layer_mems": [
@@ -4197,7 +4197,7 @@
             "essential"
         ],
         "num_out_filters": [
-            9,
+            "well_defined",
             "essential"
         ],
         "num_out_rows": [

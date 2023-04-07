@@ -34,7 +34,64 @@ def verify_out(outTXT, simjson):
     # ******** this is not complete yet ********* 
     return True
 
-def runhwtests(test_name, fsim=True, asmsim=True, vcd=False, input_="home"):
+def runasmsim(selected_test, home_dir, scmd, image_count, asmsys_test):
+    "run asmsim for a single specified test"
+
+    os.chdir(home_dir)
+    simlog = home_dir + "/ASM_test/" + selected_test["name"] + "/"
+    print(selected_test["name"] + ": Level 1 Passed, running " + selected_test["asm_sim"] + "...")                    
+    if selected_test["asm_sim"] == "asmsyspull_mchip":
+        stest_cmd = scmd + simlog + " > " + simlog + "/asmsystem.log" + " 2>&1"                                
+    elif selected_test["asm_sim"] == "asmsyspull_st":
+        stest_cmd = scmd + simlog + " " + str(image_count) + " > " + simlog + "/asmsystem.log" + " 2>&1" 
+    elif selected_test["asm_sim"] == "pull":
+        stest_cmd = scmd + simlog + " > " + simlog + "/asmsystem.log" + " 2>&1" 
+    elif selected_test["asm_sim"] == "push":
+        stest_cmd = scmd + simlog + " > " + simlog + "/asmsystem.log" + " 2>&1"                                        
+    else:
+        stest_cmd = scmd + simlog + " > " + simlog + "simtop.log" + " 2>&1"
+    res3 = os.system(stest_cmd)
+    if res3 == 0:
+        # compare final results
+        cmplog = home_dir + "/ASM_test/" + selected_test["name"] + "/asm_tst_diff.log"
+        file1 = home_dir + "/ASM_test/" + selected_test["name"] + "/out.txt"
+        file2 = home_dir + "/ASM_test/" + selected_test["name"] + "/asm_out.txt"
+        os.system("mv asmlog*.txt" + " " + home_dir + "/ASM_test/" + selected_test["name"] + "/.")
+
+        # clean the files for comparison
+        os.system("grep -v --text Added " + file1 + " > " + file1 + ".clean")
+        file1 = file1 + ".clean"
+        #print("****** file 1 = " + file1)
+
+        os.system("grep -v --text Added " + file2 + " > " + file2 + ".clean")
+        file2 = file2 + ".clean"
+        #print("****** file 2 = " + file2)
+        #print("Doing diff: file1[" + file1 + "] file2[" + file2 + "]")
+
+        cmp_cmd_3 = "diff " + file1 + " " + file2\
+                    + " > " + cmplog + " 2>&1"
+
+        res4 = os.system(cmp_cmd_3)
+
+        if res4 == 0:                            
+            if asmsys_test:
+                print(selected_test["name"] + ": Asmsystem Passed")
+            else:
+                print(selected_test["name"] + ": Simtop passed")
+        else:
+            if asmsys_test:
+                print(selected_test["name"] + ": Asmsystem Failed")
+            else:
+                print(selected_test["name"] + ": Simtop Failed")
+            return "AsmsimExecutionError"
+    else:
+        if asmsys_test:
+                print(selected_test["name"] + ": Asmsystem Failed")
+        else:
+                print(selected_test["name"] + ": Simtop Failed")               
+        return "AsmsimExecutionError"
+
+def runhwtests(test_name, fsim, asmsim, force_asmsim, vcd=False, input_="home"):
     "running fsim and asmsim (if specified) of a single test case"
 
     if vcd:
@@ -194,81 +251,30 @@ def runhwtests(test_name, fsim=True, asmsim=True, vcd=False, input_="home"):
                 cmp_cmd_5 = "diff out" + str(i) + ".txt " + home_ref_dir + selected_test["name"] + "-" + str(i) + ".txt"\
                     + " > " + selected_test["name"] + "-" + str(i) + ".txt.log 2>&1"  
                 res5 = res5 or os.system(cmp_cmd_5)                            
-
+        
+        # if fsim passed, 
         if res1 == 0 and res2 == 0 and res5 == 0:
-            if selected_test["asm_test"] == True:
-                if not asmsim: 
-                    # user has not asked to run asmsim
-                    return "asmsimDisabled"
-
-                os.chdir(home_dir)
-                simlog = home_dir + "/ASM_test/" + selected_test["name"] + "/"
-                print(selected_test["name"] + ": Level 1 Passed, running " + selected_test["asm_sim"] + "...")                    
-                if selected_test["asm_sim"] == "asmsyspull_mchip":
-                    stest_cmd = scmd + simlog + " > " + simlog + "/asmsystem.log" + " 2>&1"                                
-                elif selected_test["asm_sim"] == "asmsyspull_st":
-                    stest_cmd = scmd + simlog + " " + str(image_count) + " > " + simlog + "/asmsystem.log" + " 2>&1" 
-                elif selected_test["asm_sim"] == "pull":
-                    stest_cmd = scmd + simlog + " > " + simlog + "/asmsystem.log" + " 2>&1" 
-                elif selected_test["asm_sim"] == "push":
-                    stest_cmd = scmd + simlog + " > " + simlog + "/asmsystem.log" + " 2>&1"                                        
-                else:
-                    stest_cmd = scmd + simlog + " > " + simlog + "simtop.log" + " 2>&1"
-                res3 = os.system(stest_cmd)
-                if res3 == 0:
-                    # compare final results
-                    cmplog = home_dir + "/ASM_test/" + selected_test["name"] + "/asm_tst_diff.log"
-                    file1 = home_dir + "/ASM_test/" + selected_test["name"] + "/out.txt"
-                    file2 = home_dir + "/ASM_test/" + selected_test["name"] + "/asm_out.txt"
-                    os.system("mv asmlog*.txt" + " " + home_dir + "/ASM_test/" + selected_test["name"] + "/.")
-
-                    # clean the files for comparison
-                    os.system("grep -v --text Added " + file1 + " > " + file1 + ".clean")
-                    file1 = file1 + ".clean"
-                    #print("****** file 1 = " + file1)
-
-                    os.system("grep -v --text Added " + file2 + " > " + file2 + ".clean")
-                    file2 = file2 + ".clean"
-                    #print("****** file 2 = " + file2)
-                    #print("Doing diff: file1[" + file1 + "] file2[" + file2 + "]")
-
-                    cmp_cmd_3 = "diff " + file1 + " " + file2\
-                                + " > " + cmplog + " 2>&1"
-
-                    res4 = os.system(cmp_cmd_3)
-
-                    if res4 == 0:                            
-                        if asmsys_test:
-                            print(selected_test["name"] + ": Asmsystem Passed")
-                        else:
-                            print(selected_test["name"] + ": Simtop passed")
-                    else:
-                        if asmsys_test:
-                            print(selected_test["name"] + ": Asmsystem Failed")
-                        else:
-                            print(selected_test["name"] + ": Simtop Failed")
-                        return "AsmsimExecutionError"
-                else:
-                    if asmsys_test:
-                            print(selected_test["name"] + ": Asmsystem Failed")
-                    else:
-                            print(selected_test["name"] + ": Simtop Failed")               
-                    return "AsmsimExecutionError"
+            # if asmsim is enabled in testdb.json and user has specified to run asmsim
+            if selected_test["asm_test"] == True and asmsim: 
+                flag = runasmsim(selected_test, home_dir, scmd, image_count, asmsys_test)
+                if flag != None: return flag 
             else:
                 print(selected_test["name"] + ": Passed")
-                print("'asm_test' option for the test '%s' has not been set to True, so not running asmsim" %(selected_test["name"]))
+                print("asmsim for the test '%s' is either disabled in testdb.json or disabled by the user" %(selected_test["name"]))
                 return "AsmsimDisabled"
+        # if fsim has been failed due to ResultComparisonError 
         else:
-            print(selected_test["name"] + ": Failed; the result may not be comling with the ref map.rpt or out.txt")
-            
-            # intermediate output checks for each layer if data mismatch in final output of level 1
-            # if res2 !=0 or res5 !=0:
-            #     mismatch_check(selected_test["name"])
+            print(selected_test["name"] + ": Failed; the result may not be complying with the ref map.rpt or out.txt")
+            # if asmsim has been forced by the user in case of a fsim-fail
+            if force_asmsim: 
+                print(f"{tab}asmsim has been forced by the user...")
+                runasmsim(selected_test, home_dir, scmd, image_count, asmsys_test)
             return "ResultComparisonError"
     
     else: 
         print("%s: has not been enabled" %test_name)
         return "NotEnabledError"
+    
     #Moving activity file to simtop and running vcd script for every test case
     activity_file_path = home_dir + "/activity.txt"
     if vcd == True:

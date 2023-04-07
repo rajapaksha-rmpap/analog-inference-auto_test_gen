@@ -229,18 +229,18 @@ ref_rpt_list.sort()
 
 
 # -------------------------------------------------- let's create a dict categorizing all the layers based on their layer types --------------------------------------------------------------------
-with open("testings_out/all_layers-with_test_names.json") as all_layers_file:
-    layers_arr = json.load(all_layers_file)
+# with open("testings_out/all_layers-with_test_names.json") as all_layers_file:
+#     layers_arr = json.load(all_layers_file)
 
-layer_types = {}
-for layer_key in layers_arr:
-    layer_type = layers_arr[layer_key]["layer_type"]
-    if layer_type not in layer_types.keys():
-        layer_types[layer_type] = {}
-    layer_types[layer_type][layer_key] = layers_arr[layer_key]
+# layer_types = {}
+# for layer_key in layers_arr:
+#     layer_type = layers_arr[layer_key]["layer_type"]
+#     if layer_type not in layer_types.keys():
+#         layer_types[layer_type] = {}
+#     layer_types[layer_type][layer_key] = layers_arr[layer_key]
 
-with open("testings_out/layers_categorized-with_test_names.json", 'w') as layers_cat_file:
-    json.dump(layer_types, layers_cat_file, indent=4)
+# with open("testings_out/layers_categorized-with_test_names.json", 'w') as layers_cat_file:
+#     json.dump(layer_types, layers_cat_file, indent=4)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -411,59 +411,59 @@ with open("testings_out/layers_categorized-with_test_names.json", 'w') as layers
 
 # ------------------------------------------------------------------------------- reducing spec.json files -----------------------------------------------------------------------------------------
 
-# test_name = "rn50-best"
-# with open(in_path + test_name + "-spec.json") as test_file:
-#     test_cnt = json.load(test_file)
-# with open("defaults.json") as defaults_file:
-#     defaults = json.load(defaults_file)
+test_name = "rn50-best"
+with open(in_path + test_name + "-spec.json") as test_file:
+    test_cnt = json.load(test_file)
+with open("defaults.json") as defaults_file:
+    defaults = json.load(defaults_file)
 
-# if "chips" in test_cnt: test_cnt = test_cnt["chips"][0]
-# layers_arr = []
-# if "io_module" in test_cnt:
-#     for layer in test_cnt["io_module"]["layers"]:
-#         layers_arr.append(layer)
-# for mac_row in test_cnt["mac_rows"]:
-#     for layer in mac_row["layers"]:
-#         layers_arr.append(layer)
+if "chips" in test_cnt: test_cnt = test_cnt["chips"][0]
+layers_arr = []
+if "io_module" in test_cnt:
+    for layer in test_cnt["io_module"]["layers"]:
+        layers_arr.append(layer)
+for mac_row in test_cnt["mac_rows"]:
+    for layer in mac_row["layers"]:
+        layers_arr.append(layer)
 
-# for layer in layers_arr:
-#     traverse_layer(layer, layer["layer_type"], default=defaults[layer["layer_type"]], operation="reduce_layer")
-#     # let's do some further simplifications now
-#     # -> disolving 'dest_entries'
-#     for dest_entry in layer["dest_entries"]:
-#         if len(dest_entry["dest_details"]) == 1:
-#             for key in dest_entry["dest_details"][0]:
-#                 dest_entry[key] = dest_entry["dest_details"][0][key]
-#             del dest_entry["dest_details"]
+for layer in layers_arr:
+    traverse_layer(layer, layer["layer_type"], default=defaults[layer["layer_type"]], operation="reduce_layer")
+    # let's do some further simplifications now
+    # -> disolving 'dest_entries'
+    for dest_entry in layer["dest_entries"]:
+        if len(dest_entry["dest_details"]) == 1:
+            for key in dest_entry["dest_details"][0]:
+                dest_entry[key] = dest_entry["dest_details"][0][key]
+            del dest_entry["dest_details"]
 
-#     if len(layer["dest_entries"]) == 1:
-#         layer["dest_entries"] = layer["dest_entries"][0]
-#     if type(layer["dest_entries"]) == dict and "dest_details" not in layer["dest_entries"]:
-#         for key in layer["dest_entries"]:
-#             layer[key] = layer["dest_entries"][key]
-#         del layer["dest_entries"]
+    if len(layer["dest_entries"]) == 1:
+        layer["dest_entries"] = layer["dest_entries"][0]
+    if type(layer["dest_entries"]) == dict and "dest_details" not in layer["dest_entries"]:
+        for key in layer["dest_entries"]:
+            layer[key] = layer["dest_entries"][key]
+        del layer["dest_entries"]
 
-#     # -> disolving 'layer_mems'
-#     if len(layer["layer_mems"]) == 1: 
-#         for key in layer["layer_mems"][0]:
-#             layer[key] = layer["layer_mems"][0][key]
-#         del layer["layer_mems"]
+    # -> disolving 'layer_mems'
+    if len(layer["layer_mems"]) == 1: 
+        for key in layer["layer_mems"][0]:
+            layer[key] = layer["layer_mems"][0][key]
+        del layer["layer_mems"]
 
-#     # -> disolving 'col_splits'
-#     if "col_splits" in layer and len(layer["col_splits"]["splits"]) == 1:
-#         for key in layer["col_splits"]["splits"][0]:
-#             layer["col_splits"][key] = layer["col_splits"]["splits"][0][key]
-#         del layer["col_splits"]["splits"]
+    # -> disolving 'col_splits'
+    if "col_splits" in layer and len(layer["col_splits"]["splits"]) == 1:
+        for key in layer["col_splits"]["splits"][0]:
+            layer["col_splits"][key] = layer["col_splits"]["splits"][0][key]
+        del layer["col_splits"]["splits"]
 
-#         for key in layer["col_splits"]:
-#             layer[key] = layer["col_splits"][key]
-#         del layer["col_splits"]
+        for key in layer["col_splits"]:
+            layer[key] = layer["col_splits"][key]
+        del layer["col_splits"]
     
-#     # put the specs in order 
-#     put_specs_inorder(layer)
+    # put the specs in order 
+    put_specs_inorder(layer)
 
-# with open("auto_tests_in/" + test_name + "-new.json", 'w') as in_file:
-#     json.dump(test_cnt, in_file, indent=4)
+with open("auto_tests_in/" + test_name + "-new.json", 'w') as in_file:
+    json.dump(test_cnt, in_file, indent=4)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 end_time = time.time()

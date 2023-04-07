@@ -1,0 +1,973 @@
+{
+    "io_module" : 
+    {
+        "layers" :
+        [
+            {
+                "dest_entries" : 
+                [
+                    {
+                        "addr" : "0x0",
+                        "dest_details" : 
+                        [
+                            {
+                                "addr_incr" : 384,
+                                "dest_addr" : "0x0",
+                                "dest_layer" : 0,
+                                "mem_index" : 0,
+                                "mem_type" : "layer_mem"
+                            }
+                        ],
+                        "len" : 288
+                    },
+                    {
+                        "addr" : "0x120",
+                        "dest_details" : 
+                        [
+                            {
+                                "addr_incr" : 384,
+                                "dest_addr" : "0x120",
+                                "dest_layer" : 0,
+                                "mem_index" : 0,
+                                "mem_type" : "layer_mem"
+                            },
+                            {
+                                "addr_incr" : 384,
+                                "dest_addr" : "0x0",
+                                "dest_layer" : 1,
+                                "mem_index" : 0,
+                                "mem_type" : "layer_mem"
+                            }
+                        ],
+                        "len" : 96
+                    },
+                    {
+                        "addr" : "0x180",
+                        "dest_details" : 
+                        [
+                            {
+                                "addr_incr" : 384,
+                                "dest_addr" : "0x60",
+                                "dest_layer" : 1,
+                                "mem_index" : 0,
+                                "mem_type" : "layer_mem"
+                            }
+                        ],
+                        "len" : 288
+                    }
+                ],
+                "dma_id" : -1,
+                "layer_class" : "input",
+                "layer_id" : 60,
+                "layer_mems" : 
+                [
+                    {
+                        "lm_max_rows" : 9,
+                        "lm_row_size" : 672
+                    }
+                ],
+                "layer_type" : "input",
+                "num_in_cols" : 224,
+                "num_in_filters" : 3,
+                "num_in_rows" : 224,
+                "src_entries" : []
+            },
+            {
+                "dest_entries" : 
+                [
+                    {
+                        "addr" : "0x0",
+                        "dest_details" : 
+                        [
+                            {
+                                "addr_incr" : 14336,
+                                "dest_addr" : "0x904000",
+                                "dest_layer" : 62,
+                                "mem_index" : 0,
+                                "mem_type" : "layer_mem"
+                            }
+                        ],
+                        "len" : 14336
+                    }
+                ],
+                "layer_class" : "output",
+                "layer_id" : 61,
+                "layer_mems" : 
+                [
+                    {
+                        "lm_max_rows" : 6,
+                        "lm_row_size" : 14336
+                    }
+                ],
+                "layer_type" : "output",
+                "num_out_cols" : 56,
+                "num_out_filters" : 256,
+                "num_out_rows" : 56,
+                "src_entries" : []
+            }
+        ]
+    },
+    "mac_rows" : 
+    [
+        {
+            "layers" : 
+            [
+                {
+                    "adc_scale" : 198.0,
+                    "add_bias" : false,
+                    "add_residuals" : false,
+                    "alt_signs" : false,
+                    "bias_add_round_shift" : 0,
+                    "col_splits" : 
+                    {
+                        "grp_shift" : 0,
+                        "splits" : 
+                        [
+                            {
+                                "shift" : 1,
+                                "sign" : true
+                            },
+                            {
+                                "shift" : 1,
+                                "sign" : false
+                            }
+                        ]
+                    },
+                    "dest_entries" : 
+                    [
+                        {
+                            "addr" : "0x0",
+                            "dest_details" : 
+                            [
+                                {
+                                    "addr_incr" : 7168,
+                                    "dest_addr" : "0x0",
+                                    "dest_layer" : 2,
+                                    "gen_sync" : true,
+                                    "mem_index" : 0,
+                                    "mem_type" : "layer_mem"
+                                }
+                            ],
+                            "len" : 3968
+                        }
+                    ],
+                    "dilation" : 1,
+                    "dma_layer_usage" : "single_layer",
+                    "filter_size" : 7,
+                    "horz_splits" : 
+                    [
+                        2048
+                    ],
+                    "in_scale" : 1.0,
+                    "input_dup" : 1,
+                    "layer_class" : "conv",
+                    "layer_id" : 0,
+                    "layer_mems" : 
+                    [
+                        {
+                            "lm_max_rows" : 9,
+                            "lm_row_size" : 384
+                        }
+                    ],
+                    "layer_type" : "conv",
+                    "nconvs" : 
+                    [
+                        4,
+                        2
+                    ],
+                    "num_blocks" : 4,
+                    "num_in_cols" : 128,
+                    "num_in_filters" : 3,
+                    "num_in_rows" : 224,
+                    "num_out_cols" : 62,
+                    "num_out_filters" : 64,
+                    "num_out_rows" : 112,
+                    "num_xbars" : 
+                    [
+                        4,
+                        4
+                    ],
+                    "out_scale" : 1.0,
+                    "out_scale_mult" : 
+                    [
+                        64,
+                        1,
+                        1,
+                        1
+                    ],
+                    "out_scale_shift" : 
+                    [
+                        6,
+                        0,
+                        0,
+                        0
+                    ],
+                    "out_sync_mult" : 1,
+                    "pad_bot" : 3,
+                    "pad_left" : 3,
+                    "pad_right" : 0,
+                    "pad_top" : 3,
+                    "pos_neg_acts" : true,
+                    "pos_neg_wgts" : true,
+                    "prefetch_scale_mult" : 1,
+                    "prefetch_scale_shift" : 0,
+                    "relu" : "relu",
+                    "remap_region" : 0,
+                    "scale_output" : true,
+                    "scale_path_flip" : false,
+                    "scale_prefetch" : false,
+                    "src_entries" : [],
+                    "start_col" : 0,
+                    "start_xbar" : 0,
+                    "stride" : 2,
+                    "vert_splits" : 
+                    [
+                        512
+                    ],
+                    "wgts_bias_file" : "",
+                    "wgts_file" : "w_0.txt",
+                    "wgts_file_has_bias" : true,
+                    "wgts_layer_name" : "Layer 0",
+                    "xbar_cnt" : 4,
+                    "xbar_start_layer" : 0
+                }
+            ],
+            "mac_row_id" : 0
+        },
+        {
+            "layers" : 
+            [
+                {
+                    "adc_scale" : 198.0,
+                    "add_bias" : false,
+                    "add_residuals" : false,
+                    "alt_signs" : false,
+                    "bias_add_round_shift" : 0,
+                    "col_splits" : 
+                    {
+                        "grp_shift" : 0,
+                        "splits" : 
+                        [
+                            {
+                                "shift" : 1,
+                                "sign" : true
+                            },
+                            {
+                                "shift" : 1,
+                                "sign" : false
+                            }
+                        ]
+                    },
+                    "dest_entries" : 
+                    [
+                        {
+                            "addr" : "0x0",
+                            "dest_details" : 
+                            [
+                                {
+                                    "addr_incr" : 7168,
+                                    "dest_addr" : "0xf80",
+                                    "dest_layer" : 2,
+                                    "gen_sync" : true,
+                                    "mem_index" : 0,
+                                    "mem_type" : "layer_mem"
+                                }
+                            ],
+                            "len" : 3200
+                        }
+                    ],
+                    "dilation" : 1,
+                    "dma_layer_usage" : "single_layer",
+                    "filter_size" : 7,
+                    "horz_splits" : 
+                    [
+                        2048
+                    ],
+                    "in_scale" : 1.0,
+                    "input_dup" : 1,
+                    "layer_class" : "conv",
+                    "layer_id" : 1,
+                    "layer_mems" : 
+                    [
+                        {
+                            "lm_max_rows" : 9,
+                            "lm_row_size" : 384
+                        }
+                    ],
+                    "layer_type" : "conv",
+                    "nconvs" : 
+                    [
+                        4,
+                        2
+                    ],
+                    "conv_start_col": 75,
+                    "num_blocks" : 4,
+                    "num_in_cols" : 128,
+                    "num_in_filters" : 3,
+                    "num_in_rows" : 224,
+                    "num_out_cols" : 50,
+                    "num_out_filters" : 64,
+                    "num_out_rows" : 112,
+                    "num_xbars" : 
+                    [
+                        4,
+                        1
+                    ],
+                    "out_scale" : 1.0,
+                    "out_scale_mult" : 
+                    [
+                        64,
+                        1,
+                        1,
+                        1
+                    ],
+                    "out_scale_shift" : 
+                    [
+                        6,
+                        0,
+                        0,
+                        0
+                    ],
+                    "out_sync_mult" : 1,
+                    "pad_bot" : 3,
+                    "pad_left" : 0,
+                    "pad_right" : 2,
+                    "pad_top" : 3,
+                    "pos_neg_acts" : true,
+                    "pos_neg_wgts" : true,
+                    "prefetch_scale_mult" : 1,
+                    "prefetch_scale_shift" : 0,
+                    "relu" : "relu",
+                    "remap_region" : 0,
+                    "scale_output" : true,
+                    "scale_path_flip" : false,
+                    "scale_prefetch" : false,
+                    "src_entries" : [],
+                    "start_col" : 0,
+                    "start_xbar" : 0,
+                    "stride" : 2,
+                    "vert_splits" : 
+                    [
+                        512
+                    ],
+                    "wgts_bias_file" : "",
+                    "wgts_file" : "w_0.txt",
+                    "wgts_file_has_bias" : true,
+                    "wgts_layer_name" : "Layer 0",
+                    "xbar_cnt" : 4,
+                    "xbar_start_layer" : 0
+                }
+            ],
+            "mac_row_id" : 1
+        },
+        {
+            "layers" : 
+            [
+                {
+                    "bias_add_round_shift" : 0,
+                    "dest_entries" : 
+                    [
+                        {
+                            "addr" : "0x0",
+                            "dest_details" : 
+                            [
+                                {
+                                    "addr_incr" : 3584,
+                                    "dest_addr" : "0x0",
+                                    "dest_layer" : 3,
+                                    "gen_sync" : true,
+                                    "mem_index" : 0,
+                                    "mem_type" : "layer_mem"
+                                },
+                                {
+                                    "addr_incr" : 3584,
+                                    "dest_addr" : "0x0",
+                                    "dest_layer" : 6,
+                                    "gen_sync" : true,
+                                    "mem_index" : 0,
+                                    "mem_type" : "layer_mem"
+                                }
+                            ],
+                            "len" : 3584
+                        }
+                    ],
+                    "dma_layer_usage" : "single_layer",
+                    "filter_size" : 3,
+                    "in_scale" : 1.0,
+                    "layer_class" : "pool",
+                    "layer_id" : 2,
+                    "layer_mems" : 
+                    [
+                        {
+                            "lm_max_rows" : 6,
+                            "lm_row_size" : 7168
+                        }
+                    ],
+                    "layer_type" : "pool",
+                    "num_in_cols" : 112,
+                    "num_in_filters" : 3,
+                    "num_in_rows" : 112,
+                    "num_out_cols" : 56,
+                    "num_out_filters" : 64,
+                    "num_out_rows" : 56,
+                    "out_scale" : 1.0,
+                    "out_scale_mult" : 
+                    [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "out_scale_shift" : 
+                    [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "out_sync_mult" : 1,
+                    "pad_bot" : 0,
+                    "pad_left" : 1,
+                    "pad_right" : 0,
+                    "pad_top" : 1,
+                    "pool_out_filters" : 
+                    [
+                        64,
+                        64
+                    ],
+                    "prefetch_scale_mult" : 1,
+                    "prefetch_scale_shift" : 0,
+                    "remap_region" : 0,
+                    "scale_output" : false,
+                    "scale_path_flip" : false,
+                    "scale_prefetch" : false,
+                    "src_entries" : [],
+                    "stride" : 2
+                }
+            ],
+            "mac_row_id" : 2
+        },
+        {
+            "layers" : 
+            [
+                {
+                    "adc_scale" : 45.0,
+                    "add_bias" : false,
+                    "add_residuals" : false,
+                    "alt_signs" : false,
+                    "bias_add_round_shift" : 0,
+                    "col_splits" : 
+                    {
+                        "grp_shift" : 0,
+                        "splits" : 
+                        [
+                            {
+                                "shift" : 0,
+                                "sign" : true
+                            },
+                            {
+                                "shift" : 0,
+                                "sign" : false
+                            }
+                        ]
+                    },
+                    "dest_entries" : 
+                    [
+                        {
+                            "addr" : "0x0",
+                            "dest_details" : 
+                            [
+                                {
+                                    "addr_incr" : 3584,
+                                    "dest_addr" : "0x0",
+                                    "dest_layer" : 4,
+                                    "gen_sync" : true,
+                                    "mem_index" : 0,
+                                    "mem_type" : "layer_mem"
+                                }
+                            ],
+                            "len" : 3584
+                        }
+                    ],
+                    "dilation" : 1,
+                    "dma_layer_usage" : "single_layer",
+                    "filter_size" : 1,
+                    "horz_splits" : 
+                    [
+                        2048
+                    ],
+                    "in_scale" : 1.0,
+                    "input_dup" : 1,
+                    "layer_class" : "conv",
+                    "layer_id" : 3,
+                    "layer_mems" : 
+                    [
+                        {
+                            "lm_max_rows" : 6,
+                            "lm_row_size" : 3584
+                        }
+                    ],
+                    "layer_type" : "conv",
+                    "nconvs" : 
+                    [
+                        4,
+                        4
+                    ],
+                    "num_blocks" : 7,
+                    "num_in_cols" : 56,
+                    "num_in_filters" : 64,
+                    "num_in_rows" : 56,
+                    "num_out_cols" : 56,
+                    "num_out_filters" : 64,
+                    "num_out_rows" : 56,
+                    "num_xbars" : 
+                    [
+                        2,
+                        2
+                    ],
+                    "out_scale" : 1.0,
+                    "out_scale_mult" : 
+                    [
+                        64,
+                        1,
+                        1,
+                        1
+                    ],
+                    "out_scale_shift" : 
+                    [
+                        6,
+                        0,
+                        0,
+                        0
+                    ],
+                    "out_sync_mult" : 1,
+                    "pad_bot" : 0,
+                    "pad_left" : 0,
+                    "pad_right" : 0,
+                    "pad_top" : 0,
+                    "pos_neg_acts" : false,
+                    "pos_neg_wgts" : true,
+                    "prefetch_scale_mult" : 1,
+                    "prefetch_scale_shift" : 0,
+                    "relu" : "relu",
+                    "remap_region" : 0,
+                    "scale_output" : true,
+                    "scale_path_flip" : false,
+                    "scale_prefetch" : false,
+                    "src_entries" : [],
+                    "start_col" : 0,
+                    "start_xbar" : 0,
+                    "stride" : 1,
+                    "vert_splits" : 
+                    [
+                        512
+                    ],
+                    "wgts_bias_file" : "",
+                    "wgts_file" : "w_20.txt",
+                    "wgts_file_has_bias" : true,
+                    "wgts_layer_name" : "Layer 20",
+                    "xbar_cnt" : 2,
+                    "xbar_start_layer" : 0
+                }
+            ],
+            "mac_row_id" : 3
+        },
+        {
+            "layers" : 
+            [
+                {
+                    "adc_scale" : 136.0,
+                    "add_bias" : false,
+                    "add_residuals" : false,
+                    "alt_signs" : false,
+                    "bias_add_round_shift" : 0,
+                    "col_splits" : 
+                    {
+                        "grp_shift" : 0,
+                        "splits" : 
+                        [
+                            {
+                                "shift" : 0,
+                                "sign" : true
+                            },
+                            {
+                                "shift" : 0,
+                                "sign" : false
+                            }
+                        ]
+                    },
+                    "dest_entries" : 
+                    [
+                        {
+                            "addr" : "0x0",
+                            "dest_details" : 
+                            [
+                                {
+                                    "addr_incr" : 3584,
+                                    "dest_addr" : "0x0",
+                                    "dest_layer" : 5,
+                                    "gen_sync" : true,
+                                    "mem_index" : 0,
+                                    "mem_type" : "layer_mem"
+                                }
+                            ],
+                            "len" : 3584
+                        }
+                    ],
+                    "dilation" : 1,
+                    "dma_layer_usage" : "single_layer",
+                    "filter_size" : 3,
+                    "horz_splits" : 
+                    [
+                        2048
+                    ],
+                    "in_scale" : 1.0,
+                    "input_dup" : 1,
+                    "layer_class" : "conv",
+                    "layer_id" : 4,
+                    "layer_mems" : 
+                    [
+                        {
+                            "lm_max_rows" : 5,
+                            "lm_row_size" : 3584
+                        }
+                    ],
+                    "layer_type" : "conv",
+                    "nconvs" : 
+                    [
+                        2,
+                        2
+                    ],
+                    "num_blocks" : 7,
+                    "num_in_cols" : 56,
+                    "num_in_filters" : 64,
+                    "num_in_rows" : 56,
+                    "num_out_cols" : 56,
+                    "num_out_filters" : 64,
+                    "num_out_rows" : 56,
+                    "num_xbars" : 
+                    [
+                        4,
+                        4
+                    ],
+                    "out_scale" : 1.0,
+                    "out_scale_mult" : 
+                    [
+                        68,
+                        1,
+                        1,
+                        1
+                    ],
+                    "out_scale_shift" : 
+                    [
+                        6,
+                        0,
+                        0,
+                        0
+                    ],
+                    "out_sync_mult" : 1,
+                    "pad_bot" : 1,
+                    "pad_left" : 1,
+                    "pad_right" : 1,
+                    "pad_top" : 1,
+                    "pos_neg_acts" : false,
+                    "pos_neg_wgts" : true,
+                    "prefetch_scale_mult" : 1,
+                    "prefetch_scale_shift" : 0,
+                    "relu" : "relu",
+                    "remap_region" : 0,
+                    "scale_output" : true,
+                    "scale_path_flip" : false,
+                    "scale_prefetch" : false,
+                    "src_entries" : [],
+                    "start_col" : 0,
+                    "start_xbar" : 0,
+                    "stride" : 1,
+                    "vert_splits" : 
+                    [
+                        512
+                    ],
+                    "wgts_bias_file" : "",
+                    "wgts_file" : "w_30.txt",
+                    "wgts_file_has_bias" : true,
+                    "wgts_layer_name" : "Layer 30",
+                    "xbar_cnt" : 2,
+                    "xbar_start_layer" : 0
+                }
+            ],
+            "mac_row_id" : 4
+        },
+        {
+            "layers" : 
+            [
+                {
+                    "adc_scale" : 23.0,
+                    "add_bias" : false,
+                    "add_residuals" : false,
+                    "alt_signs" : false,
+                    "bias_add_round_shift" : 1,
+                    "col_splits" : 
+                    {
+                        "grp_shift" : 0,
+                        "splits" : 
+                        [
+                            {
+                                "shift" : 0,
+                                "sign" : true
+                            },
+                            {
+                                "shift" : 0,
+                                "sign" : false
+                            }
+                        ]
+                    },
+                    "dest_entries" : 
+                    [
+                        {
+                            "addr" : "0x0",
+                            "dest_details" : 
+                            [
+                                {
+                                    "addr_incr" : 14336,
+                                    "dest_addr" : "0x0",
+                                    "dest_layer" : 0,
+                                    "gen_sync" : true,
+                                    "mem_index" : 0,
+                                    "mem_type" : "global_residual_mem"
+                                }
+                            ],
+                            "len" : 14336
+                        }
+                    ],
+                    "dilation" : 1,
+                    "dma_layer_usage" : "single_layer",
+                    "filter_size" : 1,
+                    "horz_splits" : 
+                    [
+                        2048
+                    ],
+                    "in_scale" : 1.0,
+                    "input_dup" : 1,
+                    "layer_class" : "conv",
+                    "layer_id" : 5,
+                    "layer_mems" : 
+                    [
+                        {
+                            "lm_max_rows" : 3,
+                            "lm_row_size" : 3584
+                        }
+                    ],
+                    "layer_type" : "conv",
+                    "nconvs" : 
+                    [
+                        2,
+                        2
+                    ],
+                    "num_blocks" : 7,
+                    "num_in_cols" : 56,
+                    "num_in_filters" : 64,
+                    "num_in_rows" : 56,
+                    "num_out_cols" : 56,
+                    "num_out_filters" : 256,
+                    "num_out_rows" : 56,
+                    "num_xbars" : 
+                    [
+                        4,
+                        4
+                    ],
+                    "out_scale" : 1.0,
+                    "out_scale_mult" : 
+                    [
+                        90,
+                        1,
+                        1,
+                        1
+                    ],
+                    "out_scale_shift" : 
+                    [
+                        6,
+                        0,
+                        0,
+                        0
+                    ],
+                    "out_sync_mult" : 1,
+                    "pad_bot" : 0,
+                    "pad_left" : 0,
+                    "pad_right" : 0,
+                    "pad_top" : 0,
+                    "pos_neg_acts" : false,
+                    "pos_neg_wgts" : true,
+                    "prefetch_scale_mult" : 1,
+                    "prefetch_scale_shift" : 0,
+                    "relu" : "none",
+                    "remap_region" : 0,
+                    "scale_output" : true,
+                    "scale_path_flip" : false,
+                    "scale_prefetch" : false,
+                    "src_entries" : [],
+                    "start_col" : 0,
+                    "start_xbar" : 0,
+                    "stride" : 1,
+                    "vert_splits" : 
+                    [
+                        512
+                    ],
+                    "wgts_bias_file" : "",
+                    "wgts_file" : "w_40.txt",
+                    "wgts_file_has_bias" : true,
+                    "wgts_layer_name" : "Layer 40",
+                    "xbar_cnt" : 2,
+                    "xbar_start_layer" : 0
+                }
+            ],
+            "mac_row_id" : 5
+        },
+        {
+            "layers" : 
+            [
+                {
+                    "adc_scale" : 50.0,
+                    "add_bias" : false,
+                    "add_residuals" : true,
+                    "alt_signs" : false,
+                    "bias_add_round_shift" : 0,
+                    "col_splits" : 
+                    {
+                        "grp_shift" : 0,
+                        "splits" : 
+                        [
+                            {
+                                "shift" : 0,
+                                "sign" : true
+                            },
+                            {
+                                "shift" : 0,
+                                "sign" : false
+                            }
+                        ]
+                    },
+                    "dest_entries" : 
+                    [
+                        {
+                            "addr" : "0x0",
+                            "dest_details" : 
+                            [
+                                {
+                                    "addr_incr" : 14336,
+                                    "dest_addr" : "0x0",
+                                    "dest_layer" : 61,
+                                    "gen_sync" : true,
+                                    "mem_index" : 0,
+                                    "mem_type" : "layer_mem"
+                                }
+                            ],
+                            "len" : 14336
+                        }
+                    ],
+                    "dilation" : 1,
+                    "dma_layer_usage" : "single_layer",
+                    "filter_size" : 1,
+                    "horz_splits" : 
+                    [
+                        2048
+                    ],
+                    "in_scale" : 1.0,
+                    "input_dup" : 1,
+                    "layer_class" : "conv",
+                    "layer_id" : 6,
+                    "layer_mems" : 
+                    [
+                        {
+                            "lm_max_rows" : 6,
+                            "lm_row_size" : 3584
+                        }
+                    ],
+                    "layer_type" : "conv",
+                    "nconvs" : 
+                    [
+                        2,
+                        2
+                    ],
+                    "num_blocks" : 7,
+                    "num_in_cols" : 56,
+                    "num_in_filters" : 64,
+                    "num_in_rows" : 56,
+                    "num_out_cols" : 56,
+                    "num_out_filters" : 256,
+                    "num_out_rows" : 56,
+                    "num_xbars" : 
+                    [
+                        4,
+                        4
+                    ],
+                    "out_scale" : 1.0,
+                    "out_scale_mult" : 
+                    [
+                        86,
+                        1,
+                        1,
+                        1
+                    ],
+                    "out_scale_shift" : 
+                    [
+                        6,
+                        0,
+                        0,
+                        0
+                    ],
+                    "out_sync_mult" : 1,
+                    "pad_bot" : 0,
+                    "pad_left" : 0,
+                    "pad_right" : 0,
+                    "pad_top" : 0,
+                    "pos_neg_acts" : false,
+                    "pos_neg_wgts" : true,
+                    "prefetch_scale_mult" : 41,
+                    "prefetch_scale_shift" : 7,
+                    "relu" : "relu",
+                    "remap_region" : 0,
+                    "scale_output" : true,
+                    "scale_path_flip" : false,
+                    "scale_prefetch" : true,
+                    "src_entries" : 
+                    [
+                        {
+                            "dst_index" : 0,
+                            "dst_layer" : 6,
+                            "dst_mem_type" : "residual_mem",
+                            "src_addr" : "0x0",
+                            "src_addr_incr" : 14336,
+                            "src_index" : 0,
+                            "src_layer" : 0,
+                            "src_len" : 14336,
+                            "src_mem_type" : "global_residual_mem"
+                        }
+                    ],
+                    "start_col" : 0,
+                    "start_xbar" : 0,
+                    "stride" : 1,
+                    "vert_splits" : 
+                    [
+                        512
+                    ],
+                    "wgts_bias_file" : "",
+                    "wgts_file" : "w_50.txt",
+                    "wgts_file_has_bias" : true,
+                    "wgts_layer_name" : "Layer 50",
+                    "xbar_cnt" : 2,
+                    "xbar_start_layer" : 0
+                }
+            ],
+            "mac_row_id" : 6
+        }
+    ],
+    "residual_mems" : 
+    [
+        {
+            "base_addr" : "0x0",
+            "num_rows" : 18,
+            "row_size" : 14336,
+            "sub_array_index" : 0
+        }
+    ]
+}

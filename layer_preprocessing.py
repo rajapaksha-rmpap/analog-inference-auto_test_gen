@@ -11,7 +11,7 @@ def add_defaults(layer_level, root, defaults, optional=False):
     for spec in defaults:
         if spec.startswith(root):
             spec = spec[len(root):]     # stripping the starting root
-            if '/' in spec: continue    # the spec belogns to an upper level
+            if '/' in spec: continue    # the spec belogns to an upper json level
             if spec in layer_level: continue # user has already specified the spec 
 
             default, optionality = defaults[root + spec] # **************** change here **************** 
@@ -155,16 +155,24 @@ def process_src_entries(layer, defaults):
                 layer["src_entries"][spec] = layer[spec]
                 del layer[spec]
     if type(layer["src_entries"]) == dict:
+        if len(layer["src_entries"]) == 0: 
+            # the user has not specified either a src_entry or associate params in the input json
+            layer["src_entries"] = []
+            return 
         layer["src_entries"] = [layer["src_entries"]]
-    if type(layer["src_entries"]) != list or len(layer["layer_mems"]) == 0:
-        print("layer id: %d - 'src_entries' must be either a single json object or a non-empty array of json objects" %layer["layer_id"])
+    if type(layer["src_entries"]) != list:
+        print("layer id: %d - 'src_entries' must be either a single json object or an array of json objects" %layer["layer_id"])
         exit(0)
     
     for src_entry in layer["src_entries"]:
         if type(src_entry) != dict:
             print("layer id: %d - elements of 'src_entries' must be json objects (python dicts)" %layer["layer_id"])
             exit(0)
-        # add default 'col_splits/splits' params 
+        if "src_index" not in src_entry:
+            print("layer id: %d - 'src_index' has not been specified" %layer["layer_id"])
+            exit(0)
+
+        # add default 'src_entries/' params 
         add_defaults(src_entry, 'src_entries/', defaults)
 
 def put_specs_inorder(layer):

@@ -14,10 +14,13 @@ data_template = {
     #   values: {value: times_of_apperance}
     # }
 }
-# specs who have no default values ('num_out_filters' will be only eliminated if not layer_class is conv)
-delete = ["num_in_rows", "num_in_cols", "num_in_filters", "num_out_rows", "num_out_cols", "num_out_filters"\
+# specs who have no default values 
+delete = ["num_in_rows", "num_in_cols", "num_in_filters", "num_out_rows", "num_out_cols", "num_out_filters", \
           "layer_id", "layer_mems/lm_max_rows", "layer_mems/lm_row_size", \
-          "dest_entries/dest_details/addr_incr", "dest_entries/dest_details/dest_layer", "dest_entries/len"]
+          "dest_entries/dest_details/addr_incr", "dest_entries/dest_details/dest_layer", "dest_entries/len", \
+          "src_entries/src_index", "src_entries/src_layer", "src_entries/src_addr_incr", "src_entries/src_len", "src_entries/dst_layer"]
+# specs who may be optional (not specified always), but have to be added into the output spec json file
+essentials = ["src_entries/dst_index", "src_entries/dst_mem_type", "src_entries/src_addr", "src_entries/src_mem_type"]
 
 def gather_data(spec, value, layer_type, existing_data, delete):
     "gather data about a spec in a given layer type by combining existing data of the spec with the incoming value"
@@ -48,8 +51,7 @@ def gather_data(spec, value, layer_type, existing_data, delete):
     # gather data about the value of the spec 
     if (spec in delete): 
         # if user specify not to consider a spec
-        if layer_type in ("conv", "dilate", "transpose") and spec == "num_out_filters": pass
-        else: value = "well_defined"
+        value = "well_defined"
     
     elif (type(value) == dict):
         # if value is a dict, then do not gather values of those specs
@@ -121,16 +123,17 @@ def gather_data(spec, value, layer_type, existing_data, delete):
 #     if operation in ("gather_data", "specname_only"): 
 #         return default
 
-def traverse_layer(layer, layer_type, default={}, operation="gather_data", root="", keep=None, add=None, rename=None, delete=[], only_del_from_default=False):
+def traverse_layer(layer, layer_type, default={}, operation="gather_data", root="", delete=[]):
     "traverse a layer specs json strcuture and simplify the object"
-    # layer -> json object representing a layer that was taken from the loaded json spec object
-    # defaults -> json object containing the default parameters for the corresponding layer type
-    # operaton -> "gather_data" -> gather data about the layer specs and add them to the default, return default
-    #          -> "specname_only" -> add the spec name to the default array, return default (here, default is an array, NOT a dict object)
-    #          -> "reduce_layer" -> remove the specs in a layer whose spec values are "well-defined" or same as the defaults
-    # delete -> delete the specs from the layer or does not consider in manipulating/creating the default 
-    # delete -> only_del_from_default -> if True, the specs in delete arr will be kept in layer object, but not be included in default object
-
+    # layer      -> json object representing a layer in a test spec json file or a lower json level within a layer 
+    # layer_type -> type of the layer 
+    # default    -> json object containing the default parameters for the corresponding layer type
+    # operaton   -> "gather_data" -> gather data about the layer specs and add them to the default, return default 
+    #            -> "specname_only" -> add the spec name to the default array, return default (here, default is an array, NOT a dict object)
+    #            -> "reduce_layer" -> remove the specs in a layer whose spec values are "well-defined" or equal to its default value
+    # root       -> json hierarchy level of the current 'layer' object; root can take values like '', 'dest_entries', 'dest_entries/dest_details', etc. 
+    # delete     -> delete the specs from the layer when 'reduce layer' operation is called, and take the value 'well_defined' in creating default specs with 'gather data' operation
+    
     if type(layer) == dict: 
         # get a copy of 'layer.keys()', otherwise Exception arises when the specs get deleted when 'operation' == 'reduce_layer' 
         keys = list(layer.keys())
@@ -181,7 +184,7 @@ def traverse_layer(layer, layer_type, default={}, operation="gather_data", root=
     if operation in ("gather_data", "specname_only"): 
         return default
 
-def summarize_data(spec_data, num_layers, essential_spec_thres=0.95, optional=True):
+def summarize_data(spec, spec_data, num_layers, essential_spec_thres=0.95, optional=True):
     "for a given spec, summarize the data gathered using 'gather_data' function"
     max_count = 0
     for type in spec_data["type"]:
@@ -195,6 +198,8 @@ def summarize_data(spec_data, num_layers, essential_spec_thres=0.95, optional=Tr
         default = eval(default)
     # evaluating the opionality of a spec
     if spec_data["times"] >= num_layers * essential_spec_thres:
+        optionality = "essential"
+    elif spec in essentials: # 'essentials' has not been specified as an argument to this function 
         optionality = "essential"
     else: 
         optionality = "optional"
@@ -227,7 +232,7 @@ for layer_type in layer_cat.keys():
     temp = {}
     for spec in layer_defaults:
         # to remove optionality getting written into defaults.json, set 'optional' = False
-        temp[spec] = summarize_data(copy.deepcopy(layer_defaults[spec]), num_layers, optional=True)
+        temp[spec] = summarize_data(spec, copy.deepcopy(layer_defaults[spec]), num_layers, optional=True)
     defaults[layer_type] = temp
 
     layer_defaults["num_layers"] = num_layers

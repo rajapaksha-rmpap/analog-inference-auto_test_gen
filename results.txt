@@ -1,0 +1,2 @@
+results count matching for image 0
+Data mismatch!: in line 1 pos 0 asm out 0 ref 4 for image 0
